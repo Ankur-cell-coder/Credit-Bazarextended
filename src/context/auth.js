@@ -8,6 +8,8 @@ const AuthProvider = ({ children }) => {
     token: "",
   });
 
+  
+
   //default axios
   axios.defaults.headers.common["Authorization"] = auth?.token;
 

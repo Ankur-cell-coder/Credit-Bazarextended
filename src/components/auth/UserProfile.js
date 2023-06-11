@@ -5,20 +5,16 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 
 
-function UserProfile(props) {
+function UserProfile() {
   const navigate = useNavigate();
   const [address,setAddress]=useState("");
-  const [defaultRole,setDefaultRole]=useState("");
-
 
   const location = useLocation()
   console.log(location.state.id);
-  
- 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-  const handleNavigate=()=>{
+
+  const [defaultRole,setDefaultRole]=useState("");
+  const handleNavigate=(res)=>{
+    setDefaultRole(res.data.user.role);
     if(defaultRole==='seller')
     {
       navigate('/sdashboard')
@@ -31,6 +27,9 @@ function UserProfile(props) {
       navigate('/tdashboard');
     }
   }
+ 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       const res = await axios.post("http://localhost:3005/user/add-details", {
         id:`${location.state.id}`,
@@ -39,16 +38,17 @@ function UserProfile(props) {
       });
       if (res.data.success) {
         alert(res.data.message);
-        handleNavigate();
+        handleNavigate(res);
       } else {
         alert(res.data.message);
-        handleNavigate();
+        handleNavigate(res);
       }
     } catch (error) {
       console.log(error);
       alert("something went wrong");
     }
   };
+  
   return (
     <User1>
       <div className="formwrap">

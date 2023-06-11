@@ -6,12 +6,29 @@ import axios from "axios";
 import { useAuth } from "../../context/auth";
 
 function Signin() {
+  const [role, setRole] = useState("seller");
   const [auth, setAuth] = useAuth();
 
   const navigate = useNavigate();
   const [numberOrEmail, setnumberOrEmail] = useState("");
   const [password, setPassword] = useState("");
 
+
+  //routing
+  const handleNavigate = (res) => {
+  
+    setRole(res.data.user.userDetails.defaultRole);
+    if (res.data.user.userDetails.defaultRole == "seller") {
+      navigate("/sdashboard");
+    } else if (res.data.user.userDetails.defaultRole == "buyer") {
+      navigate("/bdashboard");
+    } else {
+      navigate("/tdashboard");
+    }
+  };
+
+
+  ///login
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -30,7 +47,7 @@ function Signin() {
         localStorage.setItem("auth", JSON.stringify(res.data));
         console.log("successfull");
 
-        navigate("/sdashboard");
+        handleNavigate(res);
       } else {
         alert(res.data.message);
         setAuth({
@@ -42,13 +59,14 @@ function Signin() {
         localStorage.setItem("auth", JSON.stringify(res.data));
         console.log("successfull");
 
-        navigate("/sdashboard");
+        handleNavigate(res);
       }
     } catch (error) {
       console.log(error);
       alert("something went wrong");
     }
   };
+
 
   return (
     <Sign1>
@@ -105,6 +123,12 @@ function Signin() {
         <div>
           Don't have an account?
           <Link to="/signup">Signup for free</Link>
+        </div>
+
+        <div>
+          <Link to={'/forgotpassword'}>
+           Forgot Password ?
+          </Link>
         </div>
       </div>
     </Sign1>

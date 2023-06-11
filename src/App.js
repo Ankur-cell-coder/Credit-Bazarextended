@@ -8,53 +8,37 @@ import Tdashboard from "./components/traders/Tdashboard";
 import Bdashboard from "./components/buyers/Bdashboard";
 import Sdashboard from "./components/seller/Sdashboard";
 import { styled } from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "./context/auth";
+import ForgotPassword from "./components/auth/ForgotPassword";
 
 function App() {
-   
-  const [auth,setAuth]=useAuth();
+  const [auth, setAuth] = useAuth();
 
-  const navigate =useNavigate();
-  const handleClick = () => {
-    alert("Logout successfully");
-    navigate("/");
-  };
-
-  const [option, setOption] = useState("seller");
-  const handleChange = (e) => {
-    setOption(e.currentTarget.value);
-  }
-
-  
-  
 
   return (
     <App1>
       <div className="topcomp">
-      <div className="leftcontent">Credit Bazar</div>
-
-      <div className="rightsection">
-        <div className="options">
-          <select id="users" onChange={e => handleChange(e)}>
-            <option value="seller">Seller</option>
-            <option value="buyer">Buyers</option>
-            <option value="merchants">Merchants</option>
-          </select>
-        </div>
-        <div className="login">
-          <button onClick={handleClick}>Logout</button>
-        </div>
-      </div>
+        <div className="leftcontent">Credit Bazar</div>
       </div>
 
       <Routes>
         <Route path="/" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/profile" element={<UserProfile />} />
-        <Route path="/tdashboard" element={<Tdashboard option={option} />} />
-        <Route path="/bdashboard" element={<Bdashboard option={option}/>} />
-        <Route path="/sdashboard" element={<Sdashboard option={option}/>} />
+        <Route path="/profile" element={<UserProfile  />} />
+        <Route path='/forgotpassword' element={<ForgotPassword/>}/>
+        <Route
+          path="/tdashboard"
+          element={!auth.user ? <Signin /> : <Tdashboard  />}
+        />
+        <Route
+          path="/bdashboard"
+          element={!auth.user ? <Signin /> : <Bdashboard  />}
+        />
+        <Route
+          path="/sdashboard"
+          element={!auth.user ? <Signin /> : <Sdashboard  />}
+        />
       </Routes>
     </App1>
   );
@@ -63,20 +47,19 @@ function App() {
 export default App;
 
 const App1 = styled.div`
-
-.topcomp{
-border:2px solid black;
-display:flex;
-height:80px;
-justify-content:space-between;
-}
-
- .rightsection{
-    display:flex;
+  .topcomp {
+    border: 2px solid black;
+    display: flex;
+    height: 60px;
+    margin-top:50px;
+    margin-left:50px;
     width:300px;
-    justify-content:space-between;
-    margin-right:20px;
-    margin-top:30px;
+    justify-content:center;
+  }
+  .leftcontent{
+    margin-top:10px;
+    font-size:25px;
+  }
 
- }
- `;
+ 
+`;

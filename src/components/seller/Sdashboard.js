@@ -2,27 +2,67 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../pages/Navbar";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/auth";
 
 
 function Sdashboard(props) {
-    const navigate=useNavigate();
-    const [role,setRole]=useState(props.option);
+   
+  const [auth, setAuth] = useAuth();
+  const navigate = useNavigate();
 
-    useEffect(()=>{
-        if(props.option!==role)
-        {
-            if (props.option == "seller") {
-                navigate("/sdashboard");
-              } else if (props.option == "buyer") {
-                navigate("/bdashboard");
-              } else {
-                navigate("/tdashboard");
-              }
+  const handleClick = () => {
+    setAuth({
+      ...auth,
+      user: null,
+      token: "",
+    });
+    localStorage.removeItem("auth");
+    alert("Logout successfully");
+    navigate("/");
+  };
+
+  const [option, setOption] = useState(auth.user?.userDetails.defaultRole);
+
+  console.log(option);
+  const handleChange = (e) => {
+    setOption(e.currentTarget.value);
+    if (e.currentTarget.value == "buyer") {
+        const win = window.open("http://localhost:3000/bdashboard", "_blank");
+        if (win != null) {
+          win.focus();
         }
-    })
+      navigate("/bdashboard");
+    } else if (e.currentTarget.value == "merchants") {
+        const win = window.open("http://localhost:3000/tdashboard", "_blank");
+        if (win != null) {
+          win.focus();
+        }
+      navigate("/tdashboard");
+    }
+  };
+
   return (
     <Dash>
-        {/* <Navbar/> */}
+        <div className="rightsection">
+        <div className="options">
+          <select id="option" onChange={(e) => handleChange(e)}>
+            <option value="seller">
+                Seller
+            </option>
+            <option value="buyer">
+                Buyers
+            </option>
+            <option value="merchants"> 
+                Merchants
+            </option>
+          </select>
+        </div>
+
+        <div className="login">
+          <button onClick={handleClick}>Logout</button>
+        </div>
+      </div>
+
       <div>
         <div
           style={{ fontSize: "35px", marginTop: "20px", marginLeft: "695px" }}
@@ -88,5 +128,12 @@ const Dash = styled.div`
   .content2{
     font-size:17px;
     margin-left:30px;
+  }
+  .rightsection {
+    display: flex;
+    width: 400px;
+    margin-left: 1400px;
+    margin-top: -30px;
+    justify-content: space-between;
   }
 `;
