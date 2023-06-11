@@ -2,28 +2,47 @@ import { React, useState } from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import axios from 'axios'
-
+import axios from "axios";
+import { useAuth } from "../../context/auth";
 
 function Signin() {
+  const [auth, setAuth] = useAuth();
+
   const navigate = useNavigate();
-  const [phoneOrEmail, setphoneOrEmail] = useState("");
+  const [numberOrEmail, setnumberOrEmail] = useState("");
   const [password, setPassword] = useState("");
 
- 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const res = await axios.post("http://localhost:3005/user/login", {
-        phoneOrEmail,
+        numberOrEmail,
         password,
       });
       if (res.data.success) {
         alert(res.data.message);
-        navigate("/sellerdash");
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        console.log({ auth });
+        localStorage.setItem("auth", JSON.stringify(res.data));
+        console.log("successfull");
+
+        navigate("/sdashboard");
       } else {
         alert(res.data.message);
-        navigate("/sellerdash");
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        console.log({ auth });
+        localStorage.setItem("auth", JSON.stringify(res.data));
+        console.log("successfull");
+
+        navigate("/sdashboard");
       }
     } catch (error) {
       console.log(error);
@@ -35,15 +54,15 @@ function Signin() {
     <Sign1>
       <div className="formwrap">
         <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="phoneOrEmail">Phone or Email</label>
+          <label htmlFor="numberOrEmail">number or Email</label>
           <br />
           <input
             type="txt"
-            value={phoneOrEmail}
-            onChange={(e) => setphoneOrEmail(e.target.value)}
+            value={numberOrEmail}
+            onChange={(e) => setnumberOrEmail(e.target.value)}
             style={{ height: "30px", width: "300px", marginBottom: "20px" }}
-            id="phoneOrEmail"
-            name="phoneOrEmail"
+            id="numberOrEmail"
+            name="numberOrEmail"
             required
           />
           <br />

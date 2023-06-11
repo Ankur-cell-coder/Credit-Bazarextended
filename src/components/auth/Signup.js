@@ -6,35 +6,43 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Signup() {
-    const [name,setName]=useState("");
-    const [username,setUsername]=useState("");
-    const [email,setEmail]=useState("");
-    const [password,setPassword]=useState("");
-   const navigate=useNavigate();
-  
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        navigate("/profile");
-        try {
-          const res = await axios.post("http://localhost:3005/user/signup", {
-            name,
-            username,
-            email,
-            password,
-          });
-          if (res.data.success) {
-            alert(res.data.message);
-            console.log("successfull");
-            navigate("/profile");
-          } else {
-            alert(res.data.message);
-            navigate("/profile");
-          }
-        } catch (error) {
-          console.log(error);
-          alert("something went wrong");
-        }
-      };
+  const [name, setName] = useState("");
+  const [number, setnumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:3005/user/signup", {
+        name,
+        number,
+        email,
+        password,
+      });
+      if (res.data.success) {
+        alert(res.data.message);
+        // console.log(res.data.user);
+        navigate("/profile", {
+          state: {
+            id: res.data.user.id,
+          },
+        });
+      } else {
+        alert(res.data.message);
+        // console.log(res.data.user);
+        navigate("/profile", {
+          state: {
+            id: res.data.user.id,
+          },
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      alert("something went wrong");
+    }
+  };
 
   return (
     <Sign1>
@@ -45,7 +53,7 @@ function Signup() {
           <input
             type="name"
             value={name}
-            onChange={(e)=>setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             style={{
               height: "30px",
               width: "300px",
@@ -59,12 +67,12 @@ function Signup() {
           />
           <br />
 
-          <label htmlFor="username">Username</label>
+          <label htmlFor="number">number</label>
           <br />
           <input
             type="name"
-            value={username}
-            onChange={(e)=>setUsername(e.target.value)}
+            value={number}
+            onChange={(e) => setnumber(e.target.value)}
             style={{
               height: "30px",
               width: "300px",
@@ -72,8 +80,8 @@ function Signup() {
               marginTop: "20px",
               marginLeft: "2px",
             }}
-            id="username"
-            name="username"
+            id="number"
+            name="number"
             required
           />
           <br />
@@ -83,7 +91,7 @@ function Signup() {
           <input
             type="email"
             value={email}
-            onChange={(e)=>setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             style={{ height: "30px", width: "300px", marginBottom: "20px" }}
             id="email"
             name="email"

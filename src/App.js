@@ -9,8 +9,11 @@ import Bdashboard from "./components/buyers/Bdashboard";
 import Sdashboard from "./components/seller/Sdashboard";
 import { styled } from "styled-components";
 import { useState } from "react";
+import { useAuth } from "./context/auth";
 
 function App() {
+   
+  const [auth,setAuth]=useAuth();
 
   const navigate =useNavigate();
   const handleClick = () => {

@@ -5,45 +5,50 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 
 
-function UserProfile() {
+function UserProfile(props) {
   const navigate = useNavigate();
   const [address,setAddress]=useState("");
-  const [role,setRole]=useState("");
+  const [defaultRole,setDefaultRole]=useState("");
 
+
+  const location = useLocation()
+  console.log(location.state.id);
+  
  
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if(role=='seller')
+  const handleNavigate=()=>{
+    if(defaultRole==='seller')
     {
       navigate('/sdashboard')
     }
-    else if(role=="buyer")
+    else if(defaultRole==="buyer")
     {
       navigate('/bdashboard');
     }
     else{
       navigate('/tdashboard');
     }
-
+  }
     try {
-      const res = await axios.post("http://localhost:3005/user/login", {
+      const res = await axios.post("http://localhost:3005/user/add-details", {
+        id:`${location.state.id}`,
         address,
-        role,
+        defaultRole,
       });
       if (res.data.success) {
         alert(res.data.message);
-        navigate("/sellerdash");
+        handleNavigate();
       } else {
         alert(res.data.message);
-        navigate("/sellerdash");
+        handleNavigate();
       }
     } catch (error) {
       console.log(error);
       alert("something went wrong");
     }
   };
-
   return (
     <User1>
       <div className="formwrap">
@@ -61,12 +66,12 @@ function UserProfile() {
           />
           <br />
 
-          <label htmlFor="role">Please Select your role</label>
+          <label htmlFor="defaultRole">Please Select your defaultRole</label>
           <br />
           <input
             type="text"
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
+            value={defaultRole}
+            onChange={(e) => setDefaultRole(e.target.value)}
             style={{
               height: "30px",
               width: "300px",
@@ -74,8 +79,8 @@ function UserProfile() {
               marginTop: "20px",
               marginLeft: "2px",
             }}
-            id="role"
-            name="role"
+            id="defaultRole"
+            name="defaultRole"
             required
           />
           <br />
