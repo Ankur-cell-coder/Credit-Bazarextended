@@ -2,37 +2,32 @@ import { React, useState } from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import axios from 'axios'
-
+import axios from "axios";
 
 function UserProfile() {
   const navigate = useNavigate();
-  const [address,setAddress]=useState("");
+  const [address, setAddress] = useState("");
 
-  const location = useLocation()
+  const location = useLocation();
   console.log(location.state.id);
 
-  const [defaultRole,setDefaultRole]=useState("");
-  const handleNavigate=(res)=>{
+  const [defaultRole, setDefaultRole] = useState("seller");
+  const handleNavigate = (res) => {
     setDefaultRole(res.data.user.role);
-    if(defaultRole==='seller')
-    {
-      navigate('/sdashboard')
+    if (defaultRole === "seller") {
+      navigate("/sdashboard");
+    } else if (defaultRole === "buyer") {
+      navigate("/bdashboard");
+    } else {
+      navigate("/tdashboard");
     }
-    else if(defaultRole==="buyer")
-    {
-      navigate('/bdashboard');
-    }
-    else{
-      navigate('/tdashboard');
-    }
-  }
- 
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const res = await axios.post("http://localhost:3005/user/add-details", {
-        id:`${location.state.id}`,
+        id: `${location.state.id}`,
         address,
         defaultRole,
       });
@@ -48,7 +43,7 @@ function UserProfile() {
       alert("something went wrong");
     }
   };
-  
+
   return (
     <User1>
       <div className="formwrap">
@@ -68,22 +63,31 @@ function UserProfile() {
 
           <label htmlFor="defaultRole">Please Select your defaultRole</label>
           <br />
-          <input
-            type="text"
-            value={defaultRole}
-            onChange={(e) => setDefaultRole(e.target.value)}
-            style={{
+
+          <select id="option" onChange={(e) => setDefaultRole(e.target.value)}
+             style={{
               height: "30px",
               width: "300px",
               marginBottom: "20px",
               marginTop: "20px",
               marginLeft: "2px",
             }}
+          >
+            <option value="seller">Seller</option>
+            <option value="buyer">Buyers</option>
+            <option value="merchants">Merchants</option>
+          </select>
+
+          {/* <input
+            type="text"
+            value={defaultRole}
+            onChange={(e) => setDefaultRole(e.target.value)}
+           
             id="defaultRole"
             name="defaultRole"
             required
           />
-          <br />
+          <br /> */}
 
           <button
             style={{
@@ -100,8 +104,6 @@ function UserProfile() {
             Submit
           </button>
         </form>
-
-       
       </div>
     </User1>
   );

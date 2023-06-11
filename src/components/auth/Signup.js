@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useAuth } from "../../context/auth";
 
 function Signup() {
+  const [auth, setAuth] = useAuth();
   const [name, setName] = useState("");
   const [number, setnumber] = useState("");
   const [email, setEmail] = useState("");
@@ -23,7 +25,12 @@ function Signup() {
       });
       if (res.data.success) {
         alert(res.data.message);
-        // console.log(res.data.user);
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        localStorage.setItem("auth", JSON.stringify(res.data));
         navigate("/profile", {
           state: {
             id: res.data.user.id,
@@ -31,7 +38,12 @@ function Signup() {
         });
       } else {
         alert(res.data.message);
-        // console.log(res.data.user);
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        localStorage.setItem("auth", JSON.stringify(res.data));
         navigate("/profile", {
           state: {
             id: res.data.user.id,

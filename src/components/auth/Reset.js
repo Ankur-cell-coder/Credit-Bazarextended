@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-function ForgotPassword() {
+function Reset() {
 
   const [email, setEmail] = useState("");
 
@@ -65,7 +65,7 @@ function ForgotPassword() {
   );
 }
 
-export default ForgotPassword;
+export default Reset;
 
 const Sign1 = styled.div`
   display: flex;

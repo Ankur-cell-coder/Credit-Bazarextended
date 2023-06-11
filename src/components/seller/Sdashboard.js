@@ -20,12 +20,9 @@ function Sdashboard(props) {
     alert("Logout successfully");
     navigate("/");
   };
-
-  const [option, setOption] = useState(auth.user?.userDetails.defaultRole);
-
-  console.log(option);
+  
   const handleChange = (e) => {
-    setOption(e.currentTarget.value);
+    
     if (e.currentTarget.value == "buyer") {
         const win = window.open("http://localhost:3000/bdashboard", "_blank");
         if (win != null) {

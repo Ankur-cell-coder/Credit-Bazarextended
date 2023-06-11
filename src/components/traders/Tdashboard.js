@@ -19,11 +19,7 @@ function Tdashboard() {
     navigate("/");
   };
 
-  const [option, setOption] = useState(auth.user?.userDetails.defaultRole);
-
-  console.log(option);
   const handleChange = (e) => {
-    setOption(e.currentTarget.value);
     if (e.currentTarget.value == "buyer") {
       const win = window.open("http://localhost:3000/bdashboard", "_blank");
       if (win != null) {
@@ -31,10 +27,10 @@ function Tdashboard() {
       }
       navigate("/bdashboard");
     } else if (e.currentTarget.value == "seller") {
-        const win = window.open("http://localhost:3000/sdashboard", "_blank");
-        if (win != null) {
-          win.focus();
-        }
+      const win = window.open("http://localhost:3000/sdashboard", "_blank");
+      if (win != null) {
+        win.focus();
+      }
       navigate("/sdashboard");
     }
   };
