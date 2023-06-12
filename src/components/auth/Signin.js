@@ -68,53 +68,33 @@ function Signin() {
   return (
     <Sign1>
       <div className="formwrap">
+        <div className="content">Welcome To Login Page</div>
         <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="numberOrEmail">number or Email</label>
+          <label htmlFor="numberOrEmail" style={{marginLeft:'-90px'}}>Registered Number or Email</label>
           <br />
           <input
             type="txt"
             value={numberOrEmail}
             onChange={(e) => setnumberOrEmail(e.target.value)}
-            style={{ height: "30px", width: "300px", marginBottom: "20px" }}
             id="numberOrEmail"
             name="numberOrEmail"
             required
           />
           <br />
 
-          <label htmlFor="name">Password</label>
+          <label htmlFor="name" style={{marginLeft:'-225px'}}>Password</label>
           <br />
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={{
-              height: "30px",
-              width: "300px",
-              marginBottom: "20px",
-              marginTop: "20px",
-              marginLeft: "2px",
-            }}
             id="password"
             name="password"
             required
           />
           <br />
 
-          <button
-            style={{
-              fontsize: "20px",
-              color: "white",
-              height: "40px",
-              width: "100%",
-              marginBottom: "20px",
-              backgroundColor: "#3498DB",
-              border: "none",
-            }}
-            type="submit"
-          >
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </form>
 
         <div>
@@ -122,7 +102,7 @@ function Signin() {
           <Link to="/signup">Signup for free</Link>
         </div>
 
-        <div>
+        <div style={{ marginTop: "10px" }}>
           <Link to={"/forgotpassword"}>Forgot Password ?</Link>
         </div>
       </div>
@@ -135,16 +115,79 @@ export default Signin;
 const Sign1 = styled.div`
   display: flex;
   justify-content: center;
-  background-position: center;
-  margin-top: 300px;
+  /* Styles for the page background */
+  body {
+    background-color: #e5e4e2;
+  }
 
+  /* Styles for the form wrapper */
   .formwrap {
     width: 600px;
-    border: 2px solid black;
+    height: 600px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    margin-top: 50px;
+    background-color: #e5e4e2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   }
+
+  /* Styles for the content */
+  .content {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 80px;
+  }
+
+  /* Styles for the form */
   .form {
-    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Styles for the form labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333333;
+  }
+
+  /* Styles for the form inputs */
+  input[type="txt"],
+  input[type="password"] {
+    height: 30px;
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+
+  /* Styles for the submit button */
+  button[type="submit"] {
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Styles for the "Don't have an account?" and "Forgot Password?" links */
+  div > a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: orange;
+  }
+
+  /* Optional hover effect for links */
+  div > a:hover {
+    text-decoration: underline;
   }
 `;
