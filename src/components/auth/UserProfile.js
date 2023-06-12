@@ -64,8 +64,10 @@ function UserProfile() {
           <label htmlFor="defaultRole">Please Select your defaultRole</label>
           <br />
 
-          <select id="option" onChange={(e) => setDefaultRole(e.target.value)}
-             style={{
+          <select
+            id="option"
+            onChange={(e) => setDefaultRole(e.target.value)}
+            style={{
               height: "30px",
               width: "300px",
               marginBottom: "20px",
@@ -77,17 +79,6 @@ function UserProfile() {
             <option value="buyer">Buyers</option>
             <option value="merchants">Merchants</option>
           </select>
-
-          {/* <input
-            type="text"
-            value={defaultRole}
-            onChange={(e) => setDefaultRole(e.target.value)}
-           
-            id="defaultRole"
-            name="defaultRole"
-            required
-          />
-          <br /> */}
 
           <button
             style={{
