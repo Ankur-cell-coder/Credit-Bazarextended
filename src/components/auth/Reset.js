@@ -8,8 +8,7 @@ function Reset() {
   const [resetToken, setResettoken] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
-  const navigate=useNavigate();
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -32,10 +31,10 @@ function Reset() {
       );
       if (res.data.success) {
         alert(res.data.message);
-        navigate('/')
+        navigate("/");
       } else {
         alert(res.data.message);
-        navigate('/');
+        navigate("/");
       }
     } catch (error) {
       console.log(error);
@@ -46,6 +45,7 @@ function Reset() {
   return (
     <Sign1>
       <div className="formwrap">
+        <div className="contentmain">Welcome To Reset Password Page!</div>
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="email">Please Enter your registered Email</label>
           <br />
@@ -53,7 +53,6 @@ function Reset() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ height: "30px", width: "300px", marginBottom: "20px" }}
             id="email"
             name="email"
             required
@@ -66,27 +65,13 @@ function Reset() {
             type="newPassword"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
-            style={{ height: "30px", width: "300px", marginBottom: "20px" }}
             id="newPassword"
             name="newPassword"
             required
           />
           <br />
 
-          <button
-            style={{
-              fontsize: "20px",
-              color: "white",
-              height: "40px",
-              width: "100%",
-              marginBottom: "20px",
-              backgroundColor: "#3498DB",
-              border: "none",
-            }}
-            type="submit"
-          >
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </Sign1>
@@ -99,15 +84,75 @@ const Sign1 = styled.div`
   display: flex;
   justify-content: center;
   background-position: center;
-  margin-top: 300px;
 
+  /* Styles for the form wrapper */
   .formwrap {
-    width: 600px;
-    border: 2px solid black;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    margin-top: 50px;
+    background-color: #e5e4e2;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   }
+  
+  /* Styles for the welcome text */
+  .contentmain {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 60px;
+  }
+  
+  /* Styles for the form */
   .form {
-    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
+  
+  /* Styles for the form labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  /* Styles for the form inputs */
+  input[type="email"],
+  input[type="newPassword"] {
+    height: 40px;
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  /* Styles for the submit button */
+  button[type="submit"] {
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    width: 300px;
+    margin-bottom: 20px;
+    background-color:orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Optional hover effect for the submit button */
+  button[type="submit"]:hover {
+    background-color: #2079B4;
+  }
+  
+  /* Optional focus effect for the form inputs */
+  input:focus {
+    outline: none;
+    border-color: #2079B4;
+    box-shadow: 0px 0px 5px rgba(32, 121, 180, 0.5);
+  }
+  
 `;

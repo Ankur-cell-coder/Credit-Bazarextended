@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 import { useAuth } from "./context/auth";
 import ForgotPassword from "./components/auth/ForgotPassword";
 import Reset from "./components/auth/Reset";
+import Boffer from "./components/buyers/Boffer";
+import Boffer_detail from "./components/buyers/Boffer_detail";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -34,6 +36,16 @@ function App() {
           path="/bdashboard"
           element={!auth.user ? <Signin /> : <Bdashboard />}
         />
+         <Route
+          path="/boffer"
+          element={!auth.user ? <Signin /> : <Boffer />}
+        />
+        <Route
+          path="/bofferdetails"
+          element={!auth.user ? <Signin /> : <Boffer_detail />}
+        />
+      
+         
         <Route
           path="/sdashboard"
           element={!auth.user ? <Signin /> : <Sdashboard />}

@@ -2,62 +2,20 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../pages/Navbar";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/auth";
 
 function Bdashboard(props) {
-  const [auth, setAuth] = useAuth();
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    setAuth({
-      ...auth,
-      user: null,
-      token: "",
-    });
-    localStorage.removeItem("auth");
-    alert("Logout successfully");
-    navigate("/");
-  };
-
-
-  const handleChange = (e) => {
-   
-    if (e.currentTarget.value == "merchants") {
-        const win = window.open("http://localhost:3000/tdashboard", "_blank");
-        if (win != null) {
-          win.focus();
-        }
-      navigate("/tdashboard");
-    } else if (e.currentTarget.value == "seller") {
-        const win = window.open("http://localhost:3000/sdashboard", "_blank");
-        if (win != null) {
-          win.focus();
-        }
-      navigate("/sdashboard");
-    }
-  };
 
   return (
     <Dash>
-      <div className="rightsection">
-        <div className="options">
-          <select id="option" onChange={(e) => handleChange(e)}>
-            <option value="buyer">Buyers</option>
-            <option value="seller">Seller</option>
-            <option value="merchants">Merchants</option>
-          </select>
-        </div>
-
-        <div className="login">
-          <button onClick={handleClick}>Logout</button>
-        </div>
-      </div>
+      <Navbar/>
 
       <div>
         <div
-          style={{ fontSize: "35px", marginTop: "20px", marginLeft: "695px" }}
+          style={{ fontSize: "35px", marginTop: "20px", marginLeft: "650px" }}
         >
-          FinTech Cashflow Bdashboard
+          FinTech Cashflow Buyer Dashboard
         </div>
         <br />
         <div style={{ fontSize: "20px", marginLeft: "645px" }}>
@@ -92,6 +50,7 @@ function Bdashboard(props) {
           for Finance". This can help maintain positive cashflow for your
           business. Click on the button below to get started.
         </div>
+        <button onClick={()=>{navigate('/boffer')}} className="button">Request For Finance</button>
       </div>
     </Dash>
   );
@@ -111,7 +70,7 @@ const Dash = styled.div`
     height: 150px;
     margin-left: 170px;
     margin-right: 170px;
-    background: #d9dddc;
+    background: #e5e4e2;
   }
 
   .content1 {
@@ -129,5 +88,15 @@ const Dash = styled.div`
     margin-left: 1400px;
     margin-top: -30px;
     justify-content: space-between;
+  }
+
+  .button{
+    margin-left:20px;
+    margin-top:15px;
+    height:36px;
+    background:orange;
+    border:2px solid orange;
+    width:200px;
+    font-size:15px;
   }
 `;

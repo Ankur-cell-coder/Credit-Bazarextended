@@ -1,43 +1,58 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import  { styled } from "styled-components";
+import { styled } from "styled-components";
+import { useAuth } from "../../context/auth";
 
 function Navbar() {
-    const navigate=useNavigate();
-    const handleClick=()=>{
-        alert('Logout successfully');
-        navigate('/');
+  const [auth, setAuth] = useAuth();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    setAuth({
+      ...auth,
+      user: null,
+      token: "",
+    });
+    localStorage.removeItem("auth");
+    alert("Logout successfully");
+    navigate("/");
+  };
+
+  const handleChange = (e) => {
+    if (e.currentTarget.value == "merchants") {
+      const win = window.open("http://localhost:3000/tdashboard", "_blank");
+      if (win != null) {
+        win.focus();
+      }
+      navigate("/tdashboard");
+    } else if (e.currentTarget.value == "seller") {
+      const win = window.open("http://localhost:3000/sdashboard", "_blank");
+      if (win != null) {
+        win.focus();
+      }
+      navigate("/sdashboard");
     }
-   
-  const [role,setRole]=useState("seller");
-
-  if(role=='seller')
-  {
-    navigate('/sdashboard')
-  }
-  else if(role=="buyer")
-  {
-    navigate('/bdashboard');
-  }
-  else{
-    navigate('/tdashboard');
-  }
-
+  };
 
   return (
     <Navbar1>
-      <div className="leftcontent">Credit Bazar</div>
-
       <div className="rightsection">
-        <div className="options">
-          <select id="users">
+        <div>
+          <select
+            id="option"
+            onChange={(e) => handleChange(e)}
+            className="options"
+          >
+            <option value="buyer">Buyers</option>
             <option value="seller">Seller</option>
-            <option value="buyers">Buyers</option>
             <option value="merchants">Merchants</option>
           </select>
         </div>
-        <div className="login">
-        <button onClick={handleClick}>Logout</button>
+
+        <div>
+          <button onClick={handleClick} className="login">
+            Logout
+          </button>
         </div>
       </div>
     </Navbar1>
@@ -47,18 +62,38 @@ function Navbar() {
 export default Navbar;
 
 const Navbar1 = styled.div`
-border:2px solid black;
-display:flex;
-height:80px;
-justify-content:space-between;
+  display: flex;
 
- .rightsection{
-    display:flex;
-    width:300px;
-    justify-content:space-between;
-    margin-right:20px;
-    margin-top:30px;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -30px;
 
- }
+  .rightsection {
+    display: flex;
+    width: 400px;
+    margin-left: 1400px;
+    margin-top: -30px;
+    justify-content: space-between;
+  }
 
+  .options {
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    border: 2px solid black;
+  }
+  .login {
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+  }
+  .button {
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 36px;
+    background: orange;
+    border: 2px solid orange;
+    width: 200px;
+    font-size: 15px;
+  }
 `;
