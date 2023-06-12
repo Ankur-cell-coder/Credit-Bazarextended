@@ -13,20 +13,18 @@ function Signin() {
   const [numberOrEmail, setnumberOrEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
   //routing
   const handleNavigate = (res) => {
-  
     setRole(res.data.user.userDetails.defaultRole);
-    if (res.data.user.userDetails.defaultRole == "seller") {
+
+    if (res.data.user.userDetails.defaultRole === "seller") {
       navigate("/sdashboard");
-    } else if (res.data.user.userDetails.defaultRole == "buyer") {
+    } else if (res.data.user.userDetails.defaultRole === "buyer") {
       navigate("/bdashboard");
     } else {
       navigate("/tdashboard");
     }
   };
-
 
   ///login
   const handleSubmit = async (e) => {
@@ -36,6 +34,7 @@ function Signin() {
         numberOrEmail,
         password,
       });
+      console.log(res.data.user);
       if (res.data.success) {
         alert(res.data.message);
         setAuth({
@@ -46,7 +45,6 @@ function Signin() {
         console.log({ auth });
         localStorage.setItem("auth", JSON.stringify(res.data));
         console.log("successfull");
-
         handleNavigate(res);
       } else {
         alert(res.data.message);
@@ -66,7 +64,6 @@ function Signin() {
       alert("something went wrong");
     }
   };
-
 
   return (
     <Sign1>
@@ -126,9 +123,7 @@ function Signin() {
         </div>
 
         <div>
-          <Link to={'/forgotpassword'}>
-           Forgot Password ?
-          </Link>
+          <Link to={"/forgotpassword"}>Forgot Password ?</Link>
         </div>
       </div>
     </Sign1>
