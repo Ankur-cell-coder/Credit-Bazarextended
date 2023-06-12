@@ -26,16 +26,17 @@ function ForgotPassword() {
 
   return (
     <Sign1>
-       
+     
       <div className="formwrap">
+      <div className="content" style={{marginBottom:"80px"}}>Welcome To Forgot Password Page!</div>
          <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="email">Please Enter your registered Email</label>
+          <label htmlFor="email" style={{marginLeft:"-250px"}}>Please Enter your registered Email</label>
           <br />
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ height: "30px", width: "300px", marginBottom: "20px" }}
+          
             id="email"
             name="email"
             required
@@ -44,15 +45,7 @@ function ForgotPassword() {
 
 
           <button
-            style={{
-              fontsize: "20px",
-              color: "white",
-              height: "40px",
-              width: "100%",
-              marginBottom: "20px",
-              backgroundColor: "#3498DB",
-              border: "none",
-            }}
+          
             type="submit"
           >
             Submit
@@ -68,18 +61,81 @@ function ForgotPassword() {
 export default ForgotPassword;
 
 const Sign1 = styled.div`
-  display: flex;
-  justify-content: center;
-  background-position: center;
-  margin-top: 300px;
+display:flex;
+justify-content:center;
+/* Styles for the page background */
+body {
+  background-color: #e5e4e2;
+}
 
-  .formwrap {
-    width: 600px;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-  }
-  .form {
-    width: 310px;
-  }
+/* Styles for the form wrapper */
+.formwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: #e5e4e2;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for the welcome text */
+.content {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Styles for the form */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Styles for the form labels */
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+/* Styles for the form inputs */
+input[type="email"] {
+  height: 40px;
+  width: 500px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+/* Styles for the submit button */
+button[type="submit"] {
+  font-size: 20px;
+  color: white;
+  height: 40px;
+  width: 500px;
+  margin-bottom: 20px;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styles for the "Forgot Password" link */
+div > a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: orange;
+}
+
+/* Optional hover effect for links */
+div > a:hover {
+  text-decoration: underline;
+}
+
+
 `;

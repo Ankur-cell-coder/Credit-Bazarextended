@@ -58,92 +58,59 @@ function Signup() {
 
   return (
     <Sign1>
+      
       <div className="formwrap">
+      <div style={{marginBottom:"40px"}}>Welcome To SignUp Page</div>
         <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="name">Your Name</label>
+          <label htmlFor="name" style={{marginLeft:"-212px"}}>Your Name</label>
           <br />
           <input
             type="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            style={{
-              height: "30px",
-              width: "300px",
-              marginBottom: "20px",
-              marginTop: "20px",
-              marginLeft: "2px",
-            }}
             id="name"
             name="name"
             required
           />
           <br />
 
-          <label htmlFor="number">number</label>
+          <label htmlFor="number" style={{marginLeft:"-206px"}}>Phone Number</label>
           <br />
           <input
             type="name"
             value={number}
             onChange={(e) => setnumber(e.target.value)}
-            style={{
-              height: "30px",
-              width: "300px",
-              marginBottom: "20px",
-              marginTop: "20px",
-              marginLeft: "2px",
-            }}
             id="number"
             name="number"
             required
           />
           <br />
 
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" style={{marginLeft:"-259px"}}>Email</label>
           <br />
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ height: "30px", width: "300px", marginBottom: "20px" }}
             id="email"
             name="email"
             required
           />
           <br />
 
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" style={{marginLeft:"-242px"}}>Password</label>
           <br />
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={{
-              height: "30px",
-              width: "300px",
-              marginBottom: "20px",
-              marginTop: "20px",
-              marginLeft: "2px",
-            }}
             id="password"
             name="password"
             required
           />
           <br />
 
-          <button
-            style={{
-              fontsize: "20px",
-              color: "white",
-              height: "40px",
-              width: "100%",
-              marginBottom: "20px",
-              backgroundColor: "#3498DB",
-              border: "none",
-            }}
-            type="submit"
-          >
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </form>
 
         <div>
@@ -158,18 +125,84 @@ function Signup() {
 export default Signup;
 
 const Sign1 = styled.div`
-  display: flex;
-  justify-content: center;
-  background-position: center;
-  margin-top: 300px;
-
-  .formwrap {
-    width: 600px;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
+  /* Styles for the page background */
+  display:flex;
+  justify-content:center;
+  body {
+    background-color: #e5e4e2;
   }
+
+  /* Styles for the form wrapper */
+  .formwrap {
+    display: flex;
+    width:600px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #e5e4e2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Styles for the welcome text */
+  .formwrap > div:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+
+  /* Styles for the form */
   .form {
-    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Styles for the form labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display:flex;
+    color: #333333;
+  }
+
+  /* Styles for the form inputs */
+  input[type="name"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"] {
+    height: 30px;
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+
+  /* Styles for the submit button */
+  button[type="submit"] {
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    width: 320px;
+    margin-bottom: 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Styles for the "have an account?" and "Login for free" links */
+  div > a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: orange;
+  }
+
+  /* Optional hover effect for links */
+  div > a:hover {
+    text-decoration: underline;
   }
 `;
