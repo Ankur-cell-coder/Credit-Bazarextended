@@ -22,7 +22,7 @@ function Signin() {
     } else if (res.data.user.userDetails.defaultRole === "buyer") {
       navigate("/buyersdashboard");
     } else {
-      navigate("/tradersdashboard");
+      navigate("/financesdashboard");
     }
   };
 

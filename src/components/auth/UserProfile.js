@@ -19,7 +19,7 @@ function UserProfile() {
     } else if (defaultRole === "buyer") {
       navigate("/buyersdashboard");
     } else {
-      navigate("/tradersdashboard");
+      navigate("/financesdashboard");
     }
   };
 

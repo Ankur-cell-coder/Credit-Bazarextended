@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
@@ -22,17 +20,23 @@ function Navbarseller() {
 
   const handleChange = (e) => {
     if (e.currentTarget.value == "merchants") {
-      const win = window.open("http://localhost:3000/tdashboard", "_blank");
+      const win = window.open(
+        "http://localhost:3000/financesdashboard",
+        "_blank"
+      );
       if (win != null) {
         win.focus();
       }
-      navigate("/tdashboard");
-    } else if (e.currentTarget.value == "seller") {
-      const win = window.open("http://localhost:3000/sdashboard", "_blank");
+      //  navigate("/sellersdashboard");
+    } else if (e.currentTarget.value == "buyer") {
+      const win = window.open(
+        "http://localhost:3000/buyersdashboard",
+        "_blank"
+      );
       if (win != null) {
         win.focus();
       }
-      navigate("/sdashboard");
+      //  navigate("/sellersdashboard");
     }
   };
 
@@ -42,12 +46,13 @@ function Navbarseller() {
         <div>
           <select
             id="option"
+            value="seller"
             onChange={(e) => handleChange(e)}
             className="options"
           >
             <option value="seller">Sellers</option>
             <option value="buyer">Buyers</option>
-            <option value="merchants">Traders</option>
+            <option value="merchants">Finances</option>
           </select>
         </div>
 

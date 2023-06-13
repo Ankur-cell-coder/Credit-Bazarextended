@@ -20,17 +20,23 @@ function Navbar() {
 
   const handleChange = (e) => {
     if (e.currentTarget.value == "merchants") {
-      const win = window.open("http://localhost:3000/tdashboard", "_blank");
+      const win = window.open(
+        "http://localhost:3000/financesdashboard",
+        "_blank"
+      );
       if (win != null) {
         win.focus();
       }
-      navigate("/tdashboard");
+      // navigate("/buyersdashboard");
     } else if (e.currentTarget.value == "seller") {
-      const win = window.open("http://localhost:3000/sdashboard", "_blank");
+      const win = window.open(
+        "http://localhost:3000/sellersdashboard",
+        "_blank"
+      );
       if (win != null) {
         win.focus();
       }
-      navigate("/sdashboard");
+      // navigate("/buyersdashboard");
     }
   };
 
@@ -40,12 +46,13 @@ function Navbar() {
         <div>
           <select
             id="option"
+            value="buyer"
             onChange={(e) => handleChange(e)}
             className="options"
           >
             <option value="buyer">Buyers</option>
             <option value="seller">Sellers</option>
-            <option value="merchants">Traders</option>
+            <option value="merchants">Finances</option>
           </select>
         </div>
 

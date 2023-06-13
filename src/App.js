@@ -3,17 +3,13 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Signin from "./components/auth/Signin";
 import Signup from "./components/auth/Signup";
 import UserProfile from "./components/auth/UserProfile";
-import Tdashboard from "./components/traders/Tradersdashboard";
+import Tdashboard from "./components/finance/Financedashboard";
 import Bdashboard from "./components/buyers/Buyersdashboard";
 import Sdashboard from "./components/seller/SellerDashboard";
 import { styled } from "styled-components";
-import { useEffect, useState } from "react";
 import { useAuth } from "./context/auth";
 import ForgotPassword from "./components/auth/ForgotPassword";
 import Reset from "./components/auth/Reset";
-import Boffer from "./components/buyers/Boffer";
-import Boffer_detail from "./components/buyers/Boffer_detail";
-import Backnowledgement from "./components/buyers/Backnowledgement";
 import SellerAcknowledgement from "./components/seller/SellerAcknowledgement";
 import SellerOffer from "./components/seller/SellerOffer";
 import SellerOfferDetails from "./components/seller/SellerOfferDetails";
@@ -32,10 +28,10 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
-        //traders
+        //finances
         //routes////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route
-          path="/tradersdashboard"
+          path="/financesdashboard"
           element={!auth.user ? <Signin /> : <Tdashboard />}
         />
         //buyers//
@@ -43,18 +39,6 @@ function App() {
         <Route
           path="/buyersdashboard"
           element={!auth.user ? <Signin /> : <Bdashboard />}
-        />
-        <Route
-          path="/buyersoffer"
-          element={!auth.user ? <Signin /> : <Boffer />}
-        />
-        <Route
-          path="/buyersofferdetails"
-          element={!auth.user ? <Signin /> : <Boffer_detail />}
-        />
-        <Route
-          path="/buyersacknowledgement"
-          element={!auth.user ? <Signin /> : <Backnowledgement />}
         />
         //seller// routes
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////

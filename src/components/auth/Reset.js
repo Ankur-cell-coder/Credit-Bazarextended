@@ -97,7 +97,7 @@ const Sign1 = styled.div`
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   }
-  
+
   /* Styles for the welcome text */
   .contentmain {
     font-size: 24px;
@@ -105,7 +105,7 @@ const Sign1 = styled.div`
     color: #333333;
     margin-bottom: 60px;
   }
-  
+
   /* Styles for the form */
   .form {
     display: flex;
@@ -113,14 +113,14 @@ const Sign1 = styled.div`
     align-items: center;
     width: 100%;
   }
-  
+
   /* Styles for the form labels */
   label {
     font-weight: bold;
     margin-bottom: 10px;
     color: #333333;
   }
-  
+
   /* Styles for the form inputs */
   input[type="email"],
   input[type="newPassword"] {
@@ -129,7 +129,7 @@ const Sign1 = styled.div`
     margin-bottom: 10px;
     padding: 5px;
   }
-  
+
   /* Styles for the submit button */
   button[type="submit"] {
     font-size: 20px;
@@ -137,22 +137,21 @@ const Sign1 = styled.div`
     height: 40px;
     width: 300px;
     margin-bottom: 20px;
-    background-color:orange;
+    background-color: orange;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   /* Optional hover effect for the submit button */
   button[type="submit"]:hover {
-    background-color: #2079B4;
+    background-color: #2079b4;
   }
-  
+
   /* Optional focus effect for the form inputs */
   input:focus {
     outline: none;
-    border-color: #2079B4;
+    border-color: #2079b4;
     box-shadow: 0px 0px 5px rgba(32, 121, 180, 0.5);
   }
-  
 `;
