@@ -73,7 +73,7 @@ function SellerReceivedOfferAcknowledgement() {
             <button
               class="accept-btn"
               onClick={() => {
-                navigate("/");
+                navigate("/sellersdashboard");
               }}
             >
               Ok
