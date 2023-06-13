@@ -18,11 +18,11 @@ function Signin() {
     setRole(res.data.user.userDetails.defaultRole);
 
     if (res.data.user.userDetails.defaultRole === "seller") {
-      navigate("/sdashboard");
+      navigate("/sellersdashboard");
     } else if (res.data.user.userDetails.defaultRole === "buyer") {
-      navigate("/bdashboard");
+      navigate("/buyersdashboard");
     } else {
-      navigate("/tdashboard");
+      navigate("/tradersdashboard");
     }
   };
 

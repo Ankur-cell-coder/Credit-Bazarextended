@@ -1,14 +1,14 @@
 import React from "react";
 import { styled } from "styled-components";
-import Navbar from "../pages/Navbar";
 import { useNavigate } from "react-router-dom";
+import Navbarseller from "../pages/Navbarseller";
 
 
-function Boffer_detail() {
+function SellerOfferDetails() {
   const navigate=useNavigate();
   return (
     <>
-      <Navbar />
+      <Navbarseller />
       <Details1>
         <div className="section1">Offer Details</div>
 
@@ -61,7 +61,7 @@ function Boffer_detail() {
         <button
           type="button"
           onClick={() => {
-            navigate("/buyersacknowledgement");
+            navigate("/sellersacknowledgement");
           }}
         >
           Accept
@@ -71,7 +71,7 @@ function Boffer_detail() {
   );
 }
 
-export default Boffer_detail;
+export default SellerOfferDetails;
 
 const Details1 = styled.div`
   margin-left: 300px;

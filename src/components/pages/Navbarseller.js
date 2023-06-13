@@ -1,9 +1,11 @@
+
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { useAuth } from "../../context/auth";
 
-function Navbar() {
+function Navbarseller() {
   const [auth, setAuth] = useAuth();
   const navigate = useNavigate();
 
@@ -35,7 +37,7 @@ function Navbar() {
   };
 
   return (
-    <Navbar1>
+    <Navbarseller1>
       <div className="rightsection">
         <div>
           <select
@@ -43,8 +45,8 @@ function Navbar() {
             onChange={(e) => handleChange(e)}
             className="options"
           >
-            <option value="buyer">Buyers</option>
             <option value="seller">Sellers</option>
+            <option value="buyer">Buyers</option>
             <option value="merchants">Traders</option>
           </select>
         </div>
@@ -55,13 +57,13 @@ function Navbar() {
           </button>
         </div>
       </div>
-    </Navbar1>
+    </Navbarseller1>
   );
 }
 
-export default Navbar;
+export default Navbarseller;
 
-const Navbar1 = styled.div`
+const Navbarseller1 = styled.div`
   display: flex;
 
   flex-direction: column;
