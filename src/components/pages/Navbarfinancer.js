@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { useAuth } from "../../context/auth";
 
-function Navbar() {
+function Navbarfinancer() {
   const [auth, setAuth] = useAuth();
   const navigate = useNavigate();
 
@@ -19,14 +19,14 @@ function Navbar() {
   };
 
   const handleChange = (e) => {
-    if (e.currentTarget.value == "merchants") {
-      const win = window.open(
-        "http://localhost:3000/financesdashboard",
-        "_blank"
-      );
-      if (win != null) {
-        win.focus();
-      }
+    if (e.currentTarget.value == "buyer") {
+        const win = window.open(
+          "http://localhost:3000/buyersdashboard",
+          "_blank"
+        );
+        if (win != null) {
+          win.focus();
+        }
       // navigate("/buyersdashboard");
     } else if (e.currentTarget.value == "seller") {
       const win = window.open(
@@ -41,18 +41,19 @@ function Navbar() {
   };
 
   return (
-    <Navbar1>
+    <Navbarfinancer1>
       <div className="rightsection">
         <div>
           <select
             id="option"
-            value="buyer"
+            value="merchants"
             onChange={(e) => handleChange(e)}
             className="options"
           >
+             <option value="merchants">Finances</option>
             <option value="buyer">Buyers</option>
             <option value="seller">Sellers</option>
-            <option value="merchants">Finances</option>
+           
           </select>
         </div>
 
@@ -62,13 +63,13 @@ function Navbar() {
           </button>
         </div>
       </div>
-    </Navbar1>
+    </Navbarfinancer1>
   );
 }
 
-export default Navbar;
+export default Navbarfinancer;
 
-const Navbar1 = styled.div`
+const Navbarfinancer1 = styled.div`
 display: flex;
 background:orange;
 

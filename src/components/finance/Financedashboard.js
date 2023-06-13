@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "../pages/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth";
+import Navbarfinancer from "../pages/Navbarfinancer";
 
 function Tdashboard() {
   const [auth, setAuth] = useAuth();
@@ -37,25 +38,13 @@ function Tdashboard() {
 
   return (
     <Dash>
-      <div className="rightsection">
-        <div className="options">
-          <select id="option" onChange={(e) => handleChange(e)}>
-            <option value="merchants">Finances</option>
-            <option value="seller">Seller</option>
-            <option value="buyer">Buyers</option>
-          </select>
-        </div>
-
-        <div className="login">
-          <button onClick={handleClick}>Logout</button>
-        </div>
-      </div>
+     <Navbarfinancer/>
 
       <div>
         <div
           style={{ fontSize: "35px", marginTop: "20px", marginLeft: "695px" }}
         >
-          FinTech Cashflow Tdashboard
+          FinTech Cashflow Finance dashboard
         </div>
         <br />
         <div style={{ fontSize: "20px", marginLeft: "645px" }}>
