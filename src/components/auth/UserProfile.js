@@ -67,7 +67,7 @@ function UserProfile() {
           <select id="option" onChange={(e) => setDefaultRole(e.target.value)}>
             <option value="seller">Seller</option>
             <option value="buyer">Buyers</option>
-            <option value="merchants">Merchants</option>
+            <option value="merchants">Finances</option>
           </select>
 
           <button type="submit">Submit</button>
