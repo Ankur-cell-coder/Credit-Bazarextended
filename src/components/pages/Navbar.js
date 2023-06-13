@@ -70,6 +70,7 @@ export default Navbar;
 
 const Navbar1 = styled.div`
   display: flex;
+  background:orange;
 
   flex-direction: column;
   justify-content: center;
@@ -84,16 +85,17 @@ const Navbar1 = styled.div`
   }
 
   .options {
-    width: 200px;
-    height: 60px;
+    width: 140px;
+    height: 40px;
     font-size: 20px;
     border: 2px solid black;
   }
   .login {
     width: 150px;
-    height: 60px;
+    height: 40px;
     font-size: 20px;
   }
+
   .button {
     margin-left: 20px;
     margin-top: 15px;

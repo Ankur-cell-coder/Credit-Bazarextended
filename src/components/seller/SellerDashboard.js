@@ -8,7 +8,7 @@ function Sdashboard(props) {
 
   return (
     <Dash>
-      <Navbarseller/>
+      <Navbarseller />
       <div>
         <div
           style={{ fontSize: "35px", marginTop: "20px", marginLeft: "650px" }}
@@ -57,6 +57,22 @@ function Sdashboard(props) {
           Request For Finance
         </button>
       </div>
+
+      <div className="content">
+        <div className="content1">Received Offers</div>
+        <br />
+        <div className="content2">
+          Here You will get all received Offers from financier.
+        </div>
+        <button
+          onClick={() => {
+            navigate("/sellersreceivedoffers");
+          }}
+          className="button"
+        >
+          View Received Offers.
+        </button>
+      </div>
     </Dash>
   );
 }
@@ -103,5 +119,8 @@ const Dash = styled.div`
     border: 2px solid orange;
     width: 200px;
     font-size: 15px;
+  }
+  .button:hover {
+    background-color: #0056b3;
   }
 `;
