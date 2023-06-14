@@ -73,6 +73,40 @@ function Sdashboard(props) {
           View Received Offers.
         </button>
       </div>
+
+      <div className="content">
+        <div className="content1">Disbursements</div>
+        <br />
+        <div className="content2">
+          This section provides information about the disbursements made to your
+          account. You can track the disbursement details and manage the
+          funds accordingly.
+        </div>
+        <button
+          onClick={() => {
+            navigate("/sellersdisbursement");
+          }}
+          className="button"
+        >
+         View disbursements
+        </button>
+      </div>
+
+      <div className="content">
+        <div className="content1">Settlements</div>
+        <br />
+        <div className="content2">
+        In this section, you can view the settlements made for your outstanding payments. It provides an overview of the transactions and helps you maintain a clear record.
+        </div>
+        <button
+          onClick={() => {
+            navigate("/sellerssettlements");
+          }}
+          className="button"
+        >
+          View Settlements.
+        </button>
+      </div>
     </Dash>
   );
 }

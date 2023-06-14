@@ -15,6 +15,10 @@ import SellerOffer from "./components/seller/SellerOffer";
 import SellerOfferDetails from "./components/seller/SellerOfferDetails";
 import SellerreceivedOffers from "./components/seller/SellerreceivedOffers";
 import SellerReceivedOfferAcknowledgement from "./components/seller/SellerReceivedOfferAcknowledgement";
+import SellerDisbursements from "./components/seller/SellerDisbursements";
+import SellerSettlements from "./components/seller/SellerSettlements";
+import SellerPayments from "./components/seller/SellerPayments";
+import SellerPaymentAcknowledgement from "./components/seller/SellerPaymentAcknowledgement";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -74,6 +78,37 @@ function App() {
             !auth.user ? <Signin /> : <SellerReceivedOfferAcknowledgement />
           }
         />
+         <Route
+          path="/sellersdisbursement"
+          element={
+            !auth.user ? <Signin /> : <SellerDisbursements />
+          }
+        />
+         <Route
+          path="/sellerssettlements"
+          element={
+            !auth.user ? <Signin /> : <SellerSettlements />
+          }
+        />
+         <Route
+          path="/sellerssettlements"
+          element={
+            !auth.user ? <Signin /> : <SellerSettlements />
+          }
+        />
+         <Route
+          path="/sellerspayment"
+          element={
+            !auth.user ? <Signin /> : <SellerPayments />
+          }
+        />
+         <Route
+          path="/sellerspaymentacknowledgement"
+          element={
+            !auth.user ? <Signin /> : <SellerPaymentAcknowledgement/>
+          }
+        />
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route path="/reset-password" element={<Reset />} />
       </Routes>
