@@ -1,12 +1,25 @@
 import { React, useState } from "react";
 import styled from "styled-components";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function UserProfile() {
   const navigate = useNavigate();
-  const [address, setAddress] = useState("");
+
+  //personal details section
+  const [name, setName] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [companygst, setCompanyGst] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+
+  //bank details section
+  const [accountNo, setAccountNo] = useState("");
+  const [ifscCode, setIfscCode] = useState("");
+  const [receipientName, setReceipientName] = useState("");
+  const [bankName, setBankName] = useState("");
+  const [branch, setBranch] = useState("");
 
   const location = useLocation();
   console.log(location.state.id);
@@ -28,7 +41,6 @@ function UserProfile() {
     try {
       const res = await axios.post("http://localhost:3005/user/add-details", {
         id: `${location.state.id}`,
-        address,
         defaultRole,
       });
       if (res.data.success) {
@@ -48,29 +60,150 @@ function UserProfile() {
     <User1>
       <div className="formwrap">
         <div className="content">Welcome To User Profile Page!</div>
+
         <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="address">Please Enter Your Address</label>
-          <br />
-          <input
-            type="address"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            id="address"
-            name="address"
-            required
-          />
-          <br />
+          {/* //personal details section */}
+          <div className="pdetail">
+            <h2>Personal Details:</h2>
+            <label htmlFor="name">Name:</label>
+            <br />
+            <input
+              type="name"
+              value={name}
+              // onChange={(e) => setname(e.target.value)}
+              id="name"
+              name="name"
+              required
+            />
+            <br />
 
-          <label htmlFor="defaultRole">Please Select your defaultRole</label>
-          <br />
+            <label htmlFor="companyName">Comapny Name:</label>
+            <br />
+            <input
+              type="companyName"
+              value={companyName}
+              // onChange={(e) => setCompanyName(e.target.value)}
+              id="companyName"
+              name="companyName"
+              required
+            />
+            <br />
 
-          <select id="option" onChange={(e) => setDefaultRole(e.target.value)}>
-            <option value="seller">Seller</option>
-            <option value="buyer">Buyers</option>
-            <option value="merchants">Finances</option>
-          </select>
+            <label htmlFor="companygst">Comapny GST ID:</label>
+            <br />
+            <input
+              type="companygst"
+              value={companygst}
+              onChange={(e) => setCompanyGst(e.target.value)}
+              id="companygst"
+              name="companygst"
+              required
+            />
+            <br />
 
-          <button type="submit">Submit</button>
+            <label htmlFor="phone">Phone Number:</label>
+            <br />
+            <input
+              type="phone"
+              value={phone}
+              // onChange={(e) => setPhone(e.target.value)}
+              id="phone"
+              name="phone"
+              required
+            />
+            <br />
+
+            <label htmlFor="email">Email:</label>
+            <br />
+            <input
+              type="email"
+              value={email}
+              // onChange={(e) => setemail(e.target.value)}
+              id="email"
+              name="email"
+              required
+            />
+            <br />
+          </div>
+
+          {/* ///Bank detail section///////////////// */}
+          <div className="bdetails">
+            <h2>Bank Details</h2>
+            <label htmlFor="accountNo">Account Number:</label>
+            <br />
+            <input
+              type="accountNo"
+              value={accountNo}
+              onChange={(e) => setAccountNo(e.target.value)}
+              id="accountNo"
+              name="accountNo"
+              required
+            />
+            <br />
+
+            <label htmlFor="ifscCode">IFSC Code:</label>
+            <br />
+            <input
+              type="ifscCode"
+              value={ifscCode}
+              onChange={(e) => setIfscCode(e.target.value)}
+              id="ifscCode"
+              name="ifscCode"
+              required
+            />
+            <br />
+
+            <label htmlFor="receipientName">Receipient Name:</label>
+            <br />
+            <input
+              type="receipientName"
+              value={receipientName}
+              onChange={(e) => setReceipientName(e.target.value)}
+              id="receipientName"
+              name="receipientName"
+              required
+            />
+            <br />
+
+            <label htmlFor="bankName">Bank Name:</label>
+            <br />
+            <input
+              type="bankName"
+              value={bankName}
+              onChange={(e) => setBankName(e.target.value)}
+              id="bankName"
+              name="bankName"
+              required
+            />
+            <br />
+
+            <label htmlFor="branch">Branch:</label>
+            <br />
+            <input
+              type="branch"
+              value={branch}
+              onChange={(e) => setBranch(e.target.value)}
+              id="branch"
+              name="branch"
+              required
+            />
+            <br />
+          </div>
+
+          <div className="persona">
+            <h2>Persona</h2>
+            <label htmlFor="defaultRole">Select default Persona:</label>
+            <br />
+            <select
+              id="option"
+              onChange={(e) => setDefaultRole(e.target.value)}
+            >
+              <option value="seller">Seller</option>
+              <option value="buyer">Buyers</option>
+              <option value="merchants">Finances</option>
+            </select>
+            <button type="submit">Submit</button>
+          </div>
         </form>
       </div>
     </User1>
@@ -80,86 +213,65 @@ function UserProfile() {
 export default UserProfile;
 
 const User1 = styled.div`
-  display: flex;
-  justify-content: center;
-  background-position: center;
-  margin-top: 30px;
-
-  /* Styles for the form wrapper */
+  padding: 40px;
   .formwrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    background-color: #f0f0f0;
-    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-  /* Styles for the welcome text */
   .content {
     font-size: 24px;
     font-weight: bold;
-    color: #333333;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
-  /* Styles for the form */
   .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    margin-bottom: 20px;
   }
 
-  /* Styles for the form labels */
+  .pdetail h2,
+  .bdetails h2,
+  .persona h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
   label {
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #333333;
   }
 
-  /* Styles for the form inputs */
-  input[type="address"] {
-    height: 40px;
-    width: 300px;
-    margin-bottom: 20px;
-    padding: 5px;
-  }
-
-  /* Styles for the select dropdown */
+  input,
   select {
-    height: 40px;
-    width: 300px;
-    margin-bottom: 20px;
-    padding: 5px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
 
-  /* Styles for the submit button */
   button[type="submit"] {
-    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
     color: white;
-    height: 40px;
-    width: 300px;
-    margin-bottom: 20px;
-    background-color: orange;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
   }
 
-  /* Optional hover effect for the submit button */
   button[type="submit"]:hover {
-    background-color: #2079b4;
+    background-color: #45a049;
   }
 
-  /* Optional focus effect for the form inputs and select dropdown */
-  input:focus,
-  select:focus {
-    outline: none;
-    border-color: #2079b4;
-    box-shadow: 0px 0px 5px rgba(32, 121, 180, 0.5);
+  .pdetail,
+  .bdetails,
+  .persona {
+    margin-bottom: 30px;
   }
 `;

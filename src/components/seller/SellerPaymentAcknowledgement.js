@@ -25,9 +25,15 @@ function SellerPaymentAcknowledgement() {
         </div>
         <div className="message">
           <p>Thank you for using our services!</p>
-          <a href="/sellersdashboard" className="btn">
+
+          <button
+            onClick={() => {
+              navigate("/sellersdashboard");
+            }}
+            className="btn"
+          >
             Back to Dashboard
-          </a>
+          </button>
         </div>
       </Sellerack1>
     </>

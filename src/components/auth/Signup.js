@@ -9,6 +9,7 @@ import { useAuth } from "../../context/auth";
 function Signup() {
   const [auth, setAuth] = useAuth();
   const [name, setName] = useState("");
+  const [companyName, setCompanyName] = useState("");
   const [number, setnumber] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,6 +17,12 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if(name===""&&companyName==="")
+    {
+      alert("Name or Comapny Name one Field is required");
+    }
+    else{
     try {
       const res = await axios.post("http://localhost:3005/user/signup", {
         name,
@@ -54,15 +61,17 @@ function Signup() {
       console.log(error);
       alert("something went wrong");
     }
+  }
   };
 
   return (
     <Sign1>
-      
       <div className="formwrap">
-      <div style={{marginBottom:"40px"}}>Welcome To SignUp Page</div>
+        <div style={{ marginBottom: "40px" }}>Welcome To SignUp Page</div>
         <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="name" style={{marginLeft:"-212px"}}>Your Name</label>
+          <label htmlFor="name" style={{ marginLeft: "-212px" }}>
+            Your Name
+          </label>
           <br />
           <input
             type="name"
@@ -70,11 +79,27 @@ function Signup() {
             onChange={(e) => setName(e.target.value)}
             id="name"
             name="name"
-            required
+            // required
           />
           <br />
 
-          <label htmlFor="number" style={{marginLeft:"-206px"}}>Phone Number</label>
+          <label htmlFor="companyName" style={{ marginLeft: "-200px" }}>
+            Company Name
+          </label>
+          <br />
+          <input
+            type="companyName"
+            value={companyName}
+            onChange={(e) => setCompanyName(e.target.value)}
+            id="companyName"
+            name="companyName"
+            // required
+          />
+          <br />
+
+          <label htmlFor="number" style={{ marginLeft: "-206px" }}>
+            Phone Number
+          </label>
           <br />
           <input
             type="name"
@@ -86,7 +111,9 @@ function Signup() {
           />
           <br />
 
-          <label htmlFor="email" style={{marginLeft:"-259px"}}>Email</label>
+          <label htmlFor="email" style={{ marginLeft: "-259px" }}>
+            Email
+          </label>
           <br />
           <input
             type="email"
@@ -98,7 +125,9 @@ function Signup() {
           />
           <br />
 
-          <label htmlFor="password" style={{marginLeft:"-242px"}}>Password</label>
+          <label htmlFor="password" style={{ marginLeft: "-242px" }}>
+            Password
+          </label>
           <br />
           <input
             type="password"
@@ -126,8 +155,8 @@ export default Signup;
 
 const Sign1 = styled.div`
   /* Styles for the page background */
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   body {
     background-color: #e5e4e2;
   }
@@ -135,7 +164,7 @@ const Sign1 = styled.div`
   /* Styles for the form wrapper */
   .formwrap {
     display: flex;
-    width:600px;
+    width: 600px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -166,7 +195,7 @@ const Sign1 = styled.div`
   label {
     font-weight: bold;
     margin-bottom: 5px;
-    display:flex;
+    display: flex;
     color: #333333;
   }
 
@@ -174,7 +203,8 @@ const Sign1 = styled.div`
   input[type="name"],
   input[type="number"],
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="companyName"] {
     height: 30px;
     width: 300px;
     margin-bottom: 20px;
