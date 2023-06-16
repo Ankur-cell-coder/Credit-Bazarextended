@@ -10,6 +10,7 @@ function  SellerAcknowledgement() {
     <>
     <Navbarseller/>
    <Acko1>
+    <div>
     <div className='content1'>
     Request for offer Acknowledgment
     </div>
@@ -35,7 +36,7 @@ function  SellerAcknowledgement() {
     <button onClick={()=>{navigate('/sellersdashboard')}} className='button'>
         Back To Dashboard
     </button>
-
+    </div>
    </Acko1>
    </>
   )
@@ -44,23 +45,30 @@ function  SellerAcknowledgement() {
 export default  SellerAcknowledgement
 
 const Acko1=styled.div`
-
+  
+display:flex;
+justify-content:center;
   .content1{
+    display:flex;
+justify-content:center;
     font-size:35px;
     margin-top:80px;
-    margin-left:650px;
+    // margin-left:650px;
   }
   .wrapper{
     width:600px;
     height:150px;
     margin-top:60px;
     border:2px solid black;
-    margin-left:620px;
+    display:flex;
+justify-content:center;
+flex-direction:column;
     background:#e5e4e2;
   }
   .internalcontent{
     font-size:24px;
-    margin-left:50px;
+    display:flex;
+    justify-content:center;
     margin-top:30px;
   }
   .internal{
@@ -73,16 +81,19 @@ const Acko1=styled.div`
   .status{
     display:flex;
     margin-top:40px;
-    margin-left:830px;
+    display:flex;
+justify-content:center;
   }
   .thankyou{
-    margin-left:810px;
+    display:flex;
+    justify-content:center;
     margin-top:40px;
   }
   .button{
-    margin-left:780px;
+   
     margin-top:40px;
     width:300px;
+    margin-left:160px;
     height:50px;
     font-size:20px;
     background:orange;

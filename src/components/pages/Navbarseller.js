@@ -71,14 +71,16 @@ export default Navbarseller;
 const Navbarseller1 = styled.div`
   display: flex;
   background:orange;
-  
   flex-direction: column;
   justify-content: center;
+  margin-left: 1100px;
+  @media only screen and (min-width: 1800px){
+    margin-left:1400px;
+  }
   
   .rightsection {
     display: flex;
     width: 400px;
-    margin-left: 1400px;
     margin-top: -30px;
     justify-content: space-between;
   }

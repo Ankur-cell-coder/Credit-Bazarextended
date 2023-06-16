@@ -88,7 +88,7 @@ function SellerSettlements() {
               </tbody>
             </table>
           </div>
-          <button style={{width:"200px",height:"50px",background:"orange",fontSize:"20px",marginLeft:"700px"}} onClick={() => navigate("/sellerspayment")}>
+          <button className="button" onClick={() => navigate("/sellerspayment")}>
             Make Payment
           </button>
         </div>
@@ -148,5 +148,18 @@ const Seller1 = styled.div`
   }
   .btn:hover {
     background-color: #0056b3;
+  }
+  .button{
+   
+    margin-top:40px;
+    width:300px;
+    margin-left:540px;
+    height:50px;
+    font-size:20px;
+    background:orange;
+    border:2px solid orange;
+    @media only screen and (min-width: 1800px){
+      margin-left:640px;
+    }
   }
 `;

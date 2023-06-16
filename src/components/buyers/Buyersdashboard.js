@@ -12,13 +12,24 @@ function Bdashboard(props) {
       <Navbar/>
 
       <div>
-        <div
-          style={{ fontSize: "35px", marginTop: "20px", marginLeft: "650px" }}
+      <div
+          style={{
+            display: "flex",
+            fontSize: "35px",
+            marginTop: "20px",
+            justifyContent: "center",
+          }}
         >
-          FinTech Cashflow Buyer Dashboard
+          FinTech Cashflow Buyers Dashboard
         </div>
         <br />
-        <div style={{ fontSize: "20px", marginLeft: "645px" }}>
+        <div
+          style={{
+            fontSize: "20px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           Welcome! See your current and projected cashflow status below.
         </div>
       </div>
@@ -82,13 +93,7 @@ const Dash = styled.div`
     font-size: 17px;
     margin-left: 30px;
   }
-  .rightsection {
-    display: flex;
-    width: 400px;
-    margin-left: 1400px;
-    margin-top: -30px;
-    justify-content: space-between;
-  }
+ 
 
   .button{
     margin-left:20px;

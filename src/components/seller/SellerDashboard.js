@@ -11,12 +11,23 @@ function Sdashboard(props) {
       <Navbarseller />
       <div>
         <div
-          style={{ fontSize: "35px", marginTop: "20px", marginLeft: "650px" }}
+          style={{
+            display: "flex",
+            fontSize: "35px",
+            marginTop: "20px",
+            justifyContent: "center",
+          }}
         >
           FinTech Cashflow Seller Dashboard
         </div>
         <br />
-        <div style={{ fontSize: "20px", marginLeft: "645px" }}>
+        <div
+          style={{
+            fontSize: "20px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           Welcome! See your current and projected cashflow status below.
         </div>
       </div>
@@ -88,7 +99,7 @@ function Sdashboard(props) {
           }}
           className="button"
         >
-         View disbursements
+          View disbursements
         </button>
       </div>
 
@@ -96,7 +107,9 @@ function Sdashboard(props) {
         <div className="content1">Settlements</div>
         <br />
         <div className="content2">
-        In this section, you can view the settlements made for your outstanding payments. It provides an overview of the transactions and helps you maintain a clear record.
+          In this section, you can view the settlements made for your
+          outstanding payments. It provides an overview of the transactions and
+          helps you maintain a clear record.
         </div>
         <button
           onClick={() => {
@@ -122,7 +135,7 @@ const Dash = styled.div`
   .content {
     // border: 2px solid black;
     margin-top: 50px;
-    height: 150px;
+    height: 180px;
     margin-left: 170px;
     margin-right: 170px;
     background: #e5e4e2;
@@ -137,13 +150,13 @@ const Dash = styled.div`
     font-size: 17px;
     margin-left: 30px;
   }
-  .rightsection {
-    display: flex;
-    width: 400px;
-    margin-left: 1400px;
-    margin-top: -30px;
-    justify-content: space-between;
-  }
+  // .rightsection {
+  //   display: flex;
+  //   width: 400px;
+  //   margin-left: 1400px;
+  //   margin-top: -30px;
+  //   justify-content: space-between;
+  // }
 
   .button {
     margin-left: 20px;
