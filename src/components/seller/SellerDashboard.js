@@ -133,7 +133,6 @@ const Dash = styled.div`
   justify-content: center;
 
   .content {
-    // border: 2px solid black;
     margin-top: 50px;
     height: 180px;
     margin-left: 170px;
@@ -150,13 +149,7 @@ const Dash = styled.div`
     font-size: 17px;
     margin-left: 30px;
   }
-  // .rightsection {
-  //   display: flex;
-  //   width: 400px;
-  //   margin-left: 1400px;
-  //   margin-top: -30px;
-  //   justify-content: space-between;
-  // }
+
 
   .button {
     margin-left: 20px;

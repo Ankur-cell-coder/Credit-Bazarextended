@@ -19,6 +19,12 @@ import SellerDisbursements from "./components/seller/SellerDisbursements";
 import SellerSettlements from "./components/seller/SellerSettlements";
 import SellerPayments from "./components/seller/SellerPayments";
 import SellerPaymentAcknowledgement from "./components/seller/SellerPaymentAcknowledgement";
+import FinanceInitate from "./components/finance/FinanceInitate";
+import FinanceOfferAcknowledgement from "./components/finance/FinanceOfferAcknowledgement";
+import FinanceDisrubment from "./components/finance/FinanceDisrubment";
+import FinancePayment from "./components/finance/FinancePayment";
+import FinanceDisburenmentAcknowledgement from "./components/finance/FinanceDisburenmentAcknowledgement";
+import FinanceSettlementDetail from "./components/finance/FinanceSettlementDetail";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -44,6 +50,31 @@ function App() {
           path="/financesdashboard"
           element={!auth.user ? <Signin /> : <Tdashboard />}
         />
+        <Route
+          path="/financeinitate"
+          element={!auth.user ? <Signin /> : <FinanceInitate />}
+        />
+         <Route
+          path="/financeofferacknowledgement"
+          element={!auth.user ? <Signin /> : <FinanceOfferAcknowledgement />}
+        />
+         <Route
+          path="/financedisrubment"
+          element={!auth.user ? <Signin /> : <FinanceDisrubment />}
+        />
+         <Route
+          path="/financepayment"
+          element={!auth.user ? <Signin /> : <FinancePayment />}
+        />
+         <Route
+          path="/financedisrubmentacknowledgement"
+          element={!auth.user ? <Signin /> : <FinanceDisburenmentAcknowledgement />}
+        />
+         <Route
+          path="/financessettlementdetail"
+          element={!auth.user ? <Signin /> : <FinanceSettlementDetail />}
+        />
+
         //buyers//
         //routes////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route

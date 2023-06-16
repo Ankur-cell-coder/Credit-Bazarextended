@@ -6,42 +6,14 @@ import { useAuth } from "../../context/auth";
 import Navbarfinancer from "../pages/Navbarfinancer";
 
 function Tdashboard() {
-  const [auth, setAuth] = useAuth();
   const navigate = useNavigate();
-
-  const handleClick = () => {
-    setAuth({
-      ...auth,
-      user: null,
-      token: "",
-    });
-    localStorage.removeItem("auth");
-    alert("Logout successfully");
-    navigate("/");
-  };
-
-  const handleChange = (e) => {
-    if (e.currentTarget.value == "buyer") {
-      const win = window.open("http://localhost:3000/bdashboard", "_blank");
-      if (win != null) {
-        win.focus();
-      }
-      navigate("/buyersdashboard");
-    } else if (e.currentTarget.value == "seller") {
-      const win = window.open("http://localhost:3000/sdashboard", "_blank");
-      if (win != null) {
-        win.focus();
-      }
-      navigate("/sellersdashboard");
-    }
-  };
 
   return (
     <Dash>
-     <Navbarfinancer/>
+      <Navbarfinancer />
 
       <div>
-      <div
+        <div
           style={{
             display: "flex",
             fontSize: "35px",
@@ -64,32 +36,74 @@ function Tdashboard() {
       </div>
 
       <div className="content">
-        <div className="content1">Current Cashflow Status</div>
-        <br />
-        <div className="content2">
-          Your current cashflow status is $X. This is a calculation based on
-          your recent income and expenses.
-        </div>
-      </div>
-
-      <div className="content">
-        <div className="content1">Projected Cashflow Status</div>
-        <br />
-        <div className="content2">
-          Based on your current income and expense trends, your projected
-          cashflow for next month is $Y. Remember, this is only an estimate and
-          actual cashflow may vary.
-        </div>
-      </div>
-
-      <div className="content">
-        <div className="content1">Recommended Action</div>
+        <div className="content1">Finance Requests</div>
         <br />
         <div className="content2">
           Based on your cashflow status, we recommend you to raise a "Request
           for Finance". This can help maintain positive cashflow for your
           business. Click on the button below to get started.
         </div>
+        <button
+          onClick={() => {
+            navigate("/financeinitate");
+          }}
+          className="button"
+        >
+          View Finance Request
+        </button>
+      </div>
+
+      <div className="content">
+        <div className="content1">Offers Placed</div>
+        <br />
+        <div className="content2">
+          This section displays the offers you have received from lenders. You
+          can review the details and take necessary actions.
+        </div>
+        <button
+          // onClick={() => {
+          //   navigate("/sellersoffer");
+          // }}
+          className="button"
+        >
+         Views Offers Requests
+        </button>
+      </div>
+
+      <div className="content">
+        <div className="content1">Disbursements</div>
+        <br />
+        <div className="content2">
+          This section provides information about the disbursements made to your
+          account. You can track the disbursement details and manage the
+          funds accordingly.
+        </div>
+        <button
+          onClick={() => {
+            navigate("/financedisrubment");
+          }}
+          className="button"
+        >
+          View disbursements
+        </button>
+      </div>
+
+      <div className="content">
+        <div className="content1">Settlements</div>
+        <br />
+        <div className="content2">
+          In this section, you can view the settlements made for your
+          outstanding payments. It provides an overview of the transactions and
+          helps you maintain a clear record.
+        </div>
+        <button
+          onClick={() => {
+            navigate("/financessettlementdetail");
+          }}
+          className="button"
+        >
+          View Settlements.
+        </button>
       </div>
     </Dash>
   );
@@ -98,29 +112,40 @@ function Tdashboard() {
 export default Tdashboard;
 
 const Dash = styled.div`
-  display: flex;
+display: flex;
 
-  flex-direction: column;
-  justify-content: center;
+flex-direction: column;
+justify-content: center;
 
-  .content {
-    // border: 2px solid black;
-    margin-top: 50px;
-    height: 150px;
-    margin-left: 170px;
-    margin-right: 170px;
-    background: #d9dddc;
-  }
+.content {
+  margin-top: 50px;
+  height: 180px;
+  margin-left: 170px;
+  margin-right: 170px;
+  background: #e5e4e2;
+}
 
-  .content1 {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-left: 30px;
-  }
-  .content2 {
-    font-size: 17px;
-    margin-left: 30px;
-  }
+.content1 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.content2 {
+  font-size: 17px;
+  margin-left: 30px;
+}
 
- 
+
+.button {
+  margin-left: 20px;
+  margin-top: 15px;
+  height: 36px;
+  background: orange;
+  border: 2px solid orange;
+  width: 200px;
+  font-size: 15px;
+}
+.button:hover {
+  background-color: #0056b3;
+}
 `;
