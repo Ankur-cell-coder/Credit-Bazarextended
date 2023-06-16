@@ -17,51 +17,58 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(name===""&&companyName==="")
-    {
+
+    if (name === "" && companyName === "") {
       alert("Name or Comapny Name one Field is required");
-    }
-    else{
-    try {
-      const res = await axios.post("http://localhost:3005/user/signup", {
-        name,
-        number,
-        email,
-        password,
-      });
-      if (res.data.success) {
-        alert(res.data.message);
-        setAuth({
-          ...auth,
-          user: res.data.user,
-          token: res.data.token,
+    } else {
+      try {
+        const res = await axios.post("http://localhost:3005/user/signup", {
+          companyName,
+          name,
+          number,
+          email,
+          password,
         });
-        localStorage.setItem("auth", JSON.stringify(res.data));
-        navigate("/profile", {
-          state: {
-            id: res.data.user.id,
-          },
-        });
-      } else {
-        alert(res.data.message);
-        setAuth({
-          ...auth,
-          user: res.data.user,
-          token: res.data.token,
-        });
-        localStorage.setItem("auth", JSON.stringify(res.data));
-        navigate("/profile", {
-          state: {
-            id: res.data.user.id,
-          },
-        });
+        if (res.data.success) {
+          alert(res.data.message);
+          setAuth({
+            ...auth,
+            user: res.data.user,
+            token: res.data.token,
+          });
+          localStorage.setItem("auth", JSON.stringify(res.data));
+          navigate("/profile", {
+            state: {
+              id: res.data.user.id,
+              email: email,
+              number: number,
+              name: name,
+              companyName: companyName,
+            },
+          });
+        } else {
+          alert(res.data.message);
+          setAuth({
+            ...auth,
+            user: res.data.user,
+            token: res.data.token,
+          });
+          localStorage.setItem("auth", JSON.stringify(res.data));
+          navigate("/profile", {
+            state: {
+              id: res.data.user.id,
+              email: email,
+              number: number,
+              name: name,
+              companyName: companyName,
+            },
+          });
+        }
+      } catch (error) {
+        console.log(error);
+        alert("something went wrong");
       }
-    } catch (error) {
-      console.log(error);
-      alert("something went wrong");
     }
-  }
   };
 
   return (

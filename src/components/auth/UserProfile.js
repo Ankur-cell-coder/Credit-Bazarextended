@@ -6,13 +6,15 @@ import axios from "axios";
 
 function UserProfile() {
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location.state);
 
   //personal details section
-  const [name, setName] = useState("");
-  const [companyName, setCompanyName] = useState("");
+  const [name, setName] = useState(location.state.name);
+  const [companyName, setCompanyName] = useState(location.state.companyName);
   const [companygst, setCompanyGst] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState(location.state.number);
+  const [email, setEmail] = useState(location.state.email);
 
   //bank details section
   const [accountNo, setAccountNo] = useState("");
@@ -20,9 +22,6 @@ function UserProfile() {
   const [receipientName, setReceipientName] = useState("");
   const [bankName, setBankName] = useState("");
   const [branch, setBranch] = useState("");
-
-  const location = useLocation();
-  console.log(location.state.id);
 
   const [defaultRole, setDefaultRole] = useState("seller");
   const handleNavigate = (res) => {
@@ -70,7 +69,8 @@ function UserProfile() {
             <input
               type="name"
               value={name}
-              // onChange={(e) => setname(e.target.value)}
+             readOnly
+             // setname(e.target.value)}
               id="name"
               name="name"
               required
@@ -82,7 +82,8 @@ function UserProfile() {
             <input
               type="companyName"
               value={companyName}
-              // onChange={(e) => setCompanyName(e.target.value)}
+             readOnly
+             // setCompanyName(e.target.value)}
               id="companyName"
               name="companyName"
               required
@@ -106,7 +107,8 @@ function UserProfile() {
             <input
               type="phone"
               value={phone}
-              // onChange={(e) => setPhone(e.target.value)}
+             readOnly
+             // setPhone(e.target.value)}
               id="phone"
               name="phone"
               required
@@ -118,7 +120,8 @@ function UserProfile() {
             <input
               type="email"
               value={email}
-              // onChange={(e) => setemail(e.target.value)}
+             readOnly
+             // setemail(e.target.value)}
               id="email"
               name="email"
               required
