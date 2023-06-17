@@ -25,6 +25,7 @@ import FinanceDisrubment from "./components/finance/FinanceDisrubment";
 import FinancePayment from "./components/finance/FinancePayment";
 import FinanceDisburenmentAcknowledgement from "./components/finance/FinanceDisburenmentAcknowledgement";
 import FinanceSettlementDetail from "./components/finance/FinanceSettlementDetail";
+import { CountProvider } from "./context/count";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -46,6 +47,8 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         //finances
         //routes////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+       
         <Route
           path="/financesdashboard"
           element={!auth.user ? <Signin /> : <Tdashboard />}
@@ -74,6 +77,7 @@ function App() {
           path="/financessettlementdetail"
           element={!auth.user ? <Signin /> : <FinanceSettlementDetail />}
         />
+        
 
         //buyers//
         //routes////////////////////////////////////////////////////////////////////////////////////////////////////////////////

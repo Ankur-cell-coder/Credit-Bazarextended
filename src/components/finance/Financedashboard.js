@@ -4,9 +4,11 @@ import Navbar from "../pages/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 import Navbarfinancer from "../pages/Navbarfinancer";
+import { useCount } from "../../context/count";
 
 function Tdashboard() {
   const navigate = useNavigate();
+  const { count1 } = useCount();
 
   return (
     <Dash>
@@ -61,12 +63,9 @@ function Tdashboard() {
           can review the details and take necessary actions.
         </div>
         <button
-          // onClick={() => {
-          //   navigate("/sellersoffer");
-          // }}
           className="button"
         >
-         Views Offers Requests
+          Views Offers Requests
         </button>
       </div>
 
@@ -75,17 +74,31 @@ function Tdashboard() {
         <br />
         <div className="content2">
           This section provides information about the disbursements made to your
-          account. You can track the disbursement details and manage the
-          funds accordingly.
+          account. You can track the disbursement details and manage the funds
+          accordingly.
         </div>
-        <button
-          onClick={() => {
-            navigate("/financedisrubment");
-          }}
-          className="button"
-        >
-          View disbursements
-        </button>
+
+        {count1 ? (
+          <button
+            onClick={() => {
+              navigate("/financedisrubment");
+            }}
+            style={{background:"gray",border:"2px solid gray"}}
+            className="button"
+          >
+            <div className="count">{count1}</div>
+            View disbursements
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              navigate("/financedisrubment");
+            }}
+            className="button"
+          >
+            View disbursements
+          </button>
+        )}
       </div>
 
       <div className="content">
@@ -112,40 +125,51 @@ function Tdashboard() {
 export default Tdashboard;
 
 const Dash = styled.div`
-display: flex;
+  display: flex;
 
-flex-direction: column;
-justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 
-.content {
-  margin-top: 50px;
-  height: 180px;
-  margin-left: 170px;
-  margin-right: 170px;
-  background: #e5e4e2;
-}
+  .count {
+    width: 20px;
+    height: 20px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    margin-top: -15px;
+    margin-left: 160px;
+    border-radius: 50%;
+    background: red;
+  }
 
-.content1 {
-  font-size: 30px;
-  margin-top: 10px;
-  margin-left: 30px;
-}
-.content2 {
-  font-size: 17px;
-  margin-left: 30px;
-}
+  .content {
+    margin-top: 50px;
+    height: 180px;
+    margin-left: 170px;
+    margin-right: 170px;
+    background: #e5e4e2;
+  }
 
+  .content1 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+  .content2 {
+    font-size: 17px;
+    margin-left: 30px;
+  }
 
-.button {
-  margin-left: 20px;
-  margin-top: 15px;
-  height: 36px;
-  background: orange;
-  border: 2px solid orange;
-  width: 200px;
-  font-size: 15px;
-}
-.button:hover {
-  background-color: #0056b3;
-}
+  .button {
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 36px;
+    background: orange;
+    border: 2px solid orange;
+    width: 200px;
+    font-size: 15px;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
 `;

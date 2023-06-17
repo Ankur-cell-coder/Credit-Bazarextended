@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Navbarfinancer from "../pages/Navbarfinancer";
+import { useCount } from "../../context/count";
 
 function FinanceInitate() {
   const navigate = useNavigate();
@@ -9,6 +10,13 @@ function FinanceInitate() {
   const [margin, setMargin] = useState("");
   const [interest, setInterest] = useState("");
   const [terms, setTerms] = useState("");
+
+  const {incrementCount1}=useCount();
+
+  const handleClick=()=>{
+    incrementCount1();
+    navigate('/financeofferacknowledgement');
+  }
 
   return (
     <Finance1>
@@ -94,7 +102,7 @@ function FinanceInitate() {
             </div>
         </div>
         <div className="btn-container">
-           <button className="btn" onClick={()=>{navigate('/financeofferacknowledgement')}}>
+           <button className="btn" onClick={handleClick}>
             Place an Offer
         </button>
         <button className="btn" onClick={()=>{navigate('/financesdashboard')}}>

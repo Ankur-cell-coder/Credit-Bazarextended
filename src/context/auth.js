@@ -7,7 +7,6 @@ const AuthProvider = ({ children }) => {
     user: null,
     token: "",
   });
-
   
 
   //default axios
