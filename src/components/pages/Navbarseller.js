@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { useAuth } from "../../context/auth";
+import uicon from "../images/usericon.png";
 
 function Navbarseller() {
   const [auth, setAuth] = useAuth();
   const navigate = useNavigate();
+  const [showOption,setShowOption]=useState(false);
 
   const handleClick = () => {
+    setShowOption(!showOption);
+  };
+  const handleLogout=()=>{  
     setAuth({
       ...auth,
       user: null,
@@ -15,8 +20,8 @@ function Navbarseller() {
     });
     localStorage.removeItem("auth");
     alert("Logout successfully");
-    navigate("/");
-  };
+      navigate("/user-profile");
+  }
 
   const handleChange = (e) => {
     if (e.currentTarget.value == "merchants") {
@@ -55,12 +60,23 @@ function Navbarseller() {
             <option value="merchants">Finances</option>
           </select>
         </div>
-
-        <div>
+        
+        { 
+         showOption?
+          <div>
+             <button onClick={handleClick} className="login">
+            <img src={uicon} style={{ width: "40px", height: "40px" }} />
+          </button>
+            </div>
+         :
+         <div>
           <button onClick={handleClick} className="login">
-            Logout
+            <img src={uicon} style={{ width: "40px", height: "40px" }} />
           </button>
         </div>
+
+        }
+        
       </div>
     </Navbarseller1>
   );
@@ -70,14 +86,14 @@ export default Navbarseller;
 
 const Navbarseller1 = styled.div`
   display: flex;
-  background:orange;
+  background: orange;
   flex-direction: column;
   justify-content: center;
   margin-left: 1100px;
-  @media only screen and (min-width: 1800px){
-    margin-left:1400px;
+  @media only screen and (min-width: 1800px) {
+    margin-left: 1400px;
   }
-  
+
   .rightsection {
     display: flex;
     width: 400px;
@@ -90,13 +106,11 @@ const Navbarseller1 = styled.div`
     height: 40px;
     font-size: 20px;
     border: 2px solid black;
-    margin-top:-60px;
+    margin-top: -60px;
   }
   .login {
-    width: 150px;
-    height: 40px;
-    font-size: 20px;
-    margin-top:-60px;
+    background: white;
+    margin-top: -20px;
   }
   .button {
     margin-left: 20px;

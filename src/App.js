@@ -26,6 +26,7 @@ import FinancePayment from "./components/finance/FinancePayment";
 import FinanceDisburenmentAcknowledgement from "./components/finance/FinanceDisburenmentAcknowledgement";
 import FinanceSettlementDetail from "./components/finance/FinanceSettlementDetail";
 import { CountProvider } from "./context/count";
+import Profile from "./components/Profile";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -133,6 +134,8 @@ function App() {
         />
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route path="/reset-password" element={<Reset />} />
+        <Route path="/user-profile"  element={!auth.user ? <Signin /> : <Profile />} />
+
       </Routes>
     </App1>
   );
