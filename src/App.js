@@ -32,13 +32,13 @@ function App() {
 
   return (
     <App1>
-      <div style={{background:"orange",width:"100%",height:"100px"}}>
-      </div>
-     
+      <div
+        style={{ background: "orange", width: "100%", height: "100px" }}
+      ></div>
+
       <div className="topcomp">
         <div className="leftcontent">Credit Bazar</div>
       </div>
-     
 
       <Routes>
         <Route path="/" element={<Signin />} />
@@ -47,8 +47,6 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         //finances
         //routes////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-       
         <Route
           path="/financesdashboard"
           element={!auth.user ? <Signin /> : <Tdashboard />}
@@ -57,28 +55,28 @@ function App() {
           path="/financeinitate"
           element={!auth.user ? <Signin /> : <FinanceInitate />}
         />
-         <Route
+        <Route
           path="/financeofferacknowledgement"
           element={!auth.user ? <Signin /> : <FinanceOfferAcknowledgement />}
         />
-         <Route
+        <Route
           path="/financedisrubment"
           element={!auth.user ? <Signin /> : <FinanceDisrubment />}
         />
-         <Route
+        <Route
           path="/financepayment"
           element={!auth.user ? <Signin /> : <FinancePayment />}
         />
-         <Route
+        <Route
           path="/financedisrubmentacknowledgement"
-          element={!auth.user ? <Signin /> : <FinanceDisburenmentAcknowledgement />}
+          element={
+            !auth.user ? <Signin /> : <FinanceDisburenmentAcknowledgement />
+          }
         />
-         <Route
+        <Route
           path="/financessettlementdetail"
           element={!auth.user ? <Signin /> : <FinanceSettlementDetail />}
         />
-        
-
         //buyers//
         //routes////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route
@@ -113,37 +111,26 @@ function App() {
             !auth.user ? <Signin /> : <SellerReceivedOfferAcknowledgement />
           }
         />
-         <Route
+        <Route
           path="/sellersdisbursement"
-          element={
-            !auth.user ? <Signin /> : <SellerDisbursements />
-          }
+          element={!auth.user ? <Signin /> : <SellerDisbursements />}
         />
-         <Route
+        <Route
           path="/sellerssettlements"
-          element={
-            !auth.user ? <Signin /> : <SellerSettlements />
-          }
+          element={!auth.user ? <Signin /> : <SellerSettlements />}
         />
-         <Route
+        <Route
           path="/sellerssettlements"
-          element={
-            !auth.user ? <Signin /> : <SellerSettlements />
-          }
+          element={!auth.user ? <Signin /> : <SellerSettlements />}
         />
-         <Route
+        <Route
           path="/sellerspayment"
-          element={
-            !auth.user ? <Signin /> : <SellerPayments />
-          }
+          element={!auth.user ? <Signin /> : <SellerPayments />}
         />
-         <Route
+        <Route
           path="/sellerspaymentacknowledgement"
-          element={
-            !auth.user ? <Signin /> : <SellerPaymentAcknowledgement/>
-          }
+          element={!auth.user ? <Signin /> : <SellerPaymentAcknowledgement />}
         />
-
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route path="/reset-password" element={<Reset />} />
       </Routes>
@@ -161,9 +148,8 @@ const App1 = styled.div`
     margin-left: 50px;
     width: 300px;
     justify-content: center;
-    margin-top:-80px;
-    background:red;
-   
+    margin-top: -80px;
+    background: red;
   }
   .leftcontent {
     margin-top: 10px;

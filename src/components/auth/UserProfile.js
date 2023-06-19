@@ -10,8 +10,10 @@ function UserProfile() {
   console.log(location.state);
 
   //personal details section
-  const [name, setName] = useState(location.state.name);
-  const [companyName, setCompanyName] = useState(location.state.companyName);
+  const [name, setName] = useState(
+    location.state.firstName + " " + location.state.lastName
+  );
+  const [companyName, setCompanyName] = useState("");
   const [companygst, setCompanyGst] = useState("");
   const [phone, setPhone] = useState(location.state.number);
   const [email, setEmail] = useState(location.state.email);
@@ -41,6 +43,13 @@ function UserProfile() {
       const res = await axios.post("http://localhost:3005/user/add-details", {
         id: `${location.state.id}`,
         defaultRole,
+        companyName,
+        companygst,
+        accountNo,
+        ifscCode,
+        receipientName,
+        bankName,
+        branch,
       });
       if (res.data.success) {
         alert(res.data.message);
@@ -69,8 +78,7 @@ function UserProfile() {
             <input
               type="name"
               value={name}
-             readOnly
-             // setname(e.target.value)}
+              readOnly
               id="name"
               name="name"
               required
@@ -82,11 +90,9 @@ function UserProfile() {
             <input
               type="companyName"
               value={companyName}
-             readOnly
-             // setCompanyName(e.target.value)}
+              onChange={(e) => setCompanyName(e.target.value)}
               id="companyName"
               name="companyName"
-              required
             />
             <br />
 
@@ -98,7 +104,6 @@ function UserProfile() {
               onChange={(e) => setCompanyGst(e.target.value)}
               id="companygst"
               name="companygst"
-              required
             />
             <br />
 
@@ -107,8 +112,8 @@ function UserProfile() {
             <input
               type="phone"
               value={phone}
-             readOnly
-             // setPhone(e.target.value)}
+              readOnly
+              // setPhone(e.target.value)}
               id="phone"
               name="phone"
               required
@@ -120,8 +125,8 @@ function UserProfile() {
             <input
               type="email"
               value={email}
-             readOnly
-             // setemail(e.target.value)}
+              readOnly
+              // setemail(e.target.value)}
               id="email"
               name="email"
               required

@@ -8,23 +8,22 @@ import { useAuth } from "../../context/auth";
 
 function Signup() {
   const [auth, setAuth] = useAuth();
-  const [name, setName] = useState("");
-  const [companyName, setCompanyName] = useState("");
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [number, setnumber] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (name === "" && companyName === "") {
-      alert("Name or Comapny Name one Field is required");
-    } else {
       try {
         const res = await axios.post("http://localhost:3005/user/signup", {
-          companyName,
-          name,
+          firstName,
+          lastName,
           number,
           email,
           password,
@@ -42,8 +41,8 @@ function Signup() {
               id: res.data.user.id,
               email: email,
               number: number,
-              name: name,
-              companyName: companyName,
+              firstName: firstName,
+              lastName:lastName,
             },
           });
         } else {
@@ -59,8 +58,8 @@ function Signup() {
               id: res.data.user.id,
               email: email,
               number: number,
-              name: name,
-              companyName: companyName,
+              firstName: firstName,
+              lastName:lastName,
             },
           });
         }
@@ -68,7 +67,6 @@ function Signup() {
         console.log(error);
         alert("something went wrong");
       }
-    }
   };
 
   return (
@@ -76,31 +74,31 @@ function Signup() {
       <div className="formwrap">
         <div style={{ marginBottom: "40px" }}>Welcome To SignUp Page</div>
         <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="name" style={{ marginLeft: "-212px" }}>
-            Your Name
+          <label htmlFor="firstName" style={{ marginLeft: "-212px" }}>
+          First Name
           </label>
           <br />
           <input
             type="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            id="name"
-            name="name"
-            // required
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            id="firstName"
+            name="firstName"
+             required
           />
           <br />
 
-          <label htmlFor="companyName" style={{ marginLeft: "-200px" }}>
-            Company Name
+          <label htmlFor="lastName" style={{ marginLeft: "-200px" }}>
+            Last Name
           </label>
           <br />
           <input
-            type="companyName"
-            value={companyName}
-            onChange={(e) => setCompanyName(e.target.value)}
-            id="companyName"
-            name="companyName"
-            // required
+            type="name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            id="lastName"
+            name="lastName"
+             required
           />
           <br />
 
@@ -210,8 +208,7 @@ const Sign1 = styled.div`
   input[type="name"],
   input[type="number"],
   input[type="email"],
-  input[type="password"],
-  input[type="companyName"] {
+  input[type="password"] {
     height: 30px;
     width: 300px;
     margin-bottom: 20px;

@@ -1,5 +1,5 @@
 // CountContext.js
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const CountContext = createContext();
 
