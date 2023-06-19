@@ -28,6 +28,8 @@ import FinanceSettlementDetail from "./components/finance/FinanceSettlementDetai
 import { CountProvider } from "./context/count";
 import Profile from "./components/Profile";
 
+import creditlogo from "../src/components/images/creditlogo.png";
+
 function App() {
   const [auth, setAuth] = useAuth();
 
@@ -38,7 +40,7 @@ function App() {
       ></div>
 
       <div className="topcomp">
-        <div className="leftcontent">Credit Bazar</div>
+        <img src={creditlogo} className="leftContent" />
       </div>
 
       <Routes>
@@ -134,8 +136,10 @@ function App() {
         />
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route path="/reset-password" element={<Reset />} />
-        <Route path="/user-profile"  element={!auth.user ? <Signin /> : <Profile />} />
-
+        <Route
+          path="/user-profile"
+          element={!auth.user ? <Signin /> : <Profile />}
+        />
       </Routes>
     </App1>
   );
@@ -145,14 +149,14 @@ export default App;
 
 const App1 = styled.div`
   .topcomp {
-    border: 2px solid red;
+    
     display: flex;
     height: 60px;
     margin-left: 50px;
     width: 300px;
     justify-content: center;
     margin-top: -80px;
-    background: red;
+   
   }
   .leftcontent {
     margin-top: 10px;
