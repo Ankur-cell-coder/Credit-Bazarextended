@@ -2,6 +2,7 @@ import React from 'react'
 import { styled } from 'styled-components'
 import { useNavigate } from 'react-router-dom';
 import Navbarseller from '../pages/Navbarseller';
+import Footer from '../pages/Footer';
 
 function  SellerAcknowledgement() {
     const navigate=useNavigate();
@@ -38,6 +39,7 @@ function  SellerAcknowledgement() {
     </button>
     </div>
    </Acko1>
+   <Footer/>
    </>
   )
 }

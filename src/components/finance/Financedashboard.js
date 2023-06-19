@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 import Navbarfinancer from "../pages/Navbarfinancer";
 import { useCount } from "../../context/count";
+import Footer from "../pages/Footer";
 
 function Tdashboard() {
   const navigate = useNavigate();
@@ -118,6 +119,7 @@ function Tdashboard() {
           View Settlements.
         </button>
       </div>
+      <Footer/>
     </Dash>
   );
 }

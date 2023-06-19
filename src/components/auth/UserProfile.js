@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Footer from "../pages/Footer";
 
 function UserProfile() {
   const navigate = useNavigate();
@@ -214,6 +215,7 @@ function UserProfile() {
           </div>
         </form>
       </div>
+      <Footer/>
     </User1>
   );
 }

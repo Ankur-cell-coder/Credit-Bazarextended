@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbarseller from "./pages/Navbarseller";
 import { useAuth } from "../context/auth";
+import Footer from "./pages/Footer";
 
 function Profile() {
   const navigate = useNavigate();
@@ -231,6 +232,7 @@ function Profile() {
           </form>
         </div>
       </User1>
+      <Footer/>
     </>
   );
 }

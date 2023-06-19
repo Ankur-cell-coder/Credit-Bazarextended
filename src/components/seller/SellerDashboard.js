@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import Navbarseller from "../pages/Navbarseller";
+import Footer from "../pages/Footer";
 
 function Sdashboard(props) {
   const navigate = useNavigate();
@@ -120,6 +121,7 @@ function Sdashboard(props) {
           View Settlements.
         </button>
       </div>
+      <Footer/>
     </Dash>
   );
 }

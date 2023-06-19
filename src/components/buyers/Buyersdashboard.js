@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../pages/Navbar";
 import { useNavigate } from "react-router-dom";
+import Footer from "../pages/Footer";
 
 function Bdashboard(props) {
   const navigate = useNavigate();
@@ -63,6 +64,7 @@ function Bdashboard(props) {
         </div>
         <button onClick={()=>{navigate('/buyersoffer')}} className="button">Request For Finance</button>
       </div>
+      <Footer/>
     </Dash>
   );
 }
