@@ -3,9 +3,27 @@ import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
 import Navbarseller from "../pages/Navbarseller";
 import Footer from "../pages/Footer";
+import { useAuth } from "../../context/auth";
+import axios from "axios";
 
 function SellerOfferDetails() {
   const navigate = useNavigate();
+  const [auth, setAuth] = useAuth();
+  console.log(auth.user.id);
+  const handleClick = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:3005/user/email", {
+        sellerId: auth.user.id,
+      });
+      alert(res.data);
+      navigate("/sellersacknowledgement");
+    } catch (error) {
+      console.log(error);
+      alert("something went wrong");
+    }
+  };
+
   return (
     <>
       <Navbarseller />
@@ -57,18 +75,13 @@ function SellerOfferDetails() {
             </div>
           </div>
           <div className="content">
-            <button
-              className="btn"
-              onClick={() => {
-                navigate("/sellersacknowledgement");
-              }}
-            >
+            <button className="btn" onClick={handleClick}>
               Accept Offer
             </button>
           </div>
         </div>
       </Details1>
-      <Footer/>
+      <Footer />
     </>
   );
 }
