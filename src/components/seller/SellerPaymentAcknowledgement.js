@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
+import Footer from "../pages/Footer";
 
 function SellerPaymentAcknowledgement() {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ function SellerPaymentAcknowledgement() {
           </button>
         </div>
       </Sellerack1>
+      <Footer/>
     </>
   );
 }

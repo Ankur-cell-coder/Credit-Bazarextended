@@ -3,16 +3,17 @@ import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { useAuth } from "../../context/auth";
 import uicon from "../images/usericon.png";
+import { BiLogOut, BiUser } from "react-icons/bi";
 
 function Navbarseller() {
   const [auth, setAuth] = useAuth();
   const navigate = useNavigate();
-  const [showOption,setShowOption]=useState(false);
+  const [showOption, setShowOption] = useState(false);
 
   const handleClick = () => {
     setShowOption(!showOption);
   };
-  const handleLogout=()=>{  
+  const handleLogout = () => {
     setAuth({
       ...auth,
       user: null,
@@ -20,8 +21,8 @@ function Navbarseller() {
     });
     localStorage.removeItem("auth");
     alert("Logout successfully");
-      navigate("/user-profile");
-  }
+    navigate("/user-profile");
+  };
 
   const handleChange = (e) => {
     if (e.currentTarget.value == "merchants") {
@@ -60,23 +61,58 @@ function Navbarseller() {
             <option value="merchants">Finances</option>
           </select>
         </div>
-        
-        { 
-         showOption?
-          <div>
-             <button onClick={handleClick} className="login">
-            <img src={uicon} style={{ width: "40px", height: "40px" }} />
-          </button>
-            </div>
-         :
-         <div>
-          <button onClick={handleClick} className="login">
-            <img src={uicon} style={{ width: "40px", height: "40px" }} />
-          </button>
-        </div>
 
-        }
-        
+        {showOption ? (
+          <div>
+            <div>
+              <button onClick={handleClick} className="login">
+                <BiUser style={{ width: "40px", height: "40px" }} />
+                {/* <img src={uicon} style={{ width: "40px", height: "40px" }} /> */}
+              </button>
+            </div>
+            <div className="onclickprofile">
+              <div>
+                <button
+                  onClick={() => {
+                    navigate("/user-profile");
+                  }}
+                  style={{
+                    width: "200px",
+                    height: "35px",
+                    fontSize: "18px",
+                    border:"0px solid white",
+                    background:"white",
+                    borderRadius:"10px"
+                  }}
+                >
+                <BiUser/> User Detail
+                </button>
+              </div>
+              <div>
+                <button
+                  onClick={handleLogout}
+                  style={{
+                    width: "200px",
+                    height: "35px",
+                    fontSize: "18px",
+                    border:"0px solid white",
+                    background:"white",
+                    borderRadius:"10px"
+                  }}
+                >
+                  <BiLogOut style={{marginRight:"40px"}}/>
+                   Logout
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <button onClick={handleClick} className="login">
+              <BiUser style={{ width: "40px", height: "40px" }} />
+            </button>
+          </div>
+        )}
       </div>
     </Navbarseller1>
   );
@@ -86,12 +122,22 @@ export default Navbarseller;
 
 const Navbarseller1 = styled.div`
   display: flex;
-  background: orange;
   flex-direction: column;
   justify-content: center;
   margin-left: 1100px;
   @media only screen and (min-width: 1800px) {
     margin-left: 1400px;
+  }
+
+  .onclickprofile {
+    border: 2px solid black;
+    width: 200px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    background:white;
   }
 
   .rightsection {

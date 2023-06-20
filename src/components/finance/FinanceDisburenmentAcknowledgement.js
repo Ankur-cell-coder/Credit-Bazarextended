@@ -2,6 +2,7 @@ import React from 'react'
 import { styled } from 'styled-components'
 import { useNavigate } from 'react-router-dom';
 import Navbarfinancer from '../pages/Navbarfinancer';
+import Footer from '../pages/Footer';
 
 
 function  FinanceDisburenmentAcknowledgement() {
@@ -39,6 +40,7 @@ function  FinanceDisburenmentAcknowledgement() {
     </button>
     </div>
    </Acko1>
+   <Footer/>
    </>
   )
 }

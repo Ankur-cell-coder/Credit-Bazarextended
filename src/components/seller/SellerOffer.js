@@ -2,6 +2,7 @@ import React from "react";
 import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
 import Navbarseller from "../pages/Navbarseller";
+import Footer from "../pages/Footer";
 
 function SellerOffer() {
   const navigate = useNavigate();
@@ -113,6 +114,7 @@ function SellerOffer() {
 
 
     </Boffer1>
+    <Footer/>
     </>
   );
 }

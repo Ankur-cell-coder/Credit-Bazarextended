@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
 import qimg from "../images/qrcodeimage.png";
 import { useNavigate } from "react-router-dom";
+import Footer from "../pages/Footer";
 
 function SellerPayments() {
   const navigate = useNavigate();
@@ -58,6 +59,7 @@ function SellerPayments() {
           </form>
         </div>
       </Seller1>
+      <Footer/>
     </>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
 import { useNavigate } from "react-router-dom";
+import Footer from "../pages/Footer";
 
 function SellerDisbursements() {
   const navigate=useNavigate();
@@ -67,6 +68,7 @@ function SellerDisbursements() {
           </div>
         </div>
       </div>
+      <Footer/>
     </Seller1>
   );
 }

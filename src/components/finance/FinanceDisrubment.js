@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { styled } from 'styled-components'
 import Navbarfinancer from '../pages/Navbarfinancer';
+import Footer from '../pages/Footer';
 
 function FinanceDisrubment() {
     const navigate=useNavigate();
@@ -26,6 +27,7 @@ function FinanceDisrubment() {
             </div>
         </div>
     </div>
+    <Footer/>
     </Finance1>
   )
 }

@@ -3,13 +3,17 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import Navbarseller from "../pages/Navbarseller";
 import Footer from "../pages/Footer";
+import NavbarSide from "../pages/NavbarSide";
 
 function Sdashboard(props) {
   const navigate = useNavigate();
 
   return (
+    <>
+     <Navbarseller />
+      <NavbarSide/>
+   
     <Dash>
-      <Navbarseller />
       <div>
         <div
           style={{
@@ -92,7 +96,7 @@ function Sdashboard(props) {
         <div className="content2">
           This section provides information about the disbursements made to your
           account. You can track the disbursement details and manage the
-          funds accordingly.
+          funds accordingly.
         </div>
         <button
           onClick={() => {
@@ -121,8 +125,10 @@ function Sdashboard(props) {
           View Settlements.
         </button>
       </div>
-      <Footer/>
+     
     </Dash>
+    <Footer/>
+    </>
   );
 }
 
@@ -130,10 +136,11 @@ export default Sdashboard;
 
 const Dash = styled.div`
   display: flex;
-
+  border:2px solid black;
   flex-direction: column;
-  justify-content: center;
-
+   margin-top:-65vh;
+   margin-left:280px;
+ 
   .content {
     margin-top: 50px;
     height: 180px;

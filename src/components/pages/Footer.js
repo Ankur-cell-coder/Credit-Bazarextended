@@ -49,6 +49,7 @@ const Footer1 = styled.div`
   border: 2px solid black;
   background-color: black;
   color: white;
+  margin-top:20px;
   footer {
     background-color: black;
     padding: 20px;
@@ -63,7 +64,7 @@ const Footer1 = styled.div`
   }
 
   .footer-content p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .footer-links {

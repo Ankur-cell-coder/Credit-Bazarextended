@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Navbarfinancer from "../pages/Navbarfinancer";
+import Footer from "../pages/Footer";
 
 function FinanceSettlementDetail() {
     const navigate=useNavigate();
@@ -24,6 +25,7 @@ function FinanceSettlementDetail() {
           </div>
         </div>
       </div>
+      <Footer/>
     </Finance1>
   );
 }
@@ -60,7 +62,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    // height: 100vh;
+
+     height: 80vh;
 }
 .disbursement-details {
     background-color: #F8F9FA;

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Navbarfinancer from "../pages/Navbarfinancer";
 import { useCount } from "../../context/count";
+import Footer from "../pages/Footer";
 
 function FinanceInitate() {
   const navigate = useNavigate();
@@ -112,7 +113,7 @@ function FinanceInitate() {
     </div>
 
 
-
+  <Footer/>
     </Finance1>
   );
 }
