@@ -1,0 +1,147 @@
+import React,{ useState } from 'react'
+import { styled } from 'styled-components'
+import Footer from './pages/Footer';
+import NavbarSide from './pages/NavbarSide';
+import Navbarseller from './pages/Navbarseller';
+import { useNavigate } from 'react-router-dom';
+
+function RequestForOffers() {
+    const navigate=useNavigate();
+    const [display,setDisplay]=useState(false);
+
+     const handleClick=()=>{
+        setDisplay(!display);
+     }
+
+  return (
+    <>
+    <Navbarseller/>
+    <NavbarSide/>
+    <Request1>
+    
+    <div className="buttoncontainer">
+        <button className="btn1">New Request For Finance</button>
+        <button className="btn2">Finance Request</button>
+    </div>
+
+   
+
+    { display?
+    (
+        <>
+        <div>
+        <input /> <button onClick={handleClick}>Search</button>
+    </div>
+
+        <div className="header">
+            <h1>Request for finance</h1>
+        </div>
+        <div className="state-item">
+            <div className="state-label">Requested Amount:</div>
+            <div className="state-value">INR 10,00,000</div>
+        </div>
+        <div className="record-details">
+            <table>
+                <tr>
+                    <th>Seller GST</th>
+                    <th>Buyer Name</th>
+                    <th>Buyer GST</th>
+                    <th>Trade Amount</th>
+                    <th>Invoice Number</th>
+                    <th>Trade</th>
+                </tr>
+                <tr>
+                    <td>GST123</td>
+                    <td>Buyer 1</td>
+                    <td>GST456</td>
+                    <td>INR 60,000</td>
+                    <td>INV001</td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>GST123</td>
+                    <td>Buyer 2</td>
+                    <td>GST012</td>
+                    <td>INR 60,000</td>
+                    <td>INV002</td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>GST123</td>
+                    <td>Buyer 3</td>
+                    <td>GST678</td>
+                    <td>INR 5,00,000</td>
+                    <td>INV003</td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>GST123</td>
+                    <td>Buyer 4</td>
+                    <td>GST456</td>
+                    <td>INR 1,00,000</td>
+                    <td>INV001</td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>GST123</td>
+                    <td>Buyer 5</td>
+                    <td>GST012</td>
+                    <td>INR 4,80,000</td>
+                    <td>INV002</td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>GST123</td>
+                    <td>Buyer 6</td>
+                    <td>GST678</td>
+                    <td>INR 15,000</td>
+                    <td>INV003</td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+            </table>
+            <div className="content">
+                <button className="btn" onClick={()=>{navigate('/finance-request')}} >Submit</button>
+            </div>
+        </div>
+   
+
+</>
+
+
+    ):
+
+    (
+        <div>
+        <input /> <button onClick={handleClick}>Search</button>
+    </div>
+    )
+
+    }
+
+
+
+
+
+    </Request1>
+    <div style={{marginTop:"220px"}}>
+    <Footer/>
+    </div>
+    </>
+  )
+}
+
+export default RequestForOffers
+
+
+
+
+const Request1=styled.div`
+
+
+   width:100vh;
+   margin-left:320px;
+  
+
+
+
+`;

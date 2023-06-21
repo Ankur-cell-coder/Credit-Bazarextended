@@ -66,7 +66,7 @@ function Sdashboard(props) {
         </div>
         <button
           onClick={() => {
-            navigate("/sellersoffer");
+            navigate("/offer-request");
           }}
           className="button"
         >
@@ -139,7 +139,7 @@ const Dash = styled.div`
   border:2px solid black;
   flex-direction: column;
    margin-top:-65vh;
-   margin-left:280px;
+   margin-left:268px;
  
   .content {
     margin-top: 50px;

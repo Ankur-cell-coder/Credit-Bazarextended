@@ -29,6 +29,15 @@ import { CountProvider } from "./context/count";
 import Profile from "./components/Profile";
 
 import creditlogo from "../src/components/images/creditlogo.png";
+import RequestForOffers from "./components/RequestForOffers";
+import Trades from "./components/Trades";
+import Request_offers from "./components/Request_offers"
+import Settlement from "./components/Settlement";
+import Disbursement from "./components/Disbursement";
+import Offers from "./components/Offers";
+import Shipment from "./components/Shipment";
+import Payment from "./components/Payment";
+import RequestInformation from "./components/RequestInformation";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -140,6 +149,44 @@ function App() {
           path="/user-profile"
           element={!auth.user ? <Signin /> : <Profile />}
         />
+        <Route
+          path="/offer-request"
+          element={!auth.user ? <Signin /> : <RequestForOffers />}
+        />
+         <Route
+          path="/finance-request"
+          element={!auth.user ? <Signin /> : <Request_offers />}
+        />
+         <Route
+          path="/trades"
+          element={!auth.user ? <Signin /> : <Trades />}
+        />
+        /////
+         <Route
+          path="/settlement"
+          element={!auth.user ? <Signin /> : <Settlement />}
+        />
+         <Route
+          path="/disbursement"
+          element={!auth.user ? <Signin /> : <Disbursement />}
+        />
+         <Route
+          path="/offers"
+          element={!auth.user ? <Signin /> : <Offers/>}
+        />
+         <Route
+          path="/shipment"
+          element={!auth.user ? <Signin /> : <Shipment />}
+        />
+         <Route
+          path="/payment"
+          element={!auth.user ? <Signin /> : <Payment />}
+        />
+         <Route
+          path="/request_information"
+          element={!auth.user ? <Signin /> : <RequestInformation />}
+        />
+
       </Routes>
     </App1>
   );

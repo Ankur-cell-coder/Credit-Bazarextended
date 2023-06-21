@@ -3,13 +3,17 @@ import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
 import { useNavigate } from "react-router-dom";
 import Footer from "../pages/Footer";
+import RequestForOffers from "../RequestForOffers";
 
 function SellerDisbursements() {
   const navigate=useNavigate();
 
   return (
+    <>
+     <Navbarseller />
     <Seller1>
-      <Navbarseller />
+     
+      
       <button className="button" onClick={()=>{navigate(-1)}}>
         Back to Dashboard
       </button>
@@ -70,6 +74,7 @@ function SellerDisbursements() {
       </div>
       <Footer/>
     </Seller1>
+    </>
   );
 }
 

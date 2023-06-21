@@ -14,17 +14,17 @@ const NavbarSide = ({ children }) => {
   const toggle = () => setIsOpen(!isOpen);
   const menuItem = [
     {
-      path: "/sellerdashboard",
+      path: "/sellersdashboard",
       name: "Dashboard",
       icon: <FaTh  />,
     },
     {
-      path: "/trade",
+      path: "/trades",
       name: "Trade",
       icon: <FaRegChartBar />,
     },
     {
-      path: "/requestforoffers",
+      path: "/offer-request",
       name: "Request For Offers",
       icon: <FaShopify />,
     },
