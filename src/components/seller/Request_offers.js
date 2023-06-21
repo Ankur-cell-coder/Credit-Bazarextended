@@ -130,6 +130,9 @@ const Request1 = styled.div`
     border-radius: 5px;
     display: inline-block;
     margin-bottom: 50px;
+    width:350px;
+    height:50px;
+    font-size:20px;
   }
   .btn:hover {
     background-color: #0056b3;

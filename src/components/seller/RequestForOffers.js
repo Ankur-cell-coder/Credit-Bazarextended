@@ -198,19 +198,23 @@ const Request1 = styled.div`
     border-radius: 4px 0 0 4px;
     font-size: 14px;
     align-items: center;
+    width:450px;
+    height:40px;
   }
   .search-button {
     margin-top: 30px;
     background-color: orange;
     color: #ffffff;
-    width: 120px;
-    height: 40px;
+    width: 240px;
+    height: 60px;
     margin-left: 20px;
     border: none;
     padding: 8px;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size:20px;
+
   }
   .search-button:hover {
     background-color: #0056b3;
@@ -262,6 +266,9 @@ const Request1 = styled.div`
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    width:350px;
+    height:50px;
+    font-size:20px;
   }
   .btn:hover {
     background-color: #0056b3;

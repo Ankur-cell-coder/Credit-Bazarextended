@@ -140,6 +140,9 @@ margin-top: -420px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    width:350px;
+    height:50px;
+    font-size:20px;
   }
   .btn:hover {
     background-color: #0056b3;
