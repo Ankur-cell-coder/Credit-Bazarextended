@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
 import Footer from "../pages/Footer";
+import NavbarSide from "../pages/NavbarSide";
 
 function SellerSettlements() {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ function SellerSettlements() {
   return (
     <>
       <Navbarseller />
+      <NavbarSide/>
       <Seller1>
         <div>
           <div className="content">
@@ -94,7 +96,10 @@ function SellerSettlements() {
           </button>
         </div>
       </Seller1>
+      <div style={{marginTop:"25vh"}}> 
       <Footer/>
+      </div>
+      
     </>
   );
 }
@@ -102,13 +107,17 @@ function SellerSettlements() {
 export default SellerSettlements;
 
 const Seller1 = styled.div`
-  padding: 80px;
-
+width: 160vh;
+margin-left: 320px;
+margin-top: -420px;
+@media only screen and (min-width: 1800px) {
+  margin-top: -560px;
+}
   body {
     font-family: Arial, sans-serif;
   }
   #container {
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   .header {

@@ -127,7 +127,10 @@ function Sdashboard(props) {
       </div>
      
     </Dash>
+    <div style={{marginTop:"20vh"}}>
     <Footer/>
+    </div>
+   
     </>
   );
 }
@@ -136,7 +139,6 @@ export default Sdashboard;
 
 const Dash = styled.div`
   display: flex;
-  border:2px solid black;
   flex-direction: column;
    margin-top:-65vh;
    margin-left:268px;

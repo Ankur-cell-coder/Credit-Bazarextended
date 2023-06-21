@@ -94,23 +94,7 @@ const Ackno1 = styled.div`
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
   }
-  .top-bar {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-  }
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 20px;
-  }
-  .notification-bell {
-    margin-left: auto;
-    margin-right: 20px;
-    font-size: 20px;
-  }
+
   #container {
     width: 80%;
     margin: auto;

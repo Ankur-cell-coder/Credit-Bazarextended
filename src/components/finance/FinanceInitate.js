@@ -6,6 +6,7 @@ import { useCount } from "../../context/count";
 import Footer from "../pages/Footer";
 
 function FinanceInitate() {
+    
   const navigate = useNavigate();
   const [amount, setAmount] = useState("");
   const [margin, setMargin] = useState("");

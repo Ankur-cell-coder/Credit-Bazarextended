@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
-import Navbarseller from "./pages/Navbarseller";
-import NavbarSide from "./pages/NavbarSide";
-import Footer from "./pages/Footer";
+import Navbarseller from "../pages/Navbarseller";
+import NavbarSide from "../pages/NavbarSide";
+import Footer from "../pages/Footer";
 
-function Offers() {
+function Payment() {
   const navigate = useNavigate();
   return (
     <>
@@ -22,7 +22,7 @@ function Offers() {
             Request Information
           </button>
           <button
-            className="btn1"
+            className="btn"
             onClick={() => {
               navigate("/offers");
             }}
@@ -46,7 +46,7 @@ function Offers() {
             Shipment
           </button>
           <button
-            className="btn"
+            className="btn1"
             onClick={() => {
               navigate("/payment");
             }}
@@ -62,7 +62,28 @@ function Offers() {
             Settlement
           </button>
         </div>
-        <div className='content'>This is Offers Page!....</div>
+        <div className="content">
+          <div className="main-content">
+            <div className="record-summary">
+              <h2>Request information</h2>
+            </div>
+            <div className="record-details">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Request ID</th>
+                    <td>123456</td>
+                  </tr>
+
+                  <tr>
+                    <th> Status</th>
+                    <td> In Progress</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </Request1>
       <div style={{ marginTop: "65vh" }}>
         <Footer />
@@ -71,7 +92,7 @@ function Offers() {
   );
 }
 
-export default Offers;
+export default Payment;
 
 const Request1 = styled.div`
   margin-left: 28vh;
@@ -103,5 +124,26 @@ const Request1 = styled.div`
   .content {
     margin-left: 20px;
     margin-top: 20px;
+  }
+
+  .table-container {
+    margin-top: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+  }
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+  }
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
   }
 `;

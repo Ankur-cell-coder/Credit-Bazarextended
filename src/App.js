@@ -29,15 +29,15 @@ import { CountProvider } from "./context/count";
 import Profile from "./components/Profile";
 
 import creditlogo from "../src/components/images/creditlogo.png";
-import RequestForOffers from "./components/RequestForOffers";
-import Trades from "./components/Trades";
-import Request_offers from "./components/Request_offers"
-import Settlement from "./components/Settlement";
-import Disbursement from "./components/Disbursement";
-import Offers from "./components/Offers";
-import Shipment from "./components/Shipment";
-import Payment from "./components/Payment";
-import RequestInformation from "./components/RequestInformation";
+import RequestForOffers from "./components/seller/RequestForOffers";
+import Trades from "./components/seller/Trades";
+import Request_offers from "./components/seller/Request_offers";
+import Settlement from "./components/seller/Settlement";
+import Disbursement from "./components/seller/Disbursement";
+import Offers from "./components/seller/Offers";
+import Shipment from "./components/seller/Shipment";
+import Payment from "./components/seller/Payment";
+import RequestInformation from "./components/seller/RequestInformation";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -153,40 +153,33 @@ function App() {
           path="/offer-request"
           element={!auth.user ? <Signin /> : <RequestForOffers />}
         />
-         <Route
+        <Route
           path="/finance-request"
           element={!auth.user ? <Signin /> : <Request_offers />}
         />
-         <Route
-          path="/trades"
-          element={!auth.user ? <Signin /> : <Trades />}
-        />
+        <Route path="/trades" element={!auth.user ? <Signin /> : <Trades />} />
         /////
-         <Route
+        <Route
           path="/settlement"
           element={!auth.user ? <Signin /> : <Settlement />}
         />
-         <Route
+        <Route
           path="/disbursement"
           element={!auth.user ? <Signin /> : <Disbursement />}
         />
-         <Route
-          path="/offers"
-          element={!auth.user ? <Signin /> : <Offers/>}
-        />
-         <Route
+        <Route path="/offers" element={!auth.user ? <Signin /> : <Offers />} />
+        <Route
           path="/shipment"
           element={!auth.user ? <Signin /> : <Shipment />}
         />
-         <Route
+        <Route
           path="/payment"
           element={!auth.user ? <Signin /> : <Payment />}
         />
-         <Route
+        <Route
           path="/request_information"
           element={!auth.user ? <Signin /> : <RequestInformation />}
         />
-
       </Routes>
     </App1>
   );
@@ -196,14 +189,12 @@ export default App;
 
 const App1 = styled.div`
   .topcomp {
-    
     display: flex;
     height: 60px;
     margin-left: 50px;
     width: 300px;
     justify-content: center;
     margin-top: -80px;
-   
   }
   .leftcontent {
     margin-top: 10px;

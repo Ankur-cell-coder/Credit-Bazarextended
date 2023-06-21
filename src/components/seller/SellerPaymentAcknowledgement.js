@@ -3,12 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
 import Footer from "../pages/Footer";
+import NavbarSide from "../pages/NavbarSide";
 
 function SellerPaymentAcknowledgement() {
   const navigate = useNavigate();
   return (
     <>
       <Navbarseller />
+      <NavbarSide/>
       <Sellerack1>
         <div className="header">
           <h1>Settlement Acknowledgment</h1>
@@ -37,7 +39,9 @@ function SellerPaymentAcknowledgement() {
           </button>
         </div>
       </Sellerack1>
+      <div style={{marginTop:"25vh"}}> 
       <Footer/>
+      </div>
     </>
   );
 }
@@ -45,6 +49,13 @@ function SellerPaymentAcknowledgement() {
 export default SellerPaymentAcknowledgement;
 
 const Sellerack1 = styled.div`
+
+// width: 160vh;
+// margin-left: 320px;
+margin-top: -420px;
+@media only screen and (min-width: 1800px) {
+  margin-top: -760px;
+}
   body {
     font-family: Arial, sans-serif;
   }

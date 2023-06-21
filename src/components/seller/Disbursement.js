@@ -1,27 +1,90 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
-import { useNavigate } from "react-router-dom";
-import Footer from "../pages/Footer";
-import RequestForOffers from "./RequestForOffers";
 import NavbarSide from "../pages/NavbarSide";
+import Footer from "../pages/Footer";
 
-function SellerDisbursements() {
+function Disbursement() {
   const navigate = useNavigate();
-
   return (
     <>
       <Navbarseller />
       <NavbarSide />
-      <Seller1>
-        <button
-          className="button"
-          onClick={() => {
-            navigate(-1);
-          }}
-        >
-          Back to Dashboard
-        </button>
+      <Request1>
+        <div className="button1">
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/request_information");
+            }}
+          >
+            Request Information
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/offers");
+            }}
+          >
+            Offers
+          </button>
+          <button
+            className="btn1"
+            onClick={() => {
+              navigate("/disbursement");
+            }}
+          >
+            Disbursement
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/shipment");
+            }}
+          >
+            Shipment
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/payment");
+            }}
+          >
+            Payment
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/settlement");
+            }}
+          >
+            Settlement
+          </button>
+        </div>
+        <div className="content">
+          <div className="main-content">
+            <div className="record-summary">
+              <h2>Request information</h2>
+            </div>
+            <div className="record-details">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Request ID</th>
+                    <td>123456</td>
+                  </tr>
+
+                  <tr>
+                    <th> Status</th>
+                    <td> In Progress</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
         <div className="container">
           <div className="section">
             <h2 className="section-heading">Disbursement Details</h2>
@@ -77,27 +140,71 @@ function SellerDisbursements() {
             </div>
           </div>
         </div>
-      </Seller1>
-      <div style={{ marginTop: "25vh" }}>
+
+       
+
+      </Request1>
+      <div style={{ marginTop: "65vh" }}>
         <Footer />
       </div>
     </>
   );
 }
 
-export default SellerDisbursements;
+export default Disbursement;
 
-const Seller1 = styled.div`
-  margin-left: 320px;
-  margin-top: -420px;
-  @media only screen and (min-width: 1800px) {
-    margin-top: -560px;
+const Request1 = styled.div`
+  margin-left: 28vh;
+  margin-top: -540px;
+  
+  .btn {
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  .btn1 {
+    color: white;
+    background-color: orange;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .btn:hover {
+    background-color: #0056b3;
   }
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
+  .content {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+  .table-container {
+    margin-top: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+  }
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+  }
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
   }
 
   .button {

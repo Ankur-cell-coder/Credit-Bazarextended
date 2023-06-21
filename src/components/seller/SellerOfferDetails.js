@@ -5,6 +5,7 @@ import Navbarseller from "../pages/Navbarseller";
 import Footer from "../pages/Footer";
 import { useAuth } from "../../context/auth";
 import axios from "axios";
+import NavbarSide from "../pages/NavbarSide";
 
 function SellerOfferDetails() {
   const navigate = useNavigate();
@@ -16,8 +17,8 @@ function SellerOfferDetails() {
       const res = await axios.post("http://localhost:3005/user/email", {
         sellerId: auth.user.id,
       });
-      alert(res.data);
-      navigate("/sellersacknowledgement");
+      alert('email sent successfully');
+      navigate("/finance-request");
     } catch (error) {
       console.log(error);
       alert("something went wrong");
@@ -27,8 +28,25 @@ function SellerOfferDetails() {
   return (
     <>
       <Navbarseller />
+      <NavbarSide/>
       <Details1>
         <div id="container">
+        <div className="buttoncontainer">
+            <button
+              className="btn"
+              onClick={() => {
+                navigate("/offer-request");
+              }}
+            >
+              New Request For Finance
+            </button>
+            <button
+              className="btn"
+              style={{ background: "blue", marginLeft: "30px" }}
+            >
+              Finance Request
+            </button>
+            </div>
           <div className="header">
             <h1>Projected Offers</h1>
             <p>
@@ -81,7 +99,9 @@ function SellerOfferDetails() {
           </div>
         </div>
       </Details1>
+      <div style={{marginTop:"20vh"}}>
       <Footer />
+      </div>
     </>
   );
 }
@@ -89,14 +109,18 @@ function SellerOfferDetails() {
 export default SellerOfferDetails;
 
 const Details1 = styled.div`
-  // margin-left: 300px;
-  // margin-top: 20px;
+width: 100vh;
+margin-left: 320px;
+margin-top: -420px;
+@media only screen and (min-width: 1800px) {
+  margin-top: -560px;
+}
 
   body {
     font-family: Arial, sans-serif;
   }
   #container {
-    width: 80%;
+    width: 170%;
     margin: auto;
   }
   .header {

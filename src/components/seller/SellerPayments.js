@@ -4,12 +4,14 @@ import Navbarseller from "../pages/Navbarseller";
 import qimg from "../images/qrcodeimage.png";
 import { useNavigate } from "react-router-dom";
 import Footer from "../pages/Footer";
+import NavbarSide from "../pages/NavbarSide";
 
 function SellerPayments() {
   const navigate = useNavigate();
   return (
     <>
       <Navbarseller />
+      <NavbarSide/>
       <Seller1>
         <div className="header">
           <h1>Payment Gateway</h1>
@@ -59,7 +61,10 @@ function SellerPayments() {
           </form>
         </div>
       </Seller1>
+
+      <div style={{marginTop:"25vh"}}> 
       <Footer/>
+      </div>
     </>
   );
 }
@@ -67,6 +72,12 @@ function SellerPayments() {
 export default SellerPayments;
 
 const Seller1 = styled.div`
+width: 170vh;
+margin-left: 320px;
+margin-top: -420px;
+@media only screen and (min-width: 1800px) {
+  margin-top: -560px;
+}
   body {
     font-family: Arial, sans-serif;
   }
@@ -89,8 +100,8 @@ const Seller1 = styled.div`
     color: gold;
   }
 
-  width: 80%;
-  margin: auto;
+  // width: 80%;
+  // margin: auto;
 
   .header {
     text-align: center;

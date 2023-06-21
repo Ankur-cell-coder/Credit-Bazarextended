@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
-import Footer from "./pages/Footer";
-import NavbarSide from "./pages/NavbarSide";
-import Navbarseller from "./pages/Navbarseller";
+import Footer from "../pages/Footer";
+import NavbarSide from "../pages/NavbarSide";
+import Navbarseller from "../pages/Navbarseller";
 import { useNavigate } from "react-router-dom";
 
 function Request_offers() {
@@ -92,7 +92,10 @@ export default Request_offers;
 const Request1 = styled.div`
   width: 100vh;
   margin-left: 320px;
-
+  margin-top: -420px;
+  @media only screen and (min-width: 1800px) {
+    margin-top: -560px;
+  }
   .main-content {
     padding: 20px;
   }
