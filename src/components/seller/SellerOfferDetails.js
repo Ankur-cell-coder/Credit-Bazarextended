@@ -58,11 +58,11 @@ function SellerOfferDetails() {
             <h2>Current State</h2>
             <div className="state-item">
               <div className="state-label">Current Cashflow:</div>
-              <div className="state-value">$50,000</div>
+              <div className="state-value">INR 10,00,000</div>
             </div>
             <div className="state-item">
               <div className="state-label">Requested Amount:</div>
-              <div className="state-value">$30,000</div>
+              <div className="state-value">INR 50,000</div>
             </div>
           </div>
           <div className="content">
@@ -70,25 +70,31 @@ function SellerOfferDetails() {
             <div className="projection-item">
               <div className="projection-label">Offer 1</div>
               <div className="projection-value">
-                <div>Term: 12 months</div>
-                <div>Amount: $100,000</div>
-                <div>Interest Rate: 8%</div>
+                <div>Amount: INR 10,00,000</div>
+                <div>Margin (25%): INR 2,50,000</div>
+                <div>Interest Rate (12%): INR 22,191.78</div>
+                <div>Term: 90days</div>
+                <div>Other charges (4%):INR 9864</div>
               </div>
             </div>
             <div className="projection-item">
               <div className="projection-label">Offer 2</div>
               <div className="projection-value">
-                <div>Term: 24 months</div>
-                <div>Amount: $150,000</div>
-                <div>Interest Rate: 9%</div>
+              <div>Amount: INR 10,00,000</div>
+                <div>Margin (25%): INR 2,50,000</div>
+                <div>Interest Rate (12%): INR 22,191.78</div>
+                <div>Term: 90days</div>
+                <div>Other charges (4%):INR 9864</div>
               </div>
             </div>
             <div className="projection-item">
               <div className="projection-label">Offer 3</div>
               <div className="projection-value">
-                <div>Term: 18 months</div>
-                <div>Amount: $120,000</div>
-                <div>Interest Rate: 7.5%</div>
+              <div>Amount: INR 10,00,000</div>
+                <div>Margin (25%): INR 2,50,000</div>
+                <div>Interest Rate (12%): INR 22,191.78</div>
+                <div>Term: 90days</div>
+                <div>Other charges (4%):INR 9864</div>
               </div>
             </div>
           </div>
@@ -109,7 +115,7 @@ function SellerOfferDetails() {
 export default SellerOfferDetails;
 
 const Details1 = styled.div`
-width: 100vh;
+width: 95vh;
 margin-left: 320px;
 margin-top: -420px;
 @media only screen and (min-width: 1800px) {
