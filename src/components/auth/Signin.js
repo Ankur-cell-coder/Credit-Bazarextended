@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
+import Footer from "../pages/Footer";
 
 function Signin() {
   const [role, setRole] = useState("seller");
@@ -66,6 +67,7 @@ function Signin() {
   };
 
   return (
+    <>
     <Sign1>
       <div className="formwrap">
         <div className="content">Welcome To Login Page</div>
@@ -106,7 +108,12 @@ function Signin() {
           <Link to={"/forgotpassword"}>Forgot Password ?</Link>
         </div>
       </div>
+      
     </Sign1>
+    <div style={{marginTop:"20vh"}} >
+    <Footer/>
+  </div>
+  </>
   );
 }
 
@@ -115,6 +122,7 @@ export default Signin;
 const Sign1 = styled.div`
   display: flex;
   justify-content: center;
+  margin-top:10vh;
   /* Styles for the page background */
   body {
     background-color: #e5e4e2;

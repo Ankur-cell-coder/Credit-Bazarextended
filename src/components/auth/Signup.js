@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
+import Footer from "../pages/Footer";
 
 function Signup() {
   const [auth, setAuth] = useAuth();
@@ -70,6 +71,7 @@ function Signup() {
   };
 
   return (
+    <>
     <Sign1>
       <div className="formwrap">
         <div style={{ marginBottom: "40px" }}>Welcome To SignUp Page</div>
@@ -153,6 +155,10 @@ function Signup() {
         </div>
       </div>
     </Sign1>
+    <div style={{marginTop:"20vh"}} >
+    <Footer/>
+  </div>
+  </>
   );
 }
 
@@ -162,6 +168,7 @@ const Sign1 = styled.div`
   /* Styles for the page background */
   display: flex;
   justify-content: center;
+  margin-top:10vh;
   body {
     background-color: #e5e4e2;
   }

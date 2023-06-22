@@ -1,17 +1,89 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from 'styled-components'
 import Navbarfinancer from '../pages/Navbarfinancer';
 import NavbarsideFinance from '../pages/NavbarsideFinance';
 import Footer from '../pages/Footer';
 import { useNavigate } from 'react-router-dom';
+import { useCount } from '../../context/count';
 
 function FinanceViewRequest() {
     const navigate=useNavigate();
+   
+    const [amount, setAmount] = useState("");
+    const [margin, setMargin] = useState("");
+    const [interest, setInterest] = useState("");
+    const [terms, setTerms] = useState("");
+  
+    const {incrementCount1}=useCount();
+  
+    const handleClick=()=>{
+      incrementCount1();
+      navigate('/financeofferacknowledgement');
+    }
   return (
     <>
      <Navbarfinancer/>
     <NavbarsideFinance/>
    <Finance1>
+
+   <div className="button">
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/finance_request_information");
+            }}
+          >
+            Request Information
+          </button>
+          <button
+            className="btn1"
+            onClick={() => {
+              navigate("/finance_view_request");
+            }}
+          >
+           View Request
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/finance_offers");
+            }}
+          >
+          Offers
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/finance_disbursement");
+            }}
+          >
+            Disbursement
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/finance_shipment");
+            }}
+          >
+            Shipment
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/finance_payment");
+            }}
+          >
+            Payment
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/finance_settlement");
+            }}
+          >
+            Settlement
+          </button>
+        </div>
 
    <div className="content">
         <div className="offer-details">
@@ -150,13 +222,24 @@ flex-direction: column;
           margin-top: 30px;
       }
       .btn {
-          color: white;
-          background-color: orange;
-          padding: 10px 20px;
-          text-decoration: none;
-          border-radius: 5px;
-          display: inline-block;
-          margin-right: 10px;
+        color: white;
+        background-color: #007bff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-left: 20px;
+        font-size: 20px;
+      }
+      .btn1 {
+        color: white;
+        background-color: orange;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-left: 20px;
       }
       .btn:hover {
           background-color: #0056b3;
