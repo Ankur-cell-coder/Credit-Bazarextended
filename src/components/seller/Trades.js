@@ -13,12 +13,12 @@ function Trades() {
         <div className="container">
           <div className="search-container">
             <div>
-              <input
+              {/* <input
                 type="text"
                 className="search-input"
                 placeholder="Search"
               />
-              <button className="search-btn">🔍</button>
+              <button className="search-btn">🔍</button> */}
             </div>
             <div className="button">
               <button className="btn">Add New Trades</button>
@@ -44,48 +44,48 @@ function Trades() {
                 <td>GST123</td>
                 <td>Buyer 1</td>
                 <td>GST456</td>
-                <td>INR 10,000</td>
-                <td>5%</td>
+                <td>INR 10,00,000</td>
+                <td>11%</td>
                 <td>INV001</td>
               </tr>
               <tr>
                 <td>GST123</td>
                 <td>Buyer 2</td>
                 <td>GST012</td>
-                <td>INR 8,000</td>
-                <td>3%</td>
+                <td>INR 8,00,000</td>
+                <td>9%</td>
                 <td>INV002</td>
               </tr>
               <tr>
                 <td>GST123</td>
                 <td>Buyer 3</td>
                 <td>GST678</td>
-                <td>INR 15,000</td>
-                <td>4%</td>
+                <td>INR 15,00,000</td>
+                <td>10%</td>
                 <td>INV003</td>
               </tr>
               <tr>
                 <td>GST123</td>
                 <td>Buyer 4</td>
                 <td>GST456</td>
-                <td>INR 10,000</td>
-                <td>5%</td>
+                <td>INR 10,00,000</td>
+                <td>8%</td>
                 <td>INV001</td>
               </tr>
               <tr>
                 <td>GST123</td>
                 <td>Buyer 5</td>
                 <td>GST012</td>
-                <td>INR 8,000</td>
-                <td>3%</td>
+                <td>INR 8,00,000</td>
+                <td>12%</td>
                 <td>INV002</td>
               </tr>
               <tr>
                 <td>GST123</td>
                 <td>Buyer 6</td>
                 <td>GST678</td>
-                <td>INR 15,000</td>
-                <td>4%</td>
+                <td>INR 15,00,000</td>
+                <td>11%</td>
                 <td>INV003</td>
               </tr>
             </tbody>

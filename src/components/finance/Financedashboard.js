@@ -6,14 +6,19 @@ import { useAuth } from "../../context/auth";
 import Navbarfinancer from "../pages/Navbarfinancer";
 import { useCount } from "../../context/count";
 import Footer from "../pages/Footer";
+import NavbarsideFinance from "../pages/NavbarsideFinance";
 
 function Tdashboard() {
   const navigate = useNavigate();
   const { count1 } = useCount();
 
   return (
+
+    <>
+    <Navbarfinancer />
+    <NavbarsideFinance/>
     <Dash>
-      <Navbarfinancer />
+      
 
       <div>
         <div
@@ -119,8 +124,10 @@ function Tdashboard() {
           View Settlements.
         </button>
       </div>
+      </Dash>
       <Footer/>
-    </Dash>
+   
+    </>
   );
 }
 
@@ -131,6 +138,11 @@ const Dash = styled.div`
 
   flex-direction: column;
   justify-content: center;
+
+ 
+   margin-top:-65vh;
+   margin-left:268px;
+ 
 
   .count {
     width: 20px;

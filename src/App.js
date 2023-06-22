@@ -38,6 +38,8 @@ import Offers from "./components/seller/Offers";
 import Shipment from "./components/seller/Shipment";
 import Payment from "./components/seller/Payment";
 import RequestInformation from "./components/seller/RequestInformation";
+import FinanceRequest from "./components/finance/FinanceRequest";
+import FinanceRequestInformation from "./components/finance/FinanceRequestInformation";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -63,6 +65,15 @@ function App() {
           path="/financesdashboard"
           element={!auth.user ? <Signin /> : <Tdashboard />}
         />
+         <Route
+          path="/financerequest"
+          element={!auth.user ? <Signin /> : <FinanceRequest />}
+        />
+         <Route
+          path="/finance_request_information"
+          element={!auth.user ? <Signin /> : <FinanceRequestInformation />}
+        />
+
         <Route
           path="/financeinitate"
           element={!auth.user ? <Signin /> : <FinanceInitate />}

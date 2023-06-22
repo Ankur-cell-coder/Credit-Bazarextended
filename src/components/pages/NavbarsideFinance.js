@@ -9,23 +9,18 @@ import {
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
-const NavbarSide = ({ children }) => {
+const NavbarsideFinance = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const menuItem = [
     {
-      path: "/sellersdashboard",
+      path: "/financesdashboard",
       name: "Dashboard",
       icon: <FaTh  />,
     },
     {
-      path: "/trades",
-      name: "Trade",
-      icon: <FaRegChartBar />,
-    },
-    {
-      path: "/offer-request",
-      name: "Request For Finance",
+      path: "/financerequest",
+      name: "Finance Request",
       icon: <FaShopify />,
     },
   ];
@@ -67,7 +62,7 @@ const NavbarSide = ({ children }) => {
   );
 };
 
-export default NavbarSide;
+export default NavbarsideFinance;
 
 const Navbar1 = styled.div`
 

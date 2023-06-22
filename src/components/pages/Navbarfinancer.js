@@ -50,9 +50,9 @@ function Navbarfinancer() {
             onChange={(e) => handleChange(e)}
             className="options"
           >
-             <option value="merchants">Finances</option>
-            <option value="buyer">Buyers</option>
-            <option value="seller">Sellers</option>
+             <option value="merchants">Finance Partner</option>
+            <option value="buyer">Buyer</option>
+            <option value="seller">Seller</option>
            
           </select>
         </div>

@@ -77,7 +77,7 @@ function Disbursement() {
 
                   <tr>
                     <th> Status</th>
-                    <td> In Progress</td>
+                    <td> Done</td>
                   </tr>
                 </tbody>
               </table>

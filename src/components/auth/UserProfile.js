@@ -208,8 +208,8 @@ function UserProfile() {
               onChange={(e) => setDefaultRole(e.target.value)}
             >
               <option value="seller">Seller</option>
-              <option value="buyer">Buyers</option>
-              <option value="merchants">Finances</option>
+              <option value="buyer">Buyer</option>
+              <option value="merchants">Finance Partner</option>
             </select>
             <button type="submit">Submit</button>
           </div>

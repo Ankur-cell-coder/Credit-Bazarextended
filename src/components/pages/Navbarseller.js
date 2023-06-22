@@ -56,9 +56,9 @@ function Navbarseller() {
             onChange={(e) => handleChange(e)}
             className="options"
           >
-            <option value="seller">Sellers</option>
-            <option value="buyer">Buyers</option>
-            <option value="merchants">Finances</option>
+            <option value="seller">Seller</option>
+            <option value="buyer">Buyer</option>
+            <option value="merchants">Finance Partner</option>
           </select>
         </div>
 
@@ -128,6 +128,8 @@ const Navbarseller1 = styled.div`
   @media only screen and (min-width: 1800px) {
     margin-left: 1400px;
   }
+
+  
 
   .onclickprofile {
     border: 2px solid black;

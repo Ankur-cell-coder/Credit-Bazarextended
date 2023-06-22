@@ -23,7 +23,7 @@ function Sdashboard(props) {
             justifyContent: "center",
           }}
         >
-          FinTech Cashflow Seller Dashboard
+          ProFinTech Cashflow Seller Dashboard
         </div>
         <br />
         <div
@@ -41,7 +41,7 @@ function Sdashboard(props) {
         <div className="content1">Current Cashflow Status</div>
         <br />
         <div className="content2">
-          Your current cashflow status is $X. This is a calculation based on
+          Your current cashflow status is INR 10,00,000. This is a calculation based on
           your recent income and expenses.
         </div>
       </div>
@@ -51,7 +51,7 @@ function Sdashboard(props) {
         <br />
         <div className="content2">
           Based on your current income and expense trends, your projected
-          cashflow for next month is $Y. Remember, this is only an estimate and
+          cashflow for next month is INR 5,00,000. Remember, this is only an estimate and
           actual cashflow may vary.
         </div>
       </div>
@@ -74,7 +74,7 @@ function Sdashboard(props) {
         </button>
       </div>
 
-      <div className="content">
+      {/* <div className="content">
         <div className="content1">Received Offers</div>
         <br />
         <div className="content2">
@@ -88,9 +88,9 @@ function Sdashboard(props) {
         >
           View Received Offers.
         </button>
-      </div>
+      </div> */}
 
-      <div className="content">
+      {/* <div className="content">
         <div className="content1">Disbursements</div>
         <br />
         <div className="content2">
@@ -106,9 +106,9 @@ function Sdashboard(props) {
         >
           View disbursements
         </button>
-      </div>
+      </div> */}
 
-      <div className="content">
+      {/* <div className="content">
         <div className="content1">Settlements</div>
         <br />
         <div className="content2">
@@ -124,7 +124,7 @@ function Sdashboard(props) {
         >
           View Settlements.
         </button>
-      </div>
+      </div> */}
      
     </Dash>
     <div style={{marginTop:"20vh"}}>

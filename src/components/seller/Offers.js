@@ -87,7 +87,7 @@ function Offers() {
                   </tr>
                   <tr>
                     <th> Status</th>
-                    <td> In Progress</td>
+                    <td> Done</td>
                   </tr>
                 </tbody>
               </table>
@@ -99,28 +99,24 @@ function Offers() {
           <div id="container">
             <div className="header">
               <h1>Received Offers</h1>
-              <p>Review the offers received from lenders.</p>
+              <p>Review the offers received from Finance Partner.</p>
             </div>
             <div className="lender-details">
               <h2>Offer 1</h2>
               <p>
-                <strong>Lender Name:</strong> Lender A
+                <strong>Lender Name:</strong> Suresh
               </p>
               <p>
-                <strong>Offered Amount:</strong> $10,000
+                <strong>Offered Amount:</strong> INR 7,50,000
               </p>
               <p>
-                <strong>Interest Rate:</strong> 5%
+                <strong>Interest Rate(12%):</strong>INR 22,191.78
               </p>
               <p>
-                <strong>Terms:</strong> 12 months
+                <strong>Terms:</strong>90 days
               </p>
               <p>
-                <strong>Additional Details:</strong> Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-              <p>
-                <strong>Address:</strong> 123 Main Street, City, State
+                <strong>Address:</strong> 123 Main Street, City,India
               </p>
               <p>
                 <strong>Contact:</strong> lender@example.com, +1 123-456-7890
@@ -134,53 +130,19 @@ function Offers() {
             <div className="lender-details">
               <h2>Offer 2</h2>
               <p>
-                <strong>Lender Name:</strong> Lender B
+                <strong>Lender Name:</strong> Ram
               </p>
               <p>
-                <strong>Offered Amount:</strong> $10,000
+                <strong>Offered Amount:</strong> INR 7,50,000
               </p>
               <p>
-                <strong>Interest Rate:</strong> 5%
+                <strong>Interest Rate(12%):</strong>INR 22,191.78
               </p>
               <p>
-                <strong>Terms:</strong> 12 months
+                <strong>Terms:</strong>120 days
               </p>
               <p>
-                <strong>Additional Details:</strong> Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-              <p>
-                <strong>Address:</strong> 123 Main Street, City, State
-              </p>
-              <p>
-                <strong>Contact:</strong> lender@example.com, +1 123-456-7890
-              </p>
-              <div className="select-btn-container">
-                <button className="select-btn" onClick={handleClick}>
-                  Accept
-                </button>
-              </div>
-            </div>
-            <div className="lender-details">
-              <h2>Offer 3</h2>
-              <p>
-                <strong>Lender Name:</strong> Lender C
-              </p>
-              <p>
-                <strong>Offered Amount:</strong> $10,000
-              </p>
-              <p>
-                <strong>Interest Rate:</strong> 5%
-              </p>
-              <p>
-                <strong>Terms:</strong> 12 months
-              </p>
-              <p>
-                <strong>Additional Details:</strong> Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-              <p>
-                <strong>Address:</strong> 123 Main Street, City, State
+                <strong>Address:</strong> 123 Main Street, City,India
               </p>
               <p>
                 <strong>Contact:</strong> lender@example.com, +1 123-456-7890
@@ -206,7 +168,7 @@ function Offers() {
                 <strong>Supplier Name:</strong> Supplier A
               </p>
               <p>
-                <strong>Requested Amount:</strong> $10,000
+                <strong>Requested Amount:</strong>INR 10,00,000
               </p>
               <p>
                 <strong>Trade Details:</strong> Trade details here
@@ -222,7 +184,7 @@ function Offers() {
                 <strong>Lender Name:</strong> Lender B
               </p>
               <p>
-                <strong>Offered Amount:</strong> $11,000
+                <strong>Offered Amount:</strong> INR 7,27,000
               </p>
               <p>
                 <strong>Trade Details:</strong> Trade details here
@@ -238,7 +200,7 @@ function Offers() {
                 <strong>Lender Name:</strong> Lender C
               </p>
               <p>
-                <strong>Offered Amount:</strong> $12,000
+                <strong>Offered Amount:</strong> INR 10,00,000
               </p>
               <p>
                 <strong>Trade Details:</strong> Trade details here

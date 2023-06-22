@@ -55,14 +55,14 @@ function SellerOfferDetails() {
             </p>
           </div>
           <div className="content">
-            <h2>Current State</h2>
+            {/* <h2>Current State</h2>
             <div className="state-item">
               <div className="state-label">Current Cashflow:</div>
               <div className="state-value">INR 10,00,000</div>
-            </div>
+            </div> */}
             <div className="state-item">
               <div className="state-label">Requested Amount:</div>
-              <div className="state-value">INR 50,000</div>
+              <div className="state-value">INR 10,00,000</div>
             </div>
           </div>
           <div className="content">
@@ -100,7 +100,7 @@ function SellerOfferDetails() {
           </div>
           <div className="content">
             <button className="btn" onClick={handleClick}>
-              Accept Offer
+             Submit
             </button>
           </div>
         </div>

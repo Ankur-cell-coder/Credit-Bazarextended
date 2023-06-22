@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import Navbarfinancer from "../pages/Navbarfinancer";
 import { useCount } from "../../context/count";
 import Footer from "../pages/Footer";
+import NavbarsideFinance from "../pages/NavbarsideFinance";
 
 function FinanceInitate() {
     
@@ -21,8 +22,11 @@ function FinanceInitate() {
   }
 
   return (
+    <>
+       <Navbarfinancer/>
+       <NavbarsideFinance/>
     <Finance1>
-      <Navbarfinancer/>
+   
       
     <div className="content">
         <div className="offer-details">
@@ -86,23 +90,7 @@ function FinanceInitate() {
         />
                            </div>
         </div>
-        <div className="pros-cons">
-            <div className="pros">
-                <h3>Pros:</h3>
-                <ul>
-                    <li>Low interest rate compared to market average.</li>
-                    <li>Short term with quick return on investment.</li>
-                    <li>No collateral requirement.</li>
-                </ul>
-            </div>
-            <div className="cons">
-                <h3>Cons:</h3>
-                <ul>
-                    <li>Higher monthly payments due to shorter term.</li>
-                    <li>Opportunity cost of tying up funds in this investment.</li>
-                </ul>
-            </div>
-        </div>
+       
         <div className="btn-container">
            <button className="btn" onClick={handleClick}>
             Place an Offer
@@ -113,16 +101,21 @@ function FinanceInitate() {
         </div>
     </div>
 
-
-  <Footer/>
     </Finance1>
+  <Footer/>
+    
+    </>
   );
 }
 
 export default FinanceInitate;
 
 const Finance1 = styled.div`
-
+   
+display: flex;
+  flex-direction: column;
+   margin-top:-65vh;
+   margin-left:268px;
 
         body {
             font-family: Arial, sans-serif;
