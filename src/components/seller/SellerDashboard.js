@@ -10,71 +10,73 @@ function Sdashboard(props) {
 
   return (
     <>
-     <Navbarseller />
-      <NavbarSide/>
-   
-    <Dash>
-      <div>
-        <div
-          style={{
-            display: "flex",
-            fontSize: "35px",
-            marginTop: "20px",
-            justifyContent: "center",
-          }}
-        >
-          ProFinTech Cashflow Seller Dashboard
-        </div>
-        <br />
-        <div
-          style={{
-            fontSize: "20px",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          Welcome! See your current and projected cashflow status below.
-        </div>
+      <div className="navbar">
+        <Navbarseller />
+        <NavbarSide />
       </div>
 
-      <div className="content">
-        <div className="content1">Current Cashflow Status</div>
-        <br />
-        <div className="content2">
-          Your current cashflow status is INR 10,00,000. This is a calculation based on
-          your recent income and expenses.
+      <Dash>
+        <div>
+          <div
+            style={{
+              display: "flex",
+              fontSize: "35px",
+              marginTop: "20px",
+              justifyContent: "center",
+            }}
+          >
+            ProFinTech Cashflow Seller Dashboard
+          </div>
+          <br />
+          <div
+            style={{
+              fontSize: "20px",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            Welcome! See your current and projected cashflow status below.
+          </div>
         </div>
-      </div>
 
-      <div className="content">
-        <div className="content1">Projected Cashflow Status</div>
-        <br />
-        <div className="content2">
-          Based on your current income and expense trends, your projected
-          cashflow for next month is INR 5,00,000. Remember, this is only an estimate and
-          actual cashflow may vary.
+        <div className="content">
+          <div className="content1">Current Cashflow Status</div>
+          <br />
+          <div className="content2">
+            Your current cashflow status is INR 10,00,000. This is a calculation
+            based on your recent income and expenses.
+          </div>
         </div>
-      </div>
 
-      <div className="content">
-        <div className="content1">Recommended Action</div>
-        <br />
-        <div className="content2">
-          Based on your cashflow status, we recommend you to raise a "Request
-          for Finance". This can help maintain positive cashflow for your
-          business. Click on the button below to get started.
+        <div className="content">
+          <div className="content1">Projected Cashflow Status</div>
+          <br />
+          <div className="content2">
+            Based on your current income and expense trends, your projected
+            cashflow for next month is INR 5,00,000. Remember, this is only an
+            estimate and actual cashflow may vary.
+          </div>
         </div>
-        <button
-          onClick={() => {
-            navigate("/offer-request");
-          }}
-          className="button"
-        >
-          Request For Finance
-        </button>
-      </div>
 
-      {/* <div className="content">
+        <div className="content">
+          <div className="content1">Recommended Action</div>
+          <br />
+          <div className="content2">
+            Based on your cashflow status, we recommend you to raise a "Request
+            for Finance". This can help maintain positive cashflow for your
+            business. Click on the button below to get started.
+          </div>
+          <button
+            onClick={() => {
+              navigate("/offer-request");
+            }}
+            className="button"
+          >
+            Request For Finance
+          </button>
+        </div>
+
+        {/* <div className="content">
         <div className="content1">Received Offers</div>
         <br />
         <div className="content2">
@@ -90,7 +92,7 @@ function Sdashboard(props) {
         </button>
       </div> */}
 
-      {/* <div className="content">
+        {/* <div className="content">
         <div className="content1">Disbursements</div>
         <br />
         <div className="content2">
@@ -108,7 +110,7 @@ function Sdashboard(props) {
         </button>
       </div> */}
 
-      {/* <div className="content">
+        {/* <div className="content">
         <div className="content1">Settlements</div>
         <br />
         <div className="content2">
@@ -125,12 +127,10 @@ function Sdashboard(props) {
           View Settlements.
         </button>
       </div> */}
-     
-    </Dash>
-    <div style={{marginTop:"20vh"}}>
-    <Footer/>
-    </div>
-   
+      </Dash>
+      <div style={{ marginTop: "20vh" }}>
+        <Footer />
+      </div>
     </>
   );
 }
@@ -140,9 +140,13 @@ export default Sdashboard;
 const Dash = styled.div`
   display: flex;
   flex-direction: column;
-   margin-top:-65vh;
-   margin-left:268px;
- 
+  margin-top: -65vh;
+  margin-left: 268px;
+
+  // .navbar {
+  //   position: sticky;
+  // }
+
   .content {
     margin-top: 50px;
     height: 180px;
@@ -160,7 +164,6 @@ const Dash = styled.div`
     font-size: 17px;
     margin-left: 30px;
   }
-
 
   .button {
     margin-left: 20px;

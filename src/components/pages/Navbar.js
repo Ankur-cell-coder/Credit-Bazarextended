@@ -78,11 +78,15 @@ margin-left: 1100px;
   margin-left:1400px;
 }
 
+
+
 .rightsection {
   display: flex;
   width: 400px;
   margin-top: -30px;
   justify-content: space-between;
+  position: sticky;
+  top: 0px;
 }
 
 .options {
@@ -91,12 +95,16 @@ margin-left: 1100px;
   font-size: 20px;
   border: 2px solid black;
   margin-top:-60px;
+  position: sticky;
+  top: 0px;
 }
 .login {
   width: 150px;
   height: 40px;
   font-size: 20px;
   margin-top:-60px;
+  position: sticky;
+  top: 0px;
 }
 .button {
   margin-left: 20px;
@@ -106,5 +114,7 @@ margin-left: 1100px;
   border: 2px solid orange;
   width: 200px;
   font-size: 15px;
+  position: sticky;
+  top: 0px;
 }
 `;

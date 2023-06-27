@@ -129,7 +129,7 @@ const Navbarseller1 = styled.div`
     margin-left: 1400px;
   }
 
-  
+  position: sticky;
 
   .onclickprofile {
     border: 2px solid black;

@@ -3,12 +3,16 @@ import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Navbarfinancer from "../pages/Navbarfinancer";
 import Footer from "../pages/Footer";
+import NavbarsideFinance from "../pages/NavbarsideFinance";
 
 function FinanceSettlementDetail() {
     const navigate=useNavigate();
   return (
+    <>
+    <Navbarfinancer/>
+    <NavbarsideFinance/>
     <Finance1>
-        <Navbarfinancer/>
+        
       <div className="content">
         <div className="disbursement-details">
           <h2>Settlement Details</h2>
@@ -25,8 +29,12 @@ function FinanceSettlementDetail() {
           </div>
         </div>
       </div>
-      <Footer/>
+    
     </Finance1>
+    <div style={{marginTop:"20vh"}}>
+    <Footer/>
+    </div>
+    </>
   );
 }
 
@@ -34,30 +42,12 @@ export default FinanceSettlementDetail;
 
 const Finance1 = styled.div`
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-.top-bar {
-    background-color: #007BFF;
-    color: #ffffff;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-}
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: auto;
-}
-.notification-bell {
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: 10px;
-}
+display:flex;
+justify-content:center;
+
+margin-top: -65vh;
+margin-left: 5vh;
+
 .content {
     display: flex;
     justify-content: center;

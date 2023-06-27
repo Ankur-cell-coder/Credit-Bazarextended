@@ -7,8 +7,7 @@ function Footer() {
   return (
     <Footer1>
       <div className="footer-content">
-        <p>© Copyright 2023. All rights reserved | Credit Bazar</p>
-        <ul className="footer-links">
+      <ul className="footer-links">
           <li>
             <a href="#">
               <FaYoutube />
@@ -30,6 +29,8 @@ function Footer() {
             </a>
           </li>
         </ul>
+        <p>© Copyright 2023. All rights reserved | Credit Bazar</p>
+      
         <ul className="footer-links">
           <li>
             <a href="#">Contact Us</a>
@@ -49,17 +50,17 @@ const Footer1 = styled.div`
   border: 2px solid black;
   background-color: black;
   color: white;
-  margin-top:20px;
+  margin-top:20vh;
+
   footer {
     background-color: black;
-    padding: 20px;
     text-align: center;
   }
 
   .footer-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
+    justify-content: space-evenly;
     align-items: center;
   }
 

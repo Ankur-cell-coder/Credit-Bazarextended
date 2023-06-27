@@ -3,12 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Navbarfinancer from "../pages/Navbarfinancer";
 import Footer from "../pages/Footer";
+import NavbarsideFinance from "../pages/NavbarsideFinance";
 
 function FinanceOfferAcknowledgement() {
     const navigate=useNavigate();
   return (
-    <Finance1>
+    <>
       <Navbarfinancer/>
+      <NavbarsideFinance/>
+    <Finance1>
      
     <div id="container">
         <div className="header">
@@ -32,8 +35,10 @@ function FinanceOfferAcknowledgement() {
 
 
 
-     <Footer/>
+    
     </Finance1>
+    <Footer/>
+    </>
   );
 }
 
@@ -41,9 +46,13 @@ export default FinanceOfferAcknowledgement;
 
 const Finance1 = styled.div`
 
-body {
-  font-family: Arial, sans-serif;
-}
+display: flex;
+flex-direction: column;
+width:80%;
+margin-top: -65vh;
+margin-left: 28vh;
+
+
 #container {
   width: 80%;
   margin: auto;

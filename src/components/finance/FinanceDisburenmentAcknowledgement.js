@@ -3,6 +3,7 @@ import { styled } from 'styled-components'
 import { useNavigate } from 'react-router-dom';
 import Navbarfinancer from '../pages/Navbarfinancer';
 import Footer from '../pages/Footer';
+import NavbarsideFinance from '../pages/NavbarsideFinance';
 
 
 function  FinanceDisburenmentAcknowledgement() {
@@ -11,6 +12,7 @@ function  FinanceDisburenmentAcknowledgement() {
   return (
     <>
     <Navbarfinancer/>
+    <NavbarsideFinance/>
    <Acko1>
     <div>
     <div className='content1'>
@@ -40,7 +42,10 @@ function  FinanceDisburenmentAcknowledgement() {
     </button>
     </div>
    </Acko1>
+   <div style={{marginTop:"25vh"}}>
    <Footer/>
+   </div>
+   
    </>
   )
 }
@@ -51,12 +56,17 @@ const Acko1=styled.div`
   
 display:flex;
 justify-content:center;
+
+margin-top: -65vh;
+margin-left: 5vh;
+
+
   .content1{
     display:flex;
 justify-content:center;
     font-size:35px;
     margin-top:80px;
-    // margin-left:650px;
+  
   }
   .wrapper{
     width:600px;

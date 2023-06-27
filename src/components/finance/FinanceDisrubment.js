@@ -3,12 +3,16 @@ import { useNavigate } from 'react-router-dom'
 import { styled } from 'styled-components'
 import Navbarfinancer from '../pages/Navbarfinancer';
 import Footer from '../pages/Footer';
+import NavbarsideFinance from '../pages/NavbarsideFinance';
 
 function FinanceDisrubment() {
     const navigate=useNavigate();
   return (
+    <>
+     <Navbarfinancer/>
+     <NavbarsideFinance/>
     <Finance1>
-        <Navbarfinancer/>
+       
         <div className="content">
         <div className="disbursement-details">
             <h2>Disbursement Details</h2>
@@ -27,14 +31,22 @@ function FinanceDisrubment() {
             </div>
         </div>
     </div>
-    <Footer/>
+   
     </Finance1>
+    <Footer/>
+    </>
   )
 }
 
 export default FinanceDisrubment
 
 const Finance1=styled.div`
+
+
+display: flex;
+flex-direction: column;
+margin-top: -65vh;
+margin-left: 16vh;
         body {
             font-family: Arial, sans-serif;
             margin: 0;

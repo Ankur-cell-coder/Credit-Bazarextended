@@ -78,6 +78,7 @@ margin-left: 1100px;
 @media only screen and (min-width: 1800px){
   margin-left:1400px;
 }
+position: sticky;
 
 .rightsection {
   display: flex;

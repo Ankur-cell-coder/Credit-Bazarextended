@@ -4,12 +4,14 @@ import qimg from "../images/qrcodeimage.png";
 import { useNavigate } from "react-router-dom";
 import Navbarfinancer from "../pages/Navbarfinancer";
 import Footer from "../pages/Footer";
+import NavbarsideFinance from "../pages/NavbarsideFinance";
 
 function FinancePayment() {
   const navigate = useNavigate();
   return (
     <>
       <Navbarfinancer/>
+      <NavbarsideFinance/>
       <Seller1>
         <div className="header">
           <h1>Payment Gateway</h1>
@@ -67,9 +69,12 @@ function FinancePayment() {
 export default FinancePayment;
 
 const Seller1 = styled.div`
-  body {
-    font-family: Arial, sans-serif;
-  }
+display: flex;
+flex-direction: column;
+width:80%;
+margin-top: -65vh;
+margin-left: 28vh;
+
   .top-bar {
     background-color: #007bff;
     color: #fff;
@@ -78,20 +83,9 @@ const Seller1 = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  .logo {
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 20px;
-  }
-  .bell-icon {
-    font-size: 18px;
-    margin-right: 20px;
-    color: gold;
-  }
 
-  width: 80%;
-  margin: auto;
 
+ 
   .header {
     text-align: center;
     padding: 20px;
