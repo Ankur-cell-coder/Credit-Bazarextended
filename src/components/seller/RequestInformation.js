@@ -120,7 +120,7 @@ function RequestInformation() {
           </div>
         </div>
       </Request1>
-      <div style={{ marginTop: "30vh" }}>
+      <div style={{ marginTop: "40vh" }}>
         <Footer />
       </div>
     </>
@@ -131,7 +131,7 @@ export default RequestInformation;
 
 const Request1 = styled.div`
   margin-left: 28vh;
-  margin-top: -540px;
+  margin-top:20vh;
   .btn {
     color: white;
     background-color: #007bff;

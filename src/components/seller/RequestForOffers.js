@@ -136,7 +136,7 @@ function RequestForOffers() {
           </div>
         )}
       </Request1>
-      <div style={{ marginTop: "65vh" }}>
+      <div style={{ marginTop: "80vh" }}>
         <Footer />
       </div>
     </>
@@ -148,10 +148,7 @@ export default RequestForOffers;
 const Request1 = styled.div`
   width: 100vh;
   margin-left: 320px;
-  margin-top: -420px;
-  @media only screen and (min-width: 1800px) {
-    margin-top: -560px;
-  }
+  margin-top:20vh;
 
   .content {
     display: flex;

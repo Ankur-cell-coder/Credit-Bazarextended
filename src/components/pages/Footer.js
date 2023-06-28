@@ -51,6 +51,7 @@ const Footer1 = styled.div`
   background-color: black;
   color: white;
   margin-top:20vh;
+  
 
   footer {
     background-color: black;

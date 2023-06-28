@@ -7,9 +7,10 @@ import NavbarSide from "../pages/NavbarSide";
 function Trades() {
   return (
     <>
+    <Navbarseller />
       <NavbarSide />
       <Trade1>
-        <Navbarseller />
+        
         <div className="container">
           <div className="search-container">
             <div>
@@ -92,10 +93,11 @@ function Trades() {
           </table>
         </div>
 
-        <div style={{ marginTop: "40vh" }}>
+       
+      </Trade1>
+      <div style={{ marginTop: "60vh" }}>
           <Footer />
         </div>
-      </Trade1>
     </>
   );
 }
@@ -103,7 +105,7 @@ function Trades() {
 export default Trades;
 
 const Trade1 = styled.div`
-  margin-top: -710px;
+  
   margin-left: 10vh;
   body {
     font-family: Arial, sans-serif;

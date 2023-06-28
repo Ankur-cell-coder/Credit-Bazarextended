@@ -32,7 +32,7 @@ const NavbarSide = ({ children }) => {
   return (
     <Navbar1>
       <div className="container">
-        <div style={{ width: isOpen ? "280px" : "50px" }} className="sidebar">
+        <div style={{ width: isOpen ? "280px" : "50px"}} className="sidebar">
           <div className="top_section">
             <div
               style={{ marginLeft: isOpen ? "210px" : "0px" }}
@@ -71,11 +71,7 @@ export default NavbarSide;
 
 const Navbar1 = styled.div`
 
-  * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-  }
+  position:fixed;
   .container {
     display: flex;
   }
@@ -98,9 +94,7 @@ const Navbar1 = styled.div`
     align-items: center;
     padding: 20px 15px;
   }
-  .logo {
-    font-size: 30px;
-  }
+
   .bars {
     display: flex;
     font-size: 25px;

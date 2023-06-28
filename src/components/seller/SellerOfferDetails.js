@@ -105,7 +105,7 @@ function SellerOfferDetails() {
           </div>
         </div>
       </Details1>
-      <div style={{marginTop:"20vh"}}>
+      <div style={{marginTop:"35vh"}}>
       <Footer />
       </div>
     </>
@@ -117,10 +117,8 @@ export default SellerOfferDetails;
 const Details1 = styled.div`
 width: 95vh;
 margin-left: 320px;
-margin-top: -420px;
-@media only screen and (min-width: 1800px) {
-  margin-top: -560px;
-}
+
+margin-top:20vh;
 
   body {
     font-family: Arial, sans-serif;

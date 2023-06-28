@@ -92,19 +92,12 @@ export default Request_offers;
 const Request1 = styled.div`
   width: 100vh;
   margin-left: 320px;
-  margin-top: -420px;
-  @media only screen and (min-width: 1800px) {
-    margin-top: -560px;
-  }
+  margin-top:20vh;
+ 
   .main-content {
     padding: 20px;
   }
-  .table-container {
-    margin-top: -420px;
-    @media only screen and (min-width: 1800px) {
-      margin-top: -520px;
-    }
-  }
+  
   table {
     width: 150%;
     border-collapse: collapse;

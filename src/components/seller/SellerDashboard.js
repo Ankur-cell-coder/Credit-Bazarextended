@@ -10,10 +10,10 @@ function Sdashboard(props) {
 
   return (
     <>
-      <div className="navbar">
+      
         <Navbarseller />
-        <NavbarSide />
-      </div>
+        <NavbarSide className="sticky-navbar"/>
+    
 
       <Dash>
         <div>
@@ -76,59 +76,8 @@ function Sdashboard(props) {
           </button>
         </div>
 
-        {/* <div className="content">
-        <div className="content1">Received Offers</div>
-        <br />
-        <div className="content2">
-          Here You will get all received Offers from financier.
-        </div>
-        <button
-          onClick={() => {
-            navigate("/sellersreceivedoffers");
-          }}
-          className="button"
-        >
-          View Received Offers.
-        </button>
-      </div> */}
-
-        {/* <div className="content">
-        <div className="content1">Disbursements</div>
-        <br />
-        <div className="content2">
-          This section provides information about the disbursements made to your
-          account. You can track the disbursement details and manage the
-          funds accordingly.
-        </div>
-        <button
-          onClick={() => {
-            navigate("/sellersdisbursement");
-          }}
-          className="button"
-        >
-          View disbursements
-        </button>
-      </div> */}
-
-        {/* <div className="content">
-        <div className="content1">Settlements</div>
-        <br />
-        <div className="content2">
-          In this section, you can view the settlements made for your
-          outstanding payments. It provides an overview of the transactions and
-          helps you maintain a clear record.
-        </div>
-        <button
-          onClick={() => {
-            navigate("/sellerssettlements");
-          }}
-          className="button"
-        >
-          View Settlements.
-        </button>
-      </div> */}
       </Dash>
-      <div style={{ marginTop: "20vh" }}>
+      <div style={{ marginTop: "30vh" }}>
         <Footer />
       </div>
     </>
@@ -138,14 +87,12 @@ function Sdashboard(props) {
 export default Sdashboard;
 
 const Dash = styled.div`
+
   display: flex;
   flex-direction: column;
-  margin-top: -65vh;
-  margin-left: 268px;
-
-  // .navbar {
-  //   position: sticky;
-  // }
+  margin-top:10vh;
+  margin-left:10em;
+ 
 
   .content {
     margin-top: 50px;
@@ -177,4 +124,6 @@ const Dash = styled.div`
   .button:hover {
     background-color: #0056b3;
   }
+
+
 `;

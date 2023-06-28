@@ -48,7 +48,7 @@ function App() {
   return (
     <App1>
       <div
-        style={{ background: "orange", width: "100%", height: "100px" }}
+        style={{ background: "orange", width: "100%", height: "100px"}}
       ></div>
 
       <div className="topcomp">
@@ -203,15 +203,19 @@ function App() {
 export default App;
 
 const App1 = styled.div`
+
   .topcomp {
+    // position:fixed;
     display: flex;
     height: 60px;
     margin-left: 50px;
     width: 300px;
     justify-content: center;
     margin-top: -80px;
+    
   }
   .leftcontent {
+    // position:fixed;
     margin-top: 10px;
     font-size: 25px;
   }

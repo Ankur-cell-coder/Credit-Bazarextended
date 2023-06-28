@@ -127,7 +127,7 @@ function Bdashboard(props) {
 
   return (
     <Dash>
-      <div className="sticky-navbar">
+      <div >
         <Navbar />
       </div>
 
@@ -233,12 +233,12 @@ const Dash = styled.div`
   }
 
   /* Make the Navbar sticky */
-  // Navbar {
-  //   position: sticky;
-  //   top: 0
-  // }
+  Navbar {
+    position: fixed;
+    top: 0
+  }
   .sticky-navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
   }
