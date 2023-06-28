@@ -125,11 +125,12 @@ const Navbarseller1 = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-left: 1100px;
+  margin-top:8vh;
   @media only screen and (min-width: 1800px) {
     margin-left: 1400px;
   }
 
-  position: sticky;
+  position: fixed;
 
   .onclickprofile {
     border: 2px solid black;

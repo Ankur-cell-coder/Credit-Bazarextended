@@ -87,7 +87,7 @@ const Navbar1 = styled.div`
     transition: all 0.5s;
     border:2px solid black;
     border-radius:10px;
-    margin-top:15vh;
+    margin-top:25vh;
   }
   .top_section {
     display: flex;

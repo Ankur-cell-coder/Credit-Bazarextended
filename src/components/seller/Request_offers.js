@@ -24,7 +24,7 @@ function Request_offers() {
             </button>
             <button
               className="btn"
-              style={{ background: "orange", marginLeft: "30px" }}
+              style={{ background: "orange", marginLeft: "30px",marginTop:"25vh" }}
             >
               Finance Request
             </button>
@@ -92,7 +92,7 @@ export default Request_offers;
 const Request1 = styled.div`
   width: 100vh;
   margin-left: 320px;
-  margin-top:20vh;
+ 
  
   .main-content {
     padding: 20px;

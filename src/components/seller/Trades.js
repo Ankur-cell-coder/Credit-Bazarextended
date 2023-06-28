@@ -7,21 +7,16 @@ import NavbarSide from "../pages/NavbarSide";
 function Trades() {
   return (
     <>
+     <NavbarSide />
     <Navbarseller />
-      <NavbarSide />
+     
       <Trade1>
         
         <div className="container">
           <div className="search-container">
             <div>
-              {/* <input
-                type="text"
-                className="search-input"
-                placeholder="Search"
-              />
-              <button className="search-btn">🔍</button> */}
             </div>
-            <div className="button">
+            <div className="button" style={{ marginTop:"20vh"}}>
               <button className="btn">Add New Trades</button>
             </div>
           </div>
@@ -107,6 +102,7 @@ export default Trades;
 const Trade1 = styled.div`
   
   margin-left: 10vh;
+  
   body {
     font-family: Arial, sans-serif;
     margin: 0;

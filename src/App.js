@@ -48,11 +48,12 @@ function App() {
   return (
     <App1>
       <div
-        style={{ background: "orange", width: "100%", height: "100px"}}
-      ></div>
+        style={{ background: "orange", width: "100%", height: "100px",justifyContent:"center",position:"fixed"}}
+      >
 
-      <div className="topcomp">
-        <img src={creditlogo} className="leftContent" />
+     
+        <img src={creditlogo} className="leftContent" style={{marginTop:"20px",marginLeft:"30px"}} />
+     
       </div>
 
       <Routes>
@@ -205,7 +206,7 @@ export default App;
 const App1 = styled.div`
 
   .topcomp {
-    // position:fixed;
+    //  position:fixed;
     display: flex;
     height: 60px;
     margin-left: 50px;

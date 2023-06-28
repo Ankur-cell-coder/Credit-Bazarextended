@@ -155,7 +155,7 @@ export default Disbursement;
 
 const Request1 = styled.div`
   margin-left: 28vh;
-  margin-top:20vh;
+ 
   
   .btn {
     color: white;
@@ -166,6 +166,7 @@ const Request1 = styled.div`
     display: inline-block;
     margin-left: 20px;
     font-size: 20px;
+    margin-top:25vh;
   }
   .btn1 {
     color: white;

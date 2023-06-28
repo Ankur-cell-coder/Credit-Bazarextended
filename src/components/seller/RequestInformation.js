@@ -131,7 +131,7 @@ export default RequestInformation;
 
 const Request1 = styled.div`
   margin-left: 28vh;
-  margin-top:20vh;
+  
   .btn {
     color: white;
     background-color: #007bff;
@@ -309,6 +309,7 @@ const Request1 = styled.div`
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    margin-top:25vh;
   }
   .btn:hover {
     background-color: #0056b3;
@@ -330,4 +331,5 @@ const Request1 = styled.div`
       opacity: 1;
     }
   }
+  
 `;

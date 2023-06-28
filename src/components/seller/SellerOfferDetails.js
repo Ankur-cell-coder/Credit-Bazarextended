@@ -42,7 +42,7 @@ function SellerOfferDetails() {
             </button>
             <button
               className="btn"
-              style={{ background: "blue", marginLeft: "30px" }}
+              style={{ background: "blue", marginLeft: "30px",marginTop:"25vh" }}
             >
               Finance Request
             </button>
@@ -55,11 +55,7 @@ function SellerOfferDetails() {
             </p>
           </div>
           <div className="content">
-            {/* <h2>Current State</h2>
-            <div className="state-item">
-              <div className="state-label">Current Cashflow:</div>
-              <div className="state-value">INR 10,00,000</div>
-            </div> */}
+           
             <div className="state-item">
               <div className="state-label">Requested Amount:</div>
               <div className="state-value">INR 10,00,000</div>
@@ -118,7 +114,7 @@ const Details1 = styled.div`
 width: 95vh;
 margin-left: 320px;
 
-margin-top:20vh;
+
 
   body {
     font-family: Arial, sans-serif;

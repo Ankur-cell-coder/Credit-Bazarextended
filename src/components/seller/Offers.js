@@ -239,7 +239,7 @@ export default Offers;
 
 const Request1 = styled.div`
   margin-left: 28vh;
-  margin-top:20vh;
+ 
   .btn {
     color: white;
     background-color: #007bff;
@@ -259,6 +259,7 @@ const Request1 = styled.div`
     border-radius: 5px;
     display: inline-block;
     margin-left: 20px;
+    margin-top:25vh;
   }
   .btn:hover {
     background-color: #0056b3;

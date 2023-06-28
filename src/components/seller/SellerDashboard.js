@@ -12,16 +12,16 @@ function Sdashboard(props) {
     <>
       
         <Navbarseller />
-        <NavbarSide className="sticky-navbar"/>
+        <NavbarSide />
     
 
-      <Dash>
+      <Dash >
         <div>
           <div
             style={{
               display: "flex",
               fontSize: "35px",
-              marginTop: "20px",
+              marginTop: "20vh",
               justifyContent: "center",
             }}
           >
@@ -90,7 +90,7 @@ const Dash = styled.div`
 
   display: flex;
   flex-direction: column;
-  margin-top:10vh;
+  
   margin-left:10em;
  
 

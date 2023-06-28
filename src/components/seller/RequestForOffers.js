@@ -21,7 +21,11 @@ function RequestForOffers() {
         <div className="buttoncontainer">
           <button
             className="btn"
-            style={{ background: "orange", marginRight: "30px" }}
+            style={{
+              background: "orange",
+              marginRight: "30px",
+              marginTop: "25vh",
+            }}
           >
             New Request For Finance
           </button>
@@ -148,11 +152,10 @@ export default RequestForOffers;
 const Request1 = styled.div`
   width: 100vh;
   margin-left: 320px;
-  margin-top:20vh;
 
   .content {
     display: flex;
-    margin-top: 20px;
+    margin-top: 20vh;
   }
 
   .table-container {
@@ -195,8 +198,8 @@ const Request1 = styled.div`
     border-radius: 4px 0 0 4px;
     font-size: 14px;
     align-items: center;
-    width:450px;
-    height:40px;
+    width: 450px;
+    height: 40px;
   }
   .search-button {
     margin-top: 30px;
@@ -210,8 +213,7 @@ const Request1 = styled.div`
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size:20px;
-
+    font-size: 20px;
   }
   .search-button:hover {
     background-color: #0056b3;
@@ -263,9 +265,9 @@ const Request1 = styled.div`
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-    width:350px;
-    height:50px;
-    font-size:20px;
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
   }
   .btn:hover {
     background-color: #0056b3;
