@@ -41,6 +41,7 @@ import RequestInformation from "./components/seller/RequestInformation";
 import FinanceRequest from "./components/finance/FinanceRequest";
 import FinanceRequestInformation from "./components/finance/FinanceRequestInformation";
 import FinanceViewRequest from "./components/finance/FinanceViewRequest";
+import FinanceOffers from "./components/finance/FinanceOffers";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -99,6 +100,12 @@ function App() {
           path="/financedisrubmentacknowledgement"
           element={
             !auth.user ? <Signin /> : <FinanceDisburenmentAcknowledgement />
+          }
+        />
+         <Route
+          path="/finance_offers"
+          element={
+            !auth.user ? <Signin /> : <FinanceOffers />
           }
         />
         <Route
