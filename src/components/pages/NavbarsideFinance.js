@@ -66,11 +66,8 @@ export default NavbarsideFinance;
 
 const Navbar1 = styled.div`
 
-  * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-  }
+position:fixed;
+ 
   .container {
     display: flex;
   }
@@ -86,7 +83,7 @@ const Navbar1 = styled.div`
     transition: all 0.5s;
     border:2px solid black;
     border-radius:10px;
-    margin-top:15vh;
+    margin-top:20vh;
   }
   .top_section {
     display: flex;

@@ -45,14 +45,14 @@ const Finance1 = styled.div`
 display:flex;
 justify-content:center;
 
-margin-top: -65vh;
+
 margin-left: 5vh;
 
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
-
+margin-top:20vh;
      height: 80vh;
 }
 .disbursement-details {

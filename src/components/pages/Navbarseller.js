@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { useAuth } from "../../context/auth";
-import uicon from "../images/usericon.png";
 import { BiLogOut, BiUser } from "react-icons/bi";
 
 function Navbarseller() {
@@ -67,7 +66,6 @@ function Navbarseller() {
             <div>
               <button onClick={handleClick} className="login">
                 <BiUser style={{ width: "40px", height: "40px" }} />
-                {/* <img src={uicon} style={{ width: "40px", height: "40px" }} /> */}
               </button>
             </div>
             <div className="onclickprofile">

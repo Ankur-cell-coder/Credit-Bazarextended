@@ -45,37 +45,15 @@ const Finance1=styled.div`
 
 display: flex;
 flex-direction: column;
-margin-top: -65vh;
-margin-left: 16vh;
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .top-bar {
-            background-color: #007BFF;
-            color: orange;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            margin-right: auto;
-        }
-        .notification-bell {
-            font-size: 20px;
-            cursor: pointer;
-            margin-left: auto;
-            margin-right: 10px;
-        }
+
+// margin-left: 16vh;
+
         .content {
             display: flex;
             justify-content: center;
-            align-items: center;
+            // align-items: center;
             height: 100vh;
+            margin-top: 10vh;
         }
         .disbursement-details {
             background-color: #F8F9FA;

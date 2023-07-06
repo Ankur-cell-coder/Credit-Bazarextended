@@ -114,16 +114,13 @@ const Finance1 = styled.div`
    
 display: flex;
   flex-direction: column;
-   margin-top:-65vh;
-   margin-left:268px;
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+   margin-left:268px;
+   width:80%;
+
+        
         .content {
-            margin-top: 50px; /* Adjust the margin to move content down */
+            margin-top: 20vh; /* Adjust the margin to move content down */
             padding: 20px;
         }
         .details {

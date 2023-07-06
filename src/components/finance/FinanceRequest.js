@@ -167,7 +167,7 @@ function FinanceRequest() {
           </table>
         </div>
      </Finance1>
-     <div style={{marginTop:"20vh"}}>
+     <div style={{marginTop:"40vh"}}>
         <Footer/>
      </div>
      </>
@@ -191,10 +191,8 @@ justify-content: center;
   padding: 20px;
 }
 .table-container {
-  margin-top: -420px;
-  @media only screen and (min-width: 1800px) {
-    margin-top: -520px;
-  }
+  margin-top: 25vh;
+  
 }
 table {
   width: 150%;

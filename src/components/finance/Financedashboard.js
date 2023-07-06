@@ -15,8 +15,10 @@ function Tdashboard() {
   return (
 
     <>
+
     <Navbarfinancer />
     <NavbarsideFinance/>
+
     <Dash>
       
 
@@ -25,7 +27,7 @@ function Tdashboard() {
           style={{
             display: "flex",
             fontSize: "35px",
-            marginTop: "20px",
+            marginTop: "20vh",
             justifyContent: "center",
           }}
         >
@@ -140,7 +142,7 @@ const Dash = styled.div`
   justify-content: center;
 
  
-   margin-top:-65vh;
+  
    margin-left:268px;
  
 

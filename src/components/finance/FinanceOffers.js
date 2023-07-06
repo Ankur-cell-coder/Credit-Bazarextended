@@ -218,7 +218,7 @@ export default FinanceOffers;
 
 const Finance1 = styled.div`
   margin-left: 28vh;
-  margin-top: -540px;
+ 
   .btn {
     color: white;
     background-color: #007bff;
@@ -228,6 +228,7 @@ const Finance1 = styled.div`
     display: inline-block;
     margin-left: 20px;
     font-size: 20px;
+    margin-top:20vh;
   }
   .btn1 {
     color: white;

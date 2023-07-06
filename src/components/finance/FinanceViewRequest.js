@@ -172,7 +172,7 @@ const Finance1=styled.div`
 
 display: flex;
 flex-direction: column;
- margin-top:-65vh;
+
  margin-left:268px;
 
       body {
@@ -230,6 +230,7 @@ flex-direction: column;
         display: inline-block;
         margin-left: 20px;
         font-size: 20px;
+        margin-top:20vh;
       }
       .btn1 {
         color: white;

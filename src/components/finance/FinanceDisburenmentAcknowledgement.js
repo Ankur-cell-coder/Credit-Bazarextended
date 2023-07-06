@@ -42,7 +42,7 @@ function  FinanceDisburenmentAcknowledgement() {
     </button>
     </div>
    </Acko1>
-   <div style={{marginTop:"25vh"}}>
+   <div style={{marginTop:"35vh"}}>
    <Footer/>
    </div>
    
@@ -56,8 +56,6 @@ const Acko1=styled.div`
   
 display:flex;
 justify-content:center;
-
-margin-top: -65vh;
 margin-left: 5vh;
 
 
@@ -65,7 +63,7 @@ margin-left: 5vh;
     display:flex;
 justify-content:center;
     font-size:35px;
-    margin-top:80px;
+    margin-top:20vh;
   
   }
   .wrapper{

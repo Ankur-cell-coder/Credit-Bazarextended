@@ -49,7 +49,7 @@ const Finance1 = styled.div`
 display: flex;
 flex-direction: column;
 width:80%;
-margin-top: -65vh;
+
 margin-left: 28vh;
 
 
@@ -61,6 +61,7 @@ margin-left: 28vh;
   text-align: center;
   padding: 20px;
   color: #333;
+  margin-top:20vh;
 }
 .content {
   background-color: #F8F9FA;

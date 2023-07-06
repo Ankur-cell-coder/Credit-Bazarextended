@@ -72,7 +72,7 @@ const Seller1 = styled.div`
 display: flex;
 flex-direction: column;
 width:80%;
-margin-top: -65vh;
+
 margin-left: 28vh;
 
   .top-bar {
@@ -90,12 +90,14 @@ margin-left: 28vh;
     text-align: center;
     padding: 20px;
     color: #333;
+    margin-top: 20vh;
   }
   .content {
     background-color: #f8f9fa;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
+   
   }
   .form-group {
     margin-bottom: 15px;

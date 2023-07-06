@@ -31,6 +31,7 @@ function Signin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      //http://localhost:3005/user/login
       const res = await axios.post("http://localhost:3005/user/login", {
         numberOrEmail,
         password,
@@ -68,52 +69,55 @@ function Signin() {
 
   return (
     <>
-    <Sign1>
-      <div className="formwrap">
-        <div className="content">Welcome To Login Page</div>
-        <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="numberOrEmail" style={{marginLeft:'-90px'}}>Registered Number or Email</label>
-          <br />
-          <input
-            type="txt"
-            value={numberOrEmail}
-            onChange={(e) => setnumberOrEmail(e.target.value)}
-            id="numberOrEmail"
-            name="numberOrEmail"
-            required
-          />
-          <br />
+      <Sign1>
+        <div className="formwrap">
+          <div className="content">Welcome To Login Page</div>
+          <form className="form" onSubmit={handleSubmit}>
+            <label htmlFor="numberOrEmail" style={{ marginLeft: "-90px" }}>
+              Registered Number or Email
+            </label>
+            <br />
+            <input
+              type="txt"
+              value={numberOrEmail}
+              onChange={(e) => setnumberOrEmail(e.target.value)}
+              id="numberOrEmail"
+              name="numberOrEmail"
+              required
+            />
+            <br />
 
-          <label htmlFor="name" style={{marginLeft:'-225px'}}>Password</label>
-          <br />
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            id="password"
-            name="password"
-            required
-          />
-          <br />
+            <label htmlFor="name" style={{ marginLeft: "-225px" }}>
+              Password
+            </label>
+            <br />
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              id="password"
+              name="password"
+              required
+            />
+            <br />
 
-          <button type="submit">Submit</button>
-        </form>
+            <button type="submit">Submit</button>
+          </form>
 
-        <div>
-          Don't have an account?
-          <Link to="/signup">Signup for free</Link>
+          <div>
+            Don't have an account?
+            <Link to="/signup">Signup for free</Link>
+          </div>
+
+          <div style={{ marginTop: "10px" }}>
+            <Link to={"/forgotpassword"}>Forgot Password ?</Link>
+          </div>
         </div>
-
-        <div style={{ marginTop: "10px" }}>
-          <Link to={"/forgotpassword"}>Forgot Password ?</Link>
-        </div>
+      </Sign1>
+      <div style={{ marginTop: "20vh" }}>
+        <Footer />
       </div>
-      
-    </Sign1>
-    <div style={{marginTop:"20vh"}} >
-    <Footer/>
-  </div>
-  </>
+    </>
   );
 }
 
@@ -122,7 +126,7 @@ export default Signin;
 const Sign1 = styled.div`
   display: flex;
   justify-content: center;
-  margin-top:10vh;
+  margin-top: 10vh;
   /* Styles for the page background */
   body {
     background-color: #e5e4e2;
