@@ -19,7 +19,7 @@ const NavbarsideFinance = ({ children }) => {
       icon: <FaTh  />,
     },
     {
-      path: "/financerequest",
+      path: "/finance_request_information",
       name: "Finance Request",
       icon: <FaShopify />,
     },

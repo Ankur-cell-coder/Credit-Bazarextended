@@ -42,6 +42,9 @@ import FinanceRequest from "./components/finance/FinanceRequest";
 import FinanceRequestInformation from "./components/finance/FinanceRequestInformation";
 import FinanceViewRequest from "./components/finance/FinanceViewRequest";
 import FinanceOffers from "./components/finance/FinanceOffers";
+import FinanceDisburesment from "./components/finance/FinanceDisburesment";
+import Finance_payment from "./components/finance/Finance_payment";
+import FinanceSettlement from "./components/finance/FinanceSettlement";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -92,9 +95,21 @@ function App() {
           path="/financedisrubment"
           element={!auth.user ? <Signin /> : <FinanceDisrubment />}
         />
+         <Route
+          path="/finance_disbursement"
+          element={!auth.user ? <Signin /> : <FinanceDisburesment/>}
+        />
         <Route
           path="/financepayment"
           element={!auth.user ? <Signin /> : <FinancePayment />}
+        />
+          <Route
+          path="/finance_payment"
+          element={!auth.user ? <Signin /> : <Finance_payment/>}
+        />
+         <Route
+          path="/finance_settlement"
+          element={!auth.user ? <Signin /> : <FinanceSettlement/>}
         />
         <Route
           path="/financedisrubmentacknowledgement"

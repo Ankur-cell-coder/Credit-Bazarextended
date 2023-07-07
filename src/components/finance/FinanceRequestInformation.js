@@ -22,14 +22,14 @@ function FinanceRequestInformation() {
           >
             Request Information
           </button>
-          <button
+          {/* <button
             className="btn"
             onClick={() => {
               navigate("/finance_view_request");
             }}
           >
            View Request
-          </button>
+          </button> */}
           <button
             className="btn"
             onClick={() => {
@@ -72,61 +72,54 @@ function FinanceRequestInformation() {
           </button>
         </div>
         <div className="content">
-          <div className="main-content">
-            <div className="record-summary">
-              <h2>Request information</h2>
-            </div>
-            <div className="record-details">
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Request ID</th>
-                    <td>123456</td>
-                  </tr>
-                  <tr>
-                    <th>Date</th>
-                    <td> 20/06/2023 </td>
-                  </tr>
-                  <tr>
-                    <th> Requested Amount</th>
-                    <td> INR 10,00,000</td>
-                  </tr>
-                  <tr>
-                    <th> Status</th>
-                    <td> In Progress</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <h2 align="left"> Trades</h2>
-            <div className="record-details">
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Seller GST</th>
-                    <th>Buyer Name</th>
-                    <th>Buyer GST</th>
-                    <th>Trade Amount</th>
-                    <th>Invoice ID</th>
-                  </tr>
-                  <tr>
-                    <td>GST123</td>
-                    <td>Buyer 1</td>
-                    <td>GST456</td>
-                    <td>INR 60,000</td>
-                    <td>INV001</td>
-                  </tr>
-                  <tr>
-                    <td>GST123</td>
-                    <td>Buyer 2</td>
-                    <td>GST012</td>
-                    <td>INR 60,000</td>
-                    <td>INV002</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+<div id="RequestInformation" className="tabcontent">
+  <div className="main-content">
+    <div className="record-summary">
+    </div>
+    <div id="container">
+      <div className="header">
+        <h2 align="center">Finance requests</h2>
+      </div>
+      <div className="offer-card">
+        <div className="lender-details">
+          <h2>Offer 1</h2>
+          <p><strong>Seller A</strong></p>
+          <p><strong>Offered Amount:</strong> INR 1,10,000</p>
+        </div>
+        <div className="select-btn-container">
+          <button className="btn5"  onClick={() => {
+              navigate("/finance_view_request");
+            }}>View requests</button>
+        </div>
+      </div>
+      <div className="offer-card">
+        <div className="lender-details">
+          <h2>Offer 2</h2>
+          <p><strong>Seller B</strong></p>
+          <p><strong>Requested Amount:</strong> INR 1,40,000</p>
+        </div>
+        <div className="select-btn-container">
+          <button className="btn5"  onClick={() => {
+              navigate("/finance_view_request");
+            }}>View requests</button>
+        </div>
+      </div>
+      <div className="offer-card">
+        <div className="lender-details">
+          <h2>Offer 3</h2>
+          <p><strong>Seller C</strong></p>
+          <p><strong>Offered Amount:</strong> INR 1,80,000</p>
+        </div>
+        <div className="select-btn-container">
+          <button className="btn5"  onClick={() => {
+              navigate("/finance_view_request");
+            }}>View requests</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       
       
@@ -174,62 +167,23 @@ margin-left: 28vh;
 .content {
   margin-left: 20px;
   margin-top: 20px;
+  display: flex;
+ 
+}
+.offer-card{
+  border:2px solid black;
+  width:170%;
+  margin-bottom:20px;
+ 
+}
+.lender-details{
+  margin-left:40px;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-.top-bar {
-  background-color: #007bff;
-  color: #ffffff;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: auto;
-}
-.profile-avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: 10px;
-  background-color: #ffffff;
-}
-.content {
-  display: flex;
-  margin-top: 20px;
-}
-.side-nav {
-  background-color: #f8f9fa;
-  width: 150px;
-  padding: 20px;
-}
-.side-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.side-nav li {
-  margin-bottom: 10px;
-}
-.side-nav a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  padding: 8px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-.side-nav a:hover {
-  background-color: #007bff;
-  color: #ffffff;
+
+.header{
+  margin-left:60vh;
+  font-size:25px;
 }
 
 .table-container {
@@ -317,15 +271,17 @@ th {
 .popup .popuptext .btn {
   visibility: hidden;
 }
-.btn {
+.btn5 {
   color: white;
   background-color: #007bff;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
   display: inline-block;
+  margin-left:65vh;
+  margin-bottom:15px;
 }
-.btn:hover {
+.btn5:hover {
   background-color: #0056b3;
 }
 @-webkit-keyframes fadeIn {

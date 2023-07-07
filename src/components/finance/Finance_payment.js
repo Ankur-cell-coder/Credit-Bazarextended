@@ -5,7 +5,7 @@ import NavbarsideFinance from "../pages/NavbarsideFinance";
 import Footer from "../pages/Footer";
 import { useNavigate } from "react-router-dom";
 
-function  FinanceSettlement() {
+function Finance_payment() {
   const navigate = useNavigate();
   return (
     <>
@@ -21,14 +21,14 @@ function  FinanceSettlement() {
           >
             Request Information
           </button>
-          {/* <button
+          <button
             className="btn"
             onClick={() => {
               navigate("/finance_view_request");
             }}
           >
             View Request
-          </button> */}
+          </button>
           <button
             className="btn"
             onClick={() => {
@@ -54,7 +54,7 @@ function  FinanceSettlement() {
             Shipment
           </button>
           <button
-            className="btn"
+            className="btn1"
             onClick={() => {
               navigate("/finance_payment");
             }}
@@ -62,7 +62,7 @@ function  FinanceSettlement() {
             Payment
           </button>
           <button
-            className="btn1"
+            className="btn"
             onClick={() => {
               navigate("/finance_settlement");
             }}
@@ -71,30 +71,27 @@ function  FinanceSettlement() {
           </button>
         </div>
 
-        <div id = "Settlement" class="tabcontent">
-				<div class="main-content">
-					<div id="container">
-                        <div class="Settlement-details">
-                            <h2>Settlement Details</h2>
-                            <p>Settlement has been made by Profintech Technologies please check you account, Below are the details.</p>
-                            <div class="details">
-                            <p>Settlement Amount: INR 7,50,000</p>
-                            <p>Margin (25%): INR 2,50,000</p>
-                            <p>Interest (12%): INR 22,191.78</p>
-                            <p>Term: 90 days</p>
-                            <p>Payment loyality (2%): INR 4,932</p>
-                            <p>Technology charge (2%): INR 4,932 </p>
-                            </div>
-                        </div>  
-                    </div>
-				</div>
+        <div id="Payment" className="tabcontent">
+          <div className="main-content">
+            <div id="container">
+              <div className="Payment-details">
+                <h2>Payment details Details</h2>
+                <p>
+                  Payment has been made by the buyer to Profintech Technologies,
+                  Below are the payment detils.
+                </p>
+                <div className="details">
+                  <p>Payment Amount: INR 7,50,000</p>
+                  <p>Margin (25%): INR 2,50,000</p>
+                  <p>Interest (12%): INR 22,191.78</p>
+                  <p>Term: 90 days</p>
+                  <p>Payment loyality (2%): INR 4,932</p>
+                  <p>Technology charge (2%): INR 4,932 </p>
+                </div>
+              </div>
             </div>
-          
-
-     
-
-
-                  
+          </div>
+        </div>
       </Finance1>
       <div style={{ marginTop: "30vh" }}>
         <Footer />
@@ -103,11 +100,11 @@ function  FinanceSettlement() {
   );
 }
 
-export default  FinanceSettlement;
+export default Finance_payment;
 
 const Finance1 = styled.div`
   margin-left: 28vh;
- 
+
   .btn {
     color: white;
     background-color: #007bff;
@@ -117,7 +114,7 @@ const Finance1 = styled.div`
     display: inline-block;
     margin-left: 20px;
     font-size: 20px;
-    margin-top:20vh;
+    margin-top: 20vh;
   }
   .btn1 {
     color: white;
@@ -133,28 +130,48 @@ const Finance1 = styled.div`
     background-color: #0056b3;
   }
 
-  .Settlement-details {
+  .accept-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.accept-btn {
+    color: #fff;
+    background-color: #007BFF;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.accept-btn:hover {
+    background-color: #0056b3;
+}
+.Payment-details {
     background-color: #F8F9FA;
     padding: 20px;
-    margin-top: 90px;
+    margin-top: 50px;
     margin-bottom: auto;
     text-align: center;
     width: 500px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left:48vh;
 }
-.Settlement-details h2 {
+.Payment-details h2 {
     margin-top: 0;
     color: #007BFF;
 }
-.Settlement-details .details {
+.Payment-details .details {
     color: #666;
-    margin-top: 40px;
-
+    margin-top: 20px;
 }
-
-
-   
+.tabcontent{
+    margin-left:45vh;
+}
 
 `;

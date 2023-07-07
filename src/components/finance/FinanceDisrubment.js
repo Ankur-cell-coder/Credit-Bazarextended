@@ -46,7 +46,7 @@ const Finance1=styled.div`
 display: flex;
 flex-direction: column;
 
-// margin-left: 16vh;
+
 
         .content {
             display: flex;

@@ -32,6 +32,7 @@ function Signin() {
     e.preventDefault();
     try {
       //http://localhost:3005/user/login
+      // console.log(`${process.env.REACT_APP_API}`);
       const res = await axios.post("http://localhost:3005/user/login", {
         numberOrEmail,
         password,
@@ -126,7 +127,7 @@ export default Signin;
 const Sign1 = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
+
   /* Styles for the page background */
   body {
     background-color: #e5e4e2;
