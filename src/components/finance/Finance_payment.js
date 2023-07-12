@@ -21,14 +21,14 @@ function Finance_payment() {
           >
             Request Information
           </button>
-          <button
+          {/* <button
             className="btn"
             onClick={() => {
               navigate("/finance_view_request");
             }}
           >
             View Request
-          </button>
+          </button> */}
           <button
             className="btn"
             onClick={() => {
