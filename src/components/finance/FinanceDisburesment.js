@@ -75,17 +75,17 @@ function FinanceDisburesment() {
   <div className="main-content">
     <div id="container">
       <div className="disbursement-details">
-        <h2>Disbursement Details</h2>
+        <h1>Disbursement Details</h1>
         <div className="details">
           <p>Offered Amount: INR 7,50,000</p>
-          <p>Margin (25%): INR 2,50,000</p>
-          <p>Interest (12%): INR 22,191.78</p>
-          <p>Term: 90 days</p>
-          <p>Payment loyality (2%): INR 4,932</p>
+          <p>Margin (7.89%): INR 2,50,000</p>
+          <p>Interest (10%): INR 22,191.78</p>
+          <p>Term: 40 days</p>
+          {/* <p>Payment loyality (2%): INR 4,932</p>
           <p>Technology charge (2%): INR 4,932 </p>
-          <p>Disbursement value: INR 7,27,808</p>
+          <p>Disbursement value: INR 7,27,808</p> */}
         </div>
-        <div>
+        <div style={{marginTop:"20px",fontSize:"20px"}}>
           <h2>Payment gateway</h2>
           <form>
             <div className="form-group">
@@ -128,6 +128,8 @@ export default FinanceDisburesment;
 
 const Finance1 = styled.div`
   margin-left: 28vh;
+
+ 
  
   .btn {
     color: white;
@@ -287,12 +289,14 @@ th {
       background-color: #0056b3;
   }
   .disbursement-details {
+      border:2px solid green;
       background-color: #F8F9FA;
       padding: 20px;
       margin-top: 50px;
       margin-bottom: auto;
       text-align: center;
-      width: 500px;
+      width: 100vh;
+      height:65vh;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -319,12 +323,14 @@ th {
       border-radius: 4px;
   }
   .actions{
-      margin-left: 80px;
+      margin-left:35vh;
       margin-top: 20px;
   }
 
   .tabcontent{
-     margin-left:48vh;
+    //  border:2px solid red;
+     display:flex;
+     justify-content:center;
   }
 
 `;

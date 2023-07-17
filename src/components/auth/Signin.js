@@ -31,8 +31,6 @@ function Signin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      //http://localhost:3005/user/login
-      // console.log(`${process.env.REACT_APP_API}`);
       const res = await axios.post(`${process.env.REACT_APP_API}/user/login`, {
         numberOrEmail,
         password,
