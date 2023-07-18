@@ -21,14 +21,7 @@ function FinanceOffers() {
           >
             Request Information
           </button>
-          {/* <button
-            className="btn"
-            onClick={() => {
-              navigate("/finance_view_request");
-            }}
-          >
-            View Request
-          </button> */}
+         
           <button
             className="btn1"
             onClick={() => {
