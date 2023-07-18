@@ -82,9 +82,9 @@ function FinanceRequestInformation() {
       </div>
       <div className="offer-card">
         <div className="lender-details">
-          <h2>Offer 1</h2>
-          <p><strong>Seller A</strong></p>
-          <p><strong>Offered Amount:</strong> INR 1,10,000</p>
+          <h2>Request for Finance 1</h2>
+          <p><strong>Prime Textiles</strong></p>
+          <p><strong>Offered Amount:</strong>INR 4,00,000</p>
         </div>
         <div className="select-btn-container">
           <button className="btn5"  onClick={() => {
@@ -94,7 +94,8 @@ function FinanceRequestInformation() {
       </div>
       <div className="offer-card">
         <div className="lender-details">
-          <h2>Offer 2</h2>
+          <h2>Request for Finance 2
+</h2>
           <p><strong>Seller B</strong></p>
           <p><strong>Requested Amount:</strong> INR 1,40,000</p>
         </div>
@@ -106,7 +107,7 @@ function FinanceRequestInformation() {
       </div>
       <div className="offer-card">
         <div className="lender-details">
-          <h2>Offer 3</h2>
+          <h2>Request for Finance 3</h2>
           <p><strong>Seller C</strong></p>
           <p><strong>Offered Amount:</strong> INR 1,80,000</p>
         </div>

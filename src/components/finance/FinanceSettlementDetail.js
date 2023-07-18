@@ -45,7 +45,6 @@ const Finance1 = styled.div`
 display:flex;
 justify-content:center;
 
-
 margin-left: 5vh;
 
 .content {
