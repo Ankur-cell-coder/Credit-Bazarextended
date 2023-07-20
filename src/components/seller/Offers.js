@@ -4,21 +4,10 @@ import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
 import NavbarSide from "../pages/NavbarSide";
 import Footer from "../pages/Footer";
-import { useCount } from "../../context/count";
 
 function Offers() {
   const navigate = useNavigate();
 
-  const { incrementCount2 } = useCount();
-
-  const { count2 } = useCount();
-
-  const handleClick = () => {
-    incrementCount2();
-  };
-
-
- 
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
 

@@ -81,9 +81,7 @@ function FinanceDisburesment() {
           <p>Margin (7.89%): INR 2,50,000</p>
           <p>Interest (10%): INR 22,191.78</p>
           <p>Term: 40 days</p>
-          {/* <p>Payment loyality (2%): INR 4,932</p>
-          <p>Technology charge (2%): INR 4,932 </p>
-          <p>Disbursement value: INR 7,27,808</p> */}
+         
         </div>
         <div style={{marginTop:"20px",fontSize:"20px"}}>
           <h2>Payment gateway</h2>
