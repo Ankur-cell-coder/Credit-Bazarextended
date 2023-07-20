@@ -63,11 +63,11 @@ function RequestInformation() {
           </button>
         </div>
         <div className="content">
-          <div className="main-content">
-            <div className="record-summary">
+          <div class="main-content">
+            <div class="record-summary">
               <h2>Request information</h2>
             </div>
-            <div className="record-details">
+            <div class="record-details">
               <table>
                 <tbody>
                   <tr>
@@ -80,7 +80,7 @@ function RequestInformation() {
                   </tr>
                   <tr>
                     <th> Requested Amount</th>
-                    <td> INR 10,00,000</td>
+                    <td> INR 4,00,000</td>
                   </tr>
                   <tr>
                     <th> Status</th>
@@ -89,11 +89,13 @@ function RequestInformation() {
                 </tbody>
               </table>
             </div>
-            <h2 align="left"> Trades</h2>
-            <div className="record-details">
+            <div style={{fontSize:"34px",marginLeft:"90%",marginTop:"30px"}}> Trades</div>
+            <div class="record-details">
               <table>
                 <tbody>
                   <tr>
+                    <th>Trade Document</th>
+                    <th>Subgroup ID</th>
                     <th>Seller GST</th>
                     <th>Buyer Name</th>
                     <th>Buyer GST</th>
@@ -101,18 +103,94 @@ function RequestInformation() {
                     <th>Invoice ID</th>
                   </tr>
                   <tr>
-                    <td>GST123</td>
-                    <td>Buyer 1</td>
-                    <td>GST456</td>
-                    <td>INR 60,000</td>
+                    <td>Trade Document 1</td>
+                    <td>Subgroup 3</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Hospital3</td>
+                    <td>123-45-5373</td>
+                    <td>₹90,000.00</td>
                     <td>INV001</td>
                   </tr>
                   <tr>
-                    <td>GST123</td>
-                    <td>Buyer 2</td>
-                    <td>GST012</td>
-                    <td>INR 60,000</td>
+                    <td>Trade Document 2</td>
+                    <td>Subgroup 3</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Hospital3</td>
+                    <td>123-45-5373</td>
+                    <td>₹20,000.00</td>
                     <td>INV002</td>
+                  </tr>
+                  <tr>
+                    <td>Trade Document 3</td>
+                    <td>Subgroup 3</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Hospital3</td>
+                    <td>123-45-5373</td>
+                    <td>₹30,000.00</td>
+                    <td>INV003</td>
+                  </tr>
+                  <tr>
+                    <td>Trade Document 4</td>
+                    <td>Subgroup 4</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Medical Univ. 1</td>
+                    <td>123-45-2486</td>
+                    <td>₹40,000.00</td>
+                    <td>INV004</td>
+                  </tr>
+                  <tr>
+                    <td>Trade Document 5</td>
+                    <td>Subgroup 4</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Medical Univ. 1</td>
+                    <td>123-45-2486</td>
+                    <td>₹50,000.00</td>
+                    <td>INV005</td>
+                  </tr>
+                  <tr>
+                    <td>Trade Document 7</td>
+                    <td>Subgroup 4</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Medical Univ. 1</td>
+                    <td>123-45-2486</td>
+                    <td>₹30,000.00</td>
+                    <td>INV006</td>
+                  </tr>
+                  <tr>
+                    <td>Trade Document 8</td>
+                    <td>Subgroup 4</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Medical Univ. 1</td>
+                    <td>123-45-2486</td>
+                    <td>₹40,000.00</td>
+                    <td>INV007</td>
+                  </tr>
+                  <tr>
+                    <td>Trade Document 6</td>
+                    <td>Subgroup 1</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Hospital 1</td>
+                    <td>123-45-5454</td>
+                    <td>₹20,000.00</td>
+                    <td>INV008</td>
+                  </tr>
+                  <tr>
+                    <td>Trade Document 9</td>
+                    <td>Subgroup 2</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Hospital 2</td>
+                    <td>123-45-5919</td>
+                    <td>₹50,000.00</td>
+                    <td>INV009</td>
+                  </tr>
+                  <tr>
+                    <td>Trade Document 10</td>
+                    <td>Subgroup 2</td>
+                    <td>36AAIFP3688H1ZS</td>
+                    <td>Hospital 2</td>
+                    <td>123-45-5919</td>
+                    <td>₹90,000.00</td>
+                    <td>INV0010</td>
                   </tr>
                 </tbody>
               </table>
@@ -131,7 +209,7 @@ export default RequestInformation;
 
 const Request1 = styled.div`
   margin-left: 28vh;
-  
+
   .btn {
     color: white;
     background-color: #007bff;
@@ -156,152 +234,51 @@ const Request1 = styled.div`
     background-color: #0056b3;
   }
 
-  .content {
-    margin-left: 20px;
-    margin-top: 20px;
-  }
+ 
 
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
-  .top-bar {
-    background-color: #007bff;
-    color: #ffffff;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-  }
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: auto;
-  }
-  .profile-avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: 10px;
-    background-color: #ffffff;
-  }
+
   .content {
     display: flex;
     margin-top: 20px;
   }
-  .side-nav {
-    background-color: #f8f9fa;
-    width: 150px;
-    padding: 20px;
-  }
-  .side-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  .side-nav li {
-    margin-bottom: 10px;
-  }
-  .side-nav a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 8px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  .side-nav a:hover {
-    background-color: #007bff;
-    color: #ffffff;
-  }
+  
 
+
+  .main-content {
+    display:flex;
+    padding: 20px;
+    flex-direction:column;
+  }
   .table-container {
     margin-top: 20px;
   }
   table {
-    width: 300%;
+    width: 100%;
     border-collapse: collapse;
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     border-top: 1px solid #dddddd;
   }
-  th,
-  td {
+  th, td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #dddddd;
   }
   th {
-    background-color: #f8f9fa;
+    background-color: #F8F9FA;
     font-weight: bold;
   }
-  .search-bar {
-    display: flex;
-    margin-bottom: 20px;
-    margin-right: 10px;
+  .record-details{
+    border:2px solid black;
+    width:190%;
   }
-  .search-input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #dddddd;
-    border-radius: 4px 0 0 4px;
-    font-size: 14px;
-    align-items: center;
-  }
-  .search-button {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 8px;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .search-button:hover {
-    background-color: #0056b3;
-  }
-  .popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  .popup .popuptext {
-    width: 700px;
-    visibility: hidden;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    margin-left: -80px;
-    overflow-y: auto;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #000;
-  }
-  .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-  .popup .popuptext .btn {
-    visibility: hidden;
-  }
+
+  
   .btn {
     color: white;
     background-color: #007bff;
@@ -309,7 +286,7 @@ const Request1 = styled.div`
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-    margin-top:25vh;
+    margin-top: 25vh;
   }
   .btn:hover {
     background-color: #0056b3;
@@ -331,5 +308,4 @@ const Request1 = styled.div`
       opacity: 1;
     }
   }
-  
 `;
