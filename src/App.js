@@ -45,6 +45,12 @@ import FinanceOffers from "./components/finance/FinanceOffers";
 import FinanceDisburesment from "./components/finance/FinanceDisburesment";
 import Finance_payment from "./components/finance/Finance_payment";
 import FinanceSettlement from "./components/finance/FinanceSettlement";
+import BuyersRequestInformation from "./components/buyers/BuyersRequestInformation";
+import BuyersOffers from "./components/buyers/BuyersOffers";
+import BuyersDisbursement from "./components/buyers/BuyersDisbursement";
+import BuyersShipment from "./components/buyers/BuyersShipment";
+import BuyersPayment from "./components/buyers/BuyersPayment";
+import BuyersSettlement from "./components/buyers/BuyersSettlement";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -133,6 +139,41 @@ function App() {
           path="/buyersdashboard"
           element={!auth.user ? <Signin /> : <Bdashboard />}
         />
+         <Route
+          path="/buyersrequestinformation"
+          element={!auth.user ? <Signin /> : <BuyersRequestInformation />}
+        />
+       
+       <Route
+          path="/buyers_offers"
+          element={!auth.user ? <Signin /> : <BuyersOffers />}
+        />
+
+       <Route
+          path="/buyers_disbursement"
+          element={!auth.user ? <Signin /> : <BuyersDisbursement />}
+        />
+
+       <Route
+          path="/buyers_shipment"
+          element={!auth.user ? <Signin /> : <BuyersShipment />}
+        />
+
+        <Route
+          path="/buyers_payment"
+          element={!auth.user ? <Signin /> : <BuyersPayment />}
+        />
+
+        <Route
+          path="/buyers_settlement"
+          element={!auth.user ? <Signin /> : <BuyersSettlement />}
+        />
+
+
+
+       
+
+
         //seller// routes
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route

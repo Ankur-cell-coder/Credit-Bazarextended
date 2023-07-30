@@ -27,7 +27,6 @@ function Navbar() {
       if (win != null) {
         win.focus();
       }
-      // navigate("/buyersdashboard");
     } else if (e.currentTarget.value == "seller") {
       const win = window.open(
         "http://localhost:3000/sellersdashboard",
@@ -36,7 +35,7 @@ function Navbar() {
       if (win != null) {
         win.focus();
       }
-      // navigate("/buyersdashboard");
+     
     }
   };
 
@@ -83,9 +82,9 @@ margin-left: 1100px;
 .rightsection {
   display: flex;
   width: 400px;
-  margin-top: -30px;
+  margin-top: 45px;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0px;
 }
 

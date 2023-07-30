@@ -21,14 +21,7 @@ function FinanceDisburesment() {
           >
             Request Information
           </button>
-          {/* <button
-            className="btn"
-            onClick={() => {
-              navigate("/finance_view_request");
-            }}
-          >
-            View Request
-          </button> */}
+         
           <button
             className="btn"
             onClick={() => {
@@ -178,71 +171,7 @@ th {
     background-color: #F8F9FA;
     font-weight: bold;
 }
-.search-bar {
-    display: flex;
-    margin-bottom: 20px;
-    margin-right: 10px;
-}
-.search-input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #dddddd;
-    border-radius: 4px 0 0 4px;
-    font-size: 14px;
-    align-items: center;
-}
-.search-button {
-    background-color: #007BFF;
-    color: #ffffff;
-    border: none;
-    padding: 8px;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.search-button:hover {
-    background-color: #0056b3;
-}
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-.popup .popuptext {
-    width: 700px;
-    visibility: hidden;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    margin-left: -80px;
-    overflow-y: auto;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #000;
-}
-.popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-.popup .popuptext .btn {
-    visibility: hidden;
-}
+
 .btn2{
     color: white;
     background-color: #007BFF;
@@ -255,37 +184,7 @@ th {
 .btn2:hover {
     background-color: #0056b3;
 }
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-.accept-btn-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-  }
-  .accept-btn {
-      color: #fff;
-      background-color: #007BFF;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      transition: background-color 0.3s;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      outline: none;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  .accept-btn:hover {
-      background-color: #0056b3;
-  }
   .disbursement-details {
       border:2px solid green;
       background-color: #F8F9FA;
