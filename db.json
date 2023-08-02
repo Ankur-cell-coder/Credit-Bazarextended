@@ -1,0 +1,40 @@
+{
+    "users": [
+      {
+        "id": "e9eaf1f0-093b-4863-b42e-032ef6ded0ca",
+        "firstName": "Ankur",
+        "lastName": "Singh",
+        "number": "9380608656",
+        "email": "ankurbgs6243@gmail.com",
+        "password": "123456",
+        "userDetails": {
+          "defaultRole": "seller",
+          "companyName": "TVISHTRYON SOLUTIONS PVT LTD",
+          "companygst": "TVISHTRYON SOLUTIONS PVT LTD",
+          "accountNo": "123456 245 78 9844",
+          "ifscCode": "UCBA011",
+          "receipientName": "Ankur Kumar",
+          "bankName": "UCO",
+          "branch": "Chnadrapura"
+        }
+      },
+      {
+        "id": "a5cc411d-5b17-4dd9-be6a-07579ef62c8b",
+        "firstName": "Satyam ",
+        "lastName": "Raj",
+        "number": "07739857369",
+        "email": "19it020anku@ug.cusat.ac.in",
+        "password": "$2b$10$liu8ty8DRi35pNbJiPIAmum8jZ69yKKoLTuyqtdwTsuvI5E4/rpf6",
+        "userDetails": {
+          "defaultRole": "merchants",
+          "companyName": "Cochin university",
+          "companygst": "Cochin university",
+          "accountNo": "12826 2465 78 9844",
+          "ifscCode": "UCBA012",
+          "receipientName": "Satyma Kumar",
+          "bankName": "UCO",
+          "branch": "I.T"
+        }
+      }
+    ]
+  }
