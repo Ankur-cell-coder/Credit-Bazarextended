@@ -294,7 +294,7 @@ function FinanceSettlement() {
                         <tr>
                           <td>Sep 29, 2023</td>
                         </tr>
-                        {/* Add more rows for subsequent installments */}
+                        
                       </tbody>
                     </table>
                     <h2>Settlement Agreement</h2>

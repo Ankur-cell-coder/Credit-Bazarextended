@@ -19,7 +19,7 @@ const BuyerSide = ({ children }) => {
       icon: <FaTh  />,
     },
     {
-      path: "/finance_request_information",
+      path: "/buyersrequestinformation",
       name: "View Request",
       icon: <FaShopify />,
     },
