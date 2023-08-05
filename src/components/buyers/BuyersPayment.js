@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import Footer from "../pages/Footer";
@@ -6,161 +6,128 @@ import Navbar from "../pages/Navbar";
 import BuyerSide from "../pages/BuyerSide";
 
 function BuyersPayment() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <>
-    <Navbar />
-    <BuyerSide />
+      <Navbar />
+      <BuyerSide />
 
-    <Buyers1>
-      <div className="button">
-        <button
-          className="btn"
-          onClick={() => {
-            navigate("/buyersrequestinformation");
-          }}
-        >
-          Request Information
-        </button>
+      <Buyers1>
+        <div className="button">
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/buyersrequestinformation");
+            }}
+          >
+            Request Information
+          </button>
 
-        <button
-          className="btn"
-          onClick={() => {
-            navigate("/buyers_offers");
-          }}
-        >
-          Offers
-        </button>
-        <button
-          className="btn"
-          onClick={() => {
-            navigate("/buyers_disbursement");
-          }}
-        >
-          Disbursement
-        </button>
-        <button
-          className="btn"
-          onClick={() => {
-            navigate("/buyers_shipment");
-          }}
-        >
-          Shipment
-        </button>
-        <button
-          className="btn1"
-          onClick={() => {
-            navigate("/buyers_payment");
-          }}
-        >
-          Payment
-        </button>
-        <button
-          className="btn"
-          onClick={() => {
-            navigate("/buyers_settlement");
-          }}
-        >
-          Settlement
-        </button>
-      </div>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/buyers_offers");
+            }}
+          >
+            Offers
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/buyers_disbursement");
+            }}
+          >
+            Disbursement
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/buyers_shipment");
+            }}
+          >
+            Shipment
+          </button>
+          <button
+            className="btn1"
+            onClick={() => {
+              navigate("/buyers_payment");
+            }}
+          >
+            Payment
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/buyers_settlement");
+            }}
+          >
+            Settlement
+          </button>
+        </div>
 
-      <div id="Offer" className="tabcontent">
         <div className="main-content">
           <div id="container">
-            <div>
-              <h2 align="center">Offer details</h2>
-            </div>
-            <div className="panel">
-              <div className="panel-header">Subgroup 1</div>
-              <div className="panel-body">
-                <div className="panel-header">Liqui loans</div>
-                <div className="offer details">
-                  <h1>Offer Information</h1>
-                  <h2> Finance request Information</h2>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Seller Name:</th>
-                        <td>Prime Textiles</td>
-                      </tr>
-                      <tr>
-                        <th>Contact Details:</th>
-                        <td>info@primetextiles.in</td>
-                      </tr>
-                      <tr>
-                        <th>GST:</th>
-                        <td>36AAIFP3688H1ZS</td>
-                      </tr>
-                      <tr>
-                        <th>Amounted Requested:</th>
-                        <td>INR 4,00,000.00</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <h2>Offer Information</h2>
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th>Lender Name:</th>
-                        <td>LiquiLoans</td>
-                      </tr>
-                      <tr></tr>
-                      <tr>
-                        <th>Value of subgroup:</th>
-                        <td>INR 20,000</td>
-                      </tr>
-                      <tr>
-                        <th>Payment Amount:</th>
-                        <td>INR 19,000 </td>
-                      </tr>
-                      <tr>
-                        <th>Margine:</th>
-                        <td>INR 1500 (8%) </td>
-                      </tr>
-                      <tr>
-                        <th>Interest Rate:</th>
-                        <td> INR 1500 (8%)</td>
-                      </tr>
-                      <tr>
-                        <th>Repayment Term:</th>
-                        <td> 45 days</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <h2>Patron of the Payment</h2>
-                  <p>LiquiLoans NBFC</p>
-                  <h2>Receipent of the Payment</h2>
-                  <p>Prime Textiles</p>
-                  <h2>Contact Information</h2>
-                  <p>
-                    If you have any questions or need assistance, please
-                    contact our customer service at 1-800-123-4567 or email us
-                    at info@example.com.
-                  </p>
-                  <div className="Offer-confirmation">
-                    <h2>Offer Confirmation</h2>
-                    <p>
-                      LiquiLoans has made an offer on your invoice/purchase
-                      order, which corresponds to the finance request
-                      submitted by the seller. Confirmation Number: ABD258
-                    </p>
+            <div className="Payment-details">
+              <h2>Payment Details</h2>
+              <div className="details">
+                <p>Payment Amount: INR 19,000</p>
+                <p>Margin (8%): INR 1500</p>
+                <p>Interest (8%): INR 1500</p>
+                <p>Term: 45 days</p>
+              </div>
+              <div>
+                <h2>Payment gateway</h2>
+                <form>
+                  <div className="form-group">
+                    <label htmlFor="amount">Payment Amount</label>
+                    <input
+                      type="number"
+                      id="amount"
+                      placeholder="Enter the Payment Amount"
+                    />
                   </div>
-                </div>
+                  <div className="form-group">
+                    <label htmlFor="cardNumber">Card Number</label>
+                    <input
+                      type="text"
+                      id="cardNumber"
+                      placeholder="Enter the Card Number"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="expiry">Expiry Date</label>
+                    <input type="text" id="expiry" placeholder="MM/YY" />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="cvv">CVV</label>
+                    <input
+                      type="password"
+                      id="cvv"
+                      placeholder="Enter the CVV"
+                    />
+                  </div>
+                </form>
               </div>
             </div>
           </div>
+          <div className="actions">
+            <a className="btn" href="#">
+              Make the payment
+            </a>
+            <a className="btn" href="#">
+              Back to Dashboard
+            </a>
+          </div>
         </div>
+      </Buyers1>
+      <div style={{ marginTop: "30vh" }}>
+        <Footer />
       </div>
-    </Buyers1>
-    <div style={{ marginTop: "30vh" }}>
-      <Footer />
-    </div>
-  </>
-  )
+    </>
+  );
 }
 
-export default BuyersPayment
+export default BuyersPayment;
 
 const Buyers1 = styled.div`
   margin-left: 28vh;
@@ -176,38 +143,7 @@ const Buyers1 = styled.div`
     font-size: 20px;
     margin-top: 20vh;
   }
-  .panel-header::after {
-   
-    margin-top: 5px;
-    margin-right: 5px;
-}
-
-.panel {
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-.panel-header {
-    background-color: #ccc;
-    padding: 10px;
-    cursor: pointer;
-}
-.panel-body {
-    padding: 10px;
-    display: none;
-}
-.panel-content {
-    margin-bottom: 5px;
-    cursor: pointer;
-    margin-top: 5px;
-}
-.panel-content:last-child {
-    margin-bottom: 0;
-}
-.panel-header.active {
-    background-color: #007BFF;
-    color: #fff;
-}
+ 
   .btn1 {
     color: white;
     background-color: orange;
@@ -222,32 +158,46 @@ const Buyers1 = styled.div`
     background-color: #0056b3;
   }
 
-  .content {
-    display: flex;
-    margin-top: 20px;
-  }
-
   .main-content {
     padding: 20px;
+   margin-left:43vh;
+}
+
+  .Payment-details {
+      background-color: #F8F9FA;
+      padding: 20px;
+      margin-top: 50px;
+      margin-bottom: auto;
+      text-align: center;
+      width: 500px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  .table-container {
-    margin-top: 20px;
+  .Payment-details h2 {
+      margin-top: 0;
+      color: #007BFF;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
-    border-top: 1px solid #dddddd;
+  .Payment-details .details {
+      color: #666;
+      margin-top: 20px;
   }
-  th,
-  td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #dddddd;
+  .form-group {
+      margin-bottom: 15px;
   }
-  th {
-    background-color: #f8f9fa;
-    font-weight: bold;
+  .form-group label {
+      display: flex;
+      font-weight: bold;
+      margin-bottom: 5px;
   }
+  .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+  .actions{
+      margin-left:80px;
+      margin-top: 20px;
+  }
+
 `;
