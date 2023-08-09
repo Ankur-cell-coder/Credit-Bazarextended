@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { useAuth } from "../../context/auth";
+import { BiLogOut, BiUser } from "react-icons/bi";
 
 function Navbar() {
   const [auth, setAuth] = useAuth();
   const navigate = useNavigate();
+  const [showOption, setShowOption] = useState(false);
 
   const handleClick = () => {
+    setShowOption(!showOption);
+  };
+
+  const handleLogout = () => {
     setAuth({
       ...auth,
       user: null,
@@ -55,11 +61,57 @@ function Navbar() {
           </select>
         </div>
 
-        <div>
-          <button onClick={handleClick} className="login">
-            Logout
-          </button>
-        </div>
+        {showOption ? (
+          <div>
+            <div>
+              <button onClick={handleClick} className="login">
+                <BiUser style={{ width: "40px", height: "40px" }} />
+              </button>
+            </div>
+            <div className="onclickprofile">
+              <div>
+                <button
+                  onClick={() => {
+                    navigate("/user-profile");
+                  }}
+                  style={{
+                    width: "200px",
+                    height: "35px",
+                    fontSize: "18px",
+                    border:"0px solid white",
+                    background:"white",
+                    borderRadius:"10px"
+                  }}
+                >
+                <BiUser/> User Detail
+                </button>
+              </div>
+              <div>
+                <button
+                  onClick={handleLogout}
+                  style={{
+                    width: "200px",
+                    height: "35px",
+                    fontSize: "18px",
+                    border:"0px solid white",
+                    background:"white",
+                    borderRadius:"10px"
+                  }}
+                >
+                  <BiLogOut style={{marginRight:"40px"}}/>
+                   Logout
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <button onClick={handleClick} className="login">
+              <BiUser style={{ width: "40px", height: "40px" }} />
+            </button>
+          </div>
+        )}
+
       </div>
     </Navbar1>
   );

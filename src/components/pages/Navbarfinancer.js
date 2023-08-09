@@ -123,32 +123,23 @@ export default Navbarfinancer;
 const Navbarfinancer1 = styled.div`
 
 display: flex;
+background:orange;
 flex-direction: column;
 justify-content: center;
 margin-left: 1100px;
-margin-top:8vh;
-@media only screen and (min-width: 1800px) {
-  margin-left: 1400px;
+@media only screen and (min-width: 1800px){
+  margin-left:1400px;
 }
 
-position: fixed;
 
-.onclickprofile {
-  border: 2px solid black;
-  width: 200px;
-  height: 75px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 10px;
-  background:white;
-}
 
 .rightsection {
   display: flex;
   width: 400px;
-  margin-top: -30px;
+  margin-top: 45px;
   justify-content: space-between;
+  position: fixed;
+  top: 0px;
 }
 
 .options {
@@ -156,11 +147,17 @@ position: fixed;
   height: 40px;
   font-size: 20px;
   border: 2px solid black;
-  margin-top: -60px;
+  margin-top:-60px;
+  position: sticky;
+  top: 0px;
 }
 .login {
-  background: white;
-  margin-top: -20px;
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  margin-top:-60px;
+  position: sticky;
+  top: 0px;
 }
 .button {
   margin-left: 20px;
@@ -170,5 +167,7 @@ position: fixed;
   border: 2px solid orange;
   width: 200px;
   font-size: 15px;
+  position: sticky;
+  top: 0px;
 }
 `;
