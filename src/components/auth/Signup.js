@@ -16,149 +16,148 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-      try {
-        const res = await axios.post("http://localhost:3005/user/signup", {
-          firstName,
-          lastName,
-          number,
-          email,
-          password,
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_API}/user/signup`, {
+        firstName,
+        lastName,
+        number,
+        email,
+        password,
+      });
+      if (res.data.success) {
+        alert(res.data.message);
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
         });
-        if (res.data.success) {
-          alert(res.data.message);
-          setAuth({
-            ...auth,
-            user: res.data.user,
-            token: res.data.token,
-          });
-          localStorage.setItem("auth", JSON.stringify(res.data));
-          navigate("/profile", {
-            state: {
-              id: res.data.user.id,
-              email: email,
-              number: number,
-              firstName: firstName,
-              lastName:lastName,
-            },
-          });
-        } else {
-          alert(res.data.message);
-          setAuth({
-            ...auth,
-            user: res.data.user,
-            token: res.data.token,
-          });
-          localStorage.setItem("auth", JSON.stringify(res.data));
-          navigate("/profile", {
-            state: {
-              id: res.data.user.id,
-              email: email,
-              number: number,
-              firstName: firstName,
-              lastName:lastName,
-            },
-          });
-        }
-      } catch (error) {
-        console.log(error);
-        alert("something went wrong");
+        localStorage.setItem("auth", JSON.stringify(res.data));
+        navigate("/profile", {
+          state: {
+            id: res.data.user.id,
+            email: email,
+            number: number,
+            firstName: firstName,
+            lastName: lastName,
+          },
+        });
+      } else {
+        alert(res.data.message);
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        localStorage.setItem("auth", JSON.stringify(res.data));
+        navigate("/profile", {
+          state: {
+            id: res.data.user.id,
+            email: email,
+            number: number,
+            firstName: firstName,
+            lastName: lastName,
+          },
+        });
       }
+    } catch (error) {
+      console.log(error);
+      alert("something went wrong");
+    }
   };
 
   return (
     <>
-    <Sign1>
-      <div className="formwrap">
-        <div style={{ marginBottom: "40px" }}>Welcome To SignUp Page</div>
-        <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="firstName" style={{ marginLeft: "-212px" }}>
-          First Name
-          </label>
-          <br />
-          <input
-            type="name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            id="firstName"
-            name="firstName"
-             required
-          />
-          <br />
+      <Sign1>
+        <div className="formwrap">
+          <div style={{ marginBottom: "40px" }}>Welcome To SignUp Page</div>
+          <form className="form" onSubmit={handleSubmit}>
+            <label htmlFor="firstName" style={{ marginLeft: "-212px" }}>
+              First Name
+            </label>
+            <br />
+            <input
+              type="name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              id="firstName"
+              name="firstName"
+              required
+            />
+            <br />
 
-          <label htmlFor="lastName" style={{ marginLeft: "-200px" }}>
-            Last Name
-          </label>
-          <br />
-          <input
-            type="name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            id="lastName"
-            name="lastName"
-             required
-          />
-          <br />
+            <label htmlFor="lastName" style={{ marginLeft: "-200px" }}>
+              Last Name
+            </label>
+            <br />
+            <input
+              type="name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              id="lastName"
+              name="lastName"
+              required
+            />
+            <br />
 
-          <label htmlFor="number" style={{ marginLeft: "-206px" }}>
-            Phone Number
-          </label>
-          <br />
-          <input
-            type="name"
-            value={number}
-            onChange={(e) => setnumber(e.target.value)}
-            id="number"
-            name="number"
-            required
-          />
-          <br />
+            <label htmlFor="number" style={{ marginLeft: "-206px" }}>
+              Phone Number
+            </label>
+            <br />
+            <input
+              type="name"
+              value={number}
+              onChange={(e) => setnumber(e.target.value)}
+              id="number"
+              name="number"
+              required
+            />
+            <br />
 
-          <label htmlFor="email" style={{ marginLeft: "-259px" }}>
-            Email
-          </label>
-          <br />
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            id="email"
-            name="email"
-            required
-          />
-          <br />
+            <label htmlFor="email" style={{ marginLeft: "-259px" }}>
+              Email
+            </label>
+            <br />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              id="email"
+              name="email"
+              required
+            />
+            <br />
 
-          <label htmlFor="password" style={{ marginLeft: "-242px" }}>
-            Password
-          </label>
-          <br />
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            id="password"
-            name="password"
-            required
-          />
-          <br />
+            <label htmlFor="password" style={{ marginLeft: "-242px" }}>
+              Password
+            </label>
+            <br />
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              id="password"
+              name="password"
+              required
+            />
+            <br />
 
-          <button type="submit">Submit</button>
-        </form>
+            <button type="submit">Submit</button>
+          </form>
 
-        <div>
-          have an account?
-          <Link to="/">Login for free</Link>
+          <div>
+            have an account?
+            <Link to="/">Login for free</Link>
+          </div>
         </div>
+      </Sign1>
+      <div style={{ marginTop: "20vh" }}>
+        <Footer />
       </div>
-    </Sign1>
-    <div style={{marginTop:"20vh"}} >
-    <Footer/>
-  </div>
-  </>
+    </>
   );
 }
 
@@ -168,7 +167,7 @@ const Sign1 = styled.div`
   /* Styles for the page background */
   display: flex;
   justify-content: center;
-  margin-top:10vh;
+  margin-top: 10vh;
   body {
     background-color: #e5e4e2;
   }

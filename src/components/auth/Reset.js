@@ -22,7 +22,7 @@ function Reset() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3005/user/reset-password",
+        `${process.env.REACT_APP_API}/user/reset-password`,
         {
           email,
           resetToken,

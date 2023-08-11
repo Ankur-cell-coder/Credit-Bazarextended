@@ -41,17 +41,20 @@ function UserProfile() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3005/user/add-details", {
-        id: `${location.state.id}`,
-        defaultRole,
-        companyName,
-        companygst,
-        accountNo,
-        ifscCode,
-        receipientName,
-        bankName,
-        branch,
-      });
+      const res = await axios.post(
+        `${process.env.REACT_APP_API}/user/add-details`,
+        {
+          id: `${location.state.id}`,
+          defaultRole,
+          companyName,
+          companygst,
+          accountNo,
+          ifscCode,
+          receipientName,
+          bankName,
+          branch,
+        }
+      );
       if (res.data.success) {
         alert(res.data.message);
         handleNavigate(res);
@@ -215,7 +218,7 @@ function UserProfile() {
           </div>
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </User1>
   );
 }
