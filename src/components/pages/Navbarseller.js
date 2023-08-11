@@ -25,23 +25,23 @@ function Navbarseller() {
 
   const handleChange = (e) => {
     if (e.currentTarget.value == "merchants") {
-      const win = window.open(
-        "http://localhost:3000/financesdashboard",
-        "_blank"
-      );
-      if (win != null) {
-        win.focus();
-      }
-      //  navigate("/sellersdashboard");
+      // const win = window.open(
+      //   "http://localhost:3000/financesdashboard",
+      //   "_blank"
+      // );
+      // if (win != null) {
+      //   win.focus();
+      // }
+      navigate("/financesdashboard");
     } else if (e.currentTarget.value == "buyer") {
-      const win = window.open(
-        "http://localhost:3000/buyersdashboard",
-        "_blank"
-      );
-      if (win != null) {
-        win.focus();
-      }
-      //  navigate("/sellersdashboard");
+      // const win = window.open(
+      //   "http://localhost:3000/buyersdashboard",
+      //   "_blank"
+      // );
+      // if (win != null) {
+      //   win.focus();
+      // }
+      navigate("/buyersdashboard");
     }
   };
 
@@ -78,12 +78,12 @@ function Navbarseller() {
                     width: "200px",
                     height: "35px",
                     fontSize: "18px",
-                    border:"0px solid white",
-                    background:"white",
-                    borderRadius:"10px"
+                    border: "0px solid white",
+                    background: "white",
+                    borderRadius: "10px",
                   }}
                 >
-                <BiUser/> User Detail
+                  <BiUser /> User Detail
                 </button>
               </div>
               <div>
@@ -93,13 +93,13 @@ function Navbarseller() {
                     width: "200px",
                     height: "35px",
                     fontSize: "18px",
-                    border:"0px solid white",
-                    background:"white",
-                    borderRadius:"10px"
+                    border: "0px solid white",
+                    background: "white",
+                    borderRadius: "10px",
                   }}
                 >
-                  <BiLogOut style={{marginRight:"40px"}}/>
-                   Logout
+                  <BiLogOut style={{ marginRight: "40px" }} />
+                  Logout
                 </button>
               </div>
             </div>
@@ -123,7 +123,7 @@ const Navbarseller1 = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-left: 1100px;
-  margin-top:8vh;
+  margin-top: 8vh;
   @media only screen and (min-width: 1800px) {
     margin-left: 1400px;
   }
@@ -138,7 +138,7 @@ const Navbarseller1 = styled.div`
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
-    background:white;
+    background: white;
   }
 
   .rightsection {

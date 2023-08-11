@@ -26,22 +26,24 @@ function Navbar() {
 
   const handleChange = (e) => {
     if (e.currentTarget.value == "merchants") {
-      const win = window.open(
-        "http://localhost:3000/financesdashboard",
-        "_blank"
-      );
-      if (win != null) {
-        win.focus();
-      }
+      // const win = window.open(
+      //   "http://localhost:3000/financesdashboard",
+      //   "_blank"
+      // );
+      // if (win != null) {
+      //   win.focus();
+      // }
+      navigate("/financesdashboard");
     } else if (e.currentTarget.value == "seller") {
-      const win = window.open(
-        "http://localhost:3000/sellersdashboard",
-        "_blank"
-      );
-      if (win != null) {
-        win.focus();
-      }
-     
+      // const win = window.open(
+      //   "http://localhost:3000/sellersdashboard",
+      //   "_blank"
+      // );
+      // if (win != null) {
+      //   win.focus();
+      // }
+
+      navigate("/sellersdashboard");
     }
   };
 
@@ -78,12 +80,12 @@ function Navbar() {
                     width: "200px",
                     height: "35px",
                     fontSize: "18px",
-                    border:"0px solid white",
-                    background:"white",
-                    borderRadius:"10px"
+                    border: "0px solid white",
+                    background: "white",
+                    borderRadius: "10px",
                   }}
                 >
-                <BiUser/> User Detail
+                  <BiUser /> User Detail
                 </button>
               </div>
               <div>
@@ -93,13 +95,13 @@ function Navbar() {
                     width: "200px",
                     height: "35px",
                     fontSize: "18px",
-                    border:"0px solid white",
-                    background:"white",
-                    borderRadius:"10px"
+                    border: "0px solid white",
+                    background: "white",
+                    borderRadius: "10px",
                   }}
                 >
-                  <BiLogOut style={{marginRight:"40px"}}/>
-                   Logout
+                  <BiLogOut style={{ marginRight: "40px" }} />
+                  Logout
                 </button>
               </div>
             </div>
@@ -111,7 +113,6 @@ function Navbar() {
             </button>
           </div>
         )}
-
       </div>
     </Navbar1>
   );
@@ -120,52 +121,50 @@ function Navbar() {
 export default Navbar;
 
 const Navbar1 = styled.div`
-display: flex;
-background:orange;
-flex-direction: column;
-justify-content: center;
-margin-left: 1100px;
-@media only screen and (min-width: 1800px){
-  margin-left:1400px;
-}
-
-
-
-.rightsection {
   display: flex;
-  width: 400px;
-  margin-top: 45px;
-  justify-content: space-between;
-  position: fixed;
-  top: 0px;
-}
-
-.options {
-  width: 140px;
-  height: 40px;
-  font-size: 20px;
-  border: 2px solid black;
-  margin-top:-60px;
-  position: sticky;
-  top: 0px;
-}
-.login {
-  width: 150px;
-  height: 40px;
-  font-size: 20px;
-  margin-top:-60px;
-  position: sticky;
-  top: 0px;
-}
-.button {
-  margin-left: 20px;
-  margin-top: 15px;
-  height: 36px;
   background: orange;
-  border: 2px solid orange;
-  width: 200px;
-  font-size: 15px;
-  position: sticky;
-  top: 0px;
-}
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1100px;
+  @media only screen and (min-width: 1800px) {
+    margin-left: 1400px;
+  }
+
+  .rightsection {
+    display: flex;
+    width: 400px;
+    margin-top: 45px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+  }
+
+  .options {
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid black;
+    margin-top: -60px;
+    position: sticky;
+    top: 0px;
+  }
+  .login {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: -60px;
+    position: sticky;
+    top: 0px;
+  }
+  .button {
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 36px;
+    background: orange;
+    border: 2px solid orange;
+    width: 200px;
+    font-size: 15px;
+    position: sticky;
+    top: 0px;
+  }
 `;
