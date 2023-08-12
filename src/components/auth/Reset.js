@@ -11,6 +11,7 @@ function Reset() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    
     const searchParams = new URLSearchParams(window.location.search);
     const token = searchParams.get("token");
     setResettoken(token);

@@ -25,23 +25,35 @@ function Navbarfinancer() {
 
   const handleChange = (e) => {
     if (e.currentTarget.value == "buyer") {
-      // const win = window.open(
-      //   "http://localhost:3000/buyersdashboard",
-      //   "_blank"
-      // );
-      // if (win != null) {
-      //   win.focus();
-      // }
-      navigate("/buyersdashboard");
+      var currentURL = window.location.href;
+
+      var urlSegments = currentURL.split("/");
+      urlSegments.pop();
+      var newURL = urlSegments.join("/");
+      console.log(newURL);
+
+      const win = window.open(
+        `${newURL}/buyersdashboard`,
+        "_blank"
+      );
+      if (win != null) {
+        win.focus();
+      }
+     
     } else if (e.currentTarget.value == "seller") {
-      // const win = window.open(
-      //   "http://localhost:3000/sellersdashboard",
-      //   "_blank"
-      // );
-      // if (win != null) {
-      //   win.focus();
-      // }
-      navigate("/sellersdashboard");
+      
+      var currentURL = window.location.href;
+
+      var urlSegments = currentURL.split("/");
+      urlSegments.pop();
+      var newURL = urlSegments.join("/");
+      console.log(newURL);
+
+      const win = window.open(`${newURL}/sellersdashboard`, "_blank");
+      if (win != null) {
+        win.focus();
+      }
+
     }
   };
 
