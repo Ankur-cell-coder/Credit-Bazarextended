@@ -1,34 +1,60 @@
-import React, { useState } from 'react'
-import { styled } from 'styled-components'
-import Navbarfinancer from '../pages/Navbarfinancer';
-import NavbarsideFinance from '../pages/NavbarsideFinance';
-import Footer from '../pages/Footer';
-import { useNavigate } from 'react-router-dom';
-import { useCount } from '../../context/count';
+import React, { useState } from "react";
+import { styled } from "styled-components";
+import Navbarfinancer from "../pages/Navbarfinancer";
+import NavbarsideFinance from "../pages/NavbarsideFinance";
+import Footer from "../pages/Footer";
+import { useNavigate } from "react-router-dom";
+import { useCount } from "../../context/count";
 
 function FinanceViewRequest() {
-    const navigate=useNavigate();
-   
-    const [amount, setAmount] = useState("");
-    const [margin, setMargin] = useState("");
-    const [interest, setInterest] = useState("");
-    const [terms, setTerms] = useState("");
-  
-    const {incrementCount1}=useCount();
-  
-    const handleClick=()=>{
-      incrementCount1();
-      navigate('/financeofferacknowledgement');
-    }
+  const navigate = useNavigate();
+
+  const [load, setLoad] = useState(false);
+
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
+  const [open4, setOpen4] = useState(false);
+
+  const handleClick = () => {
+    setLoad(!load);
+  };
+
+  const handleToogle1 = () => {
+    setOpen1(!open1);
+    setOpen2(false);
+    setOpen3(false);
+    setOpen4(false);
+  };
+
+  const handleToogle2 = () => {
+    setOpen1(false);
+    setOpen2(!open2);
+    setOpen3(false);
+    setOpen4(false);
+  };
+
+  const handleToogle3 = () => {
+    setOpen1(false);
+    setOpen2(false);
+    setOpen3(!open3);
+    setOpen4(false);
+  };
+  const handleToogle4 = () => {
+    setOpen1(false);
+    setOpen2(false);
+    setOpen3(false);
+    setOpen4(!open4);
+  };
+
   return (
     <>
-     <Navbarfinancer/>
-    <NavbarsideFinance/>
-   <Finance1>
-
-   <div className="button">
+      <Navbarfinancer />
+      <NavbarsideFinance />
+      <Finance1>
+        <div className="button">
           <button
-            className="btn"
+            className="btn1"
             onClick={() => {
               navigate("/finance_request_information");
             }}
@@ -36,20 +62,12 @@ function FinanceViewRequest() {
             Request Information
           </button>
           <button
-            className="btn1"
-            onClick={() => {
-              navigate("/finance_view_request");
-            }}
-          >
-           View Request
-          </button>
-          <button
             className="btn"
             onClick={() => {
               navigate("/finance_offers");
             }}
           >
-          Offers
+            Offers
           </button>
           <button
             className="btn"
@@ -59,14 +77,7 @@ function FinanceViewRequest() {
           >
             Disbursement
           </button>
-          <button
-            className="btn"
-            onClick={() => {
-              navigate("/finance_shipment");
-            }}
-          >
-            Shipment
-          </button>
+
           <button
             className="btn"
             onClick={() => {
@@ -84,186 +95,549 @@ function FinanceViewRequest() {
             Settlement
           </button>
         </div>
-
-   <div className="content">
-        <div className="offer-details">
-            <h2>Request details</h2>
-            <div className="title">Request ID</div>
-            <div className="details">
-                <p>Offered Amount: INR 7,50,000</p>
-                <p>Margin (25%): INR 2,50,000</p>
-                <p>Interest (12%): INR 22,191.78</p>
-                <p>Term: 90 days</p>
+        {!load ? (
+          <div className="main-content">
+            <div id="myElement">
+              <h1> Finance Request</h1>
+              <div className="record-details">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Request ID</th>
+                      <td>123456</td>
+                    </tr>
+                    <tr>
+                      <th>Date</th>
+                      <td> 20/06/2023 </td>
+                    </tr>
+                    <tr>
+                      <th> Requested Amount</th>
+                      <td> INR 4,00,000</td>
+                    </tr>
+                    <tr>
+                      <th> Status</th>
+                      <td> In Progress</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h2> Trade Documents</h2>
+              <div className="record-details">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Trade Document</th>
+                      <th>Subgroup ID</th>
+                      <th>Seller GST</th>
+                      <th>Buyer Name</th>
+                      <th>Buyer GST</th>
+                      <th>Trade Amount</th>
+                      <th>Invoice ID</th>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 1</td>
+                      <td>Subgroup 3</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Hospital3</td>
+                      <td>123-45-5373</td>
+                      <td>₹90,000.00</td>
+                      <td>INV001</td>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 2</td>
+                      <td>Subgroup 3</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Hospital3</td>
+                      <td>123-45-5373</td>
+                      <td>₹20,000.00</td>
+                      <td>INV002</td>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 3</td>
+                      <td>Subgroup 3</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Hospital3</td>
+                      <td>123-45-5373</td>
+                      <td>₹30,000.00</td>
+                      <td>INV003</td>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 4</td>
+                      <td>Subgroup 4</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Medical Univ. 1</td>
+                      <td>123-45-2486</td>
+                      <td>₹40,000.00</td>
+                      <td>INV004</td>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 5</td>
+                      <td>Subgroup 4</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Medical Univ. 1</td>
+                      <td>123-45-2486</td>
+                      <td>₹50,000.00</td>
+                      <td>INV005</td>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 7</td>
+                      <td>Subgroup 4</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Medical Univ. 1</td>
+                      <td>123-45-2486</td>
+                      <td>₹30,000.00</td>
+                      <td>INV006</td>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 8</td>
+                      <td>Subgroup 4</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Medical Univ. 1</td>
+                      <td>123-45-2486</td>
+                      <td>₹40,000.00</td>
+                      <td>INV007</td>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 6</td>
+                      <td>Subgroup 1</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Hospital 1</td>
+                      <td>123-45-5454</td>
+                      <td>₹20,000.00</td>
+                      <td>INV008</td>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 9</td>
+                      <td>Subgroup 2</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Hospital 2</td>
+                      <td>123-45-5919</td>
+                      <td>₹50,000.00</td>
+                      <td>INV009</td>
+                    </tr>
+                    <tr>
+                      <td>Trade Document 10</td>
+                      <td>Subgroup 2</td>
+                      <td>36AAIFP3688H1ZS</td>
+                      <td>Hospital 2</td>
+                      <td>123-45-5919</td>
+                      <td>₹90,000.00</td>
+                      <td>INV0010</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-        </div>
-        <div className="offer-section">
-            <h2>Make an Offer</h2>
-            <div className="form-group">
-                <label for="amount">Amount:</label>
-                <input
-          type="txt"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          id="amount"
-          name="amount"
-          placeholder="Enter Amount"
-          required
-        />
-        </div>
-            <div className="form-group">
-                <label for="Margin">Margin:</label>
-               <input
-          type="txt"
-          value={margin}
-          onChange={(e) => setMargin(e.target.value)}
-          id="margin"
-          name="margin"
-          placeholder="Enter Margin"
-          required
-        />
-        </div>
-            <div className="form-group">
-                <label for="interest">Interest Rate:</label>
-                  <input
-          type="txt"
-          value={interest}
-          onChange={(e) => setInterest(e.target.value)}
-          id="interest"
-          name="interest"
-          placeholder="Enter Interest Rate"
-          required
-        />
-        </div>
-            <div className="form-group">
-                <label for="term">Term (in days):</label>
-               <input
-          type="txt"
-          value={terms}
-          onChange={(e) => setTerms(e.target.value)}
-          id="terms"
-          name="terms"
-          placeholder="Enter Term"
-          required
-        />
-                           </div>
-        </div>
-       
-        <div className="btn-container">
-           <button className="btn" onClick={handleClick}>
-            Place an Offer
-        </button>
-        <button className="btn" onClick={()=>{navigate('/financesdashboard')}}>
-            Decline Request
-        </button>
-        </div>
-    </div>
 
-   </Finance1>
-   <div style={{ marginTop: "30vh" }}>
-       <Footer/>
+            <div className="btn-container">
+              <button className="btnn" onClick={handleClick}>
+                Next
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <div className="headingcontent">Place an offer</div>
+
+            {open1 ? (
+              <div className="topcontent">
+                <button onClick={handleToogle1} className="handlebutton">
+                  SubGroup 1
+                </button>
+
+                <div className="panel-body">
+                  <div className="form-group">
+                    <label htmlFor="subgroup1">Subgroup Value</label>
+                    <input
+                      type="number"
+                      id="subgroup1"
+                      placeholder="INR 20,000"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="amount1">Amount</label>
+                    <input
+                      type="text"
+                      id="amount1"
+                      placeholder="Enter the Amount"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="margin1">Margin</label>
+                    <input
+                      type="text"
+                      id="margin1"
+                      placeholder="Enter the Margin"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="interest1">Interest</label>
+                    <input
+                      type="password"
+                      id="interest1"
+                      placeholder="Enter the Interest"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="terms1">Terms (In Days)</label>
+                    <input
+                      type="number"
+                      id="terms1"
+                      placeholder="Enter the Terms"
+                    />
+                  </div>
+                  <button className="btnn1 btn-primary">Place an Offer</button>
+                  <button className="btnn1 btn-primary" onClick={handleClick}>Back</button>
+                  <button className="btnn1 btn-primary">Cancel</button>
+                </div>
+              </div>
+            ) : (
+              <div className="topcontent">
+                <button onClick={handleToogle1} className="handlebutton">
+                  SubGroup 1
+                </button>
+              </div>
+            )}
+
+            {open2 ? (
+              <div className="topcontent">
+                <button onClick={handleToogle2} className="handlebutton">
+                  SubGroup 2
+                </button>
+                <div className="panel-body">
+                  <div className="form-group">
+                    <label htmlFor="subgroup2">Subgroup Value</label>
+                    <input
+                      type="number"
+                      id="subgroup2"
+                      placeholder="INR 1,20,000"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="amount1">Amount</label>
+                    <input
+                      type="text"
+                      id="amount1"
+                      placeholder="Enter the Amount"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="margin1">Margin</label>
+                    <input
+                      type="text"
+                      id="margin1"
+                      placeholder="Enter the Margin"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="interest1">Interest</label>
+                    <input
+                      type="password"
+                      id="interest1"
+                      placeholder="Enter the Interest"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="terms1">Terms (In Days)</label>
+                    <input
+                      type="number"
+                      id="terms1"
+                      placeholder="Enter the Terms"
+                    />
+                  </div>
+                  <button className="btnn1 btn-primary">Place an Offer</button>
+                  <button className="btnn1 btn-primary" onClick={handleClick}>Back</button>
+                  <button className="btnn1 btn-primary">Cancel</button>
+                </div>
+              </div>
+            ) : (
+              <div className="topcontent">
+                <button onClick={handleToogle2} className="handlebutton">
+                  SubGroup 2
+                </button>
+              </div>
+            )}
+            {open3 ? (
+              <div className="topcontent">
+                <button onClick={handleToogle3} className="handlebutton">
+                  SubGroup 3
+                </button>
+                <div className="panel-body">
+                  <div className="form-group">
+                    <label htmlFor="subgroup1">Subgroup Value</label>
+                    <input
+                      type="number"
+                      id="subgroup1"
+                      placeholder="INR 1,40,000"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="amount1">Amount</label>
+                    <input
+                      type="text"
+                      id="amount1"
+                      placeholder="Enter the Amount"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="margin1">Margin</label>
+                    <input
+                      type="text"
+                      id="margin1"
+                      placeholder="Enter the Margin"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="interest1">Interest</label>
+                    <input
+                      type="password"
+                      id="interest1"
+                      placeholder="Enter the Interest"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="terms1">Terms (In Days)</label>
+                    <input
+                      type="number"
+                      id="terms1"
+                      placeholder="Enter the Terms"
+                    />
+                  </div>
+                  <button className="btnn1 btn-primary">Place an Offer</button>
+                  <button className="btnn1 btn-primary" onClick={handleClick}>Back</button>
+                  <button className="btnn1 btn-primary">Cancel</button>
+                </div>
+              </div>
+            ) : (
+              <div className="topcontent">
+                <button onClick={handleToogle3} className="handlebutton">
+                  SubGroup 3
+                </button>
+              </div>
+            )}
+            {open4 ? (
+              <div className="topcontent">
+                <button onClick={handleToogle4} className="handlebutton">
+                  SubGroup 4
+                </button>
+                <div className="panel-body">
+                  <div className="form-group">
+                    <label htmlFor="subgroup1">Subgroup Value</label>
+                    <input
+                      type="number"
+                      id="subgroup1"
+                      placeholder="INR 20,000"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="amount1">Amount</label>
+                    <input
+                      type="text"
+                      id="amount1"
+                      placeholder="Enter the Amount"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="margin1">Margin</label>
+                    <input
+                      type="text"
+                      id="margin1"
+                      placeholder="Enter the Margin"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="interest1">Interest</label>
+                    <input
+                      type="password"
+                      id="interest1"
+                      placeholder="Enter the Interest"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="terms1">Terms (In Days)</label>
+                    <input
+                      type="number"
+                      id="terms1"
+                      placeholder="Enter the Terms"
+                    />
+                  </div>
+                  <button className="btnn1 btn-primary">Place an Offer</button>
+                  <button className="btnn1 btn-primary" onClick={handleClick}>
+                    Back
+                  </button>
+                  <button className="btnn1 btn-primary">Cancel</button>
+                </div>
+              </div>
+            ) : (
+              <div className="topcontent">
+                <button onClick={handleToogle4} className="handlebutton">
+                  SubGroup 4
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+      </Finance1>
+      <div style={{ marginTop: "30vh" }}>
+        <Footer />
       </div>
-   </>
-  )
+    </>
+  );
 }
 
-export default FinanceViewRequest
+export default FinanceViewRequest;
 
-const Finance1=styled.div`
+const Finance1 = styled.div`
+  display: flex;
+  flex-direction: column;
 
-display: flex;
-flex-direction: column;
+  margin-left: 268px;
 
- margin-left:268px;
-
-      body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-      }
-      .content {
-          margin-top: 50px; /* Adjust the margin to move content down */
-          padding: 20px;
-      }
-      .details {
-          margin-bottom: 50px;
-      }
-      .offer-details {
-          background-color: #F8F9FA;
-          padding: 20px;
-          margin-bottom: 20px;
-      }
-      .offer-details h2 {
-          margin-top: 0;
-      }
-      .offer-details .title {
-          font-weight: bold;
-          margin-bottom: 10px;
-      }
-      .offer-details .details {
-          color: #666;
-      }
-      .pros-cons {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 0px;
-      }
-      .pros-cons h3 {
-          margin: 0px;
-      }
-      .pros {
-          color: green;
-      }
-      .cons {
-          color: red;
-      }
-      .btn-container {
-          display: flex;
-          justify-content: center;
-          margin-top: 30px;
-      }
-      .btn {
-        color: white;
-        background-color: #007bff;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
-        margin-left: 20px;
-        font-size: 20px;
-        margin-top:20vh;
-      }
-      .btn1 {
-        color: white;
-        background-color: orange;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 20px;
-        border-radius: 5px;
-        display: inline-block;
-        margin-left: 20px;
-      }
-      .btn:hover {
-          background-color: #0056b3;
-      }
-      .form-group {
-          margin-bottom: 20px;
-      }
-      .form-group label {
-          display: block;
-          margin-bottom: 5px;
-      }
-      .form-group input {
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          width: 100%;
-      }
-      .form-group select {
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          width: 100%;
-      }
-  
-
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .handlebutton {
+    width: 500px;
+    height: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+  .btnn1 {
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-left: 20px;
+    font-size: 22px;
+    background-color: blue;
+  }
+  .content {
+    margin-top: 50px; /* Adjust the margin to move content down */
+    padding: 20px;
+  }
+  .details {
+    margin-bottom: 50px;
+  }
+  .offer-details {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .offer-details h2 {
+    margin-top: 0;
+  }
+  .offer-details .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .offer-details .details {
+    color: #666;
+  }
+  .pros-cons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+  }
+  .pros-cons h3 {
+    margin: 0px;
+  }
+  .pros {
+    color: green;
+  }
+  .cons {
+    color: red;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .btn {
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    // border-radius: 5px;
+    display: inline-block;
+    // margin-left: 20px;
+    font-size: 20px;
+    margin-top: 20vh;
+    width: 300px;
+  }
+  .btnn {
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    // border-radius: 5px;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10vh;
+    width: 100px;
+    margin-left: -80px;
+  }
+  .btn1 {
+    color: white;
+    background-color: orange;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    // border-radius: 5px;
+    display: inline-block;
+    // margin-left: 20px;
+    width: 300px;
+  }
+  .main-content {
+    margin-top: 40px;
+  }
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  .form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  .table-container {
+    margin-top: 20px;
+  }
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+  }
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+  }
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  .headingcontent {
+    font-size: 36px;
+    margin-top: 40px;
+    margin-left: 40%;
+  }
 `;

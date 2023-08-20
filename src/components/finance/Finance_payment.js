@@ -64,14 +64,7 @@ function Finance_payment() {
           >
             Disbursement
           </button>
-          <button
-            className="btn"
-            onClick={() => {
-              navigate("/finance_shipment");
-            }}
-          >
-            Shipment
-          </button>
+         
           <button
             className="btn1"
             onClick={() => {
@@ -281,6 +274,8 @@ function Finance_payment() {
             </div>
           )}
         </div>
+
+        
       </Finance1>
       <div style={{ marginTop: "60vh" }}>
         <Footer />
@@ -324,27 +319,31 @@ const Finance1 = styled.div`
     border: 2px solid blue;
   }
 
-  .btn {
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 20px;
-    margin-top: 20vh;
-  }
+ 
   .btn1 {
     color: white;
     background-color: orange;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 20px;
-    border-radius: 5px;
+    // border-radius: 5px;
     display: inline-block;
-    margin-left: 20px;
+    // margin-left: 20px;
+    width: 300px;
   }
+  .btn {
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    // border-radius: 5px;
+    display: inline-block;
+    // margin-left: 20px;
+    font-size: 20px;
+    margin-top: 20vh;
+    width: 300px;
+  }
+
   .btn:hover {
     background-color: #0056b3;
   }

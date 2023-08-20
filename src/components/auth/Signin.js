@@ -9,7 +9,6 @@ import Footer from "../pages/Footer";
 function Signin() {
   const [role, setRole] = useState("seller");
   const [auth, setAuth] = useAuth();
-
   const navigate = useNavigate();
   const [numberOrEmail, setnumberOrEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +16,6 @@ function Signin() {
   //routing
   const handleNavigate = (res) => {
     setRole(res.data.user.userDetails.defaultRole);
-
     if (res.data.user.userDetails.defaultRole === "seller") {
       navigate("/sellersdashboard");
     } else if (res.data.user.userDetails.defaultRole === "buyer") {
