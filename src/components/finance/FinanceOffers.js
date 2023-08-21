@@ -57,143 +57,39 @@ function FinanceOffers() {
           </button>
         </div>
 
-        <div id="Offers" className="tabcontent">
-          <div className="main-content">
-            <h3> Finance Request</h3>
-            <div className="record-details">
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Request ID</th>
-                    <td>123456</td>
-                  </tr>
-                  <tr>
-                    <th>Date</th>
-                    <td> 20/06/2023 </td>
-                  </tr>
-                  <tr>
-                    <th> Requested Amount</th>
-                    <td> INR 11,00,000</td>
-                  </tr>
-                  <tr>
-                    <th> Status</th>
-                    <td> In Progress</td>
-                  </tr>
-                </tbody>
-              </table>
+        <div className="container">
+          <div className="panel-group" id="accordion">
+            <div className="panel panel-default">
+              <div className="panel-heading">
+                <h4 className="panel-title">
+                  <a
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse1"
+                  >
+                    Collapsible Group 1
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse1" className="panel-collapse collapse in">
+                <div className="panel-body">
+                  <div className="lender-details">
+                    <h3>Subgroup 1</h3>
+                    <p>Offered Amount: INR 19,000</p>
+                    <p>Margin: INR 1500 (8%)</p>
+                    <p>Interest: INR 1500 (8%)</p>
+                    <p>Terms (In days): 45 Days</p>
+                    <hr />
+                    <p>
+                      <strong>Status:</strong>Your offer has been placed
+                    </p>
+                  </div>
+                  <div className="select-btn-container">
+                    <button className="btn">Cancel Offer</button>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <h3> Invoice Details</h3>
-          <div className="record-details">
-            <table>
-              <tbody>
-                <tr>
-                  <th>Subgroup Id</th>
-                  <th>Seller GST</th>
-                  <th>Buyer name</th>
-                  <th>Buyer GST</th>
-                  <th>Trade Amount</th>
-                  <th>Invoice ID</th>
-                </tr>
-                <tr>
-                  <td>Subgroup 1</td>
-                  <td>GST123</td>
-                  <td>Buyer 1</td>
-                  <td>GST456</td>
-                  <td>INR 5,00,000</td>
-                  <td>INV001</td>
-                </tr>
-                <tr>
-                  <td>Subgroup 2</td>
-                  <td>GST123</td>
-                  <td>Buyer 2</td>
-                  <td>GST012</td>
-                  <td>INR 6,00,000</td>
-                  <td>INV002</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="make-offer">
-            <h3>Make an offer</h3>
-            <form>
-              <input type="checkbox" defaultValue="amount1" />
-              <label htmlFor="amounty1"> SubGroup 1: INR 5,00,000</label> &nbsp;
-              &nbsp; &nbsp; &nbsp; &nbsp;
-              <input type="checkbox" defaultValue="amount2" />
-              <label htmlFor="amounty2"> SubGroup 2: INR 6,00,000</label>
-            </form>
-            <div className="form-group">
-              <label htmlFor="amount">Amount:</label>
-              <input
-                type="number"
-                id="amount"
-                name="amount"
-                placeholder="Enter amount"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="Margin">Margin:</label>
-              <input
-                type="number"
-                id="Margin"
-                name="Margin"
-                step="25%"
-                placeholder="Enter Margin"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="interest">Interest Rate:</label>
-              <input
-                type="number"
-                id="interest"
-                name="interest"
-                step="0.01"
-                placeholder="Enter interest rate"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="term">Term (in days):</label>
-              <input
-                type="number"
-                id="term"
-                name="term"
-                placeholder="Enter term"
-                required
-              />
-            </div>
-          </div>
-          <div className="offer-section">
-            <h3>Invoives allocated for placed offer</h3>
-            <div className="record-details">
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Subgroup ID</th>
-                    <th>Seller GST</th>
-                    <th>Buyer Name</th>
-                    <th>Buyer GST</th>
-                    <th>Trade Amount</th>
-                    <th>Invoice ID</th>
-                  </tr>
-                  <tr>
-                    <td>Subgrop 1</td>
-                    <td>GST124</td>
-                    <td>Buyer 1</td>
-                    <td>GST456</td>
-                    <td>INR 5,00,000</td>
-                    <td>INV001</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div className="btn-container">
-            <button className="btn">Next</button>
-            <button className="btn">Cancel</button>
           </div>
         </div>
       </Finance1>
@@ -242,51 +138,7 @@ const Finance1 = styled.div`
     padding: 20px;
   }
 
-  .table-container {
-    margin-top: 20px;
-  }
-  table {
-    width: 90%;
-    border-collapse: collapse;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
-    border-top: 1px solid #dddddd;
-  }
-  th,
-  td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #dddddd;
-  }
-  th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-  }
-  .search-bar {
-    display: flex;
-    margin-bottom: 20px;
-    margin-right: 10px;
-  }
-  .search-input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #dddddd;
-    border-radius: 4px 0 0 4px;
-    font-size: 14px;
-    align-items: center;
-  }
-  .search-button {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 8px;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .search-button:hover {
-    background-color: #0056b3;
-  }
+
   .popup {
     position: relative;
     display: inline-block;
@@ -360,43 +212,12 @@ const Finance1 = styled.div`
   @keyframes fadeIn {
     from {
       opacity: 0;
-    }
+    }.
     to {
       opacity: 1;
     }
   }
-  .offer-details {
-    background-color: #f8f9fa;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  .offer-details h2 {
-    margin-top: 0;
-  }
-  .offer-details .title {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  .offer-details .details {
-    color: #666;
-  }
-  .make-offer {
-    width: 90%;
-    height: 20vh;
-  }
-  .form-group {
-    margin-top: 10px;
-  }
-  #amount {
-    margin-left: 46px;
-  }
-  #Margin {
-    margin-left: 52px;
-  }
-  #interest {
-    margin-left: 10px;
-  }
-  #term {
-    margin-left: 0px;
-  }
+
+  
+
 `;

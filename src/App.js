@@ -58,12 +58,19 @@ function App() {
   return (
     <App1>
       <div
-        style={{ background: "orange", width: "100%", height: "100px",justifyContent:"center",position:"fixed"}}
+        style={{
+          background: "orange",
+          width: "100%",
+          height: "100px",
+          justifyContent: "center",
+          position: "fixed",
+        }}
       >
-
-     
-        <img src={creditlogo} className="leftContent" style={{marginTop:"20px",marginLeft:"30px"}} />
-     
+        <img
+          src={creditlogo}
+          className="leftContent"
+          style={{ marginTop: "20px", marginLeft: "30px" }}
+        />
       </div>
 
       <Routes>
@@ -101,21 +108,21 @@ function App() {
           path="/financedisrubment"
           element={!auth.user ? <Signin /> : <FinanceDisrubment />}
         />
-         <Route
+        <Route
           path="/finance_disbursement"
-          element={!auth.user ? <Signin /> : <FinanceDisburesment/>}
+          element={!auth.user ? <Signin /> : <FinanceDisburesment />}
         />
         <Route
           path="/financepayment"
           element={!auth.user ? <Signin /> : <FinancePayment />}
         />
-          <Route
+        <Route
           path="/finance_payment"
-          element={!auth.user ? <Signin /> : <Finance_payment/>}
+          element={!auth.user ? <Signin /> : <Finance_payment />}
         />
-         <Route
+        <Route
           path="/finance_settlement"
-          element={!auth.user ? <Signin /> : <FinanceSettlement/>}
+          element={!auth.user ? <Signin /> : <FinanceSettlement />}
         />
         <Route
           path="/financedisrubmentacknowledgement"
@@ -123,11 +130,9 @@ function App() {
             !auth.user ? <Signin /> : <FinanceDisburenmentAcknowledgement />
           }
         />
-         <Route
+        <Route
           path="/finance_offers"
-          element={
-            !auth.user ? <Signin /> : <FinanceOffers />
-          }
+          element={!auth.user ? <Signin /> : <FinanceOffers />}
         />
         <Route
           path="/financessettlementdetail"
@@ -139,41 +144,30 @@ function App() {
           path="/buyersdashboard"
           element={!auth.user ? <Signin /> : <Bdashboard />}
         />
-         <Route
+        <Route
           path="/buyersrequestinformation"
           element={!auth.user ? <Signin /> : <BuyersRequestInformation />}
         />
-       
-       <Route
+        <Route
           path="/buyers_offers"
           element={!auth.user ? <Signin /> : <BuyersOffers />}
         />
-
-       <Route
+        <Route
           path="/buyers_disbursement"
           element={!auth.user ? <Signin /> : <BuyersDisbursement />}
         />
-
-       <Route
+        <Route
           path="/buyers_shipment"
           element={!auth.user ? <Signin /> : <BuyersShipment />}
         />
-
         <Route
           path="/buyers_payment"
           element={!auth.user ? <Signin /> : <BuyersPayment />}
         />
-
         <Route
           path="/buyers_settlement"
           element={!auth.user ? <Signin /> : <BuyersSettlement />}
         />
-
-
-
-       
-
-
         //seller// routes
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route
@@ -267,7 +261,6 @@ function App() {
 export default App;
 
 const App1 = styled.div`
-
   .topcomp {
     //  position:fixed;
     display: flex;
@@ -276,7 +269,6 @@ const App1 = styled.div`
     width: 300px;
     justify-content: center;
     margin-top: -80px;
-    
   }
   .leftcontent {
     // position:fixed;
