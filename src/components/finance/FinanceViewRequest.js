@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import Navbarfinancer from "../pages/Navbarfinancer";
 import NavbarsideFinance from "../pages/NavbarsideFinance";
@@ -11,13 +11,109 @@ function FinanceViewRequest() {
 
   const [load, setLoad] = useState(false);
 
+  const { setData1 } = useCount();
+
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
 
+  const [selection1, setSelection1] = useState({});
+  const [selection2, setSelection2] = useState({
+    value: "",
+    amount: "",
+    margin: "",
+    interest: "",
+    terms: "",
+  });
+  const [selection3, setSelection3] = useState({
+    value: "",
+    amount: "",
+    margin: "",
+    interest: "",
+    terms: "",
+  });
+  const [selection4, setSelection4] = useState({
+    value: "",
+    amount: "",
+    margin: "",
+    interest: "",
+    terms: "",
+  });
+
+  const [value1, setValue1] = useState("");
+  const [amount1, setAmount1] = useState("");
+  const [margin1, setMargin1] = useState("");
+  const [interest1, setInterest1] = useState("");
+  const [terms1, setTerms1] = useState("");
+
+  const [value2, setValue2] = useState("");
+  const [amount2, setAmount2] = useState("");
+  const [margin2, setMargin2] = useState("");
+  const [interest2, setInterest2] = useState("");
+  const [terms2, setTerms2] = useState("");
+
+  const [value3, setValue3] = useState("");
+  const [amount3, setAmount3] = useState("");
+  const [margin3, setMargin3] = useState("");
+  const [interest3, setInterest3] = useState("");
+  const [terms3, setTerms3] = useState("");
+
+  const [value4, setValue4] = useState("");
+  const [amount4, setAmount4] = useState("");
+  const [margin4, setMargin4] = useState("");
+  const [interest4, setInterest4] = useState("");
+  const [terms4, setTerms4] = useState("");
+
   const handleClick = () => {
     setLoad(!load);
+  };
+
+  useEffect(() => {
+    const updatedSelection = {
+      value: value1,
+      amount: amount1,
+      margin: margin1,
+      interest: interest1,
+      terms: terms1,
+    };
+
+    setSelection1(updatedSelection);
+  }, [value1, amount1, margin1, interest1, terms1]);
+
+  const handleOffer1 = () => {
+    setData1(selection1);
+    navigate("/finance_offers");
+  };
+
+  const handleOffer2 = () => {
+    setSelection2({
+      value: value2,
+      amount: amount2,
+      margin: margin2,
+      interest: interest2,
+      terms: terms2,
+    });
+  };
+
+  const handleOffer3 = () => {
+    setSelection3({
+      value: value3,
+      amount: amount3,
+      margin: margin3,
+      interest: interest3,
+      terms: terms3,
+    });
+  };
+
+  const handleOffer4 = () => {
+    setSelection4({
+      value: value4,
+      amount: amount4,
+      margin: margin4,
+      interest: interest4,
+      terms: terms4,
+    });
   };
 
   const handleToogle1 = () => {
@@ -249,17 +345,23 @@ function FinanceViewRequest() {
                   <div className="form-group">
                     <label htmlFor="subgroup1">Subgroup Value</label>
                     <input
-                      type="number"
-                      id="subgroup1"
+                      type="string"
+                      id="value1"
                       placeholder="INR 20,000"
+                      value={value1}
+                      name="value1"
+                      onChange={(e) => setValue1(e.target.value)}
                     />
                   </div>
                   <div className="form-group">
                     <label htmlFor="amount1">Amount</label>
                     <input
-                      type="text"
+                      type="string"
                       id="amount1"
                       placeholder="Enter the Amount"
+                      value={amount1}
+                      name="amount1"
+                      onChange={(e) => setAmount1(e.target.value)}
                     />
                   </div>
                   <div className="form-group">
@@ -268,14 +370,20 @@ function FinanceViewRequest() {
                       type="text"
                       id="margin1"
                       placeholder="Enter the Margin"
+                      value={margin1}
+                      name="margin1"
+                      onChange={(e) => setMargin1(e.target.value)}
                     />
                   </div>
                   <div className="form-group">
                     <label htmlFor="interest1">Interest</label>
                     <input
-                      type="password"
+                      type="string"
                       id="interest1"
                       placeholder="Enter the Interest"
+                      value={interest1}
+                      name="interest1"
+                      onChange={(e) => setInterest1(e.target.value)}
                     />
                   </div>
                   <div className="form-group">
@@ -284,10 +392,18 @@ function FinanceViewRequest() {
                       type="number"
                       id="terms1"
                       placeholder="Enter the Terms"
+                      value={terms1}
+                      name="terms1"
+                      onChange={(e) => setTerms1(e.target.value)}
                     />
                   </div>
-                  <button className="btnn1 btn-primary">Place an Offer</button>
-                  <button className="btnn1 btn-primary" onClick={handleClick}>Back</button>
+
+                  <button className="btnn1 btn-primary" onClick={handleOffer1}>
+                    Place an Offer
+                  </button>
+                  <button className="btnn1 btn-primary" onClick={handleClick}>
+                    Back
+                  </button>
                   <button className="btnn1 btn-primary">Cancel</button>
                 </div>
               </div>
@@ -345,8 +461,12 @@ function FinanceViewRequest() {
                       placeholder="Enter the Terms"
                     />
                   </div>
-                  <button className="btnn1 btn-primary">Place an Offer</button>
-                  <button className="btnn1 btn-primary" onClick={handleClick}>Back</button>
+                  <button className="btnn1 btn-primary" onClick={handleOffer2}>
+                    Place an Offer
+                  </button>
+                  <button className="btnn1 btn-primary" onClick={handleClick}>
+                    Back
+                  </button>
                   <button className="btnn1 btn-primary">Cancel</button>
                 </div>
               </div>
@@ -404,7 +524,9 @@ function FinanceViewRequest() {
                     />
                   </div>
                   <button className="btnn1 btn-primary">Place an Offer</button>
-                  <button className="btnn1 btn-primary" onClick={handleClick}>Back</button>
+                  <button className="btnn1 btn-primary" onClick={handleClick}>
+                    Back
+                  </button>
                   <button className="btnn1 btn-primary">Cancel</button>
                 </div>
               </div>

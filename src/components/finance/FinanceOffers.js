@@ -4,9 +4,15 @@ import Navbarfinancer from "../pages/Navbarfinancer";
 import NavbarsideFinance from "../pages/NavbarsideFinance";
 import Footer from "../pages/Footer";
 import { useNavigate } from "react-router-dom";
+import { useCount } from "../../context/count";
 
 function FinanceOffers() {
   const navigate = useNavigate();
+
+  const { data } = useCount();
+  // console.log(data[0]);
+  console.log(data[1]);
+
   return (
     <>
       <Navbarfinancer />
@@ -75,10 +81,10 @@ function FinanceOffers() {
                 <div className="panel-body">
                   <div className="lender-details">
                     <h3>Subgroup 1</h3>
-                    <p>Offered Amount: INR 19,000</p>
-                    <p>Margin: INR 1500 (8%)</p>
-                    <p>Interest: INR 1500 (8%)</p>
-                    <p>Terms (In days): 45 Days</p>
+                    <p>Offered Amount:{data[1].amount}</p>
+                    <p>Margin: {data.margin1}</p>
+                    <p>Interest: {data.interest1}</p>
+                    <p>Terms (In days): {data.terms}</p>
                     <hr />
                     <p>
                       <strong>Status:</strong>Your offer has been placed
@@ -137,7 +143,6 @@ const Finance1 = styled.div`
     margin-top: 20px;
     padding: 20px;
   }
-
 
   .popup {
     position: relative;
@@ -212,12 +217,9 @@ const Finance1 = styled.div`
   @keyframes fadeIn {
     from {
       opacity: 0;
-    }.
-    to {
+    }
+    . to {
       opacity: 1;
     }
   }
-
-  
-
 `;

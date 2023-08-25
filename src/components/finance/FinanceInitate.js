@@ -16,6 +16,7 @@ function FinanceInitate() {
 
   const {incrementCount1}=useCount();
 
+  
   const handleClick=()=>{
     incrementCount1();
     navigate('/financeofferacknowledgement');
