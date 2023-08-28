@@ -10,8 +10,8 @@ function FinanceOffers() {
   const navigate = useNavigate();
 
   const { data } = useCount();
-  // console.log(data[0]);
-  console.log(data[1]);
+  console.log(data.length);
+  console.log(data);
 
   return (
     <>
@@ -63,41 +63,35 @@ function FinanceOffers() {
           </button>
         </div>
 
-        <div className="container">
-          <div className="panel-group" id="accordion">
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <h4 className="panel-title">
-                  <a
-                    data-toggle="collapse"
-                    data-parent="#accordion"
-                    href="#collapse1"
-                  >
-                    Collapsible Group 1
-                  </a>
-                </h4>
-              </div>
-              <div id="collapse1" className="panel-collapse collapse in">
-                <div className="panel-body">
-                  <div className="lender-details">
-                    <h3>Subgroup 1</h3>
-                    <p>Offered Amount:{data[1].amount}</p>
-                    <p>Margin: {data.margin1}</p>
-                    <p>Interest: {data.interest1}</p>
-                    <p>Terms (In days): {data.terms}</p>
-                    <hr />
-                    <p>
-                      <strong>Status:</strong>Your offer has been placed
-                    </p>
-                  </div>
-                  <div className="select-btn-container">
-                    <button className="btn">Cancel Offer</button>
-                  </div>
-                </div>
-              </div>
+         
+          {data.map((item, index) => (
+            <div className="offer_element">
+              <div className="heading">Collapsible Group {index+1}</div>
+
+            <div className="heading_content">
+            <div className="subgp">Subgroup {index+1}</div>
+            <div key={index} className="ele">Offered Amount: INR {item.amount}</div>
+            <div key={index} className="ele">Margin: INR {item.margin}</div>
+            <div key={index} className="ele">Interest: INR {item.interest}</div>
+            <div key={index} className="ele">Terms (In days): {item.terms}</div>
             </div>
-          </div>
-        </div>
+
+            <div className="status">
+               Status:Your offer has been placed
+            </div>
+            
+            <button className="btnn">
+
+              Cancel Offer
+
+            </button>
+
+            </div>
+          ))}
+       
+
+      
+
       </Finance1>
       <div style={{ marginTop: "30vh" }}>
         <Footer />
@@ -144,38 +138,7 @@ const Finance1 = styled.div`
     padding: 20px;
   }
 
-  .popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  .popup .popuptext {
-    width: 700px;
-    visibility: hidden;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    margin-left: -80px;
-    overflow-y: auto;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #000;
-  }
-  .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
+ 
   .btnn {
     color: white;
     background-color: #007bff;
@@ -184,18 +147,18 @@ const Finance1 = styled.div`
     // border-radius: 5px;
     display: inline-block;
     font-size: 20px;
-    margin-top: 10vh;
-    width: 100px;
-    margin-left: -80px;
+   
+    width: 300px;
+    margin-left: 80px;
+    margin-top:20px;
+    margin-bottom:20px;
   }
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+
+  .ele{
+    font-size:20px;
+    margin-top:2px;
   }
-  .popup .popuptext .btn {
-    visibility: hidden;
-  }
+ 
 
   .btn:hover {
     background-color: #0056b3;
@@ -205,21 +168,35 @@ const Finance1 = styled.div`
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  @-webkit-keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+   
+  .offer_element{
+    border:2px solid black;
+    margin-top:5px;
+    margin-left:30px;
+    width:1100px;
+  }
+  
+  .heading{
+    border:2px solid black;
+    height:45px;
+    font-size:28px;
+    margin-top:-1px;
+    margin-left:-1px;
+    background:silver;
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    . to {
-      opacity: 1;
-    }
+  .heading_content{
+    padding:40px;
+    
   }
+  .status{
+    border-top:1px solid black;
+    margin-left:40px;
+    margin-right:40px;
+    font-size:28px;
+  }
+  .subgp{
+    font-size:36px;
+  }
+
 `;

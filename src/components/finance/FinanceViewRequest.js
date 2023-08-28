@@ -81,19 +81,26 @@ function FinanceViewRequest() {
     setSelection1(updatedSelection);
   }, [value1, amount1, margin1, interest1, terms1]);
 
+  useEffect(() => {
+    const updatedSelection = {
+      value: value2,
+      amount: amount2,
+      margin: margin2,
+      interest: interest2,
+      terms: terms2,
+    };
+
+    setSelection2(updatedSelection);
+  }, [value2, amount2, margin2, interest2, terms2]);
+
   const handleOffer1 = () => {
     setData1(selection1);
     navigate("/finance_offers");
   };
 
   const handleOffer2 = () => {
-    setSelection2({
-      value: value2,
-      amount: amount2,
-      margin: margin2,
-      interest: interest2,
-      terms: terms2,
-    });
+    setData1(selection2);
+    navigate("/finance_offers");
   };
 
   const handleOffer3 = () => {
@@ -420,47 +427,64 @@ function FinanceViewRequest() {
                 <button onClick={handleToogle2} className="handlebutton">
                   SubGroup 2
                 </button>
+
                 <div className="panel-body">
                   <div className="form-group">
                     <label htmlFor="subgroup2">Subgroup Value</label>
                     <input
-                      type="number"
-                      id="subgroup2"
-                      placeholder="INR 1,20,000"
+                      type="string"
+                      id="value2"
+                      placeholder="INR 20,000"
+                      value={value2}
+                      name="value2"
+                      onChange={(e) => setValue2(e.target.value)}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="amount1">Amount</label>
+                    <label htmlFor="amount2">Amount</label>
                     <input
-                      type="text"
-                      id="amount1"
+                      type="string"
+                      id="amount2"
                       placeholder="Enter the Amount"
+                      value={amount2}
+                      name="amount2"
+                      onChange={(e) => setAmount2(e.target.value)}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="margin1">Margin</label>
+                    <label htmlFor="margin2">Margin</label>
                     <input
                       type="text"
-                      id="margin1"
+                      id="margin2"
                       placeholder="Enter the Margin"
+                      value={margin2}
+                      name="margin2"
+                      onChange={(e) => setMargin2(e.target.value)}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="interest1">Interest</label>
+                    <label htmlFor="interest2">Interest</label>
                     <input
-                      type="password"
-                      id="interest1"
+                      type="string"
+                      id="interest2"
                       placeholder="Enter the Interest"
+                      value={interest2}
+                      name="interest2"
+                      onChange={(e) => setInterest2(e.target.value)}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="terms1">Terms (In Days)</label>
+                    <label htmlFor="terms2">Terms (In Days)</label>
                     <input
                       type="number"
-                      id="terms1"
+                      id="terms2"
                       placeholder="Enter the Terms"
+                      value={terms2}
+                      name="terms2"
+                      onChange={(e) => setTerms2(e.target.value)}
                     />
                   </div>
+
                   <button className="btnn1 btn-primary" onClick={handleOffer2}>
                     Place an Offer
                   </button>
