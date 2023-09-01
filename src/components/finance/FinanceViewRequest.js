@@ -26,20 +26,7 @@ function FinanceViewRequest() {
     interest: "",
     terms: "",
   });
-  const [selection3, setSelection3] = useState({
-    value: "",
-    amount: "",
-    margin: "",
-    interest: "",
-    terms: "",
-  });
-  const [selection4, setSelection4] = useState({
-    value: "",
-    amount: "",
-    margin: "",
-    interest: "",
-    terms: "",
-  });
+ 
 
   const [value1, setValue1] = useState("");
   const [amount1, setAmount1] = useState("");
@@ -53,18 +40,7 @@ function FinanceViewRequest() {
   const [interest2, setInterest2] = useState("");
   const [terms2, setTerms2] = useState("");
 
-  const [value3, setValue3] = useState("");
-  const [amount3, setAmount3] = useState("");
-  const [margin3, setMargin3] = useState("");
-  const [interest3, setInterest3] = useState("");
-  const [terms3, setTerms3] = useState("");
-
-  const [value4, setValue4] = useState("");
-  const [amount4, setAmount4] = useState("");
-  const [margin4, setMargin4] = useState("");
-  const [interest4, setInterest4] = useState("");
-  const [terms4, setTerms4] = useState("");
-
+  
   const handleClick = () => {
     setLoad(!load);
   };
@@ -103,25 +79,7 @@ function FinanceViewRequest() {
     navigate("/finance_offers");
   };
 
-  const handleOffer3 = () => {
-    setSelection3({
-      value: value3,
-      amount: amount3,
-      margin: margin3,
-      interest: interest3,
-      terms: terms3,
-    });
-  };
 
-  const handleOffer4 = () => {
-    setSelection4({
-      value: value4,
-      amount: amount4,
-      margin: margin4,
-      interest: interest4,
-      terms: terms4,
-    });
-  };
 
   const handleToogle1 = () => {
     setOpen1(!open1);
@@ -137,19 +95,7 @@ function FinanceViewRequest() {
     setOpen4(false);
   };
 
-  const handleToogle3 = () => {
-    setOpen1(false);
-    setOpen2(false);
-    setOpen3(!open3);
-    setOpen4(false);
-  };
-  const handleToogle4 = () => {
-    setOpen1(false);
-    setOpen2(false);
-    setOpen3(false);
-    setOpen4(!open4);
-  };
-
+ 
   return (
     <>
       <Navbarfinancer />
@@ -171,6 +117,14 @@ function FinanceViewRequest() {
             }}
           >
             Offers
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              navigate("/finance_trades");
+            }}
+          >
+            Trades
           </button>
           <button
             className="btn"
@@ -215,11 +169,11 @@ function FinanceViewRequest() {
                     </tr>
                     <tr>
                       <th> Requested Amount</th>
-                      <td> INR 4,00,000</td>
+                      <td> INR 10,00,000</td>
                     </tr>
                     <tr>
                       <th> Status</th>
-                      <td> In Progress</td>
+                      <td> Raised</td>
                     </tr>
                   </tbody>
                 </table>
@@ -229,103 +183,28 @@ function FinanceViewRequest() {
                 <table>
                   <tbody>
                     <tr>
+                      <th>Date</th>
                       <th>Trade Document</th>
                       <th>Subgroup ID</th>
-                      <th>Seller GST</th>
-                      <th>Buyer Name</th>
-                      <th>Buyer GST</th>
                       <th>Trade Amount</th>
-                      <th>Invoice ID</th>
                     </tr>
                     <tr>
+                      <th>25/08/2023</th>
                       <td>Trade Document 1</td>
-                      <td>Subgroup 3</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Hospital3</td>
-                      <td>123-45-5373</td>
-                      <td>₹90,000.00</td>
-                      <td>INV001</td>
-                    </tr>
-                    <tr>
-                      <td>Trade Document 2</td>
-                      <td>Subgroup 3</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Hospital3</td>
-                      <td>123-45-5373</td>
-                      <td>₹20,000.00</td>
-                      <td>INV002</td>
-                    </tr>
-                    <tr>
-                      <td>Trade Document 3</td>
-                      <td>Subgroup 3</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Hospital3</td>
-                      <td>123-45-5373</td>
-                      <td>₹30,000.00</td>
-                      <td>INV003</td>
-                    </tr>
-                    <tr>
-                      <td>Trade Document 4</td>
-                      <td>Subgroup 4</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Medical Univ. 1</td>
-                      <td>123-45-2486</td>
-                      <td>₹40,000.00</td>
-                      <td>INV004</td>
-                    </tr>
-                    <tr>
-                      <td>Trade Document 5</td>
-                      <td>Subgroup 4</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Medical Univ. 1</td>
-                      <td>123-45-2486</td>
-                      <td>₹50,000.00</td>
-                      <td>INV005</td>
-                    </tr>
-                    <tr>
-                      <td>Trade Document 7</td>
-                      <td>Subgroup 4</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Medical Univ. 1</td>
-                      <td>123-45-2486</td>
-                      <td>₹30,000.00</td>
-                      <td>INV006</td>
-                    </tr>
-                    <tr>
-                      <td>Trade Document 8</td>
-                      <td>Subgroup 4</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Medical Univ. 1</td>
-                      <td>123-45-2486</td>
-                      <td>₹40,000.00</td>
-                      <td>INV007</td>
-                    </tr>
-                    <tr>
-                      <td>Trade Document 6</td>
                       <td>Subgroup 1</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Hospital 1</td>
-                      <td>123-45-5454</td>
-                      <td>₹20,000.00</td>
-                      <td>INV008</td>
+                      <td>₹4,50,000.00</td>
                     </tr>
                     <tr>
-                      <td>Trade Document 9</td>
+                      <th>25/08/2023</th>
+                      <td>Trade Document 2</td>
                       <td>Subgroup 2</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Hospital 2</td>
-                      <td>123-45-5919</td>
-                      <td>₹50,000.00</td>
-                      <td>INV009</td>
+                      <td>₹3,00,000.00</td>
                     </tr>
                     <tr>
-                      <td>Trade Document 10</td>
+                      <th>25/08/2023</th>
+                      <td>Trade Document 3</td>
                       <td>Subgroup 2</td>
-                      <td>36AAIFP3688H1ZS</td>
-                      <td>Hospital 2</td>
-                      <td>123-45-5919</td>
-                      <td>₹90,000.00</td>
-                      <td>INV0010</td>
+                      <td>₹3,50,000.00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -345,7 +224,7 @@ function FinanceViewRequest() {
             {open1 ? (
               <div className="topcontent">
                 <button onClick={handleToogle1} className="handlebutton">
-                  SubGroup 1
+                  SubGroup 1  🔽
                 </button>
 
                 <div className="panel-body">
@@ -372,7 +251,7 @@ function FinanceViewRequest() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="margin1">Margin</label>
+                    <label htmlFor="margin1">Margin %</label>
                     <input
                       type="text"
                       id="margin1"
@@ -383,7 +262,29 @@ function FinanceViewRequest() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="interest1">Interest</label>
+                    <label htmlFor="margin1">Margin INR</label>
+                    <input
+                      type="text"
+                      id="margin1"
+                      placeholder="Enter the Margin"
+                      value={margin1}
+                      name="margin1"
+                      onChange={(e) => setMargin1(e.target.value)}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="interest1">Interest %</label>
+                    <input
+                      type="string"
+                      id="interest1"
+                      placeholder="Enter the Interest"
+                      value={interest1}
+                      name="interest1"
+                      onChange={(e) => setInterest1(e.target.value)}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="interest1">Interest INR</label>
                     <input
                       type="string"
                       id="interest1"
@@ -417,15 +318,16 @@ function FinanceViewRequest() {
             ) : (
               <div className="topcontent">
                 <button onClick={handleToogle1} className="handlebutton">
-                  SubGroup 1
+                  SubGroup 1    🔽
                 </button>
               </div>
             )}
 
+
             {open2 ? (
               <div className="topcontent">
                 <button onClick={handleToogle2} className="handlebutton">
-                  SubGroup 2
+                  SubGroup 2   🔽
                 </button>
 
                 <div className="panel-body">
@@ -452,7 +354,18 @@ function FinanceViewRequest() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="margin2">Margin</label>
+                    <label htmlFor="margin1">Margin %</label>
+                    <input
+                      type="text"
+                      id="margin1"
+                      placeholder="Enter the Margin"
+                      value={margin1}
+                      name="margin1"
+                      onChange={(e) => setMargin1(e.target.value)}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="margin2">Margin INR</label>
                     <input
                       type="text"
                       id="margin2"
@@ -463,7 +376,18 @@ function FinanceViewRequest() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="interest2">Interest</label>
+                    <label htmlFor="interest1">Interest %</label>
+                    <input
+                      type="string"
+                      id="interest1"
+                      placeholder="Enter the Interest"
+                      value={interest1}
+                      name="interest1"
+                      onChange={(e) => setInterest1(e.target.value)}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="interest2">Interest INR</label>
                     <input
                       type="string"
                       id="interest2"
@@ -497,134 +421,15 @@ function FinanceViewRequest() {
             ) : (
               <div className="topcontent">
                 <button onClick={handleToogle2} className="handlebutton">
-                  SubGroup 2
+                  SubGroup 2   🔽
                 </button>
               </div>
             )}
-            {open3 ? (
-              <div className="topcontent">
-                <button onClick={handleToogle3} className="handlebutton">
-                  SubGroup 3
-                </button>
-                <div className="panel-body">
-                  <div className="form-group">
-                    <label htmlFor="subgroup1">Subgroup Value</label>
-                    <input
-                      type="number"
-                      id="subgroup1"
-                      placeholder="INR 1,40,000"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="amount1">Amount</label>
-                    <input
-                      type="text"
-                      id="amount1"
-                      placeholder="Enter the Amount"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="margin1">Margin</label>
-                    <input
-                      type="text"
-                      id="margin1"
-                      placeholder="Enter the Margin"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="interest1">Interest</label>
-                    <input
-                      type="password"
-                      id="interest1"
-                      placeholder="Enter the Interest"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="terms1">Terms (In Days)</label>
-                    <input
-                      type="number"
-                      id="terms1"
-                      placeholder="Enter the Terms"
-                    />
-                  </div>
-                  <button className="btnn1 btn-primary">Place an Offer</button>
-                  <button className="btnn1 btn-primary" onClick={handleClick}>
-                    Back
-                  </button>
-                  <button className="btnn1 btn-primary">Cancel</button>
-                </div>
-              </div>
-            ) : (
-              <div className="topcontent">
-                <button onClick={handleToogle3} className="handlebutton">
-                  SubGroup 3
-                </button>
-              </div>
-            )}
-            {open4 ? (
-              <div className="topcontent">
-                <button onClick={handleToogle4} className="handlebutton">
-                  SubGroup 4
-                </button>
-                <div className="panel-body">
-                  <div className="form-group">
-                    <label htmlFor="subgroup1">Subgroup Value</label>
-                    <input
-                      type="number"
-                      id="subgroup1"
-                      placeholder="INR 20,000"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="amount1">Amount</label>
-                    <input
-                      type="text"
-                      id="amount1"
-                      placeholder="Enter the Amount"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="margin1">Margin</label>
-                    <input
-                      type="text"
-                      id="margin1"
-                      placeholder="Enter the Margin"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="interest1">Interest</label>
-                    <input
-                      type="password"
-                      id="interest1"
-                      placeholder="Enter the Interest"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="terms1">Terms (In Days)</label>
-                    <input
-                      type="number"
-                      id="terms1"
-                      placeholder="Enter the Terms"
-                    />
-                  </div>
-                  <button className="btnn1 btn-primary">Place an Offer</button>
-                  <button className="btnn1 btn-primary" onClick={handleClick}>
-                    Back
-                  </button>
-                  <button className="btnn1 btn-primary">Cancel</button>
-                </div>
-              </div>
-            ) : (
-              <div className="topcontent">
-                <button onClick={handleToogle4} className="handlebutton">
-                  SubGroup 4
-                </button>
-              </div>
-            )}
+         
           </div>
         )}
       </Finance1>
-      <div style={{ marginTop: "30vh" }}>
+      <div style={{ marginTop: "50vh" }}>
         <Footer />
       </div>
     </>
@@ -711,7 +516,7 @@ const Finance1 = styled.div`
     // margin-left: 20px;
     font-size: 20px;
     margin-top: 20vh;
-    width: 300px;
+    width: 250px;
   }
   .btnn {
     color: white;
@@ -734,7 +539,7 @@ const Finance1 = styled.div`
     // border-radius: 5px;
     display: inline-block;
     // margin-left: 20px;
-    width: 300px;
+    width: 250px;
   }
   .main-content {
     margin-top: 40px;

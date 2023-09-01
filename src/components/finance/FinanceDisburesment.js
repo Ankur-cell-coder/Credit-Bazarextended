@@ -7,13 +7,32 @@ import { useNavigate } from "react-router-dom";
 
 function FinanceDisburesment() {
   const navigate = useNavigate();
+   
+  const [col1, setCol1] = useState("gray");
+  const [col2, setCol2] = useState("gray");
 
-  const [toogle, setToogle] = useState(false);
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
 
-  const toogleUpload = () => {
-    setToogle(!toogle);
+  const handleToogle = () => {
+    setOpen1(!open1);
+
+    if (col1 == "gray") {
+      setCol1("blue");
+    } else {
+      setCol1("gray");
+    }
   };
 
+  const handleToogle2 = () => {
+    setOpen2(!open2);
+    if (col2 == "gray") {
+      setCol2("blue");
+    } else {
+      setCol2("gray");
+    }
+  };
+  
   return (
     <>
       <Navbarfinancer />
@@ -64,7 +83,7 @@ function FinanceDisburesment() {
           </button>
         </div>
 
-        {!toogle ? (
+        {!open1 ? (
           <div
             className="main-content"
             id="disbursement-content"
@@ -110,7 +129,7 @@ function FinanceDisburesment() {
             </div>
 
             <div>
-              <button className="btnn" onClick={toogleUpload}>
+              <button className="btnn" onClick={handleToogle}>
                 Upload File
               </button>
             </div>

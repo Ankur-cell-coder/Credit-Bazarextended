@@ -51,6 +51,7 @@ import BuyersDisbursement from "./components/buyers/BuyersDisbursement";
 import BuyersShipment from "./components/buyers/BuyersShipment";
 import BuyersPayment from "./components/buyers/BuyersPayment";
 import BuyersSettlement from "./components/buyers/BuyersSettlement";
+import FinanceTrades from "./components/finance/FinanceTrades";
 
 function App() {
   const [auth, setAuth] = useAuth();
@@ -138,6 +139,12 @@ function App() {
           path="/financessettlementdetail"
           element={!auth.user ? <Signin /> : <FinanceSettlementDetail />}
         />
+          <Route
+          path="/finance_trades"
+          element={!auth.user ? <Signin /> : <FinanceTrades />}
+        />
+
+
         //buyers//
         //routes////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route

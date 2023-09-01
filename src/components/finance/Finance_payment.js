@@ -59,12 +59,20 @@ function Finance_payment() {
           <button
             className="btn"
             onClick={() => {
+              navigate("/finance_trades");
+            }}
+          >
+            Trades
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
               navigate("/finance_disbursement");
             }}
           >
             Disbursement
           </button>
-         
+
           <button
             className="btn1"
             onClick={() => {
@@ -108,174 +116,239 @@ function Finance_payment() {
             </div>
           ) : (
             <div>
-              {!open2 ? (
-                <div>
-                  <div className="mainheading" style={{ background: col1 }}>
-                    <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle}
-                        style={{
-                          background: col1,
-                          border: `2px solid ${col1}`,
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="mainheading2" style={{ background: col2 }}>
-                    <div style={{ marginLeft: "15px" }}>Liqui Loan</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle2}
-                        style={{
-                          background: col2,
-                          border: `2px solid ${col2}`,
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
+              <div>
+                <div
+                  className="mainheading"
+                  style={{ background: col1, width: "150vh" }}
+                >
+                  <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
+                  <div>
+                    <button
+                      className="btnn"
+                      onClick={handleToogle}
+                      style={{
+                        background: col1,
+                        border: `2px solid ${col1}`,
+                      }}
+                    >
+                      🔽
+                    </button>
                   </div>
                 </div>
-              ) : (
-                <div>
-                  <div
-                    className="mainheading"
-                    style={{ background: col1, width: "150vh" }}
-                  >
-                    <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle}
-                        style={{
-                          background: col1,
-                          border: `2px solid ${col1}`,
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
 
-                  <div
-                    className="mainheading2"
-                    style={{ background: col2, width: "140vh" }}
-                  >
-                    <div style={{ marginLeft: "15px" }}>Liqui Loan</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle2}
-                        style={{
-                          background: col2,
-                          border: `2px solid ${col2}`,
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div
-                    className="Disbursement_details"
-                    style={{ display: "flex",flexDirection:"Column",justifyContent:"center"}}
-                  >
-                    <div style={{marginLeft:"60vh"}}>
+                <div
+                  className="Disbursement_details"
+                  style={{
+                    display: "flex",
+                    flexDirection: "Column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div style={{ marginLeft: "60vh" }}>
                     <h1>Payment Information</h1>
-                    </div>
-                    <h2> Buyer Information</h2>
-                    <table>
-                      <tbody>
-                        <tr>
-                          <th>Name:</th>
-                          <td>Hospital 1</td>
-                        </tr>
-                        <tr>
-                          <th>Contact Details:</th>
-                          <td>Hospital 1.doe@example.com</td>
-                        </tr>
-                        <tr>
-                          <th>GST:</th>
-                          <td>123-45-5454</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <h2>Payment Details</h2>
-                    <table>
-                      <tbody>
-                        <tr>
-                          <th>Value of subgroup:</th>
-                          <td>INR 20,000</td>
-                        </tr>
-                        <tr>
-                          <th>Payment Amount:</th>
-                          <td>INR 19,000 </td>
-                        </tr>
-                        <tr>
-                          <th>Margine:</th>
-                          <td>INR 1500 (8%) </td>
-                        </tr>
-                        <tr>
-                          <th>Interest Rate:</th>
-                          <td> INR 1500 (8%)</td>
-                        </tr>
-                        <tr>
-                          <th>Repayment Term:</th>
-                          <td> 45 days</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <h2>Payment Date</h2>
-                    <p>Sep 25, 2023</p>
-                    <h2>Payment Method</h2>
-                    <p>Direct Deposit</p>
-                    <h2>Patron of the Payment</h2>
-                    <p>Hospital 1</p>
-                    <h2>Receipent of the Payment</h2>
-                    <p>ProFinTech Technologies</p>
-                    <h2>Repayment Schedule</h2>
-                    <table>
-                      <tbody>
-                        <tr>
-                          <th>Due Date</th>
-                        </tr>
-                        <tr>
-                          <td>Sep 29, 2023</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <h2>Payment Agreement</h2>
+                  </div>
+                  <h2> Buyer Information</h2>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Name:</th>
+                        <td>Hospital 1</td>
+                      </tr>
+                      <tr>
+                        <th>Contact Details:</th>
+                        <td>Hospital 1.doe@example.com</td>
+                      </tr>
+                      <tr>
+                        <th>GST:</th>
+                        <td>123-45-5454</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h2>Payment Details</h2>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Value of subgroup:</th>
+                        <td>INR 20,000</td>
+                      </tr>
+                      <tr>
+                        <th>Payment Amount:</th>
+                        <td>INR 19,000 </td>
+                      </tr>
+
+                      <tr>
+                        <th>Repayment Term:</th>
+                        <td> 45 days</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h2>Payment Date</h2>
+                  <p>Sep 25, 2023</p>
+                  <h2>Payment Method</h2>
+                  <p>Direct Deposit</p>
+                  <h2>Patron of the Payment</h2>
+                  <p>Hospital 1</p>
+                  <h2>Receipent of the Payment</h2>
+                  <p>ProFinTech Technologies</p>
+                  <h2>Repayment Schedule</h2>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Due Date</th>
+                      </tr>
+                      <tr>
+                        <td>Sep 29, 2023</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h2>Payment Agreement</h2>
+                  <p>
+                    Please review and accept the{" "}
+                    <a href="#">Payment Agreement</a> for more information.
+                  </p>
+                  <h2>Contact Information</h2>
+                  <p>
+                    If you have any questions or need assistance, please contact
+                    our customer service at 1-800-123-4567 or email us at
+                    info@example.com.
+                  </p>
+                  <div className="Payment-confirmation">
+                    <h2>Payment Confirmation</h2>
                     <p>
-                      Please review and accept the{" "}
-                      <a href="#">Payment Agreement</a> for more information.
+                      payment has been made by the Hospital 1 to ProFinTech
+                      Technologies. Confirmation Number: ABD258
                     </p>
-                    <h2>Contact Information</h2>
-                    <p>
-                      If you have any questions or need assistance, please
-                      contact our customer service at 1-800-123-4567 or email us
-                      at info@example.com.
-                    </p>
-                    <div className="Payment-confirmation">
-                      <h2>Payment Confirmation</h2>
-                      <p>
-                        payment has been made by the Hospital 1 to ProFinTech
-                        Technologies. Confirmation Number: ABD258
-                      </p>
-                    </div>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           )}
         </div>
 
-        
+        <div className="content">
+          {!open2 ? (
+            <div className="mainheading" style={{ background: col1 }}>
+              <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
+              <div>
+                <button
+                  className="btnn"
+                  onClick={handleToogle2}
+                  style={{ background: col1, border: `2px solid ${col1}` }}
+                >
+                  🔽
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <div>
+                <div
+                  className="mainheading"
+                  style={{ background: "blue", width: "150vh" }}
+                >
+                  <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
+                  <div>
+                    <button
+                      className="btnn"
+                      onClick={handleToogle2}
+                      style={{
+                        background: "blue",
+                        border: "2px solid blue",
+                      }}
+                    >
+                      🔽
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  className="Disbursement_details"
+                  style={{
+                    display: "flex",
+                    flexDirection: "Column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div style={{ marginLeft: "60vh" }}>
+                    <h1>Payment Information</h1>
+                  </div>
+                  <h2> Buyer Information</h2>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Name:</th>
+                        <td>Renova hospital</td>
+                      </tr>
+                      <tr>
+                        <th>Contact Details:</th>
+                        <td>enquiry@Example.com</td>
+                      </tr>
+                      <tr>
+                        <th>GST:</th>
+                        <td>36ABCCS4959C1Z9</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h2>Payment Details</h2>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Value of subgroup:</th>
+                        <td>INR 6,50,000</td>
+                      </tr>
+                      <tr>
+                        <th>Payment Amount:</th>
+                        <td>INR 6,50,000 </td>
+                      </tr>
+
+                      <tr>
+                        <th>Repayment Term:</th>
+                        <td> 90 days</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h2>Payment Date</h2>
+                  <p>Sep 25, 2023</p>
+                  <h2>Payment Method</h2>
+                  <p>Direct Deposit</p>
+                  <h2>Patron of the Payment</h2>
+                  <p>Renova Hospital</p>
+                  <h2>Receipent of the Payment</h2>
+                  <p>ProFinTech Technologies</p>
+                  <h2>Repayment Schedule</h2>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Due Date</th>
+                      </tr>
+                      <tr>
+                        <td>Sep 29, 2023</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h2>Payment Agreement</h2>
+                  <p>
+                    Please review and accept the{" "}
+                    <a href="#">Payment Agreement</a> for more information.
+                  </p>
+                  <h2>Contact Information</h2>
+                  <p>
+                    If you have any questions or need assistance, please contact
+                    our customer service at 1-800-123-4567 or email us at
+                    info@example.com.
+                  </p>
+                  <div className="Payment-confirmation">
+                    <h2>Payment Confirmation</h2>
+                    <p>
+                      payment has been made by the Hospital 1 to ProFinTech
+                      Technologies. Confirmation Number: ABD258
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </Finance1>
       <div style={{ marginTop: "60vh" }}>
         <Footer />
@@ -293,7 +366,7 @@ const Finance1 = styled.div`
   }
   .mainheading {
     font-size: 32px;
-    margin-top: 20px;
+    margin-top: 50px;
     color: white;
     margin-left: 5vh;
     width: 60vh;
@@ -319,7 +392,6 @@ const Finance1 = styled.div`
     border: 2px solid blue;
   }
 
- 
   .btn1 {
     color: white;
     background-color: orange;
@@ -329,7 +401,7 @@ const Finance1 = styled.div`
     // border-radius: 5px;
     display: inline-block;
     // margin-left: 20px;
-    width: 300px;
+    width: 250px;
   }
   .btn {
     color: white;
@@ -341,7 +413,7 @@ const Finance1 = styled.div`
     // margin-left: 20px;
     font-size: 20px;
     margin-top: 20vh;
-    width: 300px;
+    width: 250px;
   }
 
   .btn:hover {
@@ -377,7 +449,6 @@ const Finance1 = styled.div`
   .Disbursement_details {
     display: none;
     margin-top: 10px;
-    padding:50px;
-    
+    padding: 50px;
   }
 `;

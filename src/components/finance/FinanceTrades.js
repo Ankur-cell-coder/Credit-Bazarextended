@@ -6,7 +6,7 @@ import Footer from "../pages/Footer";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-function FinanceOffers() {
+function FinanceTrades() {
   const navigate = useNavigate();
 
   const [open1, setOpen1] = useState(false);
@@ -36,7 +36,7 @@ function FinanceOffers() {
           </button>
 
           <button
-            className="btn1"
+            className="btn"
             onClick={() => {
               navigate("/finance_offers");
             }}
@@ -44,7 +44,7 @@ function FinanceOffers() {
             Offers
           </button>
           <button
-            className="btn"
+            className="btn1"
             onClick={() => {
               navigate("/finance_trades");
             }}
@@ -108,25 +108,26 @@ function FinanceOffers() {
                   </div>
                 </div>
                 <div className="content" style={{ display: "block" }}>
-                  <div className="lender-details">
-                    <div style={{marginLeft:"40px",fontSize:"26px"}}>
-                    <p>Subgroup value (INR): 450000</p>
-                    <p>Offered Amount (INR): 3,06,818 </p>
-                    <p>Margin (%): 25 </p>
-                    <p>Margin value (INR):</p>
-                    <p>Interest p.a (%): 8 </p>
-                    <p>Interest p.a (INR): ₹ 6,052 </p>
-                    <p>Terms (In Days): 90 </p>
-                    <hr />
-                    <p>
-                      <strong>Status:</strong>Offer has been placed
-                    </p>
-                    
-                    <p
-                      id="place-offer-notification-1"
-                      style={{ color: "blue" }}
-                    />
-                    </div>
+                  <h3> Trade Documents</h3>
+                  <div className="record-details">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>Invoice Number</th>
+                          <th>Seller Name</th>
+                          <th>Seller GST</th>
+                          <th>Buyer Name</th>
+                          <th>Buyer GST</th>
+                        </tr>
+                        <tr>
+                          <td>INV001</td>
+                          <td>Prime Textiles</td>
+                          <td>36AAIFP3688H1ZS</td>
+                          <td>Apollo Hospitals</td>
+                          <td>36AAACA5443N2ZI</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -165,25 +166,33 @@ function FinanceOffers() {
                 </div>
 
                 <div className="content" style={{ display: "block" }}>
-                  <div className="lender-details">
-                    <div style={{marginLeft:"40px",fontSize:"26px"}}>
-                    <p>Subgroup value (INR): 650000</p>
-                    <p>Offered Amount (INR): 4,13,818 </p>
-                    <p>Margin (%): 30 </p>
-                    <p>Margin value (INR):</p>
-                    <p>Interest p.a (%): 12 </p>
-                    <p>Interest p.a (INR): ₹ 12,052 </p>
-                    <p>Terms (In Days): 90 </p>
-                    <hr />
-                    <p>
-                      <strong>Status:</strong>Offer has been placed
-                    </p>
-                    
-                    <p
-                      id="place-offer-notification-1"
-                      style={{ color: "blue" }}
-                    />
-                    </div>
+                  <h3> Trade Documents</h3>
+                  <div className="record-details">
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th>Invoice Number</th>
+                          <th>Seller Name</th>
+                          <th>Seller GST</th>
+                          <th>Buyer Name</th>
+                          <th>Buyer GST</th>
+                        </tr>
+                        <tr>
+                          <td>INV002</td>
+                          <td>Prime Textiles</td>
+                          <td>36AAIFP3688H1ZS</td>
+                          <td>Renova Hospitals</td>
+                          <td>36ABCCS4959C1Z9</td>
+                        </tr>
+                        <tr>
+                          <td>INV003</td>
+                          <td>Prime Textiles</td>
+                          <td>36AAIFP3688H1ZS</td>
+                          <td>Renova Hospitals</td>
+                          <td>36ABCCS4959C1Z9</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -191,14 +200,14 @@ function FinanceOffers() {
           </div>
         </div>
       </Finance1>
-      <div style={{ marginTop: "60vh" }}>
+      <div style={{ marginTop: "65vh" }}>
         <Footer />
       </div>
     </>
   );
 }
 
-export default FinanceOffers;
+export default FinanceTrades;
 
 const Finance1 = styled.div`
   margin-left: 28vh;
@@ -233,7 +242,6 @@ const Finance1 = styled.div`
   .table-container {
     margin-top: 20px;
   }
-  
   table {
     width: 100%;
     border-collapse: collapse;
@@ -287,13 +295,8 @@ const Finance1 = styled.div`
     justify-content: space-between;
   }
   .content {
-    // border: 2px solid black;
+    // border: 2px solid red;
     margin-top: 40px;
-
-  }
-  .lender-details{
-    border:2px solid black;
-    width:80%;
   }
   .btnn {
     border: 2px solid blue;
