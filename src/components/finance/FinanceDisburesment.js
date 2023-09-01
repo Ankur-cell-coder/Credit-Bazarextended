@@ -230,9 +230,7 @@ const Finance1 = styled.div`
     padding: 10px 20px;
     text-decoration: none;
     font-size: 20px;
-    // border-radius: 5px;
     display: inline-block;
-    // margin-left: 20px;
     width: 300px;
   }
   .btn {
@@ -240,9 +238,7 @@ const Finance1 = styled.div`
     background-color: #007bff;
     padding: 10px 20px;
     text-decoration: none;
-    // border-radius: 5px;
     display: inline-block;
-    // margin-left: 20px;
     font-size: 20px;
     margin-top: 20vh;
     width: 300px;

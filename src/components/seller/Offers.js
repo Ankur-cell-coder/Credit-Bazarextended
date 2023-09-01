@@ -11,7 +11,6 @@ function Offers() {
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
 
-
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
 
@@ -44,7 +43,7 @@ function Offers() {
   const handleToogle7 = () => {
     setOpen7(!open7);
   };
-  const handleToogle8= () => {
+  const handleToogle8 = () => {
     setOpen8(!open8);
   };
 
@@ -103,631 +102,629 @@ function Offers() {
             Settlement
           </button>
         </div>
-       
-       <div>
-        <div className="pheading">
-          <div style={{ fontSize: "34px", marginLeft: "65vh" }}>
-            Received Offer details
+
+        <div>
+          <div className="pheading">
+            <div style={{ fontSize: "34px", marginLeft: "65vh" }}>
+              Received Offer details
+            </div>
+            <div style={{ fontSize: "24px", marginLeft: "52vh" }}>
+              Lenders have placed offers for your request for finance.
+            </div>
           </div>
-          <div style={{ fontSize: "24px", marginLeft: "52vh" }}>
-            Lenders have placed offers for your request for finance.
+
+          <div className="content">
+            {!open1 ? (
+              <div className="mainheading" style={{ background: "gray" }}>
+                <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
+                <div>
+                  <button
+                    className="btnn"
+                    onClick={handleToogle}
+                    style={{ background: "gray", border: "2px solid gray" }}
+                  >
+                    🔽
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div>
+                {!open2 ? (
+                  <div>
+                    <div className="mainheading" style={{ background: "blue" }}>
+                      <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
+
+                    <div
+                      className="mainheading2"
+                      style={{ background: "gray" }}
+                    >
+                      <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle2}
+                          style={{
+                            background: "gray",
+                            border: "2px solid gray",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div>
+                    <div
+                      className="mainheading"
+                      style={{ background: "blue", width: "150vh" }}
+                    >
+                      <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
+
+                    <div
+                      className="mainheading2"
+                      style={{ background: "blue", width: "140vh" }}
+                    >
+                      <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle2}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="bwcontent">
+                      <div className="items">
+                        <div className="item"> Offered amount :</div>
+                        <div>
+                          <input
+                            placeholder="INR 20,000"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Margin:</div>
+                        <div>
+                          <input
+                            placeholder="INR 1500 (7.89%)"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Interest:</div>
+                        <div>
+                          <input
+                            placeholder="INR 1500(10%)"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Term (days) :</div>
+                        <div>
+                          <input
+                            placeholder="45 days"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button className="btn" style={{ marginLeft: "40%" }}>
+                      Accept Offer
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
-        <div className="content">
-          {!open1 ? (
-            <div className="mainheading" style={{ background: "gray" }}>
-              <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
-              <div>
-                <button
-                  className="btnn"
-                  onClick={handleToogle}
-                  style={{ background: "gray", border: "2px solid gray" }}
-                >
-                  🔽
-                </button>
+        <div>
+          <div className="content">
+            {!open3 ? (
+              <div className="mainheading" style={{ background: "gray" }}>
+                <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
+                <div>
+                  <button
+                    className="btnn"
+                    onClick={handleToogle3}
+                    style={{ background: "gray", border: "2px solid gray" }}
+                  >
+                    🔽
+                  </button>
+                </div>
               </div>
-            </div>
-          ) : (
-            <div>
-              {!open2 ? (
-                <div>
-                  <div className="mainheading" style={{ background: "blue" }}>
-                    <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="mainheading2" style={{ background: "gray" }}>
-                    <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle2}
-                        style={{
-                          background: "gray",
-                          border: "2px solid gray",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div>
-                  <div
-                    className="mainheading"
-                    style={{ background: "blue", width: "150vh" }}
-                  >
-                    <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div
-                    className="mainheading2"
-                    style={{ background: "blue", width: "140vh" }}
-                  >
-                    <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle2}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="bwcontent">
-                    <div className="items">
-                      <div className="item"> Offered amount :</div>
+            ) : (
+              <div>
+                {!open4 ? (
+                  <div>
+                    <div className="mainheading" style={{ background: "blue" }}>
+                      <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
                       <div>
-                        <input
-                          placeholder="INR 20,000"
-                          style={{ fontSize: "26px" }}
-                        ></input>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle3}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
                       </div>
                     </div>
 
-                    <div className="items">
-                      <div className="item"> Margin:</div>
+                    <div
+                      className="mainheading2"
+                      style={{ background: "gray" }}
+                    >
+                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
                       <div>
-                        <input
-                          placeholder="INR 1500 (7.89%)"
-                          style={{ fontSize: "26px" }}
-                        ></input>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle4}
+                          style={{
+                            background: "gray",
+                            border: "2px solid gray",
+                          }}
+                        >
+                          🔽
+                        </button>
                       </div>
                     </div>
-
-                    <div className="items">
-                      <div className="item"> Interest:</div>
-                      <div>
-                        <input
-                          placeholder="INR 1500(10%)"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Term (days) :</div>
-                      <div>
-                        <input
-                          placeholder="45 days"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                  
-
                   </div>
+                ) : (
+                  <div>
+                    <div
+                      className="mainheading"
+                      style={{ background: "blue", width: "150vh" }}
+                    >
+                      <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle3}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
 
-                  <button className="btn" style={{marginLeft:"40%"}}>Accept Offer</button>
+                    <div
+                      className="mainheading2"
+                      style={{ background: "blue", width: "140vh" }}
+                    >
+                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle4}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
 
-                </div>
-              )}
-            </div>
-          )}
-        </div>
+                    <div className="bwcontent">
+                      <div className="items">
+                        <div className="item"> Value of subgroup:</div>
+                        <div>
+                          <input
+                            placeholder="INR 1,40,000.00"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Offered amount :</div>
+                        <div>
+                          <input
+                            placeholder="INR 1,19,000.00"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Margin:</div>
+                        <div>
+                          <input
+                            placeholder="INR 7,000 (5%)"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Interest:</div>
+                        <div>
+                          <input
+                            placeholder="INR 7,000 (10%)"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Term (days) :</div>
+                        <div>
+                          <input
+                            placeholder="45 days"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button className="btn" style={{ marginLeft: "40%" }}>
+                      Accept Offer
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         </div>
 
         <div>
-        <div className="content">
-          {!open3 ? (
-            <div className="mainheading" style={{ background: "gray" }}>
-              <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
-              <div>
-                <button
-                  className="btnn"
-                  onClick={handleToogle3}
-                  style={{ background: "gray", border: "2px solid gray" }}
-                >
-                  🔽
-                </button>
+          <div className="content">
+            {!open5 ? (
+              <div className="mainheading" style={{ background: "gray" }}>
+                <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
+                <div>
+                  <button
+                    className="btnn"
+                    onClick={handleToogle5}
+                    style={{ background: "gray", border: "2px solid gray" }}
+                  >
+                    🔽
+                  </button>
+                </div>
               </div>
-            </div>
-          ) : (
-            <div>
-              {!open4 ? (
-                <div>
-                  <div className="mainheading" style={{ background: "blue" }}>
-                    <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle3}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="mainheading2" style={{ background: "gray" }}>
-                    <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle4}
-                        style={{
-                          background: "gray",
-                          border: "2px solid gray",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div>
-                  <div
-                    className="mainheading"
-                    style={{ background: "blue", width: "150vh" }}
-                  >
-                    <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle3}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div
-                    className="mainheading2"
-                    style={{ background: "blue", width: "140vh" }}
-                  >
-                    <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle4}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="bwcontent">
-
-                  <div className="items">
-                      <div className="item"> Value of subgroup:</div>
+            ) : (
+              <div>
+                {!open6 ? (
+                  <div>
+                    <div className="mainheading" style={{ background: "blue" }}>
+                      <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
                       <div>
-                        <input
-                          placeholder="INR 1,40,000.00"
-                          style={{ fontSize: "26px" }}
-                        ></input>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle5}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
                       </div>
                     </div>
 
-                    <div className="items">
-                      <div className="item"> Offered amount :</div>
+                    <div
+                      className="mainheading2"
+                      style={{ background: "gray" }}
+                    >
+                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
                       <div>
-                        <input
-                          placeholder="INR 1,19,000.00"
-                          style={{ fontSize: "26px" }}
-                        ></input>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle6}
+                          style={{
+                            background: "gray",
+                            border: "2px solid gray",
+                          }}
+                        >
+                          🔽
+                        </button>
                       </div>
                     </div>
-
-                    <div className="items">
-                      <div className="item"> Margin:</div>
-                      <div>
-                        <input
-                          placeholder="INR 7,000 (5%)"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Interest:</div>
-                      <div>
-                        <input
-                          placeholder="INR 7,000 (10%)"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Term (days) :</div>
-                      <div>
-                        <input
-                          placeholder="45 days"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                  
-
                   </div>
+                ) : (
+                  <div>
+                    <div
+                      className="mainheading"
+                      style={{ background: "blue", width: "150vh" }}
+                    >
+                      <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle5}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
 
-                  <button className="btn" style={{marginLeft:"40%"}}>Accept Offer</button>
+                    <div
+                      className="mainheading2"
+                      style={{ background: "blue", width: "140vh" }}
+                    >
+                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle6}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
 
-                </div>
-              )}
-            </div>
-          )}
-        </div>
+                    <div className="bwcontent">
+                      <div className="items">
+                        <div className="item"> Value of subgroup:</div>
+                        <div>
+                          <input
+                            placeholder="INR 1,40,000.00"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Offered amount :</div>
+                        <div>
+                          <input
+                            placeholder="INR 1,33,000.00"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Margin:</div>
+                        <div>
+                          <input
+                            placeholder="INR 7,000 (5%)"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Interest:</div>
+                        <div>
+                          <input
+                            placeholder="INR 7,000 (10%)"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Term (days) :</div>
+                        <div>
+                          <input
+                            placeholder="45 days"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button className="btn" style={{ marginLeft: "40%" }}>
+                      Accept Offer
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         </div>
 
         <div>
-        <div className="content">
-          {!open5 ? (
-            <div className="mainheading" style={{ background: "gray" }}>
-              <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-              <div>
-                <button
-                  className="btnn"
-                  onClick={handleToogle5}
-                  style={{ background: "gray", border: "2px solid gray" }}
-                >
-                  🔽
-                </button>
+          <div className="content">
+            {!open7 ? (
+              <div className="mainheading" style={{ background: "gray" }}>
+                <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
+                <div>
+                  <button
+                    className="btnn"
+                    onClick={handleToogle7}
+                    style={{ background: "gray", border: "2px solid gray" }}
+                  >
+                    🔽
+                  </button>
+                </div>
               </div>
-            </div>
-          ) : (
-            <div>
-              {!open6 ? (
-                <div>
-                  <div className="mainheading" style={{ background: "blue" }}>
-                    <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle5}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="mainheading2" style={{ background: "gray" }}>
-                    <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle6}
-                        style={{
-                          background: "gray",
-                          border: "2px solid gray",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div>
-                  <div
-                    className="mainheading"
-                    style={{ background: "blue", width: "150vh" }}
-                  >
-                    <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle5}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div
-                    className="mainheading2"
-                    style={{ background: "blue", width: "140vh" }}
-                  >
-                    <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle6}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="bwcontent">
-                    
-                  <div className="items">
-                      <div className="item"> Value of subgroup:</div>
-                      <div>
-                        <input
-                          placeholder="INR 1,40,000.00"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Offered amount :</div>
-                      <div>
-                        <input
-                          placeholder="INR 1,33,000.00"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Margin:</div>
-                      <div>
-                        <input
-                          placeholder="INR 7,000 (5%)"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Interest:</div>
-                      <div>
-                        <input
-                          placeholder="INR 7,000 (10%)"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Term (days) :</div>
-                      <div>
-                        <input
-                          placeholder="45 days"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                  
-
-                  </div>
-
-                  <button className="btn" style={{marginLeft:"40%"}}>Accept Offer</button>
-
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-        </div>
-
-        <div>
-
-        <div className="content">
-          {!open7 ? (
-            <div className="mainheading" style={{ background: "gray" }}>
-              <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
+            ) : (
               <div>
-                <button
-                  className="btnn"
-                  onClick={handleToogle7}
-                  style={{ background: "gray", border: "2px solid gray" }}
-                >
-                  🔽
-                </button>
+                {!open8 ? (
+                  <div>
+                    <div className="mainheading" style={{ background: "blue" }}>
+                      <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle7}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
+
+                    <div
+                      className="mainheading2"
+                      style={{ background: "gray" }}
+                    >
+                      <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle8}
+                          style={{
+                            background: "gray",
+                            border: "2px solid gray",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div>
+                    <div
+                      className="mainheading"
+                      style={{ background: "blue", width: "150vh" }}
+                    >
+                      <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle7}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
+
+                    <div
+                      className="mainheading2"
+                      style={{ background: "blue", width: "140vh" }}
+                    >
+                      <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle8}
+                          style={{
+                            background: "blue",
+                            border: "2px solid blue",
+                          }}
+                        >
+                          🔽
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="bwcontent">
+                      <div className="items">
+                        <div className="item"> Value of subgroup:</div>
+                        <div>
+                          <input
+                            placeholder="INR 1,60,000.00"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Offered amount :</div>
+                        <div>
+                          <input
+                            placeholder="INR 1,28,000.00"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Margin:</div>
+                        <div>
+                          <input
+                            placeholder="INR 3000 (2.3%)"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Interest:</div>
+                        <div>
+                          <input
+                            placeholder="INR 3000(10%)"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+
+                      <div className="items">
+                        <div className="item"> Term (days) :</div>
+                        <div>
+                          <input
+                            placeholder="45 days"
+                            style={{ fontSize: "26px" }}
+                          ></input>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button className="btn" style={{ marginLeft: "40%" }}>
+                      Accept Offer
+                    </button>
+                  </div>
+                )}
               </div>
-            </div>
-          ) : (
-            <div>
-              {!open8 ? (
-                <div>
-                  <div className="mainheading" style={{ background: "blue" }}>
-                    <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle7}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="mainheading2" style={{ background: "gray" }}>
-                    <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle8}
-                        style={{
-                          background: "gray",
-                          border: "2px solid gray",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div>
-                  <div
-                    className="mainheading"
-                    style={{ background: "blue", width: "150vh" }}
-                  >
-                    <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle7}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div
-                    className="mainheading2"
-                    style={{ background: "blue", width: "140vh" }}
-                  >
-                    <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
-                    <div>
-                      <button
-                        className="btnn"
-                        onClick={handleToogle8}
-                        style={{
-                          background: "blue",
-                          border: "2px solid blue",
-                        }}
-                      >
-                        🔽
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="bwcontent">
-
-                  <div className="items">
-                      <div className="item"> Value of subgroup:</div>
-                      <div>
-                        <input
-                          placeholder="INR 1,60,000.00"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Offered amount :</div>
-                      <div>
-                        <input
-                          placeholder="INR 1,28,000.00"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Margin:</div>
-                      <div>
-                        <input
-                          placeholder="INR 3000 (2.3%)"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Interest:</div>
-                      <div>
-                        <input
-                          placeholder="INR 3000(10%)"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                    <div className="items">
-                      <div className="item"> Term (days) :</div>
-                      <div>
-                        <input
-                          placeholder="45 days"
-                          style={{ fontSize: "26px" }}
-                        ></input>
-                      </div>
-                    </div>
-
-                  
-
-                  </div>
-
-                  <button className="btn" style={{marginLeft:"40%"}}>Accept Offer</button>
-
-                </div>
-              )}
-            </div>
-          )}
+            )}
+          </div>
         </div>
-        </div>
-
-
       </Request1>
       <div style={{ marginTop: "65vh" }}>
         <Footer />
@@ -752,29 +749,26 @@ const Request1 = styled.div`
     margin-right: 30px;
   }
 
-  .btn {
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 20px;
-    margin-top:20px;
-   
-  }
   .btn1 {
     color: white;
     background-color: orange;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 20px;
-    border-radius: 5px;
     display: inline-block;
-    margin-left: 20px;
-    margin-top: 25vh;
+    width: 250px;
   }
+  .btn {
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 20vh;
+    width: 250px;
+  }
+
   .btn:hover {
     background-color: #0056b3;
   }

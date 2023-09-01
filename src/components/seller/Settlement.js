@@ -1031,9 +1031,6 @@ function Settlement() {
             )}
           </div>
         </div>
-        
-
-
       </Request1>
       <div style={{ marginTop: "65vh" }}>
         <Footer />
@@ -1076,14 +1073,6 @@ const Request1 = styled.div`
     font-weight: bold;
   }
 
-  .btn {
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-  }
   .btn:hover {
     background-color: #0056b3;
   }
@@ -1152,27 +1141,24 @@ const Request1 = styled.div`
     margin-top: 10px;
   }
 
-  .btn {
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 20px;
-    margin-top: 20px;
-  }
   .btn1 {
     color: white;
     background-color: orange;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 20px;
-    border-radius: 5px;
     display: inline-block;
-    margin-left: 20px;
-    margin-top: 25vh;
+    width: 250px;
+  }
+  .btn {
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 20vh;
+    width: 250px;
   }
   .btn:hover {
     background-color: #0056b3;

@@ -89,7 +89,12 @@ function RequestInformation() {
                 </tbody>
               </table>
             </div>
-            <div style={{fontSize:"34px",marginLeft:"90%",marginTop:"30px"}}> Trades</div>
+            <div
+              style={{ fontSize: "34px", marginLeft: "90%", marginTop: "30px" }}
+            >
+              {" "}
+              Trades
+            </div>
             <div class="record-details">
               <table>
                 <tbody>
@@ -210,31 +215,28 @@ export default RequestInformation;
 const Request1 = styled.div`
   margin-left: 28vh;
 
-  .btn {
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 20px;
-  }
   .btn1 {
     color: white;
     background-color: orange;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 20px;
-    border-radius: 5px;
     display: inline-block;
-    margin-left: 20px;
+    width: 250px;
+  }
+  .btn {
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 20vh;
+    width: 250px;
   }
   .btn:hover {
     background-color: #0056b3;
   }
-
- 
 
   body {
     font-family: Arial, sans-serif;
@@ -246,13 +248,11 @@ const Request1 = styled.div`
     display: flex;
     margin-top: 20px;
   }
-  
-
 
   .main-content {
-    display:flex;
+    display: flex;
     padding: 20px;
-    flex-direction:column;
+    flex-direction: column;
   }
   .table-container {
     margin-top: 20px;
@@ -264,30 +264,21 @@ const Request1 = styled.div`
     border-right: 1px solid #dddddd;
     border-top: 1px solid #dddddd;
   }
-  th, td {
+  th,
+  td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #dddddd;
   }
   th {
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     font-weight: bold;
   }
-  .record-details{
-    border:2px solid black;
-    width:190%;
+  .record-details {
+    border: 2px solid black;
+    width: 190%;
   }
 
-  
-  .btn {
-    color: white;
-    background-color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 25vh;
-  }
   .btn:hover {
     background-color: #0056b3;
   }
