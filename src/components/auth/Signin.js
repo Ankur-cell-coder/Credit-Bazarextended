@@ -124,7 +124,7 @@ const Sign1 = styled.div`
   display: flex;
   justify-content: center;
 
-  /* Styles for the page background */
+
   body {
     background-color: #e5e4e2;
   }

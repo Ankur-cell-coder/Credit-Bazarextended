@@ -50,8 +50,6 @@ function Navbar() {
       if (win != null) {
         win.focus();
       }
-
-      // navigate("/sellersdashboard");
     }
   };
 
@@ -66,7 +64,7 @@ function Navbar() {
             className="options"
           >
             <option value="buyer">Buyer</option>
-            <option value="seller">Seller</option>
+            <option value="seller">Anchor Trader</option>
             <option value="merchants">Finance Partner</option>
           </select>
         </div>

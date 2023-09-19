@@ -62,7 +62,7 @@ function Navbarseller() {
             onChange={(e) => handleChange(e)}
             className="options"
           >
-            <option value="seller">Seller</option>
+            <option value="seller">Anchor Trader</option>
             <option value="buyer">Buyer</option>
             <option value="merchants">Finance Partner</option>
           </select>

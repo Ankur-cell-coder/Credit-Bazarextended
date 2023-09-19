@@ -69,7 +69,7 @@ function Navbarfinancer() {
           >
             <option value="merchants">Finance Partner</option>
             <option value="buyer">Buyer</option>
-            <option value="seller">Seller</option>
+            <option value="seller">Anchor Trader</option>
           </select>
         </div>
 

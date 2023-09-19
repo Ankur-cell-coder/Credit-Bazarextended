@@ -1,98 +1,186 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
 import Footer from "../pages/Footer";
 import NavbarSide from "../pages/NavbarSide";
 
+const data = [
+  {
+    sellergst: "36AAIFP3688H1ZS",
+    buyer: "Apollo Hospital",
+    buyergst: "36AAACA5443N2ZI",
+    amount: "	INR 4,50,000",
+  },
+  {
+    sellergst: "36AAIFP3688H1ZS",
+    buyer: "Renova Hospital",
+    buyergst: "36AAACA5443N2ZI",
+    amount: "	INR 3,00,000",
+  },
+  {
+    sellergst: "36AAIFP3688H1ZS",
+    buyer: "Renova Hospital",
+    buyergst: "36AAACA5443N2ZI",
+    amount: "	INR 3,50,000",
+  },
+  {
+    sellergst: "36AAIFP3688H1ZS",
+    buyer: "Apollo Hospital",
+    buyergst: "36AAACA5443N2ZI",
+    amount: "	INR 4,50,000",
+  },
+  {
+    sellergst: "36AAIFP3688H1ZS",
+    buyer: "Apollo Hospital",
+    buyergst: "36AAACA5443N2ZI",
+    amount: "	INR 1,50,000",
+  },
+  {
+    sellergst: "36AAIFP3688H1ZS",
+    buyer: "Apollo Hospital",
+    buyergst: "36AAACA5443N2ZI",
+    amount: "	INR 6,50,000",
+  },
+];
+
 function Trades() {
+  const [open, setOpen] = useState(false);
+  const [sellergst, setSellergst] = useState("");
+  const [sellername, setSellername] = useState("");
+  const [buyergst, setBuyergst] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    data.push({
+    sellergst: sellergst,
+    buyer: sellername,
+    buyergst: buyergst,
+    amount: amount
+    })
+
+    setOpen(!open);
+
+  };
+
   return (
     <>
-     <NavbarSide />
-    <Navbarseller />
-     
-      <Trade1>
-        
-        <div className="container">
-          <div className="search-container">
-            <div>
-            </div>
-            <div className="button" style={{ marginTop:"20vh"}}>
-              <button className="btn">Add New Trades</button>
-            </div>
-          </div>
-          <div className="header">
-            <h1>Trades</h1>
-            <p>Lists Of Trades.</p>
-          </div>
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Seller GST</th>
-                <th>Buyer Name</th>
-                <th>Buyer GST</th>
-                <th>Trade Amount</th>
-                <th>Interest</th>
-                <th>Invoice Number</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>GST123</td>
-                <td>Buyer 1</td>
-                <td>GST456</td>
-                <td>INR 10,00,000</td>
-                <td>11%</td>
-                <td>INV001</td>
-              </tr>
-              <tr>
-                <td>GST123</td>
-                <td>Buyer 2</td>
-                <td>GST012</td>
-                <td>INR 8,00,000</td>
-                <td>9%</td>
-                <td>INV002</td>
-              </tr>
-              <tr>
-                <td>GST123</td>
-                <td>Buyer 3</td>
-                <td>GST678</td>
-                <td>INR 15,00,000</td>
-                <td>10%</td>
-                <td>INV003</td>
-              </tr>
-              <tr>
-                <td>GST123</td>
-                <td>Buyer 4</td>
-                <td>GST456</td>
-                <td>INR 10,00,000</td>
-                <td>8%</td>
-                <td>INV001</td>
-              </tr>
-              <tr>
-                <td>GST123</td>
-                <td>Buyer 5</td>
-                <td>GST012</td>
-                <td>INR 8,00,000</td>
-                <td>12%</td>
-                <td>INV002</td>
-              </tr>
-              <tr>
-                <td>GST123</td>
-                <td>Buyer 6</td>
-                <td>GST678</td>
-                <td>INR 15,00,000</td>
-                <td>11%</td>
-                <td>INV003</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <NavbarSide />
+      <Navbarseller />
 
-       
+      <Trade1>
+        {!open ? (
+          <div className="container">
+            <div className="search-container">
+             
+              <div
+                className="button"
+                
+                onClick={handleClick}
+              >
+                <button className="btn">Add New Trades</button>
+              </div>
+            </div>
+            <div className="header">
+              <h1>Trades</h1>
+              <p>Lists Of Trades.</p>
+            </div>
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Seller GST</th>
+                  <th>Buyer Name</th>
+                  <th>Buyer GST</th>
+                  <th>Trade Amount</th>
+                  <th>Trade ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.map((val, i) => {
+                  return (
+                    <tr>
+                      <td>{val.sellergst}</td>
+                      <td>{val.buyer}</td>
+                      <td>{val.buyergst}</td>
+                      <td>{val.amount}</td>
+                      <td>T00{i+1}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div className="formcontainer">
+            <form className="form" onSubmit={handleSubmit}>
+              <label htmlFor="sellergst" >
+                Seller GST:
+              </label>
+              <br />
+              <input
+                type="txt"
+                value={sellergst}
+                onChange={(e) => setSellergst(e.target.value)}
+                id="sellergst"
+                name="sellergst"
+                required
+              />
+              <br />
+
+              <label htmlFor="sellername" >
+                Seller Name:
+              </label>
+              <br />
+              <input
+                type="txt"
+                value={sellername}
+                onChange={(e) => setSellername(e.target.value)}
+                id="sellername"
+                name="sellername"
+                required
+              />
+              <br />
+
+              <label htmlFor="buyergst" >
+                Buyer GST:
+              </label>
+              <br />
+              <input
+                type="txt"
+                value={buyergst}
+                onChange={(e) => setBuyergst(e.target.value)}
+                id="buyergst"
+                name="buyergst"
+                required
+              />
+              <br />
+
+              <label htmlFor="amount" >
+                Trade Amount:
+              </label>
+              <br />
+              <input
+                type="txt"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+                id="amount"
+                name="amount"
+                required
+              />
+              <br />
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        )}
       </Trade1>
       <div style={{ marginTop: "60vh" }}>
-          <Footer />
-        </div>
+        <Footer />
+      </div>
     </>
   );
 }
@@ -100,66 +188,78 @@ function Trades() {
 export default Trades;
 
 const Trade1 = styled.div`
-  
   margin-left: 10vh;
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .top-bar {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
+  padding-top:140px;
+  display:flex;
+  justify-content:center;
+
+
+  .formwrap {
+    width: 600px;
+    height: 600px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #e5e4e2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   }
-  .logo {
+
+  .formcontainer{
+  
+    border:2px solid orange;
+    border-radius:5px;
+    width:50%;
+    background:#C5C6D0;
+    
+  }
+
+  button[type="submit"] {
     font-size: 20px;
+    color: white;
+    height: 40px;
+    width: 25%;
+    margin-bottom: 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="txt"] {
+    height: 50px;
+    width: 500px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border:2px solid black;
+    border-radius:10px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:40px;
+    background:#C5C6D0;
+  }
+  label {
     font-weight: bold;
-    margin-left: 20px;
+    font-size:30px;
+    margin-bottom: 5px;
+    color: orange;
   }
-  .notification-bell {
-    margin-left: auto;
-    margin-right: 20px;
-    font-size: 18px;
-  }
+
   .container {
     width: 80%;
     margin: auto;
-    padding: 20px;
+   
   }
-  .content {
-    display: flex;
-    margin-top: 20px;
-  }
-  .side-nav {
-    background-color: #f8f9fa;
-    width: 150px;
-    padding: 20px;
-  }
-  .side-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  .side-nav li {
-    margin-bottom: 10px;
-  }
-  .side-nav a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 8px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  .side-nav a:hover {
-    background-color: #007bff;
-    color: #ffffff;
-  }
+
+ 
+
   .header {
     text-align: center;
     padding: 20px;
@@ -189,33 +289,10 @@ const Trade1 = styled.div`
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    margin-left:89%;
   }
   .btn:hover {
     background-color: #0056b3;
   }
-  .search-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    margin-top: 40px;
-  }
-  .search-input {
-    padding: 10px;
-    width: 350px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-  }
-  .search-btn {
-    color: white;
-    background-color: orange;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .search-btn:hover {
-    background-color: #0056b3;
-  }
+
 `;
