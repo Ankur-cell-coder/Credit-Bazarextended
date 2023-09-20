@@ -77,14 +77,7 @@ function Disbursement() {
           >
             Disbursement
           </button>
-          <button
-            className="btn"
-            onClick={() => {
-              navigate("/shipment");
-            }}
-          >
-            Shipment
-          </button>
+
           <button
             className="btn"
             onClick={() => {
@@ -104,15 +97,6 @@ function Disbursement() {
         </div>
 
         <div>
-          <div className="pheading">
-            <div style={{ fontSize: "34px", marginLeft: "65vh" }}>
-              Borrower details
-            </div>
-            <div style={{ fontSize: "24px", marginLeft: "52vh" }}>
-              Lenders have placed offers for your request for finance.
-            </div>
-          </div>
-
           <div className="content">
             {!open1 ? (
               <div className="mainheading" style={{ background: "gray" }}>
@@ -151,7 +135,7 @@ function Disbursement() {
                       className="mainheading2"
                       style={{ background: "gray" }}
                     >
-                      <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
+                      <div style={{ marginLeft: "15px" }}>IKF Finance</div>
                       <div>
                         <button
                           className="btnn"
@@ -191,7 +175,7 @@ function Disbursement() {
                       className="mainheading2"
                       style={{ background: "blue", width: "140vh" }}
                     >
-                      <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
+                      <div style={{ marginLeft: "15px" }}>IKF Finance</div>
                       <div>
                         <button
                           className="btnn"
@@ -207,95 +191,61 @@ function Disbursement() {
                     </div>
 
                     <div className="bwcontent">
-                      <div
-                        className="Disbursement details"
-                        style={{ display: "block" }}
-                      >
-                        <h1>Loan Disbursement</h1>
-                        <h2>Borrower Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>Prime Textiles</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>info@primetextiles.in</td>
-                            </tr>
-                            <tr>
-                              <th>GST:</th>
-                              <td>36AAIFP3688H1ZS</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Loan Details</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Value of subgroup:</th>
-                              <td>INR 20,000</td>
-                            </tr>
-                            <tr>
-                              <th>Loan Amount:</th>
-                              <td>INR 19,000 </td>
-                            </tr>
-                            <tr>
-                              <th>Margine:</th>
-                              <td>INR 1500 (8%) </td>
-                            </tr>
-                            <tr>
-                              <th>Interest Rate:</th>
-                              <td> INR 1500 (8%)</td>
-                            </tr>
-                            <tr>
-                              <th>Repayment Term:</th>
-                              <td> 45 days</td>
-                            </tr>
-                            <tr>
-                              <th>Fees and Charges:</th>
-                              <td>INR 2,500</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Disbursement Date</h2>
-                        <p>July 15, 2023</p>
-                        <h2>Payment Method</h2>
-                        <p>Direct Deposit</p>
-                        <h2>Patron of the Payment</h2>
-                        <p>LiquiLoans</p>
-                        <h2>Receipent of the Payment</h2>
-                        <p>Prime Textiles</p>
-                        <h2>Repayment Schedule</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Due Date</th>
-                            </tr>
-                            <tr>
-                              <td>August 15, 2023</td>
-                            </tr>
-                            {/* Add more rows for subsequent installments */}
-                          </tbody>
-                        </table>
-                        <h2>Loan Agreement</h2>
-                        <p>
-                          Please review and accept the{" "}
-                          <a href="#">Loan Agreement</a> for more information.
+                      <div className="panel-body" style={{ display: "block" }}>
+                        <h3 align="center">Acknowledgement of Disbursement</h3>
+                        <p align="center">
+                          The Finance partner has made the disbursement
+                          successfully, Below are the details of Disbursement.
                         </p>
-                        <h2>Contact Information</h2>
+                        <h3>Disbursement details</h3>
                         <p>
-                          If you have any questions or need assistance, please
-                          contact our customer service at 1-800-123-4567 or
-                          email us at info@example.com.
+                          <strong>Reference:</strong>123
                         </p>
-                        <div className="disbursement-confirmation">
-                          <h2>Disbursement Confirmation</h2>
-                          <p>
-                            Your loan funds have been successfully disbursed.
-                            Confirmation Number: ABC123
-                          </p>
-                        </div>
+                        <p>
+                          <strong>Finance Request ID:</strong> 1580147
+                        </p>
+                        <p>
+                          <strong>SubGroup ID:</strong> Subgroup 1
+                        </p>
+                        <p>
+                          <strong>Disbursement amount:</strong> ₹ 3,00,766
+                        </p>
+                        <br />
+                        <h3>Bank Details</h3>
+                        <p>
+                          Below are the bank details to which the disbursement
+                          has been made
+                        </p>
+                        <p>
+                          <strong>Bank Name:</strong> ICICI Bank
+                        </p>
+                        <p>
+                          <strong>Account Name:</strong>Prime Textiles
+                        </p>
+                        <p>
+                          <strong>Account Number:</strong> 123456789012
+                        </p>
+                        <p>
+                          <strong>IFSC Code:</strong> ICIC0001114
+                        </p>
+                        <p>
+                          <strong>Branch Address:</strong> Gachibowli
+                        </p>
+                        <button
+                          id="disbursement-upload-button-1"
+                          onclick="confirmBtn(1)"
+                          className="btn"
+                        >
+                          Confirm Disbursement
+                        </button>
+                        <p
+                          id="confirm-btn-notification-1"
+                          style={{ color: "blue" }}
+                        />
+
+                        <p />
+                        <div className="select-btn-container" />
+                        <div className="accept-message" />
                       </div>
                     </div>
                   </div>
@@ -344,7 +294,7 @@ function Disbursement() {
                       className="mainheading2"
                       style={{ background: "gray" }}
                     >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
+                      <div style={{ marginLeft: "15px" }}>IKF Finance</div>
                       <div>
                         <button
                           className="btnn"
@@ -384,7 +334,7 @@ function Disbursement() {
                       className="mainheading2"
                       style={{ background: "blue", width: "140vh" }}
                     >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
+                      <div style={{ marginLeft: "15px" }}>IKF Finance</div>
                       <div>
                         <button
                           className="btnn"
@@ -400,481 +350,63 @@ function Disbursement() {
                     </div>
 
                     <div className="bwcontent">
-                      <div
-                        className="Disbursement details"
-                        style={{ display: "block" }}
-                      >
-                        <h1>Loan Disbursement</h1>
-                        <h2>Borrower Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>Prime Textiles</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>info@primetextiles.in</td>
-                            </tr>
-                            <tr>
-                              <th>GST:</th>
-                              <td>36AAIFP3688H1ZS</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Loan Details</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Value of subgroup:</th>
-                              <td>INR 1,40,000</td>
-                            </tr>
-                            <tr>
-                              <th>Loan Amount:</th>
-                              <td>INR 1,19,000 </td>
-                            </tr>
-                            <tr>
-                              <th>Margine:</th>
-                              <td>INR 7,000 (5%) </td>
-                            </tr>
-                            <tr>
-                              <th>Interest Rate:</th>
-                              <td> INR 7000 (10%)</td>
-                            </tr>
-                            <tr>
-                              <th>Repayment Term:</th>
-                              <td> 45 days</td>
-                            </tr>
-                            <tr>
-                              <th>Fees and Charges:</th>
-                              <td>INR 2,500</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Disbursement Date</h2>
-                        <p>July 15, 2023</p>
-                        <h2>Payment Method</h2>
-                        <p>Direct Deposit</p>
-                        <h2>Patron of the Payment</h2>
-                        <p>ICICI Bank</p>
-                        <h2>Receipent of the Payment</h2>
-                        <p>Prime Textiles</p>
-                        <h2>Repayment Schedule</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Due Date</th>
-                              <th>Amount</th>
-                            </tr>
-                            <tr>
-                              <td>August 15, 2023</td>
-                              <td>INR 1,19,000.00</td>
-                            </tr>
-                            {/* Add more rows for subsequent installments */}
-                          </tbody>
-                        </table>
-                        <h2>Loan Agreement</h2>
-                        <p>
-                          Please review and accept the{" "}
-                          <a href="#">Loan Agreement</a> for more information.
+                      <div className="panel-body" style={{ display: "block" }}>
+                        <h3 align="center">Acknowledgement of Disbursement</h3>
+                        <p align="center">
+                          The Finance partner has made the disbursement
+                          successfully, Below are the details of Disbursement.
                         </p>
-                        <h2>Contact Information</h2>
+                        <h3>Disbursement details</h3>
                         <p>
-                          If you have any questions or need assistance, please
-                          contact our customer service at 1-800-123-4567 or
-                          email us at info@example.com.
+                          <strong>Reference:</strong>456
                         </p>
-                        <div className="disbursement-confirmation">
-                          <h2>Disbursement Confirmation</h2>
-                          <p>
-                            Your loan funds have been successfully disbursed.
-                            Confirmation Number: ABC123
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div>
-          <div className="content">
-            {!open5 ? (
-              <div className="mainheading" style={{ background: "gray" }}>
-                <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                <div>
-                  <button
-                    className="btnn"
-                    onClick={handleToogle5}
-                    style={{ background: "gray", border: "2px solid gray" }}
-                  >
-                    🔽
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div>
-                {!open6 ? (
-                  <div>
-                    <div className="mainheading" style={{ background: "blue" }}>
-                      <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle5}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "gray" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle6}
-                          style={{
-                            background: "gray",
-                            border: "2px solid gray",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div>
-                    <div
-                      className="mainheading"
-                      style={{ background: "blue", width: "150vh" }}
-                    >
-                      <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle5}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "blue", width: "140vh" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle6}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="bwcontent">
-                      <div className="text-fields" style={{ display: "block" }}>
-                        <h1>Loan Disbursement</h1>
-                        <h2>Borrower Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td> Prime Textiles</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>info@primetextiles.in</td>
-                            </tr>
-                            <tr>
-                              <th>GST:</th>
-                              <td>36AAIFP3688H1ZS</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Loan Details</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Value of subgroup:</th>
-                              <td>INR 1,40,000</td>
-                            </tr>
-                            <tr>
-                              <th>Loan Amount:</th>
-                              <td>INR 1,33,000 </td>
-                            </tr>
-                            <tr>
-                              <th>Margine:</th>
-                              <td>INR 7,000 (5%) </td>
-                            </tr>
-                            <tr>
-                              <th>Interest Rate:</th>
-                              <td> INR 7000 (10%)</td>
-                            </tr>
-                            <tr>
-                              <th>Repayment Term:</th>
-                              <td> 45 days</td>
-                            </tr>
-                            <tr>
-                              <th>Fees and Charges:</th>
-                              <td>INR 2,500</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Disbursement Date</h2>
-                        <p>July 15, 2023</p>
-                        <h2>Payment Method</h2>
-                        <p>Direct Deposit</p>
-                        <h2>Patron of the Payment</h2>
-                        <p>ICICI Bank</p>
-                        <h2>Receipent of the Payment</h2>
-                        <p>Prime Textiles</p>
-                        <h2>Repayment Schedule</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Due Date</th>
-                              <th>Amount</th>
-                            </tr>
-                            <tr>
-                              <td>August 15, 2023</td>
-                              <td>INR 1,33,000.00</td>
-                            </tr>
-                            {/* Add more rows for subsequent installments */}
-                          </tbody>
-                        </table>
-                        <h2>Loan Agreement</h2>
                         <p>
-                          Please review and accept the{" "}
-                          <a href="#">Loan Agreement</a> for more information.
+                          <strong>Finance Request ID:</strong> 1580147
                         </p>
-                        <h2>Contact Information</h2>
                         <p>
-                          If you have any questions or need assistance, please
-                          contact our customer service at 1-800-123-4567 or
-                          email us at info@example.com.
+                          <strong>SubGroup ID:</strong> Subgroup 2
                         </p>
-                        <div className="disbursement-confirmation">
-                          <h2>Disbursement Confirmation</h2>
-                          <p>
-                            Your loan funds have been successfully disbursed.
-                            Confirmation Number: ABC123
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div>
-          <div className="content">
-            {!open7 ? (
-              <div className="mainheading" style={{ background: "gray" }}>
-                <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                <div>
-                  <button
-                    className="btnn"
-                    onClick={handleToogle7}
-                    style={{ background: "gray", border: "2px solid gray" }}
-                  >
-                    🔽
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div>
-                {!open8 ? (
-                  <div>
-                    <div className="mainheading" style={{ background: "blue" }}>
-                      <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle7}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "gray" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle8}
-                          style={{
-                            background: "gray",
-                            border: "2px solid gray",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div>
-                    <div
-                      className="mainheading"
-                      style={{ background: "blue", width: "150vh" }}
-                    >
-                      <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle7}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "blue", width: "140vh" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle8}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="bwcontent">
-                      <div className="text-fields" style={{ display: "block" }}>
-                        <h1>Loan Disbursement</h1>
-                        <h2>Borrower Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>Prime Textiles</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>info@primetextiles.in</td>
-                            </tr>
-                            <tr>
-                              <th>GST:</th>
-                              <td>36AAIFP3688H1ZS</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Loan Details</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Value of subgroup:</th>
-                              <td>INR 1,60,000</td>
-                            </tr>
-                            <tr>
-                              <th>Loan Amount:</th>
-                              <td>INR 1,28,000 </td>
-                            </tr>
-                            <tr>
-                              <th>Margine:</th>
-                              <td>INR 3,000 (5%) </td>
-                            </tr>
-                            <tr>
-                              <th>Interest Rate:</th>
-                              <td> INR 3,000 (2.3%)</td>
-                            </tr>
-                            <tr>
-                              <th>Repayment Term:</th>
-                              <td> 45 days</td>
-                            </tr>
-                            <tr>
-                              <th>Fees and Charges:</th>
-                              <td>INR 2,500</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Disbursement Date</h2>
-                        <p>July 15, 2023</p>
-                        <h2>Payment Method</h2>
-                        <p>Direct Deposit</p>
-                        <h2>Patron of the Payment</h2>
-                        <p>IDFC Bank</p>
-                        <h2>Receipent of the Payment</h2>
-                        <p>Prime Textiles</p>
-                        <h2>Repayment Schedule</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Due Date</th>
-                              <th>Amount</th>
-                            </tr>
-                            <tr>
-                              <td>August 15, 2023</td>
-                              <td>INR 1,33,000.00</td>
-                            </tr>
-                            {/* Add more rows for subsequent installments */}
-                          </tbody>
-                        </table>
-                        <h2>Loan Agreement</h2>
                         <p>
-                          Please review and accept the{" "}
-                          <a href="#">Loan Agreement</a> for more information.
+                          <strong>Disbursement amount:</strong> ₹ 4,01,396.9
                         </p>
-                        <h2>Contact Information</h2>
+                        <br />
+                        <h3>Bank Details</h3>
                         <p>
-                          If you have any questions or need assistance, please
-                          contact our customer service at 1-800-123-4567 or
-                          email us at info@example.com.
+                          Below are the bank details to which the disbursement
+                          has been made
                         </p>
-                        <div className="disbursement-confirmation">
-                          <h2>Disbursement Confirmation</h2>
-                          <p>
-                            Your loan funds have been successfully disbursed.
-                            Confirmation Number: ABC123
-                          </p>
-                        </div>
+                        <p>
+                          <strong>Bank Name:</strong> ICICI Bank
+                        </p>
+                        <p>
+                          <strong>Account Name:</strong>Prime Textiles
+                        </p>
+                        <p>
+                          <strong>Account Number:</strong> 123456789012
+                        </p>
+                        <p>
+                          <strong>IFSC Code:</strong> ICIC0001114
+                        </p>
+                        <p>
+                          <strong>Branch Address:</strong> Gachibowli
+                        </p>
+                        <button
+                          id="disbursement-upload-button-2"
+                          onclick="confirmBtn(2)"
+                          className="btn"
+                        >
+                          Confirm Disbursement
+                        </button>
+                        <p
+                          id="confirm-btn-notification-2"
+                          style={{ color: "blue" }}
+                        />
+                        <p style={{ color: "green" }}>
+                          Confirmed Disbursement successfully
+                        </p>
+                        <p />
+                        <div className="select-btn-container" />
+                        <div className="accept-message" />
                       </div>
                     </div>
                   </div>
@@ -925,7 +457,6 @@ const Request1 = styled.div`
     font-weight: bold;
   }
 
-  
   .btn:hover {
     background-color: #0056b3;
   }

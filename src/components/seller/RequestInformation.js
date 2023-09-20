@@ -37,14 +37,14 @@ function RequestInformation() {
           >
             Disbursement
           </button>
-          <button
+          {/* <button
             className="btn"
             onClick={() => {
               navigate("/shipment");
             }}
           >
             Shipment
-          </button>
+          </button> */}
           <button
             className="btn"
             onClick={() => {
@@ -72,7 +72,7 @@ function RequestInformation() {
                 <tbody>
                   <tr>
                     <th>Request ID</th>
-                    <td>123456</td>
+                    <td>1580147</td>
                   </tr>
                   <tr>
                     <th>Date</th>
@@ -80,11 +80,11 @@ function RequestInformation() {
                   </tr>
                   <tr>
                     <th> Requested Amount</th>
-                    <td> INR 4,00,000</td>
+                    <td> INR 10,00,000</td>
                   </tr>
                   <tr>
                     <th> Status</th>
-                    <td> In Progress</td>
+                    <td> Raised </td>
                   </tr>
                 </tbody>
               </table>
@@ -105,98 +105,36 @@ function RequestInformation() {
                     <th>Buyer Name</th>
                     <th>Buyer GST</th>
                     <th>Trade Amount</th>
-                    <th>Invoice ID</th>
+                    
                   </tr>
                   <tr>
                     <td>Trade Document 1</td>
-                    <td>Subgroup 3</td>
+                    <td>Subgroup 1</td>
                     <td>36AAIFP3688H1ZS</td>
-                    <td>Hospital3</td>
-                    <td>123-45-5373</td>
-                    <td>₹90,000.00</td>
-                    <td>INV001</td>
+                    <td>Appolo Hospital</td>
+                    <td>36AAACA5443N2ZI</td>
+                    <td>4,50,00</td>
+                  
                   </tr>
                   <tr>
                     <td>Trade Document 2</td>
-                    <td>Subgroup 3</td>
+                    <td>Subgroup 2</td>
                     <td>36AAIFP3688H1ZS</td>
-                    <td>Hospital3</td>
-                    <td>123-45-5373</td>
-                    <td>₹20,000.00</td>
-                    <td>INV002</td>
+                    <td>Renova Hospitals</td>
+                    <td>36ABCCS4959C1Z9</td>
+                    <td>3,00,000</td>
+                 
                   </tr>
                   <tr>
                     <td>Trade Document 3</td>
                     <td>Subgroup 3</td>
                     <td>36AAIFP3688H1ZS</td>
-                    <td>Hospital3</td>
-                    <td>123-45-5373</td>
-                    <td>₹30,000.00</td>
-                    <td>INV003</td>
+                    <td>Renova Hospitals</td>
+                    <td>36ABCCS4959C1Z9</td>
+                    <td>3,50,000</td>
+                  
                   </tr>
-                  <tr>
-                    <td>Trade Document 4</td>
-                    <td>Subgroup 4</td>
-                    <td>36AAIFP3688H1ZS</td>
-                    <td>Medical Univ. 1</td>
-                    <td>123-45-2486</td>
-                    <td>₹40,000.00</td>
-                    <td>INV004</td>
-                  </tr>
-                  <tr>
-                    <td>Trade Document 5</td>
-                    <td>Subgroup 4</td>
-                    <td>36AAIFP3688H1ZS</td>
-                    <td>Medical Univ. 1</td>
-                    <td>123-45-2486</td>
-                    <td>₹50,000.00</td>
-                    <td>INV005</td>
-                  </tr>
-                  <tr>
-                    <td>Trade Document 7</td>
-                    <td>Subgroup 4</td>
-                    <td>36AAIFP3688H1ZS</td>
-                    <td>Medical Univ. 1</td>
-                    <td>123-45-2486</td>
-                    <td>₹30,000.00</td>
-                    <td>INV006</td>
-                  </tr>
-                  <tr>
-                    <td>Trade Document 8</td>
-                    <td>Subgroup 4</td>
-                    <td>36AAIFP3688H1ZS</td>
-                    <td>Medical Univ. 1</td>
-                    <td>123-45-2486</td>
-                    <td>₹40,000.00</td>
-                    <td>INV007</td>
-                  </tr>
-                  <tr>
-                    <td>Trade Document 6</td>
-                    <td>Subgroup 1</td>
-                    <td>36AAIFP3688H1ZS</td>
-                    <td>Hospital 1</td>
-                    <td>123-45-5454</td>
-                    <td>₹20,000.00</td>
-                    <td>INV008</td>
-                  </tr>
-                  <tr>
-                    <td>Trade Document 9</td>
-                    <td>Subgroup 2</td>
-                    <td>36AAIFP3688H1ZS</td>
-                    <td>Hospital 2</td>
-                    <td>123-45-5919</td>
-                    <td>₹50,000.00</td>
-                    <td>INV009</td>
-                  </tr>
-                  <tr>
-                    <td>Trade Document 10</td>
-                    <td>Subgroup 2</td>
-                    <td>36AAIFP3688H1ZS</td>
-                    <td>Hospital 2</td>
-                    <td>123-45-5919</td>
-                    <td>₹90,000.00</td>
-                    <td>INV0010</td>
-                  </tr>
+
                 </tbody>
               </table>
             </div>

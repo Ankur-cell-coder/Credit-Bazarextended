@@ -59,7 +59,7 @@ function RequestForOffers() {
                   <th>Trade</th>
                 </tr>
                 <tr>
-                  <td>GST123</td>
+                  <td>36AAIFP3688H1ZS</td>
                   <td>Buyer 1</td>
                   <td>GST456</td>
                   <td>INR 60,000</td>
@@ -69,7 +69,7 @@ function RequestForOffers() {
                   </td>
                 </tr>
                 <tr>
-                  <td>GST123</td>
+                  <td>36AAIFP3688H1ZS</td>
                   <td>Buyer 2</td>
                   <td>GST012</td>
                   <td>INR 60,000</td>
@@ -79,7 +79,7 @@ function RequestForOffers() {
                   </td>
                 </tr>
                 <tr>
-                  <td>GST123</td>
+                  <td>36AAIFP3688H1ZS</td>
                   <td>Buyer 3</td>
                   <td>GST678</td>
                   <td>INR 5,00,000</td>
@@ -89,7 +89,7 @@ function RequestForOffers() {
                   </td>
                 </tr>
                 <tr>
-                  <td>GST123</td>
+                  <td>36AAIFP3688H1ZS</td>
                   <td>Buyer 4</td>
                   <td>GST456</td>
                   <td>INR 1,00,000</td>
@@ -99,7 +99,7 @@ function RequestForOffers() {
                   </td>
                 </tr>
                 <tr>
-                  <td>GST123</td>
+                  <td>36AAIFP3688H1ZS</td>
                   <td>Buyer 5</td>
                   <td>GST012</td>
                   <td>INR 4,80,000</td>
@@ -109,7 +109,7 @@ function RequestForOffers() {
                   </td>
                 </tr>
                 <tr>
-                  <td>GST123</td>
+                  <td>36AAIFP3688H1ZS</td>
                   <td>Buyer 6</td>
                   <td>GST678</td>
                   <td>INR 15,000</td>

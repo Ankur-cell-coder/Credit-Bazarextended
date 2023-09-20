@@ -52,7 +52,7 @@ function Offers() {
       <Navbarseller />
       <NavbarSide />
       <Request1>
-        <div className="button">
+        <div className="button" >
           <button
             className="btn"
             onClick={() => {
@@ -77,14 +77,7 @@ function Offers() {
           >
             Disbursement
           </button>
-          <button
-            className="btn"
-            onClick={() => {
-              navigate("/shipment");
-            }}
-          >
-            Shipment
-          </button>
+
           <button
             className="btn"
             onClick={() => {
@@ -147,31 +140,28 @@ function Offers() {
                       </div>
                     </div>
 
-                    <div
-                      className="mainheading2"
-                      style={{ background: "gray" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
+                    <div className="mainheading2">
+                      <div>Image</div>
+                      <div>
+                        <div>Net Amount: 3,00,766.1</div>
+                        <div>Interest p.a (%):8</div>
+                        <div>Margin %: 25</div>
+                        <div>Term (In days): 90</div>
+                      </div>
                       <div>
                         <button
                           className="btnn"
                           onClick={handleToogle2}
-                          style={{
-                            background: "gray",
-                            border: "2px solid gray",
-                          }}
+                          style={{ marginTop: "50px" }}
                         >
-                          🔽
+                          View Details
                         </button>
                       </div>
                     </div>
                   </div>
                 ) : (
-                  <div>
-                    <div
-                      className="mainheading"
-                      style={{ background: "blue", width: "150vh" }}
-                    >
+                  <div style={{ border: "2px solid black",paddingLeft:"30px" }}>
+                    <div className="mainheading" style={{ background: "blue" }}>
                       <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
                       <div>
                         <button
@@ -187,70 +177,112 @@ function Offers() {
                       </div>
                     </div>
 
-                    <div
-                      className="mainheading2"
-                      style={{ background: "blue", width: "140vh" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
+                    <div className="mainheading2">
+                      <div>Image</div>
+                      <div>
+                        <div>Net Amount: 3,00,766.1</div>
+                        <div>Interest p.a (%):8</div>
+                        <div>Margin %: 25</div>
+                        <div>Term (In days): 90</div>
+                      </div>
                       <div>
                         <button
                           className="btnn"
                           onClick={handleToogle2}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
+                          style={{ marginTop: "50px" }}
                         >
-                          🔽
+                          View Details
                         </button>
                       </div>
                     </div>
 
-                    <div className="bwcontent">
-                      <div className="items">
-                        <div className="item"> Offered amount :</div>
-                        <div>
-                          <input
-                            placeholder="INR 20,000"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Margin:</div>
-                        <div>
-                          <input
-                            placeholder="INR 1500 (7.89%)"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Interest:</div>
-                        <div>
-                          <input
-                            placeholder="INR 1500(10%)"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Term (days) :</div>
-                        <div>
-                          <input
-                            placeholder="45 days"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
+                    <div
+                      style={{ height: 900, marginLeft: 10, display: "block" }}
+                    >
+                      <br />
+                      <h4 align="center">Requested Offer</h4>
+                      <p>
+                        <strong>Subgroup value (INR):</strong> 4,50,000
+                      </p>
+                      <p>
+                        <strong>Requested amount (INR):</strong> 4,09,091 (The
+                        offer is adjusted to the subgroup trade amount)
+                      </p>
+                      <p>
+                        <strong>Margin (%):</strong> 25
+                      </p>
+                      <p>
+                        <strong>Margin value (INR):</strong> 1,02,272.75
+                      </p>
+                      <p>
+                        <strong>Amount after margin (INR):</strong> 3,06,818
+                      </p>
+                      <p>
+                        <strong>Interest p.a (%):</strong> 8
+                      </p>
+                      <p>
+                        <strong>Terms (In Days):</strong> 90
+                      </p>
+                      <p>
+                        <strong>Interest value (INR):</strong> 6,052 (Interest
+                        Value adjusted to Terms)
+                      </p>
+                      <p>
+                        <strong>Net amount (INR):</strong> 3,00,766.1
+                      </p>
+                      <br />
+                      <h4 align="center">Offer Placed</h4>
+                      <p>
+                        <strong>Subgroup value (INR):</strong> 4,50,000
+                      </p>
+                      <p>
+                        <strong>Requested amount (INR):</strong> 4,09,091 (The
+                        offer is adjusted to the subgroup trade amount)
+                      </p>
+                      <p>
+                        <strong>Margin (%):</strong> 25
+                      </p>
+                      <p>
+                        <strong>Margin value (INR):</strong> 1,02,272.75
+                      </p>
+                      <p>
+                        <strong>Amount after margin (INR):</strong> 3,06,818
+                      </p>
+                      <p>
+                        <strong>Interest p.a (%):</strong> 8
+                      </p>
+                      <p>
+                        <strong>Terms (In Days):</strong> 90
+                      </p>
+                      <p>
+                        <strong>Interest value (INR):</strong> 6,052 (Interest
+                        Value adjusted to Terms)
+                      </p>
+                      <p>
+                        <strong>Net amount (INR):</strong> 3,00,766.1
+                      </p>
+                      <hr />
+                      <div className="text-center">
+                        
+                        <button
+                          className="btn btn-success"
+                          onclick="acceptOffer(this)"
+                          style={{ marginLeft: "40%" }}
+                        >
+                          Accept
+                        </button>
+                        <button
+                          className="btn btn-danger"
+                          onclick="declineOffer(this)"
+                          style={{ marginLeft: "20px"}}
+                        >
+                          Decline
+                        </button>
+                        <p id="accept-message" style={{ color: "green" }} />
                       </div>
                     </div>
 
-                    <button className="btn" style={{ marginLeft: "40%" }}>
-                      Accept Offer
-                    </button>
+                    
                   </div>
                 )}
               </div>
@@ -259,6 +291,7 @@ function Offers() {
         </div>
 
         <div>
+          
           <div className="content">
             {!open3 ? (
               <div className="mainheading" style={{ background: "gray" }}>
@@ -293,31 +326,28 @@ function Offers() {
                       </div>
                     </div>
 
-                    <div
-                      className="mainheading2"
-                      style={{ background: "gray" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
+                    <div className="mainheading2">
+                      <div>Image</div>
+                      <div>
+                        <div>Net Amount: 3,00,766.1</div>
+                        <div>Interest p.a (%):8</div>
+                        <div>Margin %: 25</div>
+                        <div>Term (In days): 90</div>
+                      </div>
                       <div>
                         <button
                           className="btnn"
                           onClick={handleToogle4}
-                          style={{
-                            background: "gray",
-                            border: "2px solid gray",
-                          }}
+                          style={{ marginTop: "50px" }}
                         >
-                          🔽
+                          View Details
                         </button>
                       </div>
                     </div>
                   </div>
                 ) : (
-                  <div>
-                    <div
-                      className="mainheading"
-                      style={{ background: "blue", width: "150vh" }}
-                    >
+                  <div style={{ border: "2px solid black",paddingLeft:"30px" }}>
+                    <div className="mainheading" style={{ background: "blue" }}>
                       <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
                       <div>
                         <button
@@ -333,80 +363,112 @@ function Offers() {
                       </div>
                     </div>
 
-                    <div
-                      className="mainheading2"
-                      style={{ background: "blue", width: "140vh" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
+                    <div className="mainheading2">
+                      <div>Image</div>
+                      <div>
+                        <div>Net Amount: 3,00,766.1</div>
+                        <div>Interest p.a (%):8</div>
+                        <div>Margin %: 25</div>
+                        <div>Term (In days): 90</div>
+                      </div>
                       <div>
                         <button
                           className="btnn"
                           onClick={handleToogle4}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
+                          style={{ marginTop: "50px" }}
                         >
-                          🔽
+                          View Details
                         </button>
                       </div>
                     </div>
 
-                    <div className="bwcontent">
-                      <div className="items">
-                        <div className="item"> Value of subgroup:</div>
-                        <div>
-                          <input
-                            placeholder="INR 1,40,000.00"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Offered amount :</div>
-                        <div>
-                          <input
-                            placeholder="INR 1,19,000.00"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Margin:</div>
-                        <div>
-                          <input
-                            placeholder="INR 7,000 (5%)"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Interest:</div>
-                        <div>
-                          <input
-                            placeholder="INR 7,000 (10%)"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Term (days) :</div>
-                        <div>
-                          <input
-                            placeholder="45 days"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
+                    <div
+                      style={{ height: 900, marginLeft: 10, display: "block" }}
+                    >
+                      <br />
+                      <h4 align="center">Requested Offer</h4>
+                      <p>
+                        <strong>Subgroup value (INR):</strong> 4,50,000
+                      </p>
+                      <p>
+                        <strong>Requested amount (INR):</strong> 4,09,091 (The
+                        offer is adjusted to the subgroup trade amount)
+                      </p>
+                      <p>
+                        <strong>Margin (%):</strong> 25
+                      </p>
+                      <p>
+                        <strong>Margin value (INR):</strong> 1,02,272.75
+                      </p>
+                      <p>
+                        <strong>Amount after margin (INR):</strong> 3,06,818
+                      </p>
+                      <p>
+                        <strong>Interest p.a (%):</strong> 8
+                      </p>
+                      <p>
+                        <strong>Terms (In Days):</strong> 90
+                      </p>
+                      <p>
+                        <strong>Interest value (INR):</strong> 6,052 (Interest
+                        Value adjusted to Terms)
+                      </p>
+                      <p>
+                        <strong>Net amount (INR):</strong> 3,00,766.1
+                      </p>
+                      <br />
+                      <h4 align="center">Offer Placed</h4>
+                      <p>
+                        <strong>Subgroup value (INR):</strong> 4,50,000
+                      </p>
+                      <p>
+                        <strong>Requested amount (INR):</strong> 4,09,091 (The
+                        offer is adjusted to the subgroup trade amount)
+                      </p>
+                      <p>
+                        <strong>Margin (%):</strong> 25
+                      </p>
+                      <p>
+                        <strong>Margin value (INR):</strong> 1,02,272.75
+                      </p>
+                      <p>
+                        <strong>Amount after margin (INR):</strong> 3,06,818
+                      </p>
+                      <p>
+                        <strong>Interest p.a (%):</strong> 8
+                      </p>
+                      <p>
+                        <strong>Terms (In Days):</strong> 90
+                      </p>
+                      <p>
+                        <strong>Interest value (INR):</strong> 6,052 (Interest
+                        Value adjusted to Terms)
+                      </p>
+                      <p>
+                        <strong>Net amount (INR):</strong> 3,00,766.1
+                      </p>
+                      <hr />
+                      <div className="text-center">
+                        
+                        <button
+                          className="btn btn-success"
+                          onclick="acceptOffer(this)"
+                          style={{ marginLeft: "40%" }}
+                        >
+                          Accept
+                        </button>
+                        <button
+                          className="btn btn-danger"
+                          onclick="declineOffer(this)"
+                          style={{ marginLeft: "20px"}}
+                        >
+                          Decline
+                        </button>
+                        <p id="accept-message" style={{ color: "green" }} />
                       </div>
                     </div>
 
-                    <button className="btn" style={{ marginLeft: "40%" }}>
-                      Accept Offer
-                    </button>
+                    
                   </div>
                 )}
               </div>
@@ -414,317 +476,7 @@ function Offers() {
           </div>
         </div>
 
-        <div>
-          <div className="content">
-            {!open5 ? (
-              <div className="mainheading" style={{ background: "gray" }}>
-                <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                <div>
-                  <button
-                    className="btnn"
-                    onClick={handleToogle5}
-                    style={{ background: "gray", border: "2px solid gray" }}
-                  >
-                    🔽
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div>
-                {!open6 ? (
-                  <div>
-                    <div className="mainheading" style={{ background: "blue" }}>
-                      <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle5}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "gray" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle6}
-                          style={{
-                            background: "gray",
-                            border: "2px solid gray",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div>
-                    <div
-                      className="mainheading"
-                      style={{ background: "blue", width: "150vh" }}
-                    >
-                      <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle5}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "blue", width: "140vh" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle6}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="bwcontent">
-                      <div className="items">
-                        <div className="item"> Value of subgroup:</div>
-                        <div>
-                          <input
-                            placeholder="INR 1,40,000.00"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Offered amount :</div>
-                        <div>
-                          <input
-                            placeholder="INR 1,33,000.00"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Margin:</div>
-                        <div>
-                          <input
-                            placeholder="INR 7,000 (5%)"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Interest:</div>
-                        <div>
-                          <input
-                            placeholder="INR 7,000 (10%)"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Term (days) :</div>
-                        <div>
-                          <input
-                            placeholder="45 days"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-                    </div>
-
-                    <button className="btn" style={{ marginLeft: "40%" }}>
-                      Accept Offer
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div>
-          <div className="content">
-            {!open7 ? (
-              <div className="mainheading" style={{ background: "gray" }}>
-                <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                <div>
-                  <button
-                    className="btnn"
-                    onClick={handleToogle7}
-                    style={{ background: "gray", border: "2px solid gray" }}
-                  >
-                    🔽
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div>
-                {!open8 ? (
-                  <div>
-                    <div className="mainheading" style={{ background: "blue" }}>
-                      <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle7}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "gray" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle8}
-                          style={{
-                            background: "gray",
-                            border: "2px solid gray",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div>
-                    <div
-                      className="mainheading"
-                      style={{ background: "blue", width: "150vh" }}
-                    >
-                      <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle7}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "blue", width: "140vh" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle8}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="bwcontent">
-                      <div className="items">
-                        <div className="item"> Value of subgroup:</div>
-                        <div>
-                          <input
-                            placeholder="INR 1,60,000.00"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Offered amount :</div>
-                        <div>
-                          <input
-                            placeholder="INR 1,28,000.00"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Margin:</div>
-                        <div>
-                          <input
-                            placeholder="INR 3000 (2.3%)"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Interest:</div>
-                        <div>
-                          <input
-                            placeholder="INR 3000(10%)"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-
-                      <div className="items">
-                        <div className="item"> Term (days) :</div>
-                        <div>
-                          <input
-                            placeholder="45 days"
-                            style={{ fontSize: "26px" }}
-                          ></input>
-                        </div>
-                      </div>
-                    </div>
-
-                    <button className="btn" style={{ marginLeft: "40%" }}>
-                      Accept Offer
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
+       
       </Request1>
       <div style={{ marginTop: "65vh" }}>
         <Footer />
@@ -757,6 +509,7 @@ const Request1 = styled.div`
     font-size: 20px;
     display: inline-block;
     width: 250px;
+    margin-top: 20vh;
   }
   .btn {
     color: white;
@@ -765,7 +518,7 @@ const Request1 = styled.div`
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin-top: 20vh;
+    
     width: 250px;
   }
 
@@ -800,27 +553,36 @@ const Request1 = styled.div`
     margin-top: 20px;
     color: white;
     margin-left: 5vh;
-    width: 60vh;
+    width: 150vh;
     height: 5vh;
     display: flex;
     justify-content: space-between;
     border: 2px solid gray;
   }
   .mainheading2 {
-    font-size: 32px;
+    padding-top: 20px;
+    font-size: 27px;
     margin-top: 20px;
-    color: white;
+    color: black;
     margin-left: 7.5vh;
-    width: 55vh;
-    height: 5vh;
+    width: 140vh;
+    height: 18vh;
     display: flex;
     justify-content: space-between;
+    border: 2px solid black;
   }
   .content {
     // border: 2px solid red;
   }
   .btnn {
     border: 2px solid blue;
+    width: 200px;
+    height: 40px;
+    margin-right: 30px;
+    border-raidus: 10px;
+    color: white;
+    background: blue;
+    font-size: 26px;
   }
   .Settlement-confirmation {
     background-color: #dff0d8;

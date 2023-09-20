@@ -230,8 +230,8 @@ const Trade1 = styled.div`
   }
 
   input[type="txt"] {
-    height: 50px;
-    width: 500px;
+    height: 30px;
+    width: 400px;
     margin-bottom: 20px;
     padding: 5px;
     border:2px solid black;
@@ -246,10 +246,10 @@ const Trade1 = styled.div`
     background:#C5C6D0;
   }
   label {
-    font-weight: bold;
+    
     font-size:30px;
     margin-bottom: 5px;
-    color: orange;
+    color: blue;
   }
 
   .container {

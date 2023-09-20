@@ -77,14 +77,14 @@ function Settlement() {
           >
             Disbursement
           </button>
-          <button
+          {/* <button
             className="btn"
             onClick={() => {
               navigate("/shipment");
             }}
           >
             Shipment
-          </button>
+          </button> */}
           <button
             className="btn"
             onClick={() => {
@@ -152,7 +152,9 @@ function Settlement() {
                       className="mainheading2"
                       style={{ background: "gray" }}
                     >
-                      <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
+                      <div style={{ marginLeft: "15px" }}>
+                        Acknowledgement for settlement
+                      </div>
                       <div>
                         <button
                           className="btnn"
@@ -192,7 +194,10 @@ function Settlement() {
                       className="mainheading2"
                       style={{ background: "blue", width: "140vh" }}
                     >
-                      <div style={{ marginLeft: "15px" }}>Liqui loans NBFC</div>
+                      <div style={{ marginLeft: "15px" }}>
+                        Acknowledgement for settlement
+                      </div>
+
                       <div>
                         <button
                           className="btnn"
@@ -206,14 +211,21 @@ function Settlement() {
                         </button>
                       </div>
                     </div>
+                    <div>
+                      <h3>Finance Partner ID: FP12345</h3>
+                    </div>
 
                     <div className="bwcontent">
-                      <div
-                        className="Settlement details"
-                        style={{ display: "block" }}
-                      >
-                        <h1>SettlementInformation</h1>
-                        <h2> Seller Information</h2>
+                      <div className="Settlement details">
+                        <div>
+                          <h3 align="center">Settlement Information</h3>
+                          <p align="center">
+                            ProFinTech Technologies made the settlement as the
+                            credit period is coming to an end.
+                          </p>
+                        </div>
+                        <h1 align="center">Settlement Details</h1>
+                        <h3>Seller Information</h3>
                         <table>
                           <tbody>
                             <tr>
@@ -230,82 +242,104 @@ function Settlement() {
                             </tr>
                           </tbody>
                         </table>
-                        <h2> Buyer Information</h2>
+                        <br />
+                        <h3>Buyer Information</h3>
                         <table>
                           <tbody>
                             <tr>
                               <th>Name:</th>
-                              <td>Hospital 1</td>
+                              <td>Apollo Hospitals</td>
                             </tr>
                             <tr>
                               <th>Contact Details:</th>
-                              <td>Hospital 1.doe@example.com</td>
+                              <td>enquiry@apollohospitals.com</td>
                             </tr>
                             <tr>
                               <th>GST:</th>
-                              <td>123-45-5656</td>
+                              <td>36AAACA5443N2ZI</td>
                             </tr>
                           </tbody>
                         </table>
-                        <h2> lender Information</h2>
+                        <br />
+                        <h3>Lender Information</h3>
                         <table>
                           <tbody>
                             <tr>
                               <th>Name:</th>
-                              <td>LiquiLoans NBFC</td>
+                              <td>IKF Finance Limited</td>
                             </tr>
                             <tr>
                               <th>Contact Details:</th>
-                              <td>info@liquiloans.com</td>
+                              <td>info@ikf.com</td>
                             </tr>
                             <tr>
                               <th>GST:</th>
-                              <td>36AAACI1195H1ZN</td>
+                              <td>36AAACI4784J2Z8</td>
                             </tr>
                           </tbody>
                         </table>
-                        <h2>Settlement Details</h2>
+                        <br />
+                        <h3>Disbursement Details</h3>
+                        <div className="bank-details">
+                          <p>
+                            <strong>Disbursement amount:</strong> ₹ 3,00,766
+                          </p>
+                          <h2>Bank Details for Funds Transfer</h2>
+                          <p>
+                            <strong>Bank Name:</strong> ICICI Bank
+                          </p>
+                          <p>
+                            <strong>Account Name:</strong>Prime Textiles
+                          </p>
+                          <p>
+                            <strong>Account Number:</strong> 123456789012
+                          </p>
+                          <p>
+                            <strong>IFSC Code:</strong> ICIC0001114
+                          </p>
+                          <p>
+                            <strong>Branch Address:</strong> Gachibowli
+                          </p>
+                          <p>
+                            Please ensure that the specified amount is
+                            transferred to the account mentioned above.
+                          </p>
+                        </div>
+                        <h3>Settlement Details</h3>
                         <table>
                           <tbody>
                             <tr>
                               <th>Settlement Amount:</th>
-                              <td>INR 19,000</td>
-                            </tr>
-                            <tr>
-                              <th>Margine:</th>
-                              <td>INR 1500 (8%)</td>
-                            </tr>
-                            <tr>
-                              <th>Interest Rate:</th>
-                              <td> INR 1500 (8%)</td>
+                              <td>₹ 3,06,818</td>
                             </tr>
                             <tr>
                               <th>Repayment Term:</th>
-                              <td> 45 days</td>
+                              <td>90 days</td>
                             </tr>
                             <tr>
-                              <th>Payment loyality for Trade partner</th>
-                              <td>INR 400.00 </td>
+                              <th>Payment loyalty for Trade partner:</th>
+                              <td>₹ 1,109.59</td>
                             </tr>
                             <tr>
                               <th>ProFinTech technology charges:</th>
-                              <td> INR 400.00 </td>
+                              <td>₹ 2219.17</td>
                             </tr>
                             <tr>
-                              <th>Payment to Anchor:</th>
-                              <td> INR 200.00 </td>
+                              <th>Payment to Anchor Trader:</th>
+                              <td>₹ 1,39,853</td>
                             </tr>
                           </tbody>
                         </table>
-                        <h2>Settlement Date</h2>
+                        <br />
+                        <h3>Settlement Date</h3>
                         <p>Sep 25, 2023</p>
-                        <h2>Settlement Method</h2>
+                        <h3>Settlement Method</h3>
                         <p>Direct Deposit</p>
-                        <h2>Patron of the Payment</h2>
+                        <h3>Patron of the Payment</h3>
                         <p>ProFinTech Technologies</p>
-                        <h2>Receipent of the Payment</h2>
-                        <p>LiquiLoans NBFC</p>
-                        <h2>Settlement Schedule</h2>
+                        <h3>Recipient of the Payment</h3>
+                        <p>IKF Finance Limited</p>
+                        <h3>Settlement Schedule</h3>
                         <table>
                           <tbody>
                             <tr>
@@ -314,26 +348,53 @@ function Settlement() {
                             <tr>
                               <td>Sep 29, 2023</td>
                             </tr>
-                            {/* Add more rows for subsequent installments */}
                           </tbody>
                         </table>
-                        <h2>Settlement Agreement</h2>
+                        <div className="bank-details">
+                          <p>
+                            We would like to inform you that the settlement
+                            amount of ₹ 3,06,818 has been successfully made to
+                            the below mentioned bank account details.
+                            Transaction Reference No: 1234567890
+                          </p>
+                          <h3>Bank Details</h3>
+                          <p>
+                            <strong>Bank Name:</strong> ICICI Bank
+                          </p>
+                          <p>
+                            <strong>Account Name:</strong>IKF Finance
+                          </p>
+                          <p>
+                            <strong>Account Number:</strong> 123456789014
+                          </p>
+                          <p>
+                            <strong>IFSC Code:</strong> ICIC0001114
+                          </p>
+                          <p>
+                            <strong>Branch Address:</strong> Gachibowli
+                          </p>
+                          <p>
+                            Please verify the transaction at your earliest
+                            convenience.
+                          </p>
+                        </div>
+                        <h3>Settlement Agreement</h3>
                         <p>
-                          Please review and accept the{" "}
+                          Please review and accept the
                           <a href="#">Settlement Agreement</a> for more
                           information.
                         </p>
-                        <h2>Contact Information</h2>
+                        <h3>Contact Information</h3>
                         <p>
                           If you have any questions or need assistance, please
                           contact our customer service at 1-800-123-4567 or
-                          email us at info@example.com.
+                          email us at settlements@profintech.in
                         </p>
                         <div className="Settlement-confirmation">
-                          <h2>Settlement Confirmation</h2>
+                          <h3>Settlement Confirmation</h3>
                           <p>
-                            Settlement has been made by the ProFinTech Team to
-                            LiquiLoans. Confirmation Number: ABD2512
+                            Settlement has been made by ProFinTech Technologies
+                            to IKF Finance Limited. Confirmation Number: ABD2512
                           </p>
                         </div>
                       </div>
@@ -384,7 +445,7 @@ function Settlement() {
                       className="mainheading2"
                       style={{ background: "gray" }}
                     >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
+                      <div style={{ marginLeft: "15px" }}>Acknowledgement for settlement</div>
                       <div>
                         <button
                           className="btnn"
@@ -424,7 +485,7 @@ function Settlement() {
                       className="mainheading2"
                       style={{ background: "blue", width: "140vh" }}
                     >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
+                      <div style={{ marginLeft: "15px" }}>Acknowledgement for settlement</div>
                       <div>
                         <button
                           className="btnn"
@@ -441,587 +502,183 @@ function Settlement() {
 
                     <div className="bwcontent">
                       <div className="Settlement details">
-                        <h1>SettlementInformation</h1>
-                        <h2> Seller Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>Prime Textiles</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>info@primetextiles.in</td>
-                            </tr>
-                            <tr>
-                              <th>GST:</th>
-                              <td>36AAIFP3688H1ZS</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2> Buyer Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>Hospital 2</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>Hospital 2.doe@example.com</td>
-                            </tr>
-                            <tr>
-                              <th>Identification:</th>
-                              <td>SSN: 123-45-5919</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2> lender Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>ICICI Bank</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>ICICI.doe@example.com</td>
-                            </tr>
-                            <tr>
-                              <th>GST:</th>
-                              <td>36AAACI1195H1ZN</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Settlement Details</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Settlement Amount:</th>
-                              <td>INR 1,19,000</td>
-                            </tr>
-                            <tr>
-                              <th>Margine:</th>
-                              <td>INR 7,000 (5%)</td>
-                            </tr>
-                            <tr>
-                              <th>Interest Rate:</th>
-                              <td> INR 7000 (10%)</td>
-                            </tr>
-                            <tr>
-                              <th>Repayment Term:</th>
-                              <td> 45 days</td>
-                            </tr>
-                            <tr>
-                              <th>Payment loyality for Trade partner</th>
-                              <td>INR 180.00 </td>
-                            </tr>
-                            <tr>
-                              <th>ProFinTech technology charges:</th>
-                              <td> INR 180.00 </td>
-                            </tr>
-                            <tr>
-                              <th>Payment to Anchor:</th>
-                              <td> INR 8,640.00 </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Settlement Date</h2>
-                        <p>Sep 25, 2023</p>
-                        <h2>Settlement Method</h2>
-                        <p>Direct Deposit</p>
-                        <h2>Patron of the Payment</h2>
-                        <p>ProFinTech Technologies</p>
-                        <h2>Receipent of the Payment</h2>
-                        <p>ICIC Bank</p>
-                        <h2>Settlement Schedule</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Due Date</th>
-                            </tr>
-                            <tr>
-                              <td>Sep 29, 2023</td>
-                            </tr>
-                            {/* Add more rows for subsequent installments */}
-                          </tbody>
-                        </table>
-                        <h2>Settlement Agreement</h2>
-                        <p>
-                          Please review and accept the{" "}
-                          <a href="#">Settlement Agreement</a> for more
-                          information.
-                        </p>
-                        <h2>Contact Information</h2>
-                        <p>
-                          If you have any questions or need assistance, please
-                          contact our customer service at 1-800-123-4567 or
-                          email us at info@example.com.
-                        </p>
-                        <div className="Settlement-confirmation">
-                          <h2>Settlement Confirmation</h2>
-                          <p>
-                            Settlement has been made by the ProFinTech to ICICI
-                            Bank. Confirmation Number: ABD2513
+                        <div>
+                          <h3 align="center">Settlement Information</h3>
+                          <p align="center">
+                            ProFinTech Technologies made the settlement as the
+                            credit period is coming to an end.
                           </p>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div>
-          <div className="content">
-            {!open5 ? (
-              <div className="mainheading" style={{ background: "gray" }}>
-                <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                <div>
-                  <button
-                    className="btnn"
-                    onClick={handleToogle5}
-                    style={{ background: "gray", border: "2px solid gray" }}
-                  >
-                    🔽
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div>
-                {!open6 ? (
-                  <div>
-                    <div className="mainheading" style={{ background: "blue" }}>
-                      <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle5}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "gray" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle6}
-                          style={{
-                            background: "gray",
-                            border: "2px solid gray",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div>
-                    <div
-                      className="mainheading"
-                      style={{ background: "blue", width: "150vh" }}
-                    >
-                      <div style={{ marginLeft: "5px" }}>Subgroup 3</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle5}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "blue", width: "140vh" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>ICICI Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle6}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="bwcontent">
-                      <div className="Settlement details">
-                        <h1>SettlementInformation</h1>
-                        <h2> Seller Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>Prime Textiles</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>info@primetextiles.in</td>
-                            </tr>
-                            <tr>
-                              <th>GST:</th>
-                              <td>36AAIFP3688H1ZS</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2> Buyer Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>Hospital 3</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>Hospital 3.doe@example.com</td>
-                            </tr>
-                            <tr>
-                              <th>Identification:</th>
-                              <td>SSN: 123-45-5373</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2> lender Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>ICICI Bank</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>ICICI.doe@example.com</td>
-                            </tr>
-                            <tr>
-                              <th>GST:</th>
-                              <td>36AAACI1195H1ZN</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Settlement Details</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Settlement Amount:</th>
-                              <td>INR 1,33,000</td>
-                            </tr>
-                            <tr>
-                              <th>Margine:</th>
-                              <td>INR 7,000 (5%)</td>
-                            </tr>
-                            <tr>
-                              <th>Interest Rate:</th>
-                              <td> INR 7000 (10%)</td>
-                            </tr>
-                            <tr>
-                              <th>Repayment Term:</th>
-                              <td> 45 days</td>
-                            </tr>
-                            <tr>
-                              <th>Payment loyality for Trade partner</th>
-                              <td>INR 0 </td>
-                            </tr>
-                            <tr>
-                              <th>ProFinTech technology charges:</th>
-                              <td> INR 0 </td>
-                            </tr>
-                            <tr>
-                              <th>Payment to Anchor:</th>
-                              <td> INR 0 </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Settlement Date</h2>
-                        <p>Sep 25, 2023</p>
-                        <h2>Settlement Method</h2>
-                        <p>Direct Deposit</p>
-                        <h2>Patron of the Payment</h2>
-                        <p>ProFinTech Technologies</p>
-                        <h2>Receipent of the Payment</h2>
-                        <p>ICICI Bank</p>
-                        <h2>Settlement Schedule</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Due Date</th>
-                            </tr>
-                            <tr>
-                              <td>Sep 29, 2023</td>
-                            </tr>
-                            {/* Add more rows for subsequent installments */}
-                          </tbody>
-                        </table>
-                        <h2>Settlement Agreement</h2>
-                        <p>
-                          Please review and accept the{" "}
-                          <a href="#">Settlement Agreement</a> for more
-                          information.
-                        </p>
-                        <h2>Contact Information</h2>
-                        <p>
-                          If you have any questions or need assistance, please
-                          contact our customer service at 1-800-123-4567 or
-                          email us at info@example.com.
-                        </p>
-                        <div className="Settlement-confirmation">
-                          <h2>Settlement Confirmation</h2>
+                        <div className="Disbursement details">
+                          <h3>Seller Information</h3>
+                          <table>
+                            <tbody>
+                              <tr>
+                                <th>Name:</th>
+                                <td>Prime Textiles</td>
+                              </tr>
+                              <tr>
+                                <th>Contact Details:</th>
+                                <td>info@primetextiles.in</td>
+                              </tr>
+                              <tr>
+                                <th>GST:</th>
+                                <td>36AAIFP3688H1ZS</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3>Buyer Information</h3>
+                          <table>
+                            <tbody>
+                              <tr>
+                                <th>Name:</th>
+                                <td>Renova hospital</td>
+                              </tr>
+                              <tr>
+                                <th>Contact Details:</th>
+                                <td>enquiry@Example.com</td>
+                              </tr>
+                              <tr>
+                                <th>GST:</th>
+                                <td>36ABCCS4959C1Z9</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3>Lender Information</h3>
+                          <table>
+                            <tbody>
+                              <tr>
+                                <th>Name:</th>
+                                <td>IKF Finance Limited</td>
+                              </tr>
+                              <tr>
+                                <th>Contact Details:</th>
+                                <td>info@ikf.com</td>
+                              </tr>
+                              <tr>
+                                <th>GST:</th>
+                                <td>123456789</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3>Disbursement Details</h3>
+                          <div className="bank-details">
+                            <p>
+                              <strong>Disbursement amount:</strong> ₹ 4,01,396.9
+                            </p>
+                            <h2>Bank Details for Funds Transfer</h2>
+                            <p>
+                              <strong>Bank Name:</strong> ICICI Bank
+                            </p>
+                            <p>
+                              <strong>Account Name:</strong>Prime Textiles
+                            </p>
+                            <p>
+                              <strong>Account Number:</strong> 123456789012
+                            </p>
+                            <p>
+                              <strong>IFSC Code:</strong> ICIC0001114
+                            </p>
+                            <p>
+                              <strong>Branch Address:</strong> Gachibowli
+                            </p>
+                            <p>
+                              Please ensure that the specified amount is
+                              transferred to the account mentioned above.
+                            </p>
+                          </div>
+                          <h3>Settlement Details</h3>
+                          <table>
+                            <tbody>
+                              <tr>
+                                <th>Settlement Amount:</th>
+                                <td>₹ 4,13,636</td>
+                              </tr>
+                              <tr>
+                                <th>Repayment Term:</th>
+                                <td>90 days</td>
+                              </tr>
+                              <tr>
+                                <th>Payment loyalty for Trade partner:</th>
+                                <td>₹ 3,205.48</td>
+                              </tr>
+                              <tr>
+                                <th>ProFinTech technology charges:</th>
+                                <td>₹ 3,205.48</td>
+                              </tr>
+                              <tr>
+                                <th>Payment to Anchor Trader:</th>
+                                <td>₹ 2,29,953.04</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3>Settlement Date</h3>
+                          <p>Sep 25, 2023</p>
+                          <h3>Settlement Method</h3>
+                          <p>Direct Deposit</p>
+                          <h3>Patron of the Payment</h3>
+                          <p>ProFinTech Technologies</p>
+                          <h3>Recipient of the Payment</h3>
+                          <p>IKF Finance Limited</p>
+                          <h3>Settlement Schedule</h3>
+                          <table>
+                            <tbody>
+                              <tr>
+                                <th>Due Date</th>
+                              </tr>
+                              <tr>
+                                <td>Sep 29, 2023</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div className="bank-details">
+                            <p>
+                              I would like to inform you that the settlement
+                              amount of ₹ 4,13,636 has been successfully made to
+                              the below mentioned bank account details.
+                              Transaction Reference No: 1234567890
+                            </p>
+                            <h2>Bank Details</h2>
+                            <p>
+                              <strong>Bank Name:</strong> ICICI Bank
+                            </p>
+                            <p>
+                              <strong>Account Name:</strong>IKF Finance
+                            </p>
+                            <p>
+                              <strong>Account Number:</strong> 123456789014
+                            </p>
+                            <p>
+                              <strong>IFSC Code:</strong> ABCD1234
+                            </p>
+                            <p>
+                              <strong>Branch Address:</strong> Gachibowli
+                            </p>
+                            <p>
+                              Please verify the transaction at your earliest
+                              convenience.
+                            </p>
+                          </div>
+                          <h3>Settlement Agreement</h3>
                           <p>
-                            Settlement has been made by ProFinTech Technologies
-                            to ICICI Bank. Confirmation Number: ABD2514
+                            Please review and accept the
+                            <a href="#">Settlement Agreement</a> for more
+                            information.
                           </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div>
-          <div className="content">
-            {!open7 ? (
-              <div className="mainheading" style={{ background: "gray" }}>
-                <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                <div>
-                  <button
-                    className="btnn"
-                    onClick={handleToogle7}
-                    style={{ background: "gray", border: "2px solid gray" }}
-                  >
-                    🔽
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div>
-                {!open8 ? (
-                  <div>
-                    <div className="mainheading" style={{ background: "blue" }}>
-                      <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle7}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "gray" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle8}
-                          style={{
-                            background: "gray",
-                            border: "2px solid gray",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div>
-                    <div
-                      className="mainheading"
-                      style={{ background: "blue", width: "150vh" }}
-                    >
-                      <div style={{ marginLeft: "5px" }}>Subgroup 4</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle7}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div
-                      className="mainheading2"
-                      style={{ background: "blue", width: "140vh" }}
-                    >
-                      <div style={{ marginLeft: "15px" }}>IDFC Bank</div>
-                      <div>
-                        <button
-                          className="btnn"
-                          onClick={handleToogle8}
-                          style={{
-                            background: "blue",
-                            border: "2px solid blue",
-                          }}
-                        >
-                          🔽
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="bwcontent">
-                      <div className="Settlement details">
-                        <h1>SettlementInformation</h1>
-                        <h2> Seller Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>Anchor trader</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>Anchor trader.doe@example.com</td>
-                            </tr>
-                            <tr>
-                              <th>Identification:</th>
-                              <td>SSN: 123-45-5454</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2> Buyer Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>Medical Univ. 1</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>Medical Univ. 1.doe@example.com</td>
-                            </tr>
-                            <tr>
-                              <th>Identification:</th>
-                              <td>SSN: 123-45-2486</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2> lender Information</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Name:</th>
-                              <td>ICICI Bank</td>
-                            </tr>
-                            <tr>
-                              <th>Contact Details:</th>
-                              <td>ICICI.doe@example.com</td>
-                            </tr>
-                            <tr>
-                              <th>GST:</th>
-                              <td>36AAACI1195H1ZN</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Settlement Details</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Settlement Amount:</th>
-                              <td>INR 1,28,000</td>
-                            </tr>
-                            <tr>
-                              <th>Margine:</th>
-                              <td>INR 3,000 (2.3%)</td>
-                            </tr>
-                            <tr>
-                              <th>Interest Rate:</th>
-                              <td> INR 3,000 (10%)</td>
-                            </tr>
-                            <tr>
-                              <th>Repayment Term:</th>
-                              <td> 45 days</td>
-                            </tr>
-                            <tr>
-                              <th>Payment loyality for Trade partner</th>
-                              <td>INR 3,200.00 </td>
-                            </tr>
-                            <tr>
-                              <th>ProFinTech technology charges:</th>
-                              <td> INR 3,200.00 </td>
-                            </tr>
-                            <tr>
-                              <th>Payment to Anchor:</th>
-                              <td> INR 15,600.00 </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h2>Settlement Date</h2>
-                        <p>Sep 25, 2023</p>
-                        <h2>Settlement Method</h2>
-                        <p>Direct Deposit</p>
-                        <h2>Patron of the Payment</h2>
-                        <p>ProFinTech Technologies</p>
-                        <h2>Receipent of the Payment</h2>
-                        <p>IDFC Bank</p>
-                        <h2>Settlement Schedule</h2>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th>Due Date</th>
-                            </tr>
-                            <tr>
-                              <td>Sep 29, 2023</td>
-                            </tr>
-                            {/* Add more rows for subsequent installments */}
-                          </tbody>
-                        </table>
-                        <h2>Settlement Agreement</h2>
-                        <p>
-                          Please review and accept the{" "}
-                          <a href="#">Settlement Agreement</a> for more
-                          information.
-                        </p>
-                        <h2>Contact Information</h2>
-                        <p>
-                          If you have any questions or need assistance, please
-                          contact our customer service at 1-800-123-4567 or
-                          email us at info@example.com.
-                        </p>
-                        <div className="Settlement-confirmation">
-                          <h2>Settlement Confirmation</h2>
+                          <h2>Contact Information</h2>
                           <p>
-                            Settlement has been made by ProFinTech Technologies
-                            to IDFC Bank. Confirmation Number: ABD2515
+                            If you have any questions or need assistance, please
+                            contact our customer service at 1-800-123-4567 or
+                            email us at settlements@profintech.in
                           </p>
+                          <div className="Settlement-confirmation">
+                            <h3>Settlement Confirmation</h3>
+                            <p>
+                              Settlement has been made by ProFinTech
+                              Technologies to IKF Finance Limited. Confirmation
+                              Number: ABD2512
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
