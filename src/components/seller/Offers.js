@@ -4,6 +4,8 @@ import { styled } from "styled-components";
 import Navbarseller from "../pages/Navbarseller";
 import NavbarSide from "../pages/NavbarSide";
 import Footer from "../pages/Footer";
+import finance from "../images/IKF Finance Limited.png";
+import download from "../images/download.png";
 
 function Offers() {
   const navigate = useNavigate();
@@ -52,7 +54,7 @@ function Offers() {
       <Navbarseller />
       <NavbarSide />
       <Request1>
-        <div className="button" >
+        <div className="button">
           <button
             className="btn"
             onClick={() => {
@@ -97,7 +99,7 @@ function Offers() {
         </div>
 
         <div>
-          <div className="pheading">
+          <div className="pheading" >
             <div style={{ fontSize: "34px", marginLeft: "65vh" }}>
               Received Offer details
             </div>
@@ -106,7 +108,7 @@ function Offers() {
             </div>
           </div>
 
-          <div className="content">
+          <div className="content" >
             {!open1 ? (
               <div className="mainheading" style={{ background: "gray" }}>
                 <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
@@ -141,7 +143,9 @@ function Offers() {
                     </div>
 
                     <div className="mainheading2">
-                      <div>Image</div>
+                      <div>
+                        <img src={finance} className="imga"/>
+                      </div>
                       <div>
                         <div>Net Amount: 3,00,766.1</div>
                         <div>Interest p.a (%):8</div>
@@ -158,9 +162,13 @@ function Offers() {
                         </button>
                       </div>
                     </div>
+
+                  
                   </div>
                 ) : (
-                  <div style={{ border: "2px solid black",paddingLeft:"30px" }}>
+                  <div
+                  
+                  >
                     <div className="mainheading" style={{ background: "blue" }}>
                       <div style={{ marginLeft: "5px" }}>Subgroup 1</div>
                       <div>
@@ -178,7 +186,9 @@ function Offers() {
                     </div>
 
                     <div className="mainheading2">
-                      <div>Image</div>
+                      <div>
+                      <img src={finance} className="imga"/>
+                      </div>
                       <div>
                         <div>Net Amount: 3,00,766.1</div>
                         <div>Interest p.a (%):8</div>
@@ -197,10 +207,10 @@ function Offers() {
                     </div>
 
                     <div
-                      style={{ height: 900, marginLeft: 10, display: "block" }}
+                      style={{ height: 950, marginLeft: 10, display: "block", border: "2px solid black", padding: "30px",marginTop:"30px",width:"80%",marginLeft:"110px" }}
                     >
                       <br />
-                      <h4 align="center">Requested Offer</h4>
+                      <h1 align="center">Requested Offer</h1>
                       <p>
                         <strong>Subgroup value (INR):</strong> 4,50,000
                       </p>
@@ -231,7 +241,8 @@ function Offers() {
                         <strong>Net amount (INR):</strong> 3,00,766.1
                       </p>
                       <br />
-                      <h4 align="center">Offer Placed</h4>
+                      <hr/>
+                      <h1 align="center">Offer Placed</h1>
                       <p>
                         <strong>Subgroup value (INR):</strong> 4,50,000
                       </p>
@@ -263,7 +274,6 @@ function Offers() {
                       </p>
                       <hr />
                       <div className="text-center">
-                        
                         <button
                           className="btn btn-success"
                           onclick="acceptOffer(this)"
@@ -274,7 +284,7 @@ function Offers() {
                         <button
                           className="btn btn-danger"
                           onclick="declineOffer(this)"
-                          style={{ marginLeft: "20px"}}
+                          style={{ marginLeft: "20px" }}
                         >
                           Decline
                         </button>
@@ -282,17 +292,73 @@ function Offers() {
                       </div>
                     </div>
 
-                    
+                  
                   </div>
                 )}
+
+              
+                
+                  {open5 ? (
+                    <div>
+                      <div className="mainheading2">
+                      <div>
+                      <img src={download} className="imga"/>
+                      </div>
+                      <div>
+                        <div>Net Amount: 13456</div>
+                        <div>Interest p.a (%):9</div>
+                        <div>Margin %: 30</div>
+                        <div>Term (In days): 45</div>
+                      </div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle5}
+                          style={{ marginTop: "50px" }}
+                        >
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                    <div style={{fontSize:"26px",border:"2px solid black",marginTop:"20px",padding:"30px",width:"80%",marginLeft:"110px"}}>
+                      <div >
+                        This is the content for Panel 2 inside Subgroup 2.
+                      </div>
+                      <br/>
+                      <div>You can replace this with your actual content.</div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <div className="mainheading2">
+                      <div>
+                      <img src={download} className="imga"/>
+                      </div>
+                      <div>
+                        <div>Net Amount: 13456</div>
+                        <div>Interest p.a (%):9</div>
+                        <div>Margin %: 30</div>
+                        <div>Term (In days): 45</div>
+                      </div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle5}
+                          style={{ marginTop: "50px" }}
+                        >
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                    </div>
+                  )}
+                
               </div>
             )}
           </div>
         </div>
 
-        <div>
-          
-          <div className="content">
+        <div className="content" >
             {!open3 ? (
               <div className="mainheading" style={{ background: "gray" }}>
                 <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
@@ -315,7 +381,7 @@ function Offers() {
                       <div>
                         <button
                           className="btnn"
-                          onClick={handleToogle3}
+                          onClick={handleToogle}
                           style={{
                             background: "blue",
                             border: "2px solid blue",
@@ -327,11 +393,13 @@ function Offers() {
                     </div>
 
                     <div className="mainheading2">
-                      <div>Image</div>
                       <div>
-                        <div>Net Amount: 3,00,766.1</div>
-                        <div>Interest p.a (%):8</div>
-                        <div>Margin %: 25</div>
+                        <img src={finance} className="imga"/>
+                      </div>
+                      <div>
+                        <div>Net Amount: 4,01,396.9</div>
+                        <div>Interest p.a (%):12</div>
+                        <div>Margin %: 30</div>
                         <div>Term (In days): 90</div>
                       </div>
                       <div>
@@ -344,9 +412,13 @@ function Offers() {
                         </button>
                       </div>
                     </div>
+
+                  
                   </div>
                 ) : (
-                  <div style={{ border: "2px solid black",paddingLeft:"30px" }}>
+                  <div
+                  
+                  >
                     <div className="mainheading" style={{ background: "blue" }}>
                       <div style={{ marginLeft: "5px" }}>Subgroup 2</div>
                       <div>
@@ -364,11 +436,13 @@ function Offers() {
                     </div>
 
                     <div className="mainheading2">
-                      <div>Image</div>
                       <div>
-                        <div>Net Amount: 3,00,766.1</div>
-                        <div>Interest p.a (%):8</div>
-                        <div>Margin %: 25</div>
+                      <img src={finance} className="imga"/>
+                      </div>
+                      <div>
+                        <div>Net Amount: 4,01,396.9</div>
+                        <div>Interest p.a (%):12</div>
+                        <div>Margin %: 30</div>
                         <div>Term (In days): 90</div>
                       </div>
                       <div>
@@ -383,73 +457,74 @@ function Offers() {
                     </div>
 
                     <div
-                      style={{ height: 900, marginLeft: 10, display: "block" }}
+                      style={{ height: 950, marginLeft: 10, display: "block", border: "2px solid black", padding: "30px",marginTop:"30px",width:"80%",marginLeft:"110px" }}
                     >
                       <br />
-                      <h4 align="center">Requested Offer</h4>
+                      <h1 align="center">Requested Offer</h1>
                       <p>
-                        <strong>Subgroup value (INR):</strong> 4,50,000
+                        <strong>Subgroup value (INR):</strong> 6,50,000
                       </p>
                       <p>
-                        <strong>Requested amount (INR):</strong> 4,09,091 (The
+                        <strong>Requested amount (INR):</strong> 5,09,099 (The
                         offer is adjusted to the subgroup trade amount)
                       </p>
                       <p>
-                        <strong>Margin (%):</strong> 25
+                        <strong>Margin (%):</strong> 30
                       </p>
                       <p>
-                        <strong>Margin value (INR):</strong> 1,02,272.75
+                        <strong>Margin value (INR):</strong> 1,77,272.7
                       </p>
                       <p>
-                        <strong>Amount after margin (INR):</strong> 3,06,818
+                        <strong>Amount after margin (INR):</strong>4,13,636
                       </p>
                       <p>
-                        <strong>Interest p.a (%):</strong> 8
+                        <strong>Interest p.a (%):</strong> 12
                       </p>
                       <p>
                         <strong>Terms (In Days):</strong> 90
                       </p>
                       <p>
-                        <strong>Interest value (INR):</strong> 6,052 (Interest
+                        <strong>Interest value (INR):</strong> 12,239.90 (Interest
                         Value adjusted to Terms)
                       </p>
                       <p>
-                        <strong>Net amount (INR):</strong> 3,00,766.1
+                        <strong>Net amount (INR):</strong> 4,09,396.9
                       </p>
                       <br />
-                      <h4 align="center">Offer Placed</h4>
+                      <hr/>
+                      <h1 align="center">Offer Placed</h1>
                       <p>
-                        <strong>Subgroup value (INR):</strong> 4,50,000
+                        <strong>Subgroup value (INR):</strong> 6,50,000
                       </p>
                       <p>
-                        <strong>Requested amount (INR):</strong> 4,09,091 (The
+                        <strong>Requested amount (INR):</strong> 5,09,099 (The
                         offer is adjusted to the subgroup trade amount)
                       </p>
                       <p>
-                        <strong>Margin (%):</strong> 25
+                        <strong>Margin (%):</strong> 30
                       </p>
                       <p>
-                        <strong>Margin value (INR):</strong> 1,02,272.75
+                        <strong>Margin value (INR):</strong> 1,77,272.7
                       </p>
                       <p>
-                        <strong>Amount after margin (INR):</strong> 3,06,818
+                        <strong>Amount after margin (INR):</strong>4,13,636
                       </p>
                       <p>
-                        <strong>Interest p.a (%):</strong> 8
+                        <strong>Interest p.a (%):</strong> 12
                       </p>
                       <p>
                         <strong>Terms (In Days):</strong> 90
                       </p>
                       <p>
-                        <strong>Interest value (INR):</strong> 6,052 (Interest
+                        <strong>Interest value (INR):</strong> 12,239.90 (Interest
                         Value adjusted to Terms)
                       </p>
                       <p>
-                        <strong>Net amount (INR):</strong> 3,00,766.1
+                        <strong>Net amount (INR):</strong> 4,09,396.9
                       </p>
+                      <br />
                       <hr />
                       <div className="text-center">
-                        
                         <button
                           className="btn btn-success"
                           onclick="acceptOffer(this)"
@@ -460,7 +535,7 @@ function Offers() {
                         <button
                           className="btn btn-danger"
                           onclick="declineOffer(this)"
-                          style={{ marginLeft: "20px"}}
+                          style={{ marginLeft: "20px" }}
                         >
                           Decline
                         </button>
@@ -468,15 +543,70 @@ function Offers() {
                       </div>
                     </div>
 
-                    
+                  
                   </div>
                 )}
+
+              
+                
+                  {open6 ? (
+                    <div>
+                      <div className="mainheading2">
+                      <div>
+                      <img src={download} className="imga"/>
+                      </div>
+                      <div>
+                        <div>Net Amount: 13456</div>
+                        <div>Interest p.a (%):9</div>
+                        <div>Margin %: 30</div>
+                        <div>Term (In days): 45</div>
+                      </div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle6}
+                          style={{ marginTop: "50px" }}
+                        >
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                    <div style={{fontSize:"26px",border:"2px solid black",marginTop:"20px",padding:"30px",width:"80%",marginLeft:"110px"}}>
+                      <div >
+                        This is the content for Panel 2 inside Subgroup 2.
+                      </div>
+                      <br/>
+                      <div>You can replace this with your actual content.</div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <div className="mainheading2">
+                      <div>
+                      <img src={download} className="imga"/>
+                      </div>
+                      <div>
+                        <div>Net Amount: 13456</div>
+                        <div>Interest p.a (%):9</div>
+                        <div>Margin %: 30</div>
+                        <div>Term (In days): 45</div>
+                      </div>
+                      <div>
+                        <button
+                          className="btnn"
+                          onClick={handleToogle6}
+                          style={{ marginTop: "50px" }}
+                        >
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                    </div>
+                  )}
+                
               </div>
             )}
           </div>
-        </div>
-
-       
       </Request1>
       <div style={{ marginTop: "65vh" }}>
         <Footer />
@@ -500,6 +630,10 @@ const Request1 = styled.div`
     font-size: 26px;
     margin-right: 30px;
   }
+  .imga{
+    margin-left:50px;
+    margin-top:40px;
+  }
 
   .btn1 {
     color: white;
@@ -518,7 +652,7 @@ const Request1 = styled.div`
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    
+
     width: 250px;
   }
 
@@ -529,6 +663,8 @@ const Request1 = styled.div`
   .content {
     margin-left: 20px;
     margin-top: 20px;
+    padding:10px;
+    width:95%;
   }
   .main-content {
     padding: 20px;
