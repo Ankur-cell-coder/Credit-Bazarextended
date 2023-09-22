@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { styled } from "styled-components";
 import { useAuth } from "../../context/auth";
 import { BiLogOut, BiUser } from "react-icons/bi";
+import "./Nav.css";
 
 function Navbarfinancer() {
   const [auth, setAuth] = useAuth();
@@ -58,7 +58,7 @@ function Navbarfinancer() {
   };
 
   return (
-    <Navbarfinancer1>
+    <div className="navcontent">
       <div className="rightsection">
         <div>
           <select
@@ -75,7 +75,7 @@ function Navbarfinancer() {
 
         {showOption ? (
           <div>
-            <div>
+            <div style={{marginLeft:"234px"}}>
               <button onClick={handleClick} className="login">
                 <BiUser style={{ width: "40px", height: "40px" }} />
               </button>
@@ -97,7 +97,9 @@ function Navbarfinancer() {
                 >
                   <BiUser /> User Detail
                 </button>
+              
               </div>
+              
               <div>
                 <button
                   onClick={handleLogout}
@@ -124,57 +126,9 @@ function Navbarfinancer() {
           </div>
         )}
       </div>
-    </Navbarfinancer1>
+    </div>
   );
 }
 
 export default Navbarfinancer;
 
-const Navbarfinancer1 = styled.div`
-  display: flex;
-  background: orange;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 1100px;
-  @media only screen and (min-width: 1800px) {
-    margin-left: 1400px;
-  }
-
-  .rightsection {
-    display: flex;
-    width: 400px;
-    margin-top: 45px;
-    justify-content: space-between;
-    position: fixed;
-    top: 0px;
-  }
-
-  .options {
-    width: 140px;
-    height: 40px;
-    font-size: 20px;
-    border: 2px solid black;
-    margin-top: -60px;
-    position: sticky;
-    top: 0px;
-  }
-  .login {
-    width: 150px;
-    height: 40px;
-    font-size: 20px;
-    margin-top: -60px;
-    position: sticky;
-    top: 0px;
-  }
-  .button {
-    margin-left: 20px;
-    margin-top: 15px;
-    height: 36px;
-    background: orange;
-    border: 2px solid orange;
-    width: 200px;
-    font-size: 15px;
-    position: sticky;
-    top: 0px;
-  }
-`;

@@ -1,0 +1,58 @@
+
+.navcontent{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+margin-left: 1100px;
+margin-top: 8vh;
+@media only screen and (min-width: 1800px) {
+  margin-left: 1400px;
+}
+
+  position: fixed;
+}
+
+.onclickprofile {
+    
+    width: 200px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:15px;
+    border:2px solid black;
+    background:black;
+    margin-top:40px;
+    
+    
+  }
+
+  .rightsection {
+    display: flex;
+    width: 400px;
+    margin-top: -30px;
+    justify-content: space-between;
+  }
+
+  .options {
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid black;
+    margin-top: -60px;
+  }
+  .login {
+    background: white;
+    margin-top:-15px;
+    border-radius:50%;
+    position:fixed;
+  }
+  .button {
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 36px;
+    background: orange;
+    border: 2px solid orange;
+    width: 200px;
+    font-size: 15px;
+  }

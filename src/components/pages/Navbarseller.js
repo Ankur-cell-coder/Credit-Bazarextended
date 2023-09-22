@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { styled } from "styled-components";
 import { useAuth } from "../../context/auth";
 import { BiLogOut, BiUser } from "react-icons/bi";
+import "./Nav.css";
 
 function Navbarseller() {
   const [auth, setAuth] = useAuth();
@@ -36,7 +36,6 @@ function Navbarseller() {
       if (win != null) {
         win.focus();
       }
-      // navigate("/financesdashboard");
     } else if (e.currentTarget.value == "buyer") {
       var currentURL = window.location.href;
 
@@ -53,7 +52,7 @@ function Navbarseller() {
   };
 
   return (
-    <Navbarseller1>
+    <div className="navcontent">
       <div className="rightsection">
         <div>
           <select
@@ -70,7 +69,7 @@ function Navbarseller() {
 
         {showOption ? (
           <div>
-            <div>
+            <div style={{marginLeft:"234px"}}>
               <button onClick={handleClick} className="login">
                 <BiUser style={{ width: "40px", height: "40px" }} />
               </button>
@@ -92,7 +91,9 @@ function Navbarseller() {
                 >
                   <BiUser /> User Detail
                 </button>
+              
               </div>
+              
               <div>
                 <button
                   onClick={handleLogout}
@@ -119,60 +120,9 @@ function Navbarseller() {
           </div>
         )}
       </div>
-    </Navbarseller1>
+    </div>
   );
 }
 
 export default Navbarseller;
 
-const Navbarseller1 = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 1100px;
-  margin-top: 8vh;
-  @media only screen and (min-width: 1800px) {
-    margin-left: 1400px;
-  }
-
-  position: fixed;
-
-  .onclickprofile {
-    border: 2px solid black;
-    width: 200px;
-    height: 75px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 10px;
-    background: white;
-  }
-
-  .rightsection {
-    display: flex;
-    width: 400px;
-    margin-top: -30px;
-    justify-content: space-between;
-  }
-
-  .options {
-    width: 140px;
-    height: 40px;
-    font-size: 20px;
-    border: 2px solid black;
-    margin-top: -60px;
-  }
-  .login {
-    background: white;
-    margin-top: -20px;
-  }
-  .button {
-    margin-left: 20px;
-    margin-top: 15px;
-    height: 36px;
-    background: orange;
-    border: 2px solid orange;
-    width: 200px;
-    font-size: 15px;
-  }
-`;

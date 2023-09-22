@@ -139,12 +139,10 @@ function App() {
           path="/financessettlementdetail"
           element={!auth.user ? <Signin /> : <FinanceSettlementDetail />}
         />
-          <Route
+        <Route
           path="/finance_trades"
           element={!auth.user ? <Signin /> : <FinanceTrades />}
         />
-
-
         //buyers//
         //routes////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         <Route
