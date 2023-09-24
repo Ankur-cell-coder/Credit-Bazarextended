@@ -25,7 +25,6 @@ import FinanceDisrubment from "./components/finance/FinanceDisrubment";
 import FinancePayment from "./components/finance/FinancePayment";
 import FinanceDisburenmentAcknowledgement from "./components/finance/FinanceDisburenmentAcknowledgement";
 import FinanceSettlementDetail from "./components/finance/FinanceSettlementDetail";
-import { CountProvider } from "./context/count";
 import Profile from "./components/Profile";
 
 import creditlogo from "../src/components/images/creditlogo.png";
